@@ -169,10 +169,42 @@ setTimeout(revealPage, 6000);
     display:block; font-family:'Nunito',sans-serif; font-weight:bold;
     color:var(--yellow); margin-bottom:6px;
   }
+  /* ── RAPPEL DE COURS — collapsible ── */
+  .rappel-wrap{
+    border:1px solid var(--purple); border-radius:10px; margin:18px 0 24px;
+    background:rgba(197,134,192,0.06); overflow:hidden;
+  }
+  .rappel-toggle{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:11px 16px; cursor:pointer; user-select:none;
+    background:rgba(197,134,192,0.10); border:none; width:100%;
+    font-family:'Nunito',sans-serif; font-weight:800; font-size:0.82em;
+    color:var(--purple); text-transform:uppercase; letter-spacing:1px;
+    transition:background .2s; border-radius:10px 10px 10px 10px;
+  }
+  .rappel-wrap.open .rappel-toggle{ border-radius:10px 10px 0 0; background:rgba(197,134,192,0.18); }
+  .rappel-toggle:hover{ background:rgba(197,134,192,0.22); }
+  .rappel-toggle-left{ display:flex; align-items:center; gap:8px; }
+  .rappel-toggle-left::before{ content:'💡'; font-size:1.15em; }
+  .rappel-arrow{
+    display:inline-block; transition:transform .28s ease; font-size:1em; flex-shrink:0;
+  }
+  .rappel-wrap.open .rappel-arrow{ transform:rotate(180deg); }
+  .rappel-body{
+    max-height:0; overflow:hidden;
+    transition:max-height .38s ease, opacity .28s ease, padding .28s ease;
+    opacity:0; padding:0 16px;
+    font-size:0.93em;
+  }
+  .rappel-wrap.open .rappel-body{
+    max-height:900px; opacity:1; padding:14px 16px 16px;
+  }
+  .rappel-body ul{margin:6px 0 0; padding-left:20px;}
+  .rappel-body li{margin-bottom:4px;}
+  /* Ancien style .rappel (au cas où du HTML direct l'utilise encore) */
   .rappel{
     border:1px solid var(--purple); border-radius:8px; padding:14px 16px; margin:18px 0 24px;
-    background:rgba(197,134,192,0.06); font-size:0.93em;
-    overflow-x:auto;
+    background:rgba(197,134,192,0.06); font-size:0.93em; overflow-x:auto;
   }
   .rappel .label{
     display:flex; align-items:center; gap:8px; font-family:'Nunito',sans-serif; font-weight:bold;
@@ -300,6 +332,50 @@ setTimeout(revealPage, 6000);
 
   if(html){
     wrap.innerHTML = html;
+
+    // ── Transformer les .rappel en blocs collapsibles ────────────
+    wrap.querySelectorAll('.rappel').forEach(function(rappel) {
+      // Récupère le label et le reste du contenu
+      var labelEl = rappel.querySelector('.label');
+      var labelText = labelEl ? labelEl.textContent.trim() : 'Rappel de cours';
+
+      // Clone le contenu intérieur (sans le .label)
+      var bodyContent = document.createElement('div');
+      Array.from(rappel.childNodes).forEach(function(node) {
+        if(node !== labelEl) bodyContent.appendChild(node.cloneNode(true));
+      });
+
+      // Crée la structure toggle
+      var wrap_div = document.createElement('div');
+      wrap_div.className = 'rappel-wrap';
+
+      var btn = document.createElement('button');
+      btn.className = 'rappel-toggle';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.innerHTML =
+        '<span class="rappel-toggle-left">' + labelText + '</span>'
+        + '<span class="rappel-arrow">▾</span>';
+
+      var body = document.createElement('div');
+      body.className = 'rappel-body';
+      body.appendChild(bodyContent);
+
+      btn.addEventListener('click', function() {
+        var isOpen = wrap_div.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if(isOpen && window.MathJax && MathJax.typesetPromise) {
+          MathJax.typesetPromise([body]).catch(function(){});
+        }
+      });
+
+      wrap_div.appendChild(btn);
+      wrap_div.appendChild(body);
+
+      // Remplace le .rappel original
+      rappel.parentNode.replaceChild(wrap_div, rappel);
+    });
+    // ─────────────────────────────────────────────────────────────
+
     function typesetWhenReady(){
       if(window.MathJax && MathJax.typesetPromise){
         MathJax.startup.promise.then(function(){
