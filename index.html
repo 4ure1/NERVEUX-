@@ -1,1343 +1,1250 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<script src="/JS/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAC D 2024 — Mathématiques — Sujet et Correction</title>
-<style>
-  :root{
-    --bg:#252526; --card:#2d2d30; --border:#3e3e42;
-    --text:#d4d4d4; --text2:#9d9d9d;
-    --blue:#4fc1ff; --purple:#c586c0; --orange:#ce9178;
-    --green:#6a9955; --yellow:#dcdcaa; --red:#f48771;
-  }
-  *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-
-  /* Scroll horizontal conservé, mais barre de défilement invisible
-     (le doigt/la souris peuvent toujours faire défiler) */
-  .step, .result, .note, table.data, .diagram-wrap, mjx-container[display="true"]{
-    scrollbar-width:none;      /* Firefox */
-    -ms-overflow-style:none;   /* vieux Edge/IE */
-  }
-  .step::-webkit-scrollbar,
-  .result::-webkit-scrollbar,
-  .note::-webkit-scrollbar,
-  table.data::-webkit-scrollbar,
-  .diagram-wrap::-webkit-scrollbar,
-  mjx-container[display="true"]::-webkit-scrollbar{
-    display:none;              /* Safari/Chrome/iOS */
-    height:0; width:0;
-  }
-
-  body{
-    background:var(--bg); color:var(--text);
-    font-family:Georgia,Cambria,serif;
-    line-height:1.65; max-width:920px; margin:0 auto; padding:24px 16px 80px;
-    overflow-x:hidden;
-    opacity:0; transition:opacity .4s ease;
-  }
-  body.ready{opacity:1;}
-  #mj-loader{
-    position:fixed; inset:0; background:#252526; z-index:999;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    font-family:'Trebuchet MS',sans-serif; color:#9d9d9d; gap:14px; transition:opacity .35s ease;
-  }
-  #mj-loader.hide{opacity:0; pointer-events:none;}
-  .mj-spinner{
-    width:34px; height:34px; border-radius:50%;
-    border:3px solid #3e3e42; border-top-color:#4fc1ff;
-    animation:mjspin .8s linear infinite;
-  }
-  @keyframes mjspin{to{transform:rotate(360deg);}}
-  @keyframes fadeSlide{ from{opacity:0; transform:translateY(-10px);} to{opacity:1; transform:translateY(0);} }
-  h1{
-    text-align:center; font-family:'Trebuchet MS',sans-serif;
-    font-size:1.85em; font-weight:700; letter-spacing:1px;
-    background:linear-gradient(90deg,var(--blue),var(--purple),var(--orange),var(--green),var(--yellow),var(--blue));
-    background-size:400% 100%;
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-    animation:flow 6s linear infinite; margin-bottom:6px;
-  }
-  @keyframes flow{
-    0%{background-position:0% 50%;}
-    100%{background-position:400% 50%;}
-  }
-  .subtitle{text-align:center; font-style:italic; color:var(--text2); margin-bottom:30px; font-family:'Trebuchet MS',sans-serif;}
-  h2{
-    font-family:'Trebuchet MS',sans-serif; color:var(--blue);
-    border-bottom:2px solid var(--border); padding-bottom:8px;
-    margin-top:52px; letter-spacing:0.5px; font-size:1.35em;
-  }
-  h3{font-family:'Trebuchet MS',sans-serif; color:var(--purple); margin-top:34px; font-size:1.15em;}
-  h4{font-family:'Trebuchet MS',sans-serif; color:var(--orange); margin-top:26px; font-size:1.05em;}
-  .infoblock{
-    background:var(--card); border:1px solid var(--border); border-radius:8px;
-    padding:16px 20px; margin:20px 0; font-family:'Trebuchet MS',sans-serif; font-size:0.9em;
-  }
-  .infoblock table{width:100%; border-collapse:collapse;}
-  .infoblock td{padding:4px 8px; color:var(--text2);}
-  .infoblock td.val{color:var(--text); font-weight:bold;}
-  .step{
-    background:var(--card); border-left:5px solid var(--blue);
-    border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0;
-    overflow-x:auto;
-  }
-  .step .label{
-    display:block; font-family:'Trebuchet MS',sans-serif; font-weight:bold;
-    color:var(--blue); margin-bottom:8px; text-transform:uppercase; font-size:0.85em; letter-spacing:0.5px;
-  }
-  .step.alt{border-left-color:var(--purple);}
-  .step.alt .label{color:var(--purple);}
-  .result{
-    background:linear-gradient(135deg, rgba(79,193,255,0.08), rgba(197,134,192,0.08));
-    border:2px solid var(--blue); border-radius:8px; padding:16px; margin:18px 0;
-    overflow-x:auto;
-  }
-  .result .label{
-    display:block; font-family:'Trebuchet MS',sans-serif; font-weight:bold;
-    color:var(--yellow); text-transform:uppercase; font-size:0.8em; letter-spacing:1px; margin-bottom:8px;
-  }
-  .note{
-    border:2px dashed var(--yellow); border-radius:8px; padding:14px 16px; margin:18px 0;
-    background:rgba(220,220,170,0.04); font-size:0.95em;
-    overflow-x:auto;
-  }
-  .note .label{
-    display:block; font-family:'Trebuchet MS',sans-serif; font-weight:bold;
-    color:var(--yellow); margin-bottom:6px;
-  }
-  .rappel{
-    border:1px solid var(--purple); border-radius:8px; padding:14px 16px; margin:18px 0 24px;
-    background:rgba(197,134,192,0.06); font-size:0.93em;
-    overflow-x:auto;
-  }
-  .rappel .label{
-    display:flex; align-items:center; gap:8px; font-family:'Trebuchet MS',sans-serif; font-weight:bold;
-    color:var(--purple); text-transform:uppercase; font-size:0.78em; letter-spacing:1px; margin-bottom:8px;
-  }
-  .rappel .label::before{content:'💡'; font-size:1.1em;}
-  .rappel ul{margin:6px 0 0; padding-left:20px;}
-  .rappel li{margin-bottom:4px;}
-  .points{color:var(--text2); font-style:italic; font-size:0.9em;}
-  table.data{border-collapse:collapse; width:100%; margin:16px 0; font-family:'Trebuchet MS',sans-serif; font-size:0.85em; display:block; overflow-x:auto; white-space:nowrap;}
-  table.data th, table.data td{border:1px solid var(--border); padding:7px 9px; text-align:center;}
-  table.data th{background:#2d2d30; color:var(--blue);}
-  table.data td{color:var(--text);}
-  .diagram-wrap{
-    background:var(--card); border:1px solid var(--border); border-radius:8px;
-    padding:12px; margin:20px 0; text-align:center; overflow-x:auto;
-  }
-  .diagram-wrap svg{max-width:100%; height:auto; display:block; margin:0 auto;}
-  .diagram-cap{color:var(--text2); font-style:italic; font-size:0.85em; margin-top:8px;}
-
-  /* Graphiques interactifs (canvas natif, sans dépendance externe) pour les courbes de fonctions */
-  .plot-wrap{
-    background:var(--card); border:1px solid var(--border); border-radius:8px;
-    padding:12px; margin:20px 0; text-align:center;
-  }
-  .plot-canvas-box{
-    width:100%; height:420px; border:1px solid var(--border); border-radius:6px;
-    overflow:hidden; background:#232326; position:relative; touch-action:none;
-  }
-  .plot-canvas-box canvas{display:block; width:100%; height:100%; cursor:grab;}
-  .plot-canvas-box canvas:active{cursor:grabbing;}
-  .plot-hint{color:var(--text2); font-size:0.78em; font-style:italic; margin-top:6px;}
-  .plot-legend{display:flex; flex-wrap:wrap; justify-content:center; gap:10px 18px; margin-top:8px; font-family:'Trebuchet MS',sans-serif; font-size:0.78em; color:var(--text2);}
-  .plot-legend span.swatch{display:inline-block; width:14px; height:3px; margin-right:5px; vertical-align:middle; border-radius:2px;}
-  .plot-legend span.swatch.dash{background-image:linear-gradient(90deg, currentColor 60%, transparent 40%); background-size:6px 3px;}
-  @media (max-width:600px){ .plot-canvas-box{height:320px;} }
-
-  /* Empêche les formules larges (ex: \begin{cases}) d'être coupées sur mobile :
-     on les rend scrollables horizontalement au lieu de les tronquer. */
-  mjx-container[display="true"]{
-    overflow-x:auto; overflow-y:hidden; max-width:100%;
-    -webkit-overflow-scrolling:touch;
-  }
-
-  /* Scroll horizontal actif partout où le contenu peut déborder (formules,
-     steps, tableaux), mais sans afficher la barre de défilement. */
-  mjx-container[display="true"],
-  .step, .result, .note, .rappel, table.data, .diagram-wrap{
-    scrollbar-width:none;      /* Firefox */
-    -ms-overflow-style:none;   /* anciens Edge/IE */
-  }
-  mjx-container[display="true"]::-webkit-scrollbar,
-  .step::-webkit-scrollbar, .result::-webkit-scrollbar,
-  .note::-webkit-scrollbar, .rappel::-webkit-scrollbar,
-  table.data::-webkit-scrollbar, .diagram-wrap::-webkit-scrollbar{
-    display:none; height:0; width:0;  /* Chrome/Safari/iOS */
-  }
-  .signature{color:var(--text2); text-align:right; font-size:0.85em; margin-top:60px; font-family:'Trebuchet MS',sans-serif;}
-
-  details.correction{
-    margin:22px 0 44px; border:1px solid var(--border); border-radius:10px;
-    background:var(--card); overflow:hidden;
-  }
-  details.correction > summary{
-    cursor:pointer; list-style:none; padding:13px 18px;
-    font-family:'Trebuchet MS',sans-serif; font-weight:700; font-size:0.95em;
-    color:#1c1c1e; background:linear-gradient(90deg,var(--blue),var(--purple));
-    display:flex; align-items:center; justify-content:space-between; gap:10px;
-    -webkit-user-select:none; user-select:none;
-    -webkit-tap-highlight-color:transparent; transition:filter .15s ease;
-  }
-  details.correction > summary:active{filter:brightness(0.9);}
-  details.correction[open] > .corr-body{animation:fadeSlide .35s ease;}
-  details.correction > summary::-webkit-details-marker{display:none;}
-  details.correction > summary::marker{content:'';}
-  details.correction > summary .arrow{
-    display:inline-block; transition:transform .25s ease; font-size:1.1em; flex-shrink:0;
-  }
-  details.correction[open] > summary .arrow{transform:rotate(180deg);}
-  details.correction > summary .txt{flex:1;}
-  details.correction > summary .txt::before{content:'▶ Afficher la correction';}
-  details.correction[open] > summary .txt::before{content:'▼ Correction';}
-  .corr-body{padding:18px 16px 6px;}
-
-  @media (max-width:600px){
-    body{padding:18px 10px 70px; font-size:0.96em;}
-    h1{font-size:1.4em;}
-    h2{font-size:1.15em; margin-top:40px;}
-    h3{font-size:1.05em;}
-    .step, .result, .note, .rappel{padding:12px 12px;}
-    details.correction > summary{padding:11px 12px; font-size:0.85em;}
-    mjx-container[display="true"]{font-size:88% !important;}
-  }
-</style>
+<title>NERVEUX — Exercices & Problèmes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <script>
-  window.MathJax = {
-    tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
-    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] },
-    startup: {
-      pageReady: function () {
-        return MathJax.startup.defaultPageReady().then(revealPage);
-      }
-    }
+  MathJax = {
+    tex: { inlineMath:[['\\(','\\)']], displayMath:[['\\[','\\]']] },
+    options: { skipHtmlTags:['script','noscript','style','textarea','pre'] },
+    startup: { typeset: false }
   };
-
-  function revealPage(){
-    document.body.classList.add('ready');
-    var l = document.getElementById('mj-loader');
-    if(l){ l.classList.add('hide'); setTimeout(function(){ l.remove(); }, 400); }
-  }
-
-  // Filet de sécurité : si MathJax échoue totalement (réseau bloqué),
-  // on affiche quand même la page après 6s plutôt que de la laisser invisible.
-  setTimeout(revealPage, 6000);
-
-  // Plusieurs CDN en cascade : si le premier échoue (réseau lent/bloqué
-  // sur mobile), on tente automatiquement le suivant. C'est ce qui évite
-  // que les formules ($...$) restent affichées en texte brut.
-  (function loadMathJax(sources, i){
-    if (i >= sources.length) { revealPage(); return; }
-    var s = document.createElement('script');
-    s.id = 'MathJax-script';
-    s.src = sources[i];
-    s.async = true;
-    s.onerror = function(){ loadMathJax(sources, i + 1); };
-    document.head.appendChild(s);
-  })([
-    'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js',
-    'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js',
-    'https://unpkg.com/mathjax@3/es5/tex-svg.js'
-  ], 0);
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script src="JS/exercises.js"></script>
+<script src="JS/new_exercises_terminale_d.js"></script>
+<script src="JS/bac_exams_2000_2004.js"></script>
+<script src="JS/bac_exams_2019_2022.js"></script>
+<script src="JS/bac_exams_2023_2025.js"></script>
+<script>
+  // Merge all BAC exam arrays into one
+  const BAC_EXAMS = [
+    ...(typeof BAC_EXAMS_2000_2004 !== 'undefined' ? BAC_EXAMS_2000_2004 : []),
+    ...(typeof BAC_EXAMS_2019_2022 !== 'undefined' ? BAC_EXAMS_2019_2022 : []),
+    ...(typeof BAC_EXAMS_2023_2025 !== 'undefined' ? BAC_EXAMS_2023_2025 : []),
+  ];
 </script>
 <script>
-  // Chargement partagé de l'API Desmos, avec repli automatique si indisponible
-  // (réseau bloqué, ouverture en fichier local, clé refusée, etc.)
-  window.__desmosReady = new Promise(function(resolve){
-    var done = false;
-    function finish(ok){ if(done) return; done = true; resolve(!!ok); }
-    try{
-      var s = document.createElement('script');
-      s.src = 'https://www.desmos.com/api/v1.9/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fa6f';
-      s.async = true;
-      s.onload = function(){ finish(typeof Desmos !== 'undefined'); };
-      s.onerror = function(){ finish(false); };
-      document.head.appendChild(s);
-      setTimeout(function(){ finish(typeof Desmos !== 'undefined'); }, 4000);
-    }catch(e){ finish(false); }
-  });
+  // This runs after both files are loaded
+  EXERCISES.push(...EXERCISES_TERMINALE_D);
 </script>
+<link rel="stylesheet" href="/Css/mobile.css">
+
+<style>
+:root {
+  --navy: #222d46;
+  --blue: #0b2c5f;
+  --accent: #d4a017;
+  --accent-light: #f0c040;
+  --green: #1a7a5e;
+  --red: #b83232;
+  --bg: #f0f3f9;
+  --text: #1a1a2e;
+  --card-bg: rgba(255,255,255,0.98);
+  --gold: #d4a017;
+  --gold-dim: rgba(212,160,23,0.18);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+/* ── TOPBAR (matches dashboard exactly) ── */
+.topbar {
+  background: var(--navy); color: white;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 28px; height: 64px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18); position: sticky; top: 0; z-index: 200;
+}
+.topbar-left { display: flex; align-items: center; gap: 14px; }
+.topbar-logo { height: 38px; object-fit: contain; }
+.topbar-brand { font-weight: 900; font-size: 18px; letter-spacing: 1px; color: white; text-decoration: none; }
+.topbar-right { display: flex; align-items: center; }
+.return-link {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 40px; padding: 7px 16px;
+  transition: all 0.2s;
+}
+.return-link:hover { background: rgba(255,255,255,0.14); color: white; }
+.return-link .arrow { font-size: 15px; }
+
+@media (max-width: 480px) {
+  .topbar { padding: 0 12px; }
+  .topbar-brand { font-size: 14px; }
+  .return-link { padding: 6px 11px; font-size: 12px; }
+  .return-link span:not(.arrow) { display: none; }
+}
+
+/* ── PAGE HERO ── */
+.page-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #2a3a60 60%, var(--blue) 100%);
+  padding: 56px 24px 44px; text-align: center;
+  border-bottom: 3px solid var(--accent);
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: '∑ ∫ π √ ≠ ∞ Δ θ';
+  position: absolute; top: 8px; left: 0; right: 0;
+  font-size: 80px; opacity: .04; letter-spacing: 20px; pointer-events: none;
+  color: white;
+}
+.page-hero h1 { font-family: 'Merriweather', serif; font-size: clamp(24px,5vw,40px); margin-bottom: 10px; color: white; }
+.page-hero h1 span { color: var(--accent); }
+.page-hero p { color: rgba(255,255,255,.55); font-size: 15px; max-width: 520px; margin: 0 auto 22px; }
+.hero-stats { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
+.hero-stat { font-size: 12px; color: rgba(255,255,255,.45); font-weight: 700; }
+.hero-stat span { color: var(--accent); font-size: 22px; font-weight: 900; display: block; }
+
+/* ── PROGRESS BAND ── */
+.progress-band { background: var(--navy); padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+.progress-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.bar-outer { background: rgba(255,255,255,.08); border-radius: 10px; height: 6px; margin-bottom: 5px; overflow: hidden; }
+.bar-inner { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 10px; transition: width .4s ease; width: 0%; }
+.bar-label { font-size: 11px; color: rgba(255,255,255,.35); font-weight: 700; }
+.bar-label span { color: var(--accent); }
+
+/* ── FILTERS ── */
+.filters-wrap { background: var(--navy); border-bottom: 1px solid rgba(255,255,255,.07); position: sticky; top: 64px; z-index: 100; }
+.filters-inner { max-width: 1100px; margin: 0 auto; padding: 10px 24px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.flabel { font-size: 10.5px; font-weight: 800; color: rgba(255,255,255,.28); text-transform: uppercase; letter-spacing: 1px; margin-right: 2px; }
+.filter-btn {
+  padding: 6px 15px; border-radius: 30px; border: 2px solid rgba(255,255,255,.11);
+  background: transparent; color: rgba(255,255,255,.5);
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 12px;
+  cursor: pointer; transition: all .2s; white-space: nowrap;
+}
+.filter-btn:hover { border-color: rgba(255,255,255,.3); color: white; }
+.filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(212,160,23,.1); }
+.filter-btn.d-easy.active   { border-color: var(--green); color: #4effc8; background: rgba(26,122,94,.15); }
+.filter-btn.d-medium.active { border-color: var(--accent); color: var(--accent-light); background: rgba(212,160,23,.15); }
+.filter-btn.d-hard.active   { border-color: var(--red); color: #ff8080; background: rgba(184,50,50,.15); }
+.filter-btn.bac-btn.active  { border-color: var(--gold); color: var(--gold); background: rgba(212,160,23,.12); }
+.fsep { width: 1px; height: 24px; background: rgba(255,255,255,.1); margin: 0 3px; flex-shrink: 0; }
+
+/* ── SEARCH ── */
+.search-wrap { max-width: 1100px; margin: 20px auto 0; padding: 0 24px; }
+.search-input {
+  
+  font-size: 20px;   /* increase this */
+  padding: 12px 16px;
+  width: 100%; padding: 10px 18px; border-radius: 30px;
+  border: 2px solid rgba(34,45,70,.15); background: white;
+  color: var(--navy); font-family: 'Nunito', sans-serif;
+  font-size: 14px; font-weight: 600; outline: none; transition: border-color .2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.search-input::placeholder { color: #aab; }
+.search-input:focus { border-color: var(--accent); }
+
+/* ── MAIN CONTENT ── */
+.main-content { max-width: 1100px; margin: 28px auto 100px; padding: 0 24px; }
+.section-block { margin-bottom: 6px; }
+.section-title {
+  font-family: 'Merriweather', serif; font-size: 17px; color: var(--blue);
+  margin: 38px 0 14px; display: flex; align-items: center; gap: 10px;
+}
+.section-title::after { content: ''; flex: 1; height: 1px; background: rgba(11,44,95,.15); }
+.exercise-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(295px,1fr)); gap: 16px; }
+
+/* ── EXERCISE CARD — Style B ── */
+.ex-card {
+  background: white; border-radius: 12px; padding: 16px 18px;
+  color: var(--navy); border: 1.5px solid #edf0f6;
+  box-shadow: 0 1px 6px rgba(0,0,0,.06);
+  position: relative;
+  transition: box-shadow .2s, border-color .2s;
+}
+.ex-card:hover { box-shadow: 0 5px 18px rgba(0,0,0,.11); border-color: #d0d5e6; }
+.ex-card.hidden-card { display: none !important; }
+.ex-card.done { border-color: rgba(26,122,94,.35); background: rgba(26,122,94,.02); }
+.ex-card.done .done-check { display: flex; }
+.done-check {
+  display: none; position: absolute; top: 12px; right: 14px;
+  width: 20px; height: 20px; background: var(--green); color: white;
+  border-radius: 50%; font-size: 10px; font-weight: 900;
+  align-items: center; justify-content: center;
+}
+.ex-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 7px; }
+.ex-card-title { font-size: 14px; font-weight: 800; line-height: 1.35; color: var(--navy); flex: 1; }
+.diff-badge {
+  display: inline-block; padding: 3px 10px; border-radius: 20px;
+  font-size: 10px; font-weight: 900; text-transform: uppercase;
+  letter-spacing: .6px; flex-shrink: 0; margin-top: 1px;
+}
+.badge-easy   { background: rgba(26,122,94,.1);   color: #0f5c43; }
+.badge-medium { background: rgba(212,160,23,.12); color: #7a5a00; }
+.badge-hard   { background: rgba(184,50,50,.1);   color: #8b1a1a; }
+.ex-card-desc { font-size: 12.5px; color: #6a7080; margin-bottom: 14px; line-height: 1.55; }
+.ex-card-footer { display: flex; align-items: center; justify-content: space-between; }
+.lesson-tag {
+  font-size: 10.5px; font-weight: 700; color: #aab;
+  display: flex; align-items: center; gap: 6px;
+}
+.type-pill { font-size: 9.5px; font-weight: 800; padding: 2px 7px; border-radius: 5px; background: #f0f3f9; color: #778; }
+.solve-btn {
+  background: transparent; color: var(--navy);
+  border: 1.5px solid var(--navy);
+  padding: 6px 14px; border-radius: 8px;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px;
+  cursor: pointer; transition: all .2s;
+}
+.solve-btn:hover { background: var(--navy); color: white; }
+
+/* ── MODULE TOGGLES ── */
+.mod-toggle-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin: 20px 0 0; padding: 14px 20px;
+  background: white; border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  cursor: pointer; user-select: none;
+  border-left: 4px solid var(--blue);
+  transition: box-shadow .2s, background .15s;
+}
+.mod-toggle-header:hover { background: #f8f9fd; box-shadow: 0 4px 16px rgba(0,0,0,.1); }
+.mod-toggle-header.bac { border-left-color: var(--accent); }
+.mod-toggle-header.open { border-radius: 14px 14px 0 0; }
+.mod-header-left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+.mod-header-title { font-family: 'Merriweather', serif; font-size: 15px; color: var(--navy); font-weight: 700; line-height: 1.3; flex: 1; }
+.mod-header-meta { display: flex; align-items: center; gap: 8px; flex-shrink: 0; flex-wrap: wrap; }
+.mod-count-pill { font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; background: var(--bg); color: #667; white-space: nowrap; }
+.mod-done-pill { font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; background: rgba(26,122,94,.1); color: var(--green); white-space: nowrap; display: none; }
+.mod-done-pill.visible { display: inline-block; }
+.mod-toggle-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 20px;
+  border: 1.5px solid var(--blue); background: transparent;
+  color: var(--blue); font-family: 'Nunito', sans-serif;
+  font-weight: 800; font-size: 12px; cursor: pointer;
+  transition: all .2s; white-space: nowrap; flex-shrink: 0;
+}
+.mod-toggle-btn:hover { background: var(--blue); color: white; }
+.mod-toggle-header.bac .mod-toggle-btn { border-color: var(--accent); color: var(--accent); }
+.mod-toggle-header.bac .mod-toggle-btn:hover { background: var(--accent); color: var(--navy); }
+.mod-toggle-icon { font-size: 15px; line-height: 1; }
+.mod-toggle-body {
+  overflow: hidden; transition: max-height .38s ease, opacity .28s ease;
+  background: white; border-radius: 0 0 14px 14px;
+  border-left: 4px solid var(--blue);
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+.mod-toggle-body.bac { border-left-color: var(--accent); }
+.mod-toggle-body.nrv-open  { max-height: none; opacity: 1; }
+.mod-toggle-body.nrv-closed { max-height: 0 !important; opacity: 0; }
+.mod-toggle-body .exercise-grid { padding: 16px 16px 20px; }
+.mod-toggle-body .bac-grid { padding: 16px 16px 20px; }
+.section-block .section-title, .section-block .bac-section-title { display: none; }
+.expand-bar {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: 10px; max-width: 1100px; margin: 20px auto 0; padding: 0 24px;
+}
+.expand-all-btn {
+  padding: 6px 15px; border-radius: 20px;
+  border: 1.5px solid rgba(34,45,70,.2); background: white;
+  color: var(--navy); font-family: 'Nunito', sans-serif;
+  font-weight: 700; font-size: 12px; cursor: pointer;
+  transition: all .2s; box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.expand-all-btn:hover { background: var(--navy); color: white; border-color: var(--navy); }
+@media (max-width: 600px) {
+  .mod-header-title { font-size: 13px; }
+  .mod-toggle-btn span:not(.mod-toggle-icon) { display: none; }
+  .mod-toggle-btn { padding: 6px 10px; }
+}
+
+/* ── BAC SECTION ── */
+.bac-section-title {
+  font-family: 'Merriweather', serif; font-size: 17px; color: var(--accent);
+  margin: 38px 0 14px; display: flex; align-items: center; gap: 10px;
+}
+.bac-section-title::after { content: ''; flex: 1; height: 1px; background: var(--gold-dim); }
+.bac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 18px; }
+/* Tableau de variation */
+.vtab{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0;}
+.vtab td,.vtab th{border:1px solid #aaa;padding:5px 8px;text-align:center;min-width:36px;}
+.vtab tr:first-child th{background:#f0f3fa;font-weight:800;}
+.vtab .arr-up{color:#1a7a5e;font-size:16px;line-height:1;}
+.vtab .arr-dn{color:#b83232;font-size:16px;line-height:1;}
+.vtab .val{font-weight:700;}
+.vtab .zero{font-weight:800;color:#333;}
+.vtab .pm{font-size:11px;color:#888;}
+.vtab{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0;}
+.vtab td,.vtab th{border:1px solid #aaa;padding:5px 8px;text-align:center;min-width:36px;}
+.vtab tr:first-child th{background:#f0f3fa;font-weight:800;}
+.vtab .arr-up{color:#1a7a5e;font-size:16px;}
+.vtab .arr-dn{color:#b83232;font-size:16px;}
+.vtab .val{font-weight:700;}
+.vtab .zero{font-weight:800;}
+.vtab .pm{font-size:11px;color:#888;}
+/* ── BAC CARD ── */
+.bac-card {
+  border-radius: 16px; overflow: hidden;
+  border: 2px solid rgba(212,160,23,.2);
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  border-top: 4px solid var(--accent);
+  transition: transform .22s, box-shadow .22s, border-color .22s;
+  position: relative;
+}
+.bac-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,.12); border-color: rgba(212,160,23,.5); }
+.bac-card.hidden-card { display: none !important; }
+.bac-card-header { padding: 16px 18px 12px; border-bottom: 1px solid rgba(212,160,23,.12); }
+.bac-meta { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; margin-bottom: 9px; }
+.bac-year { background: rgba(212,160,23,.12); color: #7a5a00; border: 1px solid rgba(212,160,23,.3); border-radius: 20px; font-size: 11px; font-weight: 900; padding: 3px 10px; }
+.bac-serie { background: var(--bg); color: #555; border: 1px solid rgba(0,0,0,.08); border-radius: 20px; font-size: 11px; font-weight: 900; padding: 3px 10px; }
+.bac-tour { font-size: 10px; font-weight: 700; color: #999; padding: 3px 8px; border-radius: 8px; background: var(--bg); }
+.bac-card-title { font-size: 13px; font-weight: 800; color: var(--navy); line-height: 1.4; }
+.bac-card-body { padding: 12px 18px 16px; }
+.bac-topics { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 13px; }
+.bac-topic { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 7px; background: var(--bg); color: #667; }
+.bac-card-footer { display: flex; align-items: center; justify-content: space-between; }
+.bac-parts-count { font-size: 11px; color: #aaa; font-weight: 700; }
+.bac-open-btn {
+  background: var(--navy); color: white;
+  border: none; padding: 7px 16px; border-radius: 9px;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12px;
+  cursor: pointer; transition: background .2s;
+}
+.bac-open-btn:hover { background: var(--blue); }
+
+/* ── NO RESULTS ── */
+.no-results { text-align: center; color: #aab; padding: 70px 0; font-size: 15px; display: none; }
+.no-results.show { display: block; }
+
+/* ── EXERCISE MODAL ── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,.65);
+  z-index: 1000; align-items: center; justify-content: center;
+  padding: 20px; backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: white; border-radius: 20px; max-width: 680px; width: 100%;
+  max-height: 90vh; overflow-y: auto; color: var(--navy);
+  padding: 36px 36px 26px; position: relative;
+  animation: modalIn .22s ease;
+}
+@keyframes modalIn { from { transform: translateY(18px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes fadeIn   { from { opacity: 0; } to { opacity: 1; } }
+.modal-close { position: absolute; top: 14px; right: 18px; font-size: 22px; cursor: pointer; color: #bbb; background: none; border: none; font-weight: 900; transition: color .15s; }
+.modal-close:hover { color: var(--navy); }
+.modal-badge { margin-bottom: 10px; }
+.modal h2 { font-family: 'Merriweather', serif; font-size: 19px; margin-bottom: 16px; line-height: 1.45; color: var(--navy); }
+.problem-box { background: var(--bg); border-left: 4px solid var(--navy); border-radius: 0 12px 12px 0; padding: 16px 20px; margin-bottom: 20px; font-size: 14px; line-height: 1.75; }
+.solution-toggle { background: var(--navy); color: white; border: none; padding: 11px 24px; border-radius: 11px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13.5px; cursor: pointer; width: 100%; margin-bottom: 14px; transition: background .2s; }
+.solution-toggle:hover { background: var(--blue); }
+.solution-box { display: none; background: rgba(26,122,94,.05); border: 1.5px solid rgba(26,122,94,.22); border-radius: 12px; padding: 16px 20px; font-size: 14px; line-height: 1.85; animation: fadeIn .25s ease; }
+.solution-box.open { display: block; }
+.solution-box h4 { font-weight: 900; color: var(--green); margin-bottom: 10px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .9px; }
+.modal-footer { display: flex; justify-content: flex-end; margin-top: 16px; }
+.mark-done-btn { background: transparent; border: 2px solid var(--green); color: var(--green); padding: 8px 18px; border-radius: 10px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12.5px; cursor: pointer; transition: all .2s; }
+.mark-done-btn:hover, .mark-done-btn.done { background: var(--green); color: white; }
+.qcm-options { display: flex; flex-direction: column; gap: 9px; margin: 14px 0; }
+.qcm-option { padding: 11px 16px; border-radius: 10px; border: 2px solid #e0e4ef; cursor: pointer; font-size: 14px; font-weight: 600; transition: all .15s; background: white; color: var(--navy); text-align: left; font-family: 'Nunito', sans-serif; }
+.qcm-option:hover:not(:disabled) { border-color: var(--navy); background: var(--bg); }
+.qcm-option.correct { border-color: var(--green); background: rgba(26,122,94,.07); color: var(--green); }
+.qcm-option.wrong   { border-color: var(--red); background: rgba(184,50,50,.07); color: var(--red); }
+.qcm-feedback { font-size: 13px; font-weight: 700; margin-top: 8px; min-height: 20px; }
+.qcm-feedback.correct { color: var(--green); }
+.qcm-feedback.wrong   { color: var(--red); }
+
+/* ── BAC MODAL ── */
+.bac-modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,.72);
+  z-index: 1000; align-items: center; justify-content: center;
+  padding: 20px; backdrop-filter: blur(5px);
+}
+.bac-modal-overlay.open { display: flex; }
+.bac-modal {
+  background: white; border: 2px solid rgba(212,160,23,.25); border-radius: 20px;
+  max-width: 760px; width: 100%; max-height: 92vh; overflow-y: auto;
+  color: var(--navy); position: relative; animation: modalIn .22s ease;
+}
+.bac-modal-head {
+  padding: 22px 26px 0; border-bottom: 1px solid rgba(212,160,23,.15);
+  position: sticky; top: 0; background: white; z-index: 10; padding-bottom: 0;
+}
+.bac-modal-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.bac-modal-title { font-family: 'Merriweather', serif; font-size: 16px; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 14px; }
+.bac-modal-close { position: absolute; top: 16px; right: 20px; font-size: 20px; cursor: pointer; color: #bbb; background: none; border: none; font-weight: 900; transition: color .15s; }
+.bac-modal-close:hover { color: var(--navy); }
+.bac-parts-nav { display: flex; gap: 6px; flex-wrap: wrap; padding-bottom: 14px; }
+.bac-part-tab {
+  padding: 7px 16px; border-radius: 9px; border: 1.5px solid rgba(212,160,23,.2);
+  background: transparent; color: #aaa;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 12px;
+  cursor: pointer; transition: all .18s; white-space: nowrap;
+}
+.bac-part-tab:hover { border-color: rgba(212,160,23,.4); color: var(--accent); }
+.bac-part-tab.active { background: rgba(212,160,23,.1); border-color: var(--accent); color: var(--accent); }
+.bac-part-content { display: none; padding: 22px 26px 28px; }
+.bac-part-content.active { display: block; }
+.bac-part-label { font-size: 11px; font-weight: 900; color: var(--accent); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(212,160,23,.15); }
+.bac-problem-box { background: var(--bg); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 16px 18px; font-size: 14px; line-height: 1.82; color: var(--navy); margin-bottom: 20px; }
+.bac-problem-box table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+.bac-problem-box th, .bac-problem-box td { border: 1px solid #dde; padding: 6px 10px; font-size: 12.5px; }
+.bac-problem-box th { background: var(--bg); }
+.bac-correction-btn { width: 100%; padding: 12px 24px; border-radius: 12px; border: 1.5px solid rgba(212,160,23,.3); background: rgba(212,160,23,.07); color: var(--accent); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px; cursor: pointer; transition: all .2s; margin-bottom: 14px; }
+.bac-correction-btn:hover:not(:disabled) { background: rgba(212,160,23,.15); border-color: var(--accent); }
+.bac-correction-btn.revealed { background: rgba(26,122,94,.07); border-color: var(--green); color: var(--green); }
+.bac-correction-btn:disabled { opacity: .38; cursor: not-allowed; }
+.correction-gate { display: none; background: rgba(212,160,23,.05); border: 1.5px solid rgba(212,160,23,.2); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; text-align: center; }
+.correction-gate.show { display: block; }
+.correction-gate p { font-size: 13.5px; color: #667; margin-bottom: 14px; line-height: 1.55; }
+.correction-gate small { font-size: 12px; color: #aab; }
+.gate-btns { display: flex; gap: 10px; justify-content: center; }
+.gate-yes { background: var(--accent); color: var(--navy); border: none; padding: 9px 24px; border-radius: 9px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 13px; cursor: pointer; transition: opacity .2s; }
+.gate-yes:hover { opacity: .85; }
+.gate-no { background: transparent; color: #888; border: 1.5px solid #dde; padding: 9px 24px; border-radius: 9px; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px; cursor: pointer; transition: all .2s; }
+.gate-no:hover { border-color: #bbc; color: var(--navy); }
+.bac-correction-box { display: none; background: rgba(26,122,94,.05); border: 1.5px solid rgba(26,122,94,.22); border-radius: 12px; padding: 18px 20px; font-size: 14px; line-height: 1.85; color: var(--navy); animation: fadeIn .3s ease; }
+.bac-correction-box.open { display: block; }
+.bac-correction-box h4 { font-weight: 900; color: var(--green); margin-bottom: 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* ── FOOTER (matches dashboard) ── */
+.footer {
+  background: var(--navy); color: white; padding: 24px 32px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px; margin-top: 40px;
+}
+.footer-left { display: flex; flex-direction: column; gap: 6px; }
+.footer-brand { font-weight: 800; font-size: 16px; color: white; }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,.7); }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-links a { color: white; text-decoration: none; font-size: 13px; font-weight: 700; transition: opacity .2s; }
+.footer-links a:hover { opacity: .7; }
+/* ── FEEDBACK SYSTEM ── */
+.report-btn {
+  background: transparent; border: 1.5px solid rgba(184,50,50,.25);
+  color: #b83232; padding: 7px 14px; border-radius: 9px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 12px;
+  cursor: pointer; transition: all .2s; margin-left: auto;
+}
+.report-btn:hover { background: rgba(184,50,50,.07); border-color: var(--red); }
+
+.float-feedback {
+  position: fixed; bottom: 28px; right: 28px; z-index: 500;
+  background: var(--navy); color: white; border: none;
+  border-radius: 50px; padding: 12px 20px;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px;
+  cursor: pointer; box-shadow: 0 4px 18px rgba(0,0,0,.22);
+  display: flex; align-items: center; gap: 8px;
+  transition: background .2s, transform .2s;
+}
+.float-feedback:hover { background: var(--blue); transform: translateY(-2px); }
+
+.feedback-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6);
+  z-index: 2000; align-items: center; justify-content: center;
+  padding: 20px; backdrop-filter: blur(4px);
+}
+.feedback-overlay.open { display: flex; }
+.feedback-modal {
+  background: white; border-radius: 18px; max-width: 520px; width: 100%;
+  padding: 32px; position: relative; animation: modalIn .22s ease;
+  color: var(--navy);
+}
+.feedback-modal h3 {
+  font-family: 'Merriweather', serif; font-size: 18px;
+  margin-bottom: 6px; color: var(--navy);
+}
+.feedback-modal .feedback-sub {
+  font-size: 13px; color: #888; margin-bottom: 22px;
+}
+.feedback-context {
+  background: var(--bg); border-radius: 8px; padding: 10px 14px;
+  font-size: 12.5px; color: #667; margin-bottom: 18px;
+  border-left: 3px solid var(--accent);
+}
+.feedback-types {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+}
+.ftype-btn {
+  padding: 7px 14px; border-radius: 20px;
+  border: 2px solid #e0e4ef; background: white;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 12px;
+  cursor: pointer; color: #667; transition: all .18s;
+}
+.ftype-btn:hover { border-color: var(--navy); color: var(--navy); }
+.ftype-btn.selected { border-color: var(--navy); background: var(--navy); color: white; }
+.feedback-textarea {
+  width: 100%; min-height: 110px; padding: 12px 14px;
+  border: 2px solid #e0e4ef; border-radius: 10px; resize: vertical;
+  font-family: 'Nunito', sans-serif; font-size: 14px; color: var(--navy);
+  outline: none; transition: border-color .2s;
+}
+.feedback-textarea:focus { border-color: var(--accent); }
+.feedback-textarea::placeholder { color: #bbc; }
+.feedback-actions {
+  display: flex; justify-content: flex-end; gap: 10px; margin-top: 16px;
+}
+.feedback-cancel {
+  background: transparent; border: 1.5px solid #dde; color: #888;
+  padding: 9px 20px; border-radius: 9px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px;
+  cursor: pointer; transition: all .2s;
+}
+.feedback-cancel:hover { border-color: #bbc; color: var(--navy); }
+.feedback-submit {
+  background: var(--navy); color: white; border: none;
+  padding: 9px 24px; border-radius: 9px;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px;
+  cursor: pointer; transition: background .2s;
+}
+.feedback-submit:hover { background: var(--blue); }
+.feedback-submit:disabled { opacity: .5; cursor: not-allowed; }
+.feedback-success {
+  text-align: center; padding: 20px 0 8px;
+  font-size: 15px; color: var(--green); font-weight: 800;
+}
+.feedback-success .fs-icon { font-size: 40px; display: block; margin-bottom: 10px; }
+</style>
 </head>
 <body>
 
-<div id="mj-loader"><div class="mj-spinner"></div><div>Chargement des formules…</div></div>
+<!-- TOPBAR — same format as dashboard -->
+<header class="topbar">
+  <div class="topbar-left">
+    <span class="topbar-brand">NERVEUX</span>
+  </div>
+  <div class="topbar-right">
+    <a href="dashboard.html" class="return-link">
+      <span class="arrow">←</span>
+      <span>Retour à l'accueil</span>
+    </a>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>Exercices <span>&amp; Problèmes</span></h1>
+  <p>Par module, par difficulté — avec solutions détaillées et QCM interactifs. Entraîne-toi comme pour le BAC.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span id="stat-total">0</span>exercices</div>
+    <div class="hero-stat"><span id="stat-done">0</span>résolus</div>
+    <div class="hero-stat"><span id="stat-modules">0</span>modules</div>
+    <div class="hero-stat"><span id="stat-bac">0</span>Sujets BAC</div>
+  </div>
+</div>
+
+<div class="progress-band">
+  <div class="progress-inner">
+    <div class="bar-outer"><div class="bar-inner" id="prog-bar"></div></div>
+    <div class="bar-label">Progression : <span id="prog-label">0 / 0 complétés</span></div>
+  </div>
+</div>
+
+<div class="filters-wrap">
+  <div class="filters-inner">
+    <span class="flabel">Voir :</span>
+    <button class="filter-btn active" onclick="applyFilter('all',this)">Tout</button>
+    <div class="fsep"></div>
+    <span class="flabel">Difficulté :</span>
+    <button class="filter-btn d-easy"   onclick="applyFilter('easy',this)">🟢 Facile</button>
+    <button class="filter-btn d-medium" onclick="applyFilter('medium',this)">🟡 Moyen</button>
+    <button class="filter-btn d-hard"   onclick="applyFilter('hard',this)">🔴 Difficile</button>
+    <div class="fsep"></div>
+    <span class="flabel">Type :</span>
+    <button class="filter-btn" onclick="applyFilter('qcm',this)">QCM</button>
+    <button class="filter-btn" onclick="applyFilter('written',this)">Rédigé</button>
+    <div class="fsep"></div>
+    <button class="filter-btn bac-btn" onclick="applyFilter('bac',this)">🎓 BAC</button>
+    <button class="filter-btn" onclick="applyFilter('todo',this)"> À faire</button>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <input class="search-input" type="text" id="search-box"
+         placeholder="⌕  Rechercher un exercice ou un sujet…" 
+         oninput="applySearch(this.value)">
+</div>
+
+<div class="expand-bar">
+  <button class="expand-all-btn" id="expand-all-btn" onclick="toggleAllModules()">+ Tout développer</button>
+</div>
+
+<div class="main-content" id="main-content"></div>
+
+<!-- EXERCISE MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeOnBg(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-badge" id="m-badge"></div>
+    <h2 id="m-title"></h2>
+    <div class="problem-box" id="m-problem"></div>
+    <div id="m-qcm"></div>
+    <button class="solution-toggle" id="m-sol-btn" onclick="toggleSolution()">Voir la solution →</button>
+    <div class="solution-box" id="m-solution"></div>
+   <div class="modal-footer" style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+  <button class="mark-done-btn" id="m-done-btn" onclick="toggleDone()">✓ Marquer comme résolu</button>
+  <button class="report-btn" onclick="openFeedback('exercise')">⚑ Signaler</button>
+</div>
+  </div>
+</div>
+
+<!-- BAC MODAL -->
+<div class="bac-modal-overlay" id="bac-modal-overlay" onclick="closeBacOnBg(event)">
+  <div class="bac-modal" id="bac-modal">
+    <button class="bac-modal-close" onclick="closeBacModal()">✕</button>
+    <div class="bac-modal-head">
+      <div class="bac-modal-meta" id="bm-meta"></div>
+      <div class="bac-modal-title" id="bm-title"></div>
+      <div class="bac-parts-nav" id="bm-tabs"></div>
+    </div>
+    <div id="bm-parts"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-left">
+    <div class="footer-brand">NERVEUX</div>
+    <div class="footer-copy">© 2026 NERVEUX · Maths & Physique pour les lycéens du Burkina Faso</div>
+  </div>
+  <div class="footer-links">
+    <a href="math.html">Maths</a>
+    <a href="exercises.html">Exercices</a>
+    <a href="about1.html">À propos</a>
+    <a href="privacy1.html">Politique de confidentialité</a>
+    <a href="terms1.html">Conditions d'utilisation</a>
+  </div>
+</footer>
 
 <script>
-/* ============================================================
-   Moteur de tracé mathématique — canvas natif, aucune dépendance
-   externe (pas d'API tierce, fonctionne hors-ligne / fichier local).
-   Zoom à la molette / pincement, déplacement à la souris / au doigt.
-   ============================================================ */
-function renderMathPlot(canvasId, opts){
-  var box = document.getElementById(canvasId);
-  if(!box) return;
-  var canvas = document.createElement('canvas');
-  box.appendChild(canvas);
-  var ctx = canvas.getContext('2d');
+const DONE_KEY = 'nerveux_done_v2';
+const getDone  = () => { try{ return JSON.parse(localStorage.getItem(DONE_KEY)||'{}'); }catch(e){ return {}; }};
+const saveDone = d => localStorage.setItem(DONE_KEY, JSON.stringify(d));
 
-  var view = { xmin: opts.xmin, xmax: opts.xmax, ymin: opts.ymin, ymax: opts.ymax };
-  var W, H, dpr;
+const BADGE = {
+  easy:   '<span class="diff-badge badge-easy">Facile</span>',
+  medium: '<span class="diff-badge badge-medium">Moyen</span>',
+  hard:   '<span class="diff-badge badge-hard">Difficile</span>',
+};
 
-  function resize(){
-    dpr = window.devicePixelRatio || 1;
-    W = box.clientWidth; H = box.clientHeight;
-    canvas.width = W*dpr; canvas.height = H*dpr;
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    draw();
+function buildDOM() {
+  const main = document.getElementById('main-content');
+  main.innerHTML = '';
+
+  const grouped = {};
+  Object.keys(MODULES).forEach(k => grouped[k] = []);
+  EXERCISES.forEach(ex => { if(grouped[ex.module] !== undefined) grouped[ex.module].push(ex); });
+
+  Object.entries(MODULES).forEach(([modKey, modTitle]) => {
+    const list = grouped[modKey];
+    if(!list || list.length === 0) return;
+
+    const block = document.createElement('div');
+    block.className = 'section-block';
+    block.dataset.section = modKey;
+    block.dataset.kind = 'exercise';
+
+    const header = document.createElement('div');
+    header.className = 'mod-toggle-header';
+    header.dataset.target = 'body-' + modKey;
+    header.innerHTML = `
+      <div class="mod-header-left">
+        <div class="mod-header-title">${modTitle}</div>
+      </div>
+      <div class="mod-header-meta">
+        <span class="mod-count-pill" id="count-${modKey}">${list.length} exercice${list.length>1?'s':''}</span>
+        <span class="mod-done-pill" id="done-pill-${modKey}"></span>
+        <button class="mod-toggle-btn" tabindex="-1">
+          <span class="mod-toggle-icon">+</span>
+          <span>Afficher</span>
+        </button>
+      </div>`;
+    header.addEventListener('click', () => toggleModule(modKey));
+    block.appendChild(header);
+
+    const body = document.createElement('div');
+    body.className = 'mod-toggle-body nrv-closed';
+    body.id = 'body-' + modKey;
+    const grid = document.createElement('div');
+    grid.className = 'exercise-grid';
+    grid.id = 'grid-' + modKey;
+    list.forEach(ex => grid.appendChild(buildExCard(ex)));
+    body.appendChild(grid);
+    block.appendChild(body);
+
+    const titleEl = document.createElement('div');
+    titleEl.className = 'section-title';
+    titleEl.style.display = 'none';
+    titleEl.textContent = modTitle;
+    block.appendChild(titleEl);
+
+    main.appendChild(block);
+  });
+
+  if(typeof BAC_EXAMS !== 'undefined' && BAC_EXAMS.length > 0) {
+    const bacBlock = document.createElement('div');
+    bacBlock.className = 'section-block';
+    bacBlock.dataset.section = 'bac';
+    bacBlock.dataset.kind = 'bac';
+
+    const bacHeader = document.createElement('div');
+    bacHeader.className = 'mod-toggle-header bac';
+    bacHeader.dataset.target = 'body-bac';
+    bacHeader.innerHTML = `
+      <div class="mod-header-left">
+        <div class="mod-header-title">🎓 Sujets BAC — Terminale D, Burkina Faso</div>
+      </div>
+      <div class="mod-header-meta">
+        <span class="mod-count-pill">${BAC_EXAMS.length} sujet${BAC_EXAMS.length>1?'s':''}</span>
+        <button class="mod-toggle-btn" tabindex="-1">
+          <span class="mod-toggle-icon">+</span>
+          <span>Afficher</span>
+        </button>
+      </div>`;
+    bacHeader.addEventListener('click', () => toggleModule('bac'));
+    bacBlock.appendChild(bacHeader);
+
+    const bacBody = document.createElement('div');
+    bacBody.className = 'mod-toggle-body bac nrv-closed';
+    bacBody.id = 'body-bac';
+    const bacGrid = document.createElement('div');
+    bacGrid.className = 'bac-grid';
+    bacGrid.id = 'bac-grid';
+    BAC_EXAMS.forEach(exam => bacGrid.appendChild(buildBacCard(exam)));
+    bacBody.appendChild(bacGrid);
+    bacBlock.appendChild(bacBody);
+
+    const bacTitleEl = document.createElement('div');
+    bacTitleEl.className = 'bac-section-title';
+    bacTitleEl.style.display = 'none';
+    bacBlock.appendChild(bacTitleEl);
+
+    main.appendChild(bacBlock);
   }
 
-  function sx(x){ return (x - view.xmin) / (view.xmax - view.xmin) * W; }
-  function sy(y){ return H - (y - view.ymin) / (view.ymax - view.ymin) * H; }
+  main.insertAdjacentHTML('beforeend','<div class="no-results" id="no-results">Aucun résultat pour ce filtre.</div>');
+  updateStats();
+  refreshDoneStyles();
+  if(window.MathJax) MathJax.startup.promise.then(() => MathJax.typesetPromise([main]));
+}
 
-  function niceStep(range){
-    var rough = range/8;
-    var mag = Math.pow(10, Math.floor(Math.log10(rough)));
-    var norm = rough/mag, step;
-    if(norm < 1.5) step = 1; else if(norm < 3) step = 2; else if(norm < 7) step = 5; else step = 10;
-    return step*mag;
+function toggleModule(modKey) {
+  const body   = document.getElementById('body-' + modKey);
+  const header = body ? body.previousElementSibling : null;
+  if(!body || !header) return;
+  const isOpen = body.classList.contains('nrv-open');
+  if(isOpen) {
+    body.classList.replace('nrv-open','nrv-closed');
+    header.classList.remove('open');
+    const btn = header.querySelector('.mod-toggle-btn');
+    if(btn){ btn.querySelector('.mod-toggle-icon').textContent='+'; btn.querySelector('span:last-child').textContent='Afficher'; }
+  } else {
+    body.classList.replace('nrv-closed','nrv-open');
+    header.classList.add('open');
+    const btn = header.querySelector('.mod-toggle-btn');
+    if(btn){ btn.querySelector('.mod-toggle-icon').textContent='−'; btn.querySelector('span:last-child').textContent='Masquer'; }
+    if(window.MathJax) MathJax.typesetPromise([body]).catch(()=>{});
   }
+  updateExpandAllBtn();
+}
 
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    ctx.fillStyle = '#232326';
-    ctx.fillRect(0,0,W,H);
+function toggleAllModules() {
+  const bodies = document.querySelectorAll('.mod-toggle-body');
+  const anyOpen = [...bodies].some(b => b.classList.contains('nrv-open'));
+  bodies.forEach(body => {
+    const modKey = body.id.replace('body-','');
+    const isOpen = body.classList.contains('nrv-open');
+    if(anyOpen && isOpen) toggleModule(modKey);
+    else if(!anyOpen && !isOpen) toggleModule(modKey);
+  });
+}
 
-    // grille
-    var stepX = niceStep(view.xmax-view.xmin);
-    var stepY = niceStep(view.ymax-view.ymin);
-    ctx.strokeStyle = '#3e3e42'; ctx.lineWidth = 1;
-    ctx.font = '11px Georgia, serif'; ctx.fillStyle = '#8a8a8a';
-    var gx0 = Math.ceil(view.xmin/stepX)*stepX;
-    for(var x = gx0; x <= view.xmax; x += stepX){
-      var px = sx(x);
-      ctx.beginPath(); ctx.moveTo(px,0); ctx.lineTo(px,H); ctx.stroke();
-      if(Math.abs(x) > 1e-9) ctx.fillText(Number(x.toFixed(6)), px+3, sy(0)+13 < H-2 ? sy(0)+13 : H-4);
+function updateExpandAllBtn() {
+  const bodies = document.querySelectorAll('.mod-toggle-body');
+  const anyOpen = [...bodies].some(b => b.classList.contains('nrv-open'));
+  const btn = document.getElementById('expand-all-btn');
+  if(btn) btn.textContent = anyOpen ? '− Tout réduire' : '+ Tout développer';
+}
+
+function buildExCard(ex) {
+  const card = document.createElement('div');
+  card.className = 'ex-card';
+  card.dataset.id     = ex.id;
+  card.dataset.module = ex.module;
+  card.dataset.diff   = ex.diff;
+  card.dataset.type   = ex.type;
+  card.dataset.kind   = 'exercise';
+  card.dataset.search = (ex.title+' '+ex.desc+' '+ex.module).toLowerCase();
+  const typePill = ex.type==='qcm'
+    ? '<span class="type-pill">QCM</span>'
+    : '<span class="type-pill">Rédigé</span>';
+  card.innerHTML = `
+    <div class="done-check">✓</div>
+    <div class="ex-card-top">
+      <div class="ex-card-title">${ex.title}</div>
+      ${BADGE[ex.diff]||''}
+    </div>
+    <div class="ex-card-desc">${ex.desc}</div>
+    <div class="ex-card-footer">
+      <span class="lesson-tag">${ex.lesson} ${typePill}</span>
+      <button class="solve-btn" onclick="openModal('${ex.id}')">Résoudre →</button>
+    </div>`;
+  return card;
+}
+
+function openBacSubject(id) {
+  savePageState();
+  window.location.href = 'bac-viewer.html?id=' + id;
+}
+
+function buildBacCard(exam) {
+  const card = document.createElement('div');
+  card.className = 'bac-card';
+  card.dataset.id     = exam.id;
+  card.dataset.year   = exam.year;
+  card.dataset.series = exam.series;
+  card.dataset.kind   = 'bac';
+  card.dataset.search = (exam.year+' '+(exam.series||'')+' '+(exam.tour||'')+' '+(exam.topics||[]).join(' ')).toLowerCase();
+  const topicsHTML = (exam.topics||[]).map(t=>`<span class="bac-topic">${t}</span>`).join('');
+  const partsCount = exam.parts ? exam.parts.length : 0;
+  const cardTitle = exam.title || ('BAC '+exam.year+' — Série '+(exam.series||''));
+  card.innerHTML = `
+    <div class="bac-card-header">
+      <div class="bac-meta">
+        <span class="bac-year">${exam.year}</span>
+        <span class="bac-serie">Série ${exam.series||'D'}</span>
+        <span class="bac-tour">${exam.tour||''}</span>
+      </div>
+      <div class="bac-card-title">${cardTitle}</div>
+    </div>
+    <div class="bac-card-body">
+      <div class="bac-topics">${topicsHTML}</div>
+      <div class="bac-card-footer">
+        <span class="bac-parts-count"> ${partsCount} partie${partsCount>1?'s':''}</span>
+        <button class="bac-open-btn" onclick="openBacSubject('${exam.id}')">Voir le sujet →</button>
+      </div>
+    </div>`;
+  return card;
+}
+
+function updateStats() {
+  const done  = getDone();
+  const total = EXERCISES.length;
+  const doneN = Object.keys(done).length;
+  const mods  = new Set(EXERCISES.map(e=>e.module)).size;
+  const bacN  = (typeof BAC_EXAMS!=='undefined') ? BAC_EXAMS.length : 0;
+  document.getElementById('stat-total').textContent   = total;
+  document.getElementById('stat-done').textContent    = doneN;
+  document.getElementById('stat-modules').textContent = mods;
+  document.getElementById('stat-bac').textContent     = bacN;
+  document.getElementById('prog-label').textContent   = doneN+' / '+total+' complétés';
+  document.getElementById('prog-bar').style.width     = total ? Math.round(doneN/total*100)+'%' : '0%';
+}
+
+function refreshDoneStyles() {
+  const done = getDone();
+  document.querySelectorAll('.ex-card').forEach(card=>{
+    card.classList.toggle('done', !!done[card.dataset.id]);
+  });
+  Object.keys(MODULES).forEach(modKey => {
+    const pill = document.getElementById('done-pill-' + modKey);
+    if(!pill) return;
+    const cards = document.querySelectorAll(`.ex-card[data-module="${modKey}"]`);
+    const doneCount = [...cards].filter(c => !!done[c.dataset.id]).length;
+    if(doneCount > 0) { pill.textContent = '✓ ' + doneCount + '/' + cards.length; pill.classList.add('visible'); }
+    else { pill.classList.remove('visible'); }
+  });
+}
+
+let currentFilter = 'all';
+let currentSearch = '';
+
+function applyFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderVisibility();
+}
+
+function applySearch(q) {
+  currentSearch = q.toLowerCase().trim();
+  renderVisibility();
+}
+
+function renderVisibility() {
+  const done = getDone();
+  let visible = 0;
+
+  document.querySelectorAll('.ex-card').forEach(card=>{
+    const {diff, type, id, search} = card.dataset;
+    let show = false;
+    if      (currentFilter==='all')     show = true;
+    else if (currentFilter==='easy')    show = diff==='easy';
+    else if (currentFilter==='medium')  show = diff==='medium';
+    else if (currentFilter==='hard')    show = diff==='hard';
+    else if (currentFilter==='qcm')     show = type==='qcm';
+    else if (currentFilter==='written') show = type==='written';
+    else if (currentFilter==='todo')    show = !done[id];
+    else if (currentFilter==='bac')     show = false;
+    if(show && currentSearch) show = search.includes(currentSearch);
+    card.classList.toggle('hidden-card', !show);
+    if(show) visible++;
+  });
+
+  document.querySelectorAll('.bac-card').forEach(card=>{
+    const {search} = card.dataset;
+    let show = (currentFilter==='all' || currentFilter==='bac' || currentFilter==='todo');
+    if(show && currentSearch) show = search.includes(currentSearch);
+    card.classList.toggle('hidden-card', !show);
+    if(show) visible++;
+  });
+
+  const isFiltering = currentFilter !== 'all' || currentSearch !== '';
+  document.querySelectorAll('.section-block').forEach(sec=>{
+    let hasVisible = false;
+    if(sec.dataset.kind==='bac') {
+      hasVisible = [...sec.querySelectorAll('.bac-card')].some(c=>!c.classList.contains('hidden-card'));
+    } else {
+      hasVisible = [...sec.querySelectorAll('.ex-card')].some(c=>!c.classList.contains('hidden-card'));
     }
-    var gy0 = Math.ceil(view.ymin/stepY)*stepY;
-    for(var y = gy0; y <= view.ymax; y += stepY){
-      var py = sy(y);
-      ctx.beginPath(); ctx.moveTo(0,py); ctx.lineTo(W,py); ctx.stroke();
-      if(Math.abs(y) > 1e-9) ctx.fillText(Number(y.toFixed(6)), sx(0)+4 > 4 ? sx(0)+4 : 4, py-3);
+    sec.style.display = hasVisible ? '' : 'none';
+    const modKey = sec.dataset.section;
+    const body = document.getElementById('body-' + modKey);
+    if(!body) return;
+    const isOpen = body.classList.contains('nrv-open');
+    if(isFiltering && hasVisible && !isOpen) toggleModule(modKey);
+    else if(!isFiltering && isOpen) toggleModule(modKey);
+  });
+
+  document.getElementById('no-results').classList.toggle('show', visible===0);
+  updateExpandAllBtn();
+}
+
+let currentExId = null;
+
+function openModal(id) {
+  const ex = EXERCISES.find(e=>e.id===id);
+  if(!ex) return;
+  currentExId = id;
+  document.getElementById('m-badge').innerHTML   = BADGE[ex.diff]||'';
+  document.getElementById('m-title').textContent = ex.title;
+  document.getElementById('m-problem').innerHTML = ex.problem.replace(/\\n/g,'<br>');
+  const solBox = document.getElementById('m-solution');
+  const solBtn = document.getElementById('m-sol-btn');
+  solBox.classList.remove('open');
+  solBox.innerHTML = '<h4>✅ Solution complète</h4>'+ex.solution.replace(/\\n/g,'<br>');
+  solBtn.textContent = 'Voir la solution →';
+  solBtn.style.display = 'block';
+  const qcmDiv = document.getElementById('m-qcm');
+  if(ex.type==='qcm') {
+    solBtn.style.display = 'none';
+    solBox.classList.add('open');
+    solBox.innerHTML = '<h4>✅ Explication</h4>'+ex.solution.replace(/\\n/g,'<br>');
+    qcmDiv.innerHTML =
+      '<div class="qcm-options">'+
+      ex.options.map((opt,i)=>`<button class="qcm-option" onclick="checkQcm(this,${i},${ex.answer})">${opt}</button>`).join('')+
+      '</div><div class="qcm-feedback" id="qcm-fb"></div>';
+  } else {
+    qcmDiv.innerHTML = '';
+  }
+  const done = getDone();
+  const doneBtn = document.getElementById('m-done-btn');
+  doneBtn.textContent = done[id] ? '✓ Résolu !' : '✓ Marquer comme résolu';
+  doneBtn.classList.toggle('done', !!done[id]);
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if(window.MathJax) MathJax.typesetPromise([document.getElementById('modal')]).catch(()=>{});
+}
+
+function checkQcm(btn, index, answer) {
+  document.querySelectorAll('.qcm-option').forEach(b=>{ b.disabled=true; b.style.cursor='default'; });
+  const fb = document.getElementById('qcm-fb');
+  if(index===answer) {
+    btn.classList.add('correct');
+    fb.textContent='✅ Bonne réponse !'; fb.className='qcm-feedback correct';
+    if(currentExId) {
+      const done=getDone(); done[currentExId]=true; saveDone(done);
+      refreshDoneStyles(); updateStats();
+      document.getElementById('m-done-btn').textContent='✓ Résolu !';
+      document.getElementById('m-done-btn').classList.add('done');
     }
-    // axes
-    ctx.strokeStyle = '#9d9d9d'; ctx.lineWidth = 1.6;
-    ctx.beginPath(); ctx.moveTo(0, sy(0)); ctx.lineTo(W, sy(0)); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(sx(0), 0); ctx.lineTo(sx(0), H); ctx.stroke();
-    ctx.fillStyle = '#d4d4d4'; ctx.font = '13px Georgia, serif';
-    ctx.fillText('x', W-14, sy(0)-6);
-    ctx.fillText('y', sx(0)+6, 14);
+  } else {
+    btn.classList.add('wrong');
+    document.querySelectorAll('.qcm-option')[answer].classList.add('correct');
+    fb.textContent='❌ Mauvaise réponse. La bonne réponse est surlignée en vert.';
+    fb.className='qcm-feedback wrong';
+  }
+}
 
-    // droites (verticales ou obliques y=fn(x))
-    (opts.lines||[]).forEach(function(ln){
-      ctx.save();
-      ctx.strokeStyle = ln.color; ctx.lineWidth = ln.width||1.6;
-      if(ln.dash) ctx.setLineDash([6,5]);
-      ctx.beginPath();
-      if(ln.type === 'vertical'){
-        var px = sx(ln.x);
-        ctx.moveTo(px,0); ctx.lineTo(px,H);
-      } else {
-        ctx.moveTo(0, sy(ln.fn(view.xmin)));
-        ctx.lineTo(W, sy(ln.fn(view.xmax)));
+function toggleSolution() {
+  const box = document.getElementById('m-solution');
+  const btn = document.getElementById('m-sol-btn');
+  box.classList.toggle('open');
+  btn.textContent = box.classList.contains('open') ? 'Masquer la solution ↑' : 'Voir la solution →';
+  if(box.classList.contains('open')&&window.MathJax) MathJax.typesetPromise([box]).catch(()=>{});
+}
+
+function toggleDone() {
+  if(!currentExId) return;
+  const done = getDone();
+  const btn  = document.getElementById('m-done-btn');
+  if(done[currentExId]) { delete done[currentExId]; btn.textContent='✓ Marquer comme résolu'; btn.classList.remove('done'); }
+  else                  { done[currentExId]=true;   btn.textContent='✓ Résolu !';             btn.classList.add('done'); }
+  saveDone(done); refreshDoneStyles(); updateStats();
+  if(currentFilter==='todo') renderVisibility();
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.body.style.overflow=''; currentExId=null;
+}
+function closeOnBg(e) { if(e.target===document.getElementById('modal-overlay')) closeModal(); }
+
+let currentBacExam = null;
+
+function openBacModal(id) {
+  const exam = (typeof BAC_EXAMS!=='undefined') ? BAC_EXAMS.find(e=>e.id===id) : null;
+  if(!exam) return;
+  currentBacExam = exam;
+
+  document.getElementById('bm-meta').innerHTML =
+    `<span class="bac-year">${exam.year}</span>`+
+    `<span class="bac-serie">Série ${exam.series||'D'}</span>`+
+    `<span class="bac-tour">${exam.tour||''}</span>`;
+  document.getElementById('bm-title').textContent = exam.title || ('BAC '+exam.year+' — Série '+(exam.series||'D'));
+
+  document.getElementById('bm-tabs').innerHTML = exam.parts.map((p,i)=>
+    `<button class="bac-part-tab ${i===0?'active':''}" onclick="switchBacPart(${i})">${p.label}</button>`
+  ).join('');
+
+  document.getElementById('bm-parts').innerHTML = exam.parts.map((p,i)=>{
+    const hasCorrn = p.correction && p.correction.trim() !== '' && !p.correction.includes('⚠️');
+    return `
+    <div class="bac-part-content ${i===0?'active':''}" id="bac-part-${i}">
+      <div class="bac-part-label">${p.label}</div>
+      <div class="bac-problem-box">${p.problem}</div>
+      <button class="bac-correction-btn" id="bac-corr-btn-${i}"
+        ${hasCorrn ? `onclick="showCorrectionGate(${i})"` : 'disabled'}
+      >${hasCorrn ? '  Voir la correction →' : '⏳ Correction à venir'}</button>
+      <div class="correction-gate" id="bac-gate-${i}">
+        <p>   As-tu vraiment essayé ce problème par toi-même ?<br><small>La correction va s'afficher.</small></p>
+        <div class="gate-btns">
+          <button class="gate-yes" onclick="revealCorrection(${i})">Oui, je veux voir</button>
+          <button class="gate-no"  onclick="hideGate(${i})">Non, je continue</button>
+        </div>
+      </div>
+      <div class="bac-correction-box" id="bac-corr-${i}">${p.correction||''}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('bac-modal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if(window.MathJax) MathJax.typesetPromise([document.getElementById('bac-modal')]).catch(()=>{});
+}
+
+function switchBacPart(idx) {
+  document.querySelectorAll('.bac-part-tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+  document.querySelectorAll('.bac-part-content').forEach((c,i)=>c.classList.toggle('active',i===idx));
+  if(window.MathJax) MathJax.typesetPromise([document.getElementById('bac-part-'+idx)]).catch(()=>{});
+}
+
+function showCorrectionGate(idx) { document.getElementById('bac-gate-'+idx).classList.add('show'); }
+function hideGate(idx) { document.getElementById('bac-gate-'+idx).classList.remove('show'); }
+
+function revealCorrection(idx) {
+  hideGate(idx);
+  const corrBox = document.getElementById('bac-corr-'+idx);
+  corrBox.classList.add('open');
+  const btn = document.getElementById('bac-corr-btn-'+idx);
+  btn.textContent = '✅ Correction affichée — cliquer pour masquer';
+  btn.classList.add('revealed');
+  btn.onclick = () => {
+    corrBox.classList.toggle('open');
+    btn.textContent = corrBox.classList.contains('open')
+      ? '✅ Correction affichée — cliquer pour masquer'
+      : '  Revoir la correction';
+  };
+  if(window.MathJax) MathJax.typesetPromise([corrBox]).catch(()=>{});
+}
+
+function closeBacModal() {
+  document.getElementById('bac-modal-overlay').classList.remove('open');
+  document.body.style.overflow=''; currentBacExam=null;
+}
+function closeBacOnBg(e) { if(e.target===document.getElementById('bac-modal-overlay')) closeBacModal(); }
+
+function savePageState() {
+  const openModules = [];
+  document.querySelectorAll('.mod-toggle-body.nrv-open').forEach(b => {
+    openModules.push(b.id.replace('body-', ''));
+  });
+  const state = {
+    scrollY: window.scrollY,
+    currentFilter: typeof currentFilter !== 'undefined' ? currentFilter : 'all',
+    currentSearch: typeof currentSearch !== 'undefined' ? currentSearch : '',
+    openModules: openModules
+  };
+  sessionStorage.setItem('nrv_exercices_state', JSON.stringify(state));
+}
+
+function restorePageState() {
+  const saved = sessionStorage.getItem('nrv_exercices_state');
+  if(!saved) return;
+  try {
+    const state = JSON.parse(saved);
+    if(state.currentFilter) {
+      const btn = document.querySelector(`.filter-btn[onclick*="${state.currentFilter}"]`);
+      if(btn) applyFilter(state.currentFilter, btn);
+    }
+    if(state.currentSearch) {
+      const searchInput = document.getElementById('search-input');
+      if(searchInput) {
+        searchInput.value = state.currentSearch;
+        applySearch(state.currentSearch);
       }
-      ctx.stroke();
-      ctx.restore();
-    });
-
-    // segments (entre deux points)
-    (opts.segments||[]).forEach(function(sg){
-      ctx.save();
-      ctx.strokeStyle = sg.color; ctx.lineWidth = sg.width||2;
-      if(sg.dash) ctx.setLineDash([6,5]);
-      ctx.beginPath();
-      ctx.moveTo(sx(sg.x1), sy(sg.y1));
-      ctx.lineTo(sx(sg.x2), sy(sg.y2));
-      ctx.stroke();
-      ctx.restore();
-    });
-
-    // cercles
-    (opts.circles||[]).forEach(function(ci){
-      ctx.save();
-      ctx.strokeStyle = ci.color; ctx.lineWidth = ci.width||1.6;
-      if(ci.dash) ctx.setLineDash([5,4]);
-      var rx = ci.r/(view.xmax-view.xmin)*W;
-      var ry = ci.r/(view.ymax-view.ymin)*H;
-      ctx.beginPath();
-      ctx.ellipse(sx(ci.cx), sy(ci.cy), Math.abs(rx), Math.abs(ry), 0, 0, 2*Math.PI);
-      ctx.stroke();
-      ctx.restore();
-    });
-
-    // zones hachurées (entre deux fonctions sur un domaine)
-    (opts.shaded||[]).forEach(function(sh){
-      var lo = Math.max(sh.domain[0], view.xmin), hi = Math.min(sh.domain[1], view.xmax);
-      if(hi<=lo) return;
-      var N = 120;
-      ctx.beginPath();
-      for(var i=0;i<=N;i++){
-        var x = lo + (hi-lo)*i/N;
-        var yv = sh.upper(x);
-        var px = sx(x), py = sy(yv);
-        if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
-      }
-      for(var i=N;i>=0;i--){
-        var x = lo + (hi-lo)*i/N;
-        var yv = sh.lower(x);
-        ctx.lineTo(sx(x), sy(yv));
-      }
-      ctx.closePath();
-      ctx.fillStyle = sh.color;
-      ctx.fill();
-    });
-
-    // courbes
-    (opts.curves||[]).forEach(function(cv){
-      ctx.save();
-      ctx.strokeStyle = cv.color; ctx.lineWidth = cv.width||2.6;
-      if(cv.dash) ctx.setLineDash([7,5]);
-      var lo = Math.max(cv.domain[0], view.xmin - (view.xmax-view.xmin)*0.05);
-      var hi = Math.min(cv.domain[1], view.xmax + (view.xmax-view.xmin)*0.05);
-      var N = 500;
-      ctx.beginPath();
-      var started = false;
-      for(var i=0;i<=N;i++){
-        var x = lo + (hi-lo)*i/N;
-        if(cv.excludes && cv.excludes.some(function(e){return Math.abs(x-e)<1e-4;})) { started=false; continue; }
-        var yv = cv.fn(x);
-        if(!isFinite(yv)) { started=false; continue; }
-        var px = sx(x), py = sy(yv);
-        if(py < -H*3 || py > H*4){ started=false; continue; }
-        if(!started){ ctx.moveTo(px,py); started=true; } else { ctx.lineTo(px,py); }
-      }
-      ctx.stroke();
-      ctx.restore();
-    });
-
-    // points remarquables
-    (opts.points||[]).forEach(function(pt){
-      var px = sx(pt.x), py = sy(pt.y);
-      ctx.beginPath(); ctx.arc(px,py,4.5,0,2*Math.PI);
-      ctx.fillStyle = pt.color; ctx.fill();
-      ctx.strokeStyle = '#232326'; ctx.lineWidth=1.5; ctx.stroke();
-      if(pt.label){
-        ctx.fillStyle = pt.color; ctx.font = 'bold 12px Georgia, serif';
-        ctx.fillText(pt.label, px+7, py-7);
-      }
-    });
-
-    // survol : croix + lecture des coordonnées — priorité forte aux points essentiels
-    if(hover){
-      var mx = hover.x, my = hover.y;
-      var wx = view.xmin + (mx/W)*(view.xmax-view.xmin);
-
-      // 1) magnétisme prioritaire vers les points essentiels (rayon de capture large)
-      var essential = null, essDist = 30;
-      (opts.points||[]).forEach(function(pt){
-        var ppx = sx(pt.x), ppy = sy(pt.y);
-        var d = Math.hypot(ppx-mx, ppy-my);
-        if(d < essDist){ essDist = d; essential = pt; }
-      });
-
-      var px, py, showX, showY, dotColor, labelText;
-
-      if(essential){
-        px = sx(essential.x); py = sy(essential.y);
-        showX = essential.x; showY = essential.y; dotColor = essential.color;
-        labelText = essential.label || ('x = '+showX.toFixed(2)+'   y = '+showY.toFixed(2));
-      } else {
-        // 2) sinon, aimantation à la courbe la plus proche
-        var best = null, bestDist = 26;
-        (opts.curves||[]).forEach(function(cv){
-          if(cv.excludes && cv.excludes.some(function(e){return Math.abs(wx-e)<0.02;})) return;
-          if(wx < cv.domain[0] || wx > cv.domain[1]) return;
-          var yv = cv.fn(wx);
-          if(!isFinite(yv)) return;
-          var pyc = sy(yv);
-          var d = Math.abs(pyc-my);
-          if(d < bestDist){ bestDist = d; best = { x: wx, y: yv, color: cv.color }; }
-        });
-        if(best){
-          px = sx(best.x); py = sy(best.y); showX = best.x; showY = best.y; dotColor = best.color;
-        } else {
-          var wy = view.ymax - (my/H)*(view.ymax-view.ymin);
-          px = mx; py = my; showX = wx; showY = wy; dotColor = '#d4d4d4';
+    }
+    if(Array.isArray(state.openModules)) {
+      state.openModules.forEach(modKey => {
+        const body = document.getElementById('body-' + modKey);
+        if(body && !body.classList.contains('nrv-open')) {
+          toggleModule(modKey);
         }
-        labelText = 'x = '+showX.toFixed(2)+'   y = '+showY.toFixed(2);
-      }
-
-      ctx.save();
-      ctx.strokeStyle = 'rgba(157,157,157,0.55)'; ctx.lineWidth = 1; ctx.setLineDash([4,4]);
-      ctx.beginPath(); ctx.moveTo(px,0); ctx.lineTo(px,H); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(0,py); ctx.lineTo(W,py); ctx.stroke();
-      ctx.restore();
-
-      if(essential){
-        // halo appuyé pour marquer qu'on est sur un point clé
-        ctx.beginPath(); ctx.arc(px,py,15,0,2*Math.PI); ctx.fillStyle = dotColor+'22'; ctx.fill();
-        ctx.beginPath(); ctx.arc(px,py,9.5,0,2*Math.PI); ctx.fillStyle = dotColor+'55'; ctx.fill();
-        ctx.beginPath(); ctx.arc(px,py,9.5,0,2*Math.PI); ctx.strokeStyle = dotColor; ctx.lineWidth = 1.5; ctx.stroke();
-      }
-      ctx.beginPath(); ctx.arc(px,py, essential ? 6 : 4.5, 0, 2*Math.PI);
-      ctx.fillStyle = dotColor; ctx.fill();
-      ctx.strokeStyle = '#232326'; ctx.lineWidth = essential ? 2 : 1.5; ctx.stroke();
-
-      var txt = essential ? (labelText+'   —   x = '+showX.toFixed(2)+', y = '+showY.toFixed(2)) : labelText;
-      ctx.font = essential ? 'bold 13px Trebuchet MS, sans-serif' : 'bold 12px Trebuchet MS, sans-serif';
-      var tw = ctx.measureText(txt).width;
-      var bx = px+14, by = py-16;
-      if(bx+tw+18 > W) bx = px-tw-26;
-      if(by-20 < 0) by = py+34;
-      ctx.fillStyle = essential ? 'rgba(35,35,38,0.97)' : 'rgba(35,35,38,0.92)';
-      ctx.strokeStyle = dotColor; ctx.lineWidth = essential ? 2 : 1;
-      ctx.beginPath();
-      var boxH = essential ? 25 : 22, boxPad = essential ? 18 : 16;
-      if(ctx.roundRect) ctx.roundRect(bx-7, by-18, tw+boxPad, boxH, 5); else ctx.rect(bx-7, by-18, tw+boxPad, boxH);
-      ctx.fill(); ctx.stroke();
-      ctx.fillStyle = '#f8f8f8';
-      ctx.fillText(txt, bx, by);
+      });
     }
-  }
-
-  // Interactions : molette = zoom, glisser = déplacement, survol = lecture des coordonnées
-  var dragging = false, lastX=0, lastY=0, hover = null;
-  canvas.addEventListener('wheel', function(e){
-    e.preventDefault();
-    var factor = e.deltaY > 0 ? 1.12 : 0.89;
-    var rect = canvas.getBoundingClientRect();
-    var mx = e.clientX-rect.left, my = e.clientY-rect.top;
-    var wx = view.xmin + (mx/W)*(view.xmax-view.xmin);
-    var wy = view.ymax - (my/H)*(view.ymax-view.ymin);
-    view.xmin = wx + (view.xmin-wx)*factor; view.xmax = wx + (view.xmax-wx)*factor;
-    view.ymin = wy + (view.ymin-wy)*factor; view.ymax = wy + (view.ymax-wy)*factor;
-    draw();
-  }, {passive:false});
-  function down(x,y){ dragging=true; lastX=x; lastY=y; }
-  function move(x,y){
-    if(!dragging) return;
-    var dx = (x-lastX)/W*(view.xmax-view.xmin);
-    var dy = (y-lastY)/H*(view.ymax-view.ymin);
-    view.xmin -= dx; view.xmax -= dx; view.ymin += dy; view.ymax += dy;
-    lastX=x; lastY=y; draw();
-  }
-  function up(){ dragging=false; }
-  function updateHover(clientX, clientY){
-    var rect = canvas.getBoundingClientRect();
-    hover = { x: clientX-rect.left, y: clientY-rect.top };
-    draw();
-  }
-  canvas.addEventListener('mousedown', function(e){ down(e.clientX,e.clientY); });
-  canvas.addEventListener('mousemove', function(e){ updateHover(e.clientX,e.clientY); if(dragging) move(e.clientX,e.clientY); });
-  canvas.addEventListener('mouseleave', function(){ hover=null; draw(); });
-  window.addEventListener('mouseup', up);
-  canvas.addEventListener('touchstart', function(e){ var t=e.touches[0]; down(t.clientX,t.clientY); updateHover(t.clientX,t.clientY); }, {passive:true});
-  canvas.addEventListener('touchmove', function(e){ var t=e.touches[0]; updateHover(t.clientX,t.clientY); move(t.clientX,t.clientY); }, {passive:true});
-  canvas.addEventListener('touchend', function(){ up(); hover=null; draw(); });
-
-  window.addEventListener('resize', resize);
-  resize();
+    if(state.scrollY) {
+      setTimeout(() => window.scrollTo(0, state.scrollY), 100);
+    }
+  } catch(e) {}
 }
 
-/* ============================================================
-   mountGraph : utilise Desmos en priorité (comme demandé), avec
-   repli automatique et transparent sur le moteur canvas interne
-   si l'API Desmos ne charge pas (réseau, fichier local, etc.)
-   afin qu'un graphique ne reste jamais vide.
-   ============================================================ */
-function mountGraph(containerId, desmosConf, canvasConf){
-  var el = document.getElementById(containerId);
-  if(!el) return;
-  window.__desmosReady.then(function(ok){
-    if(ok && typeof Desmos !== 'undefined'){
-      try{
-        var calc = Desmos.GraphingCalculator(el, {
-          expressions: true, settingsMenu: false, zoomButtons: true,
-          expressionsCollapsed: true, border: false, lockViewport: false,
-          backgroundColor: '#232326', keypad: false
-        });
-        if(desmosConf.bounds) calc.setMathBounds(desmosConf.bounds);
-        calc.setExpressions(desmosConf.expressions);
-        return;
-      }catch(e){ /* API chargée mais en échec : on bascule sur le repli */ }
-    }
-    renderMathPlot(containerId, canvasConf);
-  });
+buildDOM();
+restorePageState();
+</script>
+<!-- FLOATING FEEDBACK BUTTON -->
+<button class="float-feedback" onclick="openFeedback('general')">
+  Signaler
+</button>
+
+<!-- FEEDBACK MODAL -->
+<div class="feedback-overlay" id="feedback-overlay" onclick="closeFeedbackOnBg(event)">
+  <div class="feedback-modal" id="feedback-modal">
+    <button class="modal-close" onclick="closeFeedback()" style="position:absolute;top:14px;right:18px;font-size:20px;cursor:pointer;color:#bbb;background:none;border:none;font-weight:900;">✕</button>
+    <div id="feedback-body">
+      <h3> Envoyer un commentaire</h3>
+      <p class="feedback-sub">Une erreur ? Une suggestion ? Dis-nous tout.</p>
+      <div class="feedback-context" id="feedback-context" style="display:none"></div>
+      <div class="feedback-types" id="feedback-types">
+        <button class="ftype-btn selected" onclick="selectFtype(this,'erreur_solution')"> Erreur dans la solution</button>
+        <button class="ftype-btn" onclick="selectFtype(this,'enonce_flou')">Énoncé peu clair</button>
+        <button class="ftype-btn" onclick="selectFtype(this,'suggestion')"> Suggestion</button>
+        <button class="ftype-btn" onclick="selectFtype(this,'autre')">Autre</button>
+      </div>
+      <textarea class="feedback-textarea" id="feedback-text"
+        placeholder="Décris le problème ou ta suggestion…"></textarea>
+      <div class="feedback-actions">
+        <button class="feedback-cancel" onclick="closeFeedback()">Annuler</button>
+        <button class="feedback-submit" id="feedback-submit-btn" onclick="submitFeedback()">Envoyer →</button>
+      </div>
+    </div>
+    <div id="feedback-success" style="display:none">
+      <div class="feedback-success">
+        <span class="fs-icon">✅</span>
+        Merci pour ton retour !<br>
+        <span style="font-size:13px;font-weight:400;color:#888;">On l'examinera bientôt.</span>
+      </div>
+      <div class="feedback-actions" style="justify-content:center;margin-top:10px;">
+        <button class="feedback-cancel" onclick="closeFeedback()">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+<script src="JS/firebase-init.js"></script>
+
+<script>
+// ── FEEDBACK SYSTEM ──────────────────────────────────────────────
+let feedbackType = 'erreur_solution';
+let feedbackContext = { source: 'general', exerciseId: null, exerciseTitle: null };
+
+function selectFtype(btn, type) {
+  document.querySelectorAll('.ftype-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  feedbackType = type;
 }
-</script>
 
-<h1>BACCALAURÉAT — SÉRIE D</h1>
-<div class="subtitle">Session Normale 2024 — 1er tour — Épreuve de Mathématiques</div>
-
-<noscript>
-  <div class="note"><span class="label">Remarque</span>
-  <p>JavaScript est désactivé (ou la page est ouverte en aperçu rapide) : les formules mathématiques et les boutons de correction ne peuvent pas s'afficher correctement. Ouvrez ce fichier directement dans Safari plutôt qu'en aperçu.</p></div>
-</noscript>
-
-<div class="infoblock">
-  <table>
-    <tr><td>Pays</td><td class="val">Burkina Faso</td><td>Coefficient</td><td class="val">5</td></tr>
-    <tr><td>Enseignement</td><td class="val">Général</td><td>Durée</td><td class="val">4 heures</td></tr>
-    <tr><td>Calculatrice</td><td class="val">Non autorisée</td><td>Barème total</td><td class="val">20 points</td></tr>
-  </table>
-</div>
-
-<h2>EXERCICE N°1 <span class="points">(4 points)</span></h2>
-
-<p>Le plan complexe est muni d'un repère orthonormé direct $(O;\vec{u},\vec{v})$ d'unité graphique 2 cm.</p>
-<ol>
-  <li>Écrire $a=(3-i)^2$ sous la forme algébrique. <span class="points">(0,25 pt)</span></li>
-  <li>On considère le polynôme $P$ défini par $P(z)=z^3+(-1+i)z^2+(2+2i)z+8i$.
-    <ol type="a">
-      <li>Démontrer que l'équation $P(z)=0$ admet une unique solution imaginaire pure $\alpha i\, ;\ (\alpha\in\mathbb{R}^*)$. <span class="points">(0,25 pt)</span></li>
-      <li>Déterminer les nombres complexes $a, b$ et $c$ tels que $P(z)=(z-\alpha i)(az^2+bz+c)$. <span class="points">(0,5 pt)</span></li>
-      <li>Résoudre dans $\mathbb{C}$ l'équation $P(z)=0$. <span class="points">(0,5 pt)</span></li>
-    </ol>
-  </li>
-  <li>On considère les points $A$, $B$ et $C$ d'affixes respectives $-1-i\,;\ 2-2i\,;\ 2i$.
-    <ol type="a">
-      <li>Placer les points $A$, $B$ et $C$ dans le repère. <span class="points">(0,5 pt)</span></li>
-      <li>Quelle est la nature du triangle $ABC$ ? Justifier. <span class="points">(0,5 pt)</span></li>
-      <li>Déterminer l'affixe du point $D$, image du point $A$ par la translation du vecteur $\overrightarrow{BC}$. <span class="points">(0,25 pt)</span></li>
-    </ol>
-  </li>
-  <li>On considère le point $E$ d'affixe $2+2i$.
-    <ol type="a">
-      <li>Placer le point $E$ dans le repère. <span class="points">(0,25 pt)</span></li>
-      <li>Démontrer que les points $A, B, C$ et $E$ sont situés sur un même cercle dont on précisera le centre et le rayon. <span class="points">(1 pt)</span></li>
-    </ol>
-  </li>
-</ol>
-
-<div class="rappel">
-  <span class="label">Rappels de cours — Nombres complexes</span>
-  <ul>
-    <li>Pour développer $(a-ib)^2$, utiliser $(x-y)^2=x^2-2xy+y^2$ et remplacer $i^2=-1$.</li>
-    <li>Pour trouver une racine imaginaire pure $\alpha i$ d'une équation $P(z)=0$, on remplace $z$ par $\alpha i$, on développe, puis on sépare partie réelle et partie imaginaire (chacune nulle) : on obtient un système en $\alpha$.</li>
-    <li>Une fois une racine $z_0$ connue, $P(z)$ se factorise $(z-z_0)Q(z)$ ; on trouve $Q(z)=az^2+bz+c$ par identification après développement.</li>
-    <li>Pour résoudre $az^2+bz+c=0$ dans $\mathbb{C}$ avec $\Delta$ complexe, on cherche $\delta$ tel que $\delta^2=\Delta$.</li>
-    <li>$\dfrac{z_B-z_A}{z_C-z_A}$ imaginaire pur $\Rightarrow$ triangle rectangle en $A$ ; si en plus son module vaut 1, il est aussi isocèle en $A$.</li>
-    <li>Translation de vecteur $\vec u$ d'affixe $z_{\vec u}$ : $z_D=z_A+z_{\vec u}$.</li>
-    <li>Un triangle rectangle est inscriptible dans le cercle dont l'hypoténuse est un diamètre.</li>
-  </ul>
-</div>
-
-<details class="correction">
-<summary><span class="txt"></span><span class="arrow">▾</span></summary>
-<div class="corr-body">
-
-<div class="step">
-  <span class="label">Étape 1 — Forme algébrique de a</span>
-  $$a=(3-i)^2 = 9 - 6i + i^2 = 9-6i-1$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$a=8-6i$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 2a — Solution imaginaire pure de P(z)=0</span>
-  <p>On pose $z=\alpha i$ et on remplace dans $P(z)=z^3+(-1+i)z^2+(2+2i)z+8i$ :</p>
-  $$(\alpha i)^3+(-1+i)(\alpha i)^2+(2+2i)\alpha i+8i=0$$
-  <p>En développant et en séparant partie réelle et partie imaginaire, on obtient le système :</p>
-  $$\begin{cases}\alpha^2-2\alpha=0 & (1)\\ -\alpha^3-\alpha^2+2\alpha+8=0 & (2)\end{cases}$$
-  <p>De (1) : $\alpha=0$ ou $\alpha=2$. Or $\alpha=0$ n'est pas solution de (2) (car $8\neq0$), donc $\alpha=2$ convient bien dans les deux équations.</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>L'unique solution imaginaire pure de $P(z)=0$ est $z_0=2i$.</p>
-</div>
-
-<div class="step">
-  <span class="label">Étape 2b — Factorisation de P(z)</span>
-  <p>On développe $(z-2i)(az^2+bz+c)$ et on identifie avec $P(z)$ :</p>
-  $$az^3+(b-2ia)z^2+(c-2ib)z-2ic = z^3+(-1+i)z^2+(2+2i)z+8i$$
-  <p>Par identification :</p>
-  $$\begin{cases}a=1\\ b-2ia=-1+i\\ c-2ib=2+2i\end{cases}\ \Longrightarrow\ \begin{cases}a=1\\ b=-1+3i\\ c=-4\end{cases}$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$P(z)=(z-2i)\big(z^2+(-1+i)z-4\big)$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 2c — Résolution de P(z)=0 dans ℂ</span>
-  <p>Il reste à résoudre $z^2+(-1+i)z-4=0$. Le discriminant vaut :</p>
-  $$\Delta=(-1+i)^2-4\times1\times(-4)=3-6i$$
-  <p>On cherche $\delta$ tel que $\delta^2=\Delta$ : on trouve $\Delta=(3-i)^2$ (cf. étape 1), donc $\delta=3-i$ convient.</p>
-  $$z_1=\frac{1-i-(3-i)}{2}=\frac{-2}{2}=-1-i,\qquad z_2=\frac{1-i+(3-i)}{2}=\frac{4-2i}{2}=2-2i$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$S_{\mathbb{C}}=\{\,2i\,;\ 2-2i\,;\ -1-i\,\}$$
-</div>
-
-<div class="step alt">
-  <span class="label">Étape 3a/3b — Placement des points et nature du triangle ABC</span>
-  <p>On calcule le rapport des affixes pour caractériser le triangle $ABC$ (avec $A(-1-i)$, $B(2-2i)$, $C(2i)$) :</p>
-  $$\frac{z_B-z_A}{z_C-z_A}=\frac{(2-2i)-(-1-i)}{2i-(-1-i)}=\frac{3-i}{1+3i}=-i$$
-  <p>Comme $\dfrac{z_B-z_A}{z_C-z_A}=-i$ est un imaginaire pur, les droites $(AB)$ et $(AC)$ sont perpendiculaires : le triangle est rectangle en $A$.</p>
-  <p>De plus $|-i|=1$, donc $AB=AC$.</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>Le triangle $ABC$ est rectangle et isocèle en $A$.</p>
-</div>
-
-<div class="plot-wrap">
-<div id="plot-plan-complexe" class="plot-canvas-box"></div>
-<div class="plot-legend">
-  <span><span class="swatch" style="background:#4fc1ff"></span>triangle ABC</span>
-  <span><span class="swatch dash" style="color:#6a9955"></span>cercle de diamètre [BC]</span>
-</div>
-<div class="diagram-cap">Placement de A, B, C, D, E dans le plan complexe et cercle circonscrit de diamètre [BC]</div>
-<div class="plot-hint">Molette / pincement = zoom · glisser = déplacer · survol = coordonnées</div>
-</div>
-<script>
-  mountGraph('plot-plan-complexe',
-    { bounds: { left: -5, right: 4, bottom: -4, top: 4 },
-      expressions: [
-        { id: 'segAB', latex: 'y=-\\frac{1}{3}x-\\frac{4}{3}\\left\\{-1\\le x\\le2\\right\\}', color: '#4fc1ff', lineWidth: 2.5 },
-        { id: 'segBC', latex: 'y=-2x+2\\left\\{0\\le x\\le2\\right\\}', color: '#4fc1ff', lineWidth: 2.5 },
-        { id: 'segCA', latex: 'y=3x+2\\left\\{-1\\le x\\le0\\right\\}', color: '#4fc1ff', lineWidth: 2.5 },
-        { id: 'cercle', latex: '\\left(x-1\\right)^{2}+y^{2}=5', color: '#6a9955', lineStyle: 'DASHED' },
-        { id: 'ptA', latex: '(-1,-1)', color: '#4fc1ff', label: 'A(-1-i)', showLabel: true, pointSize: 9 },
-        { id: 'ptB', latex: '(2,-2)', color: '#4fc1ff', label: 'B(2-2i)', showLabel: true, pointSize: 9 },
-        { id: 'ptC', latex: '(0,2)', color: '#c586c0', label: 'C(2i)', showLabel: true, pointSize: 9 },
-        { id: 'ptD', latex: '(-3,3)', color: '#dcdcaa', label: 'D(-3+3i)', showLabel: true, pointSize: 9 },
-        { id: 'ptE', latex: '(2,2)', color: '#f48771', label: 'E(2+2i)', showLabel: true, pointSize: 9 },
-        { id: 'ptI', latex: '(1,0)', color: '#6a9955', label: 'I(1)', showLabel: true, pointSize: 7 }
-      ]
-    },
-    { xmin: -5, xmax: 4, ymin: -4, ymax: 4,
-      segments: [
-        { x1: -1, y1: -1, x2: 2, y2: -2, color: '#4fc1ff', width: 2.5 },
-        { x1: 2, y1: -2, x2: 0, y2: 2, color: '#4fc1ff', width: 2.5 },
-        { x1: 0, y1: 2, x2: -1, y2: -1, color: '#4fc1ff', width: 2.5 }
-      ],
-      circles: [ { cx: 1, cy: 0, r: Math.sqrt(5), color: '#6a9955', dash: true } ],
-      points: [
-        { x: -1, y: -1, color: '#4fc1ff', label: 'A(-1-i)' },
-        { x: 2, y: -2, color: '#4fc1ff', label: 'B(2-2i)' },
-        { x: 0, y: 2, color: '#c586c0', label: 'C(2i)' },
-        { x: -3, y: 3, color: '#dcdcaa', label: 'D(-3+3i)' },
-        { x: 2, y: 2, color: '#f48771', label: 'E(2+2i)' },
-        { x: 1, y: 0, color: '#6a9955', label: 'I(1)' }
-      ]
-    }
-  );
-</script>
-
-<div class="step">
-  <span class="label">Étape 3c — Affixe du point D</span>
-  <p>$D$ est l'image de $A$ par la translation de vecteur $\overrightarrow{BC}$, donc $\overrightarrow{AD}=\overrightarrow{BC}$, soit $z_D-z_A=z_C-z_B$ :</p>
-  $$z_D=z_C-z_B+z_A=2i-(2-2i)+(-1-i)=-3+3i$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$z_D=-3+3i$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 4b — A, B, C, E sur un même cercle</span>
-  <p>Le triangle $ABC$ est rectangle en $A$, il est donc inscrit dans le cercle de diamètre $[BC]$.</p>
-  <p>Calculons pour $E$ le rapport analogue :</p>
-  $$\frac{z_C-z_E}{z_B-z_E}=\frac{2i-(2+2i)}{(2-2i)-(2+2i)}=\frac{-2}{-4i}=-\frac{1}{2}i\in i\mathbb{R}^*$$
-  <p>Ce rapport étant un imaginaire pur, le triangle $BCE$ est rectangle en $E$ : $E$ appartient donc lui aussi au cercle de diamètre $[BC]$.</p>
-  <p>Soit $I$ le milieu de $[BC]$ :</p>
-  $$z_I=\frac{z_B+z_C}{2}=\frac{2-2i+2i}{2}=1$$
-  <p>Le rayon est $r=IC=|2i-1|=\sqrt{5}$.</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>Les points $A,B,C,E$ sont situés sur le cercle de centre $I(1)$ et de rayon $r=\sqrt{5}$.</p>
-</div>
-
-</div>
-</details>
-
-<h2>EXERCICE N°2 <span class="points">(4 points)</span></h2>
-
-<p>Le tableau suivant, extrait du rapport d'activités 2020 de l'Autorité de Régulation du secteur de l'Énergie, donne la consommation d'électricité des Burkinabès en gigawattheure (GWh) entre 2015 et 2020.</p>
-
-<table class="data">
-  <tr><th>Années</th><td>2015</td><td>2016</td><td>2017</td><td>2018</td><td>2019</td><td>2020</td></tr>
-  <tr><th>Rang de l'année $x_i$</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
-  <tr><th>Consommation $y_i$ (GWh)</th><td>1200</td><td>1317</td><td>1452</td><td>1568</td><td>1686</td><td>1858</td></tr>
-</table>
-
-<p>Le plan est muni d'un repère orthonormé $(O;\vec{\imath},\vec{\jmath})$. On prendra 1 cm pour l'unité des rangs des années sur l'axe des abscisses et 1 cm pour 100 GWh sur l'axe des ordonnées, avec 1000 GWh à l'origine.</p>
-<ol>
-  <li>
-    <ol type="a">
-      <li>Représenter le nuage de points associé à cette série statistique. <span class="points">(0,5 pt)</span></li>
-      <li>Un ajustement affine de ce nuage paraît-il possible ? Justifier. <span class="points">(0,5 pt)</span></li>
-    </ol>
-  </li>
-  <li>Soient $A$ le point moyen du sous-nuage constitué par les trois premiers points et $B$ le point moyen du sous-nuage constitué par les trois derniers points.
-    <ol type="a">
-      <li>Calculer les coordonnées de $A$ et $B$. <span class="points">(1 pt)</span></li>
-      <li>Placer les points $A$ et $B$ dans le repère puis tracer la droite $(AB)$. <span class="points">(0,5 pt)</span></li>
-      <li>Déterminer une équation réduite de la droite de régression $(AB)$. <span class="points">(0,5 pt)</span></li>
-    </ol>
-  </li>
-  <li>
-    <ol type="a">
-      <li>En admettant que cette évolution se poursuit, quelle sera en GWh la consommation d'électricité en 2023 ? <span class="points">(0,5 pt)</span></li>
-      <li>Déterminer l'année à laquelle cette consommation sera de 5641 GWh. <span class="points">(0,5 pt)</span></li>
-    </ol>
-  </li>
-</ol>
-
-<div class="rappel">
-  <span class="label">Rappels de cours — Ajustement affine</span>
-  <ul>
-    <li>Un ajustement affine est envisageable si le nuage de points semble globalement aligné.</li>
-    <li>Méthode des points moyens (Mayer) : on partage le nuage en deux sous-groupes, on calcule le point moyen de chacun avec $\bar{x}=\dfrac{\text{somme des }x_i}{n}$, $\bar{y}=\dfrac{\text{somme des }y_i}{n}$.</li>
-    <li>La droite de régression passe par ces deux points moyens : $m=\dfrac{y_B-y_A}{x_B-x_A}$ puis $p=y_B-mx_B$.</li>
-    <li>Extrapolation : remplacer $x$ par le rang recherché. Pour l'opération inverse, résoudre $y=mx+p$ d'inconnue $x$.</li>
-  </ul>
-</div>
-
-<details class="correction">
-<summary><span class="txt"></span><span class="arrow">▾</span></summary>
-<div class="corr-body">
-
-<div class="plot-wrap">
-<div id="plot-nuage-points" class="plot-canvas-box"></div>
-<div class="plot-legend">
-  <span><span class="swatch" style="background:#4fc1ff"></span>nuage $(x_i;y_i)$</span>
-  <span><span class="swatch" style="background:#c586c0"></span>droite (AB): y=127x+1069</span>
-</div>
-<div class="diagram-cap">Nuage de points de la consommation d'électricité (rang de l'année ; GWh) et droite de régression (AB)</div>
-<div class="plot-hint">Molette / pincement = zoom · glisser = déplacer · survol = coordonnées</div>
-</div>
-<script>
-  mountGraph('plot-nuage-points',
-    { bounds: { left: 0, right: 7, bottom: 1100, top: 1950 },
-      expressions: [
-        { id: 'd1', latex: '(1,1200)', color: '#4fc1ff', pointSize: 7 },
-        { id: 'd2', latex: '(2,1317)', color: '#4fc1ff', pointSize: 7 },
-        { id: 'd3', latex: '(3,1452)', color: '#4fc1ff', pointSize: 7 },
-        { id: 'd4', latex: '(4,1568)', color: '#4fc1ff', pointSize: 7 },
-        { id: 'd5', latex: '(5,1686)', color: '#4fc1ff', pointSize: 7 },
-        { id: 'd6', latex: '(6,1858)', color: '#4fc1ff', pointSize: 7 },
-        { id: 'droiteAB', latex: 'y=127x+1069', color: '#c586c0', lineWidth: 2.5 },
-        { id: 'ptA', latex: '(2,1323)', color: '#dcdcaa', label: 'A(2;1323)', showLabel: true, pointSize: 9 },
-        { id: 'ptB', latex: '(5,1704)', color: '#dcdcaa', label: 'B(5;1704)', showLabel: true, pointSize: 9 }
-      ]
-    },
-    { xmin: 0, xmax: 7, ymin: 1100, ymax: 1950,
-      lines: [ { fn: function(x){ return 127*x+1069; }, color: '#c586c0', width: 2.5 } ],
-      points: [
-        { x: 1, y: 1200, color: '#4fc1ff' },
-        { x: 2, y: 1317, color: '#4fc1ff' },
-        { x: 3, y: 1452, color: '#4fc1ff' },
-        { x: 4, y: 1568, color: '#4fc1ff' },
-        { x: 5, y: 1686, color: '#4fc1ff' },
-        { x: 6, y: 1858, color: '#4fc1ff' },
-        { x: 2, y: 1323, color: '#dcdcaa', label: 'A(2;1323)' },
-        { x: 5, y: 1704, color: '#dcdcaa', label: 'B(5;1704)' }
-      ]
-    }
-  );
-</script>
-
-<div class="step">
-  <span class="label">Étape 1b — Ajustement affine</span>
-  <p>Le nuage de points semble aligné selon une direction quasi rectiligne : un ajustement affine paraît donc possible.</p>
-</div>
-
-<div class="step">
-  <span class="label">Étape 2a — Points moyens A et B</span>
-  $$x_A=\frac{1+2+3}{3}=2,\qquad y_A=\frac{1200+1317+1452}{3}=1323$$
-  $$x_B=\frac{4+5+6}{3}=5,\qquad y_B=\frac{1568+1686+1858}{3}=1704$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$A(2\,;1323)\qquad B(5\,;1704)$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 2c — Équation de la droite (AB)</span>
-  $$m=\frac{y_B-y_A}{x_B-x_A}=\frac{1704-1323}{5-2}=\frac{381}{3}=127$$
-  $$p=y_B-mx_B=1704-127\times5=1704-635=1069$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$(AB):\ y=127x+1069$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 3a — Consommation estimée en 2023</span>
-  <p>Rang de 2023 : $x=(2023-2015)+1=9$.</p>
-  $$y=127\times9+1069=1143+1069=2212$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>En 2023, la consommation est estimée à $2212$ GWh.</p>
-</div>
-
-<div class="step">
-  <span class="label">Étape 3b — Année où la consommation atteint 5641 GWh</span>
-  $$5641=127x+1069 \implies x=\frac{5641-1069}{127}=\frac{4572}{127}=36$$
-  <p>Or $x=(\text{année}-2015)+1$, donc année $=2015+36-1=2050$.</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>La consommation atteindra $5641$ GWh en l'année $2050$.</p>
-</div>
-
-</div>
-</details>
-
-<h2>PROBLÈME <span class="points">(12 points)</span></h2>
-
-<h3>Partie A</h3>
-
-<p>Soit $f$ la fonction définie par :</p>
-$$f(x)=\begin{cases} \dfrac{x^2-4}{x+1} & \text{si } x\in\ ]-\infty;2[ \\[6pt] \sqrt{x^2-x-2} & \text{si } x\in[2;+\infty[ \end{cases}$$
-<p>On appelle $(\mathcal{C})$ sa courbe représentative dans un repère orthonormé $(O;\vec{\imath},\vec{\jmath})$ d'unité graphique 1 cm.</p>
-<ol>
-  <li>Montrer que l'ensemble de définition $D_f$ de $f$ est $]-\infty;-1[\cup]-1;+\infty[$. <span class="points">(0,25 pt)</span></li>
-  <li>
-    <ol type="a">
-      <li>Calculer les limites de $f$ aux bornes de $D_f$. Interpréter géométriquement le résultat de la limite de $f$ en $-1$.</li>
-      <li>Montrer que la droite d'équation $y=x-\dfrac{1}{2}$ est asymptote à $(\mathcal{C})$ en $+\infty$. <span class="points">(0,5 pt)</span></li>
-    </ol>
-  </li>
-  <li>
-    <ol type="a">
-      <li>Déterminer les réels $a, b$ et $c$ tels que pour $x\in\ ]-\infty;2[$ l'on ait $f(x)=ax+b+\dfrac{c}{x+1}$. <span class="points">(0,5 pt)</span></li>
-      <li>En déduire que $(D)$ d'équation $y=x-1$ est une asymptote à $(\mathcal{C})$ en $-\infty$. <span class="points">(0,5 pt)</span></li>
-    </ol>
-  </li>
-  <li>Étudier la continuité de $f$ en 2. <span class="points">(0,5 pt)</span></li>
-  <li>
-    <ol type="a">
-      <li>Calculer $\displaystyle\lim_{x\to2^-}\frac{f(x)-f(2)}{x-2}$ et $\displaystyle\lim_{x\to2^+}\frac{f(x)-f(2)}{x-2}$ puis déduire la dérivabilité de $f$ en 2. <span class="points">(1,5 pt)</span></li>
-      <li>Interpréter géométriquement les résultats précédents. <span class="points">(0,5 pt)</span></li>
-    </ol>
-  </li>
-</ol>
-
-<div class="rappel">
-  <span class="label">Rappels de cours — Limites, asymptotes, continuité, dérivabilité</span>
-  <ul>
-    <li>Ensemble de définition : radicande $\geq0$ pour une racine carrée, dénominateur $\neq0$ pour un quotient.</li>
-    <li>Si $\lim_{x\to a}f(x)=\pm\infty$, la droite $x=a$ est asymptote verticale.</li>
-    <li>Pour une asymptote oblique $y=ax+b$ en $\pm\infty$ : montrer $\lim_{x\to\pm\infty}[f(x)-(ax+b)]=0$. Avec une racine, multiplier par la quantité conjuguée.</li>
-    <li>Écrire $f(x)=ax+b+\dfrac{c}{x+d}$ : identification après réduction au même dénominateur.</li>
-    <li>Continuité en $a$ : $\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=f(a)$.</li>
-    <li>Dérivabilité en $a$ : $\lim_{x\to a^-}\dfrac{f(x)-f(a)}{x-a}=\lim_{x\to a^+}\dfrac{f(x)-f(a)}{x-a}$, sinon point anguleux ou demi-tangente verticale.</li>
-  </ul>
-</div>
-
-<details class="correction">
-<summary><span class="txt"></span><span class="arrow">▾</span></summary>
-<div class="corr-body">
-
-<div class="step">
-  <span class="label">Étape 1 — Ensemble de définition</span>
-  <p>Pour $x\in[2;+\infty[$, on a $x^2-x-2\geq0$ (racines $-1$ et $2$, positif à l'extérieur de $[-1;2]$), donc $\sqrt{x^2-x-2}$ est définie.</p>
-  <p>Pour $x\in\,]-\infty;2[$, $\dfrac{x^2-4}{x+1}$ est définie sur $]-\infty;-1[\,\cup\,]-1;2[$ (exclusion de $x=-1$).</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$D_f=\,]-\infty;-1[\,\cup\,]-1;+\infty[$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 2a — Limites aux bornes</span>
-  $$\lim_{x\to-\infty}f(x)=\lim_{x\to-\infty}\frac{x^2-4}{x+1}=\lim_{x\to-\infty}x=-\infty$$
-  <p>En $-1$ : $\lim_{x\to-1}(x^2-4)=-3$ et $x+1\to0$ en changeant de signe, donc :</p>
-  $$\lim_{x\to-1^-}f(x)=+\infty,\qquad \lim_{x\to-1^+}f(x)=-\infty$$
-  $$\lim_{x\to+\infty}f(x)=\lim_{x\to+\infty}\sqrt{x^2-x-2}=+\infty$$
-</div>
-<div class="result">
-  <span class="label">Résultat — interprétation en −1</span>
-  <p>La droite d'équation $x=-1$ est asymptote verticale à $(\mathcal{C})$.</p>
-</div>
-
-<div class="step">
-  <span class="label">Étape 2b — Asymptote oblique en +∞</span>
-  $$\lim_{x\to+\infty}\Big[f(x)-\Big(x-\tfrac12\Big)\Big]=\lim_{x\to+\infty}\Big[\sqrt{x^2-x-2}-\Big(x-\tfrac12\Big)\Big]$$
-  <p>En multipliant par la quantité conjuguée :</p>
-  $$=\lim_{x\to+\infty}\frac{x^2-x-2-\big(x-\tfrac12\big)^2}{\sqrt{x^2-x-2}+x-\tfrac12}=\lim_{x\to+\infty}\frac{-9/4}{\sqrt{x^2-x-2}+x-\tfrac12}=0$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>La droite $y=x-\dfrac12$ est asymptote oblique à $(\mathcal{C})$ au voisinage de $+\infty$.</p>
-</div>
-
-<div class="step">
-  <span class="label">Étape 3a — Décomposition de f sur ]−∞;2[</span>
-  <p>On cherche $a,b,c$ tels que $f(x)=ax+b+\dfrac{c}{x+1}$, soit $x^2-4=(ax+b)(x+1)+c$. En développant :</p>
-  $$x^2-4=ax^2+(a+b)x+(b+c)$$
-  <p>Par identification :</p>
-  $$\begin{cases}a=1\\ a+b=0\\ b+c=-4\end{cases}\ \Longrightarrow\ \begin{cases}a=1\\ b=-1\\ c=-3\end{cases}$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$f(x)=x-1-\frac{3}{x+1}\quad\text{pour } x\in\,]-\infty;2[$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 3b — Asymptote oblique en −∞</span>
-  $$f(x)-(x-1)=-\frac{3}{x+1}\xrightarrow[x\to-\infty]{}0$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>La droite $(D):\ y=x-1$ est asymptote oblique à $(\mathcal{C})$ au voisinage de $-\infty$.</p>
-</div>
-
-<div class="step">
-  <span class="label">Étape 4 — Continuité en 2</span>
-  $$\lim_{x\to2^-}f(x)=\lim_{x\to2^-}\frac{x^2-4}{x+1}=\frac{4-4}{3}=0,\qquad \lim_{x\to2^+}f(x)=\lim_{x\to2^+}\sqrt{x^2-x-2}=\sqrt{4-2-2}=0,\qquad f(2)=\sqrt{4-2-2}=0$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>$\displaystyle\lim_{x\to2^-}f(x)=\lim_{x\to2^+}f(x)=f(2)=0$, donc $f$ est continue en 2.</p>
-</div>
-
-<div class="step">
-  <span class="label">Étape 5a — Dérivabilité en 2</span>
-  $$\lim_{x\to2^-}\frac{f(x)-f(2)}{x-2}=\lim_{x\to2^-}\frac{x^2-4}{(x-2)(x+1)}=\lim_{x\to2^-}\frac{(x-2)(x+2)}{(x-2)(x+1)}=\lim_{x\to2^-}\frac{x+2}{x+1}=\frac{4}{3}$$
-  $$\lim_{x\to2^+}\frac{f(x)-f(2)}{x-2}=\lim_{x\to2^+}\frac{\sqrt{x^2-x-2}}{x-2}=\lim_{x\to2^+}\sqrt{\frac{(x+1)(x-2)}{(x-2)^2}}=\lim_{x\to2^+}\sqrt{\frac{x+1}{x-2}}=+\infty$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>Les deux limites étant différentes ($4/3$ à gauche, $+\infty$ à droite), $f$ n'est pas dérivable en 2.</p>
-</div>
-
-<div class="note">
-  <span class="label">Interprétation géométrique</span>
-  <p>$(\mathcal{C})$ admet une demi-tangente à gauche du point d'abscisse 2 de coefficient directeur $4/3$, et une demi-tangente verticale à droite de ce même point.</p>
-</div>
-
-</div>
-</details>
-
-<h3>Partie B</h3>
-
-<ol>
-  <li>
-    <ol type="a">
-      <li>Étudier les variations de $f$ sur $]-\infty;-1[\cup]-1;2[$ et sur $]2;+\infty[$.</li>
-      <li>Dresser le tableau de variation de $f$. <span class="points">(1,75 pt)</span></li>
-    </ol>
-  </li>
-  <li>Déterminer une équation de la tangente $(T)$ à $(\mathcal{C})$ au point d'abscisse 0. <span class="points">(0,5 pt)</span></li>
-  <li>Déterminer les coordonnées des points d'intersection de $(\mathcal{C})$ avec l'axe des abscisses. <span class="points">(0,5 pt)</span></li>
-  <li>Tracer $(T)$, les asymptotes, les demi-tangentes au point d'abscisse 2 et $(\mathcal{C})$. <span class="points">(1 pt)</span></li>
-</ol>
-
-<div class="rappel">
-  <span class="label">Rappels de cours — Variations, tangente, tableau de variation</span>
-  <ul>
-    <li>Signe de $f'(x)$ : positif $\Rightarrow$ croissante ; négatif $\Rightarrow$ décroissante.</li>
-    <li>$\left(\dfrac{u}{v}\right)'=\dfrac{u'v-uv'}{v^2}$ ; $(\sqrt{u})'=\dfrac{u'}{2\sqrt{u}}$.</li>
-    <li>Signe d'un trinôme $ax^2+bx+c$ : si $\Delta<0$, il garde le signe de $a$.</li>
-    <li>Tangente en $x=a$ : $y=f'(a)(x-a)+f(a)$.</li>
-    <li>Points sur l'axe des abscisses : résoudre $f(x)=0$ sur chaque morceau du domaine.</li>
-  </ul>
-</div>
-
-<details class="correction">
-<summary><span class="txt"></span><span class="arrow">▾</span></summary>
-<div class="corr-body">
-
-<div class="step">
-  <span class="label">Étape 1 — Variations de f</span>
-  <p>Sur $]-\infty;-1[\cup]-1;2[$, $f$ est dérivable comme quotient de fonctions dérivables ($x+1\neq0$), et :</p>
-  $$f'(x)=\frac{2x(x+1)-1\times(x^2-4)}{(x+1)^2}=\frac{2x^2+2x-x^2+4}{(x+1)^2}=\frac{x^2+2x+4}{(x+1)^2}$$
-  <p>Le discriminant de $x^2+2x+4$ vaut $\Delta=2^2-4\times1\times4=4-16=-12<0$, donc $x^2+2x+4>0$ pour tout $x\in\mathbb{R}$ ; comme $(x+1)^2>0$, on a $f'(x)>0$ sur cet intervalle.</p>
-  <p>Sur $]2;+\infty[$, $f$ est dérivable comme composée $\sqrt{u}$ avec $u(x)=x^2-x-2>0$, et :</p>
-  $$f'(x)=\frac{u'(x)}{2\sqrt{u(x)}}=\frac{2x-1}{2\sqrt{x^2-x-2}}$$
-  <p>Pour $x>2$, on a $2x-1>2\times2-1=3>0$ et $\sqrt{x^2-x-2}>0$, donc $f'(x)>0$.</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>$f$ est strictement croissante sur chacun des trois intervalles $]-\infty;-1[$, $]-1;2[$ et $]2;+\infty[$, donc strictement croissante sur $D_f$ tout entier.</p>
-</div>
-
-<div class="diagram-wrap">
-<svg viewBox="0 0 700 230" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
-  <rect width="700" height="230" fill="#2d2d30"/>
-  <rect x="1" y="1" width="698" height="228" fill="none" stroke="#9d9d9d" stroke-width="1.5"/>
-  <line x1="0" y1="48" x2="700" y2="48" stroke="#9d9d9d" stroke-width="1.5"/>
-  <line x1="0" y1="96" x2="700" y2="96" stroke="#9d9d9d" stroke-width="1.5"/>
-  <line x1="85" y1="0" x2="85" y2="230" stroke="#9d9d9d" stroke-width="1.5"/>
-
-  <line x1="285" y1="48" x2="285" y2="230" stroke="#9d9d9d" stroke-width="1.5"/>
-  <line x1="295" y1="48" x2="295" y2="230" stroke="#9d9d9d" stroke-width="1.5"/>
-
-  <line x1="480" y1="48" x2="480" y2="141" stroke="#9d9d9d" stroke-width="1.5"/>
-  <line x1="480" y1="172" x2="480" y2="230" stroke="#9d9d9d" stroke-width="1.5"/>
-
-  <text x="42" y="24" text-anchor="middle" dominant-baseline="middle" font-size="17" font-style="italic" fill="#d4d4d4" font-family="Georgia,Cambria,serif">x</text>
-  <text x="112" y="24" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="600" fill="#d4d4d4" font-family="Georgia,Cambria,serif">−∞</text>
-  <text x="290" y="24" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="600" fill="#f48771" font-family="Georgia,Cambria,serif">−1</text>
-  <text x="480" y="24" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="600" fill="#d4d4d4" font-family="Georgia,Cambria,serif">2</text>
-  <text x="674" y="24" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="600" fill="#d4d4d4" font-family="Georgia,Cambria,serif">+∞</text>
-
-  <text x="42" y="72" text-anchor="middle" dominant-baseline="middle" font-size="14" font-style="italic" fill="#d4d4d4" font-family="Georgia,Cambria,serif">f′(x)</text>
-  <text x="185" y="73" text-anchor="middle" dominant-baseline="middle" font-size="19" font-weight="600" fill="#6a9955" font-family="Georgia,Cambria,serif">+</text>
-  <text x="387" y="73" text-anchor="middle" dominant-baseline="middle" font-size="19" font-weight="600" fill="#6a9955" font-family="Georgia,Cambria,serif">+</text>
-  <text x="590" y="73" text-anchor="middle" dominant-baseline="middle" font-size="19" font-weight="600" fill="#6a9955" font-family="Georgia,Cambria,serif">+</text>
-
-  <text x="42" y="158" text-anchor="middle" dominant-baseline="middle" font-size="15" font-style="italic" fill="#d4d4d4" font-family="Georgia,Cambria,serif">f</text>
-
-  <text x="112" y="195" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="600" fill="#4fc1ff" font-family="Georgia,Cambria,serif">−∞</text>
-  <text x="260" y="104" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="600" fill="#4fc1ff" font-family="Georgia,Cambria,serif">+∞</text>
-  <text x="317" y="195" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="600" fill="#4fc1ff" font-family="Georgia,Cambria,serif">−∞</text>
-  <text x="674" y="104" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="600" fill="#4fc1ff" font-family="Georgia,Cambria,serif">+∞</text>
-
-  <text x="480" y="156" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="600" fill="#d4d4d4" font-family="Georgia,Cambria,serif">0</text>
-
-  <line x1="130" y1="185" x2="260" y2="122" stroke="#4fc1ff" stroke-width="1.6"/>
-  <polygon points="260,122 253.18,130.86 248.82,121.86" fill="#4fc1ff"/>
-
-  <line x1="335" y1="185" x2="465" y2="159.41" stroke="#4fc1ff" stroke-width="1.6"/>
-  <line x1="495" y1="153.5" x2="655" y2="122" stroke="#4fc1ff" stroke-width="1.6"/>
-  <polygon points="655,122 646.16,128.84 644.22,119.03" fill="#4fc1ff"/>
-</svg>
-<div class="diagram-cap">Tableau de variation de f</div>
-</div>
-
-<div class="step">
-  <span class="label">Étape 2 — Tangente (T) en x=0</span>
-  <p>Équation de la tangente au point d'abscisse $a$ : $y=f'(a)(x-a)+f(a)$, ici $a=0$.</p>
-  <p>Calcul de $f(0)$ (avec $x=0\in\,]-\infty;2[$) : $f(0)=\dfrac{0-4}{0+1}=-4$.</p>
-  <p>Calcul de $f'(0)$ : $f'(0)=\dfrac{0^2+2\times0+4}{(0+1)^2}=\dfrac{4}{1}=4$.</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$(T):\ y=4x-4$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 3 — Points d'intersection avec l'axe des abscisses</span>
-  <p>Sur $]-\infty;-1[\cup]-1;2[$ : $f(x)=0 \iff \dfrac{x^2-4}{x+1}=0 \iff x^2-4=0 \iff x=-2$ ou $x=2$ (rejeté, hors intervalle). Point $A(-2;0)$.</p>
-  <p>Sur $[2;+\infty[$ : $f(x)=0\iff x^2-x-2=0$. $\Delta=(-1)^2-4\times1\times(-2)=9$, $\sqrt{\Delta}=3$, racines $x=\dfrac{1-3}{2}=-1$ (rejetée) et $x=\dfrac{1+3}{2}=2$. Point $B(2;0)$.</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$A(-2\,;0)\qquad B(2\,;0)$$
-</div>
-
-<div class="plot-wrap">
-<div id="plot-courbe-C" class="plot-canvas-box"></div>
-<div class="plot-legend">
-  <span><span class="swatch" style="background:#4fc1ff"></span>(C)</span>
-  <span><span class="swatch dash" style="color:#f48771"></span>x=-1</span>
-  <span><span class="swatch dash" style="color:#c586c0"></span>y=x-1</span>
-  <span><span class="swatch dash" style="color:#dcdcaa"></span>y=x-1/2</span>
-  <span><span class="swatch" style="background:#6a9955"></span>(T): y=4x-4</span>
-  <span><span class="swatch" style="background:#4fc1ff;opacity:.4"></span>aire 𝒜</span>
-</div>
-<div class="diagram-cap">Courbe (C), asymptotes x=-1, y=x-1, y=x-1/2, tangente (T) en 0, points A(-2;0), B(2;0) et aire hachurée entre x=-5 et x=-2</div>
-<div class="plot-hint">Molette / pincement = zoom · glisser = déplacer · survol = coordonnées</div>
-</div>
-<script>
-  mountGraph('plot-courbe-C',
-    { bounds: { left: -7, right: 5, bottom: -6, top: 6 },
-      expressions: [
-        { id: 'branche1', latex: 'y=\\frac{x^{2}-4}{x+1}\\left\\{x<2\\right\\}', color: '#4fc1ff', lineWidth: 3 },
-        { id: 'branche2', latex: 'y=\\sqrt{x^{2}-x-2}\\left\\{x\\ge2\\right\\}', color: '#4fc1ff', lineWidth: 3 },
-        { id: 'asymptoteV', latex: 'x=-1', color: '#f48771', lineStyle: 'DASHED' },
-        { id: 'asymptoteObl1', latex: 'y=x-1', color: '#c586c0', lineStyle: 'DASHED' },
-        { id: 'asymptoteObl2', latex: 'y=x-\\frac{1}{2}', color: '#dcdcaa', lineStyle: 'DASHED' },
-        { id: 'tangenteT', latex: 'y=4x-4', color: '#6a9955' },
-        { id: 'aireA', latex: 'x-1\\le y\\le\\frac{x^{2}-4}{x+1}\\left\\{-5\\le x\\le-2\\right\\}', color: '#4fc1ff', fillOpacity: 0.28, lineWidth: 0 },
-        { id: 'pointA', latex: '(-2,0)', color: '#dcdcaa', label: 'A(-2;0)', showLabel: true, pointSize: 8 },
-        { id: 'pointB', latex: '(2,0)', color: '#dcdcaa', label: 'B(2;0)', showLabel: true, pointSize: 8 }
-      ]
-    },
-    { xmin: -7, xmax: 5, ymin: -6, ymax: 6,
-      curves: [
-        { fn: function(x){ return (x*x-4)/(x+1); }, domain: [-7,2], excludes: [-1,2], color: '#4fc1ff' },
-        { fn: function(x){ var u=x*x-x-2; return u>=0 ? Math.sqrt(u) : NaN; }, domain: [2,5], color: '#4fc1ff' }
-      ],
-      lines: [
-        { type: 'vertical', x: -1, color: '#f48771', dash: true },
-        { fn: function(x){ return x-1; }, color: '#c586c0', dash: true },
-        { fn: function(x){ return x-0.5; }, color: '#dcdcaa', dash: true },
-        { fn: function(x){ return 4*x-4; }, color: '#6a9955', dash: false, width: 2 }
-      ],
-      shaded: [
-        { lower: function(x){ return x-1; }, upper: function(x){ return (x*x-4)/(x+1); }, domain: [-5,-2], color: 'rgba(79,193,255,0.28)' }
-      ],
-      points: [
-        { x: -2, y: 0, color: '#dcdcaa', label: 'A(-2;0)' },
-        { x: 2, y: 0, color: '#dcdcaa', label: 'B(2;0)' }
-      ]
-    }
-  );
-</script>
-
-</div>
-</details>
-
-<h3>Partie C</h3>
-
-<ol>
-  <li>Donner une primitive $F$ de $f$ sur $]-\infty;-1[$. [On pourra utiliser 3) a) de la partie A] <span class="points">(0,5 pt)</span></li>
-  <li>Soit $\mathcal{A}$ l'aire de la partie du plan délimitée par $(\mathcal{C})$, la droite $(D)$ et les droites d'équations $x=-5$ et $x=-2$.
-    <ol type="a">
-      <li>Hachurer sur le graphique l'aire $\mathcal{A}$.</li>
-      <li>Calculer $\mathcal{A}$ en $cm^2$. <span class="points">(0,5 pt)</span></li>
-    </ol>
-  </li>
-  <li>On considère $\Sigma$, la portion du plan comprise entre les droites d'équations $x=2$ et $x=3$, l'axe des abscisses et la courbe $(\mathcal{C})$. On note $V$ le volume engendré par la rotation complète de $\Sigma$ autour de l'axe des abscisses. Calculer $V$ en $cm^3$. <span class="points">(0,5 pt)</span></li>
-</ol>
-
-<div class="rappel">
-  <span class="label">Rappels de cours — Primitives, aires, volumes</span>
-  <ul>
-    <li>Primitive de $x\mapsto\dfrac{1}{x+d}$ : $x\mapsto\ln|x+d|$.</li>
-    <li>Aire entre deux courbes sur $[a;b]$ : $\displaystyle\int_a^b|f(x)-g(x)|\,dx$.</li>
-    <li>Volume de révolution autour de $(Ox)$ : $\displaystyle V=\pi\int_a^b[f(x)]^2\,dx$.</li>
-  </ul>
-</div>
-
-<details class="correction">
-<summary><span class="txt"></span><span class="arrow">▾</span></summary>
-<div class="corr-body">
-
-<div class="step">
-  <span class="label">Étape 1 — Primitive F sur ]−∞;−1[</span>
-  <p>D'après 3a) de la partie A, $f(x)=x-1-\dfrac{3}{x+1}$ sur cet intervalle (où $x+1<0$, on prend donc $\ln(-x-1)$ pour rester positif à l'intérieur du logarithme).</p>
-  <p>Une primitive de $x-1$ est $\dfrac12x^2-x$ ; une primitive de $-\dfrac{3}{x+1}$ est $-3\ln(-x-1)$.</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$F(x)=\frac12x^2-x-3\ln(-x-1)+k,\quad k\in\mathbb{R}$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 2b — Calcul de l'aire A</span>
-  $$\mathcal{A}=\int_{-5}^{-2}\big|f(x)-(x-1)\big|\,dx=\int_{-5}^{-2}\Big(-\frac{3}{x+1}\Big)dx=-3\Big[\ln(-x-1)\Big]_{-5}^{-2}$$
-  $$=-3\big[\ln(2-1)-\ln(5-1)\big]=-3\big[\ln(1)-\ln(4)\big]=-3(0-\ln4)=3\ln4$$
-  <p>Or $\ln4=\ln(2^2)=2\ln2$, donc $3\ln4=6\ln2$.</p>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$\mathcal{A}=6\ln2\ \text{cm}^2\approx4{,}16\ \text{cm}^2$$
-</div>
-
-<div class="step">
-  <span class="label">Étape 3 — Volume de révolution</span>
-  <p>Sur $[2;3]$, $f(x)=\sqrt{x^2-x-2}$, donc $[f(x)]^2=x^2-x-2$.</p>
-  $$V=\pi\int_2^3[f(x)]^2\,dx=\pi\int_2^3(x^2-x-2)\,dx=\pi\Big[\frac{x^3}{3}-\frac{x^2}{2}-2x\Big]_2^3$$
-  <p>En $x=3$ : $\dfrac{27}{3}-\dfrac{9}{2}-6=9-\dfrac92-6=-\dfrac32$.</p>
-  <p>En $x=2$ : $\dfrac{8}{3}-\dfrac{4}{2}-4=\dfrac83-6=-\dfrac{10}{3}$.</p>
-  $$V=\pi\Big[-\frac32-\Big(-\frac{10}{3}\Big)\Big]=\pi\Big(\frac{-9+20}{6}\Big)=\pi\times\frac{11}{6}$$
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  $$V=\frac{11}{6}\pi\ \text{cm}^3\approx5{,}76\ \text{cm}^3$$
-</div>
-
-</div>
-</details>
-
-<h3>Partie D</h3>
-
-<p>Soit la fonction $g$ définie par $g(x)=|f(x)|$ et $(\Gamma)$ sa représentation graphique.</p>
-<ol>
-  <li>Sans étudier la fonction $g$, tracer $(\Gamma)$ à l'aide de $(\mathcal{C})$. Expliquer la construction. <span class="points">(0,5 pt)</span></li>
-  <li>Déterminer graphiquement le nombre de solutions sur $D_g$ de l'équation $g(x)=m$ où $m$ est un réel donné. <span class="points">(0,5 pt)</span></li>
-</ol>
-
-<div class="rappel">
-  <span class="label">Rappels de cours — Fonction valeur absolue et lecture graphique</span>
-  <ul>
-    <li>Pour tracer $(\Gamma)$ de $g(x)=|f(x)|$ à partir de $(\mathcal{C})$ : là où $f\geq0$, $(\Gamma)$ coïncide avec $(\mathcal{C})$ ; là où $f<0$, $(\Gamma)$ est le symétrique de $(\mathcal{C})$ par rapport à $(Ox)$.</li>
-    <li>Le nombre de solutions de $g(x)=m$ se lit comme le nombre de points communs entre $(\Gamma)$ et la droite $y=m$.</li>
-  </ul>
-</div>
-
-<details class="correction">
-<summary><span class="txt"></span><span class="arrow">▾</span></summary>
-<div class="corr-body">
-
-<div class="step">
-  <span class="label">Étape 1 — Construction de (Γ)</span>
-  <p>D'après le tableau de variation, $f(x)<0$ pour $x\in\,]-\infty;-2[\,\cup\,]-1;2[$ (entre les zéros de $f$) et $f(x)\geq0$ ailleurs.</p>
-  $$g(x)=\begin{cases}-f(x) & \text{sur } ]-\infty;-2]\cup[-1;2[\\ f(x) & \text{sur } [-2;-1[\,\cup\,[2;+\infty[\end{cases}$$
-  <p>Là où $f(x)<0$, $(\Gamma)$ est le symétrique de $(\mathcal{C})$ par rapport à l'axe des abscisses ; là où $f(x)\geq0$, $(\Gamma)$ et $(\mathcal{C})$ sont confondues.</p>
-</div>
-
-<div class="plot-wrap">
-<div id="plot-courbe-gamma" class="plot-canvas-box"></div>
-<div class="plot-legend">
-  <span><span class="swatch dash" style="color:#6a9955"></span>(C)</span>
-  <span><span class="swatch" style="background:#4fc1ff"></span>(Γ): g(x)=|f(x)|</span>
-</div>
-<div class="diagram-cap">(C) en pointillé et (Γ) : g(x)=|f(x)| en trait plein — là où f&lt;0, (Γ) est le symétrique de (C) par rapport à (Ox)</div>
-<div class="plot-hint">Molette / pincement = zoom · glisser = déplacer · survol = coordonnées</div>
-</div>
-<script>
-  mountGraph('plot-courbe-gamma',
-    { bounds: { left: -7, right: 5, bottom: -6, top: 6 },
-      expressions: [
-        { id: 'C-branche1', latex: 'y=\\frac{x^{2}-4}{x+1}\\left\\{x<2\\right\\}', color: '#6a9955', lineStyle: 'DASHED', lineWidth: 2 },
-        { id: 'C-branche2', latex: 'y=\\sqrt{x^{2}-x-2}\\left\\{x\\ge2\\right\\}', color: '#6a9955', lineStyle: 'DASHED', lineWidth: 2 },
-        { id: 'gamma-branche1', latex: 'y=\\left|\\frac{x^{2}-4}{x+1}\\right|\\left\\{x<2\\right\\}', color: '#4fc1ff', lineWidth: 3 },
-        { id: 'gamma-branche2', latex: 'y=\\left|\\sqrt{x^{2}-x-2}\\right|\\left\\{x\\ge2\\right\\}', color: '#4fc1ff', lineWidth: 3 },
-        { id: 'zeroA', latex: '(-2,0)', color: '#dcdcaa', label: 'zéro : x=-2', showLabel: true, pointSize: 8 },
-        { id: 'zeroB', latex: '(2,0)', color: '#dcdcaa', label: 'zéro : x=2', showLabel: true, pointSize: 8 }
-      ]
-    },
-    { xmin: -7, xmax: 5, ymin: -6, ymax: 6,
-      curves: [
-        { fn: function(x){ return (x*x-4)/(x+1); }, domain: [-7,2], excludes: [-1,2], color: '#6a9955', dash: true, width: 1.8 },
-        { fn: function(x){ var u=x*x-x-2; return u>=0 ? Math.sqrt(u) : NaN; }, domain: [2,5], color: '#6a9955', dash: true, width: 1.8 },
-        { fn: function(x){ return Math.abs((x*x-4)/(x+1)); }, domain: [-7,2], excludes: [-1,2], color: '#4fc1ff' },
-        { fn: function(x){ var u=x*x-x-2; return u>=0 ? Math.abs(Math.sqrt(u)) : NaN; }, domain: [2,5], color: '#4fc1ff' }
-      ],
-      points: [
-        { x: -2, y: 0, color: '#dcdcaa', label: 'zéro : x=-2' },
-        { x: 2, y: 0, color: '#dcdcaa', label: 'zéro : x=2' }
-      ]
-    }
-  );
-</script>
-
-<div class="step">
-  <span class="label">Étape 2 — Nombre de solutions de g(x)=m</span>
-  <ul>
-    <li>Pour $m<0$ : aucune solution, car $g(x)=|f(x)|\geq0$ pour tout $x$.</li>
-    <li>Pour $m=0$ : la droite $y=0$ ne coupe $(\Gamma)$ qu'aux deux zéros de $f$, soit 2 solutions.</li>
-    <li>Pour $m>0$ : la droite $y=m$ coupe $(\Gamma)$ en 4 points, soit 4 solutions.</li>
-  </ul>
-</div>
-<div class="result">
-  <span class="label">Résultat</span>
-  <p>Nombre de solutions selon $m$ : $0$ solution si $m<0$ ; $2$ solutions si $m=0$ ; $4$ solutions si $m>0$.</p>
-</div>
-
-</div>
-</details>
-
-<div class="signature">Corrigé établi d'après la proposition manuscrite — Sujet n°3, BAC D 2024, 1er tour.</div>
-
-<script>
-  // Petit confort mobile : quand on ouvre une correction, on scrolle
-  // doucement jusqu'à son en-tête pour ne pas perdre le fil.
-  document.querySelectorAll('details.correction').forEach(function(det){
-    det.addEventListener('toggle', function(){
-      if(det.open){
-        setTimeout(function(){
-          det.scrollIntoView({behavior:'smooth', block:'start'});
-        }, 60);
-      }
+function openFeedback(source) {
+  feedbackContext.source = source;
+  const ctx = document.getElementById('feedback-context');
+
+  if (source === 'exercise' && currentExId) {
+    const ex = EXERCISES.find(e => e.id === currentExId);
+    feedbackContext.exerciseId    = currentExId;
+    feedbackContext.exerciseTitle = ex ? ex.title : currentExId;
+    ctx.textContent = '📌 Exercice : ' + feedbackContext.exerciseTitle;
+    ctx.style.display = 'block';
+  } else {
+    feedbackContext.exerciseId    = null;
+    feedbackContext.exerciseTitle = null;
+    ctx.style.display = 'none';
+  }
+
+  // Reset form
+  document.getElementById('feedback-text').value = '';
+  document.getElementById('feedback-body').style.display = 'block';
+  document.getElementById('feedback-success').style.display = 'none';
+  document.getElementById('feedback-submit-btn').disabled = false;
+  document.querySelectorAll('.ftype-btn').forEach((b,i) => b.classList.toggle('selected', i===0));
+  feedbackType = 'erreur_solution';
+
+  document.getElementById('feedback-overlay').classList.add('open');
+}
+
+function closeFeedback() {
+  document.getElementById('feedback-overlay').classList.remove('open');
+}
+
+function closeFeedbackOnBg(e) {
+  if (e.target === document.getElementById('feedback-overlay')) closeFeedback();
+}
+
+async function submitFeedback() {
+  const text = document.getElementById('feedback-text').value.trim();
+  if (!text) {
+    document.getElementById('feedback-text').focus();
+    return;
+  }
+
+  const btn = document.getElementById('feedback-submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Envoi…';
+
+  try {
+    await firebase.firestore().collection('exercise_feedback').add({
+      type:           feedbackType,
+      source:         feedbackContext.source,
+      exerciseId:     feedbackContext.exerciseId,
+      exerciseTitle:  feedbackContext.exerciseTitle,
+      message:        text,
+      page:           'exercises.html',
+      timestamp:      firebase.firestore.FieldValue.serverTimestamp(),
+      userAgent:      navigator.userAgent.substring(0, 120),
     });
-  });
-</script>
 
+    document.getElementById('feedback-body').style.display = 'none';
+    document.getElementById('feedback-success').style.display = 'block';
+
+  } catch(err) {
+    console.error('Feedback error:', err);
+    btn.disabled = false;
+    btn.textContent = 'Envoyer →';
+    alert('Erreur lors de l\'envoi. Vérifie ta connexion.');
+  }
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeFeedback();
+});
+</script>
+  <script src="/network.js" type="module"></script>
 </body>
 </html>
