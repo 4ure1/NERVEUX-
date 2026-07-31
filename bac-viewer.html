@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<script src="/JS/theme.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sujet BAC — NERVEUX</title>
+<meta name="description" content="Sujet et correction complète d'un examen du Baccalauréat — NERVEUX Maths Terminale D Burkina Faso">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Css/mobile.css">
+
+<!-- MathJax config -->
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] },
+  startup: {
+    pageReady: function(){
+      return MathJax.startup.defaultPageReady().then(revealPage);
+    }
+  }
+};
+function revealPage(){
+  document.body.classList.add('ready');
+  var l=document.getElementById('mj-loader');
+  if(l){ l.classList.add('hide'); setTimeout(function(){ l.remove(); },400); }
+}
+setTimeout(revealPage, 6000);
+(function loadMJ(srcs,i){
+  if(i>=srcs.length){revealPage();return;}
+  var s=document.createElement('script');
+  s.src=srcs[i]; s.async=true;
+  s.onerror=function(){loadMJ(srcs,i+1);};
+  document.head.appendChild(s);
+})([
+  'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js',
+  'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js',
+  'https://unpkg.com/mathjax@3/es5/tex-svg.js'
+],0);
+</script>
+
+<style>
+  :root{
+    --navy:#222d46; 
+    --blue:#0b2c5f;
+    --card:#2d2d30;
+    --border:#3e3e42;
+    --bg:#252526;
+    --text:#d4d4d4;
+    --text2:#9d9d9d;
+    --blue-neon:#4fc1ff;
+    --purple:#c586c0;
+    --orange:#ce9178;
+    --green:#6a9955;
+    --yellow:#dcdcaa;
+    --gold:#d4a017;
+  }
+  *{box-sizing:border-box;}
+  html{ -webkit-text-size-adjust:100%; scroll-behavior: smooth; }
+
+  /* Le body occupe 100% de la largeur d'écran */
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Nunito', Georgia, Cambria, serif;
+    line-height:1.65; margin:0; padding:0; width:100%;
+    overflow-x:hidden;
+    opacity:0; transition:opacity .4s ease;
+  }
+  body.ready{opacity:1;}
+
+  #mj-loader{
+    position:fixed; inset:0; background:#252526; z-index:999;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-family:'Nunito', sans-serif; color:#9d9d9d; gap:14px; transition:opacity .35s ease;
+  }
+  #mj-loader.hide{opacity:0; pointer-events:none;}
+  .mj-spinner{
+    width:34px; height:34px; border-radius:50%;
+    border:3px solid #3e3e42; border-top-color:#4fc1ff;
+    animation:mjspin .8s linear infinite;
+  }
+  @keyframes mjspin{to{transform:rotate(360deg);}}
+  @keyframes fadeSlide{ from{opacity:0; transform:translateY(-10px);} to{opacity:1; transform:translateY(0);} }
+
+  /* ── TOPBAR PLEINE LARGEUR (100% WIDE) ── */
+  .topbar {
+    background: var(--navy); color: white;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 32px; height: 64px; width: 100%;
+    box-shadow: 0 2px 14px rgba(0,0,0,.3); position: sticky; top: 0; z-index: 200;
+  }
+  .topbar-left { display: flex; align-items: center; gap: 12px; }
+  .topbar-logo { width: 34px; height: 34px; object-fit: contain; }
+  .topbar-brand { font-weight: 900; font-size: 19px; letter-spacing: 1.2px; color: white; text-decoration: none; font-family:'Nunito',sans-serif; }
+  .topbar-right { display: flex; align-items: center; gap: 10px; }
+  .return-link {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.9);
+    text-decoration: none; font-family:'Nunito',sans-serif;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 40px; padding: 8px 18px; transition: all .2s;
+  }
+  .return-link:hover { background: rgba(255,255,255,.2); color: white; border-color: var(--gold); }
+
+  /* ── CONTENEUR DU BAC CENTRÉ ── */
+  .bac-container {
+    max-width: 900px; margin: 0 auto; padding: 24px 16px 80px;
+  }
+
+  /* ── TITRE NÉON ANIMÉ ── */
+  h1{
+    text-align:center; font-family:'Nunito', sans-serif;
+    font-size:1.9em; font-weight:900; letter-spacing:1px;
+    background:linear-gradient(90deg,var(--blue-neon),var(--purple),var(--orange),var(--green),var(--yellow),var(--blue-neon));
+    background-size:400% 100%;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:flow 6s linear infinite; margin-top: 20px; margin-bottom:6px;
+  }
+  @keyframes flow{
+    0%{background-position:0% 50%;}
+    100%{background-position:400% 50%;}
+  }
+  .subtitle{text-align:center; font-style:italic; color:var(--text2); margin-bottom:30px; font-family:'Nunito',sans-serif;}
+  
+  h2{
+    font-family:'Nunito',sans-serif; color:var(--blue-neon);
+    border-bottom:2px solid var(--border); padding-bottom:8px;
+    margin-top:52px; letter-spacing:0.5px; font-size:1.35em; font-weight:800;
+  }
+  h3{font-family:'Nunito',sans-serif; color:var(--purple); margin-top:34px; font-size:1.15em; font-weight:800;}
+  h4{font-family:'Nunito',sans-serif; color:var(--orange); margin-top:26px; font-size:1.05em; font-weight:800;}
+  
+  .infoblock{
+    background:var(--card); border:1px solid var(--border); border-radius:8px;
+    padding:16px 20px; margin:20px 0; font-family:'Nunito',sans-serif; font-size:0.9em;
+  }
+  .infoblock table{width:100%; border-collapse:collapse;}
+  .infoblock td{padding:4px 8px; color:var(--text2);}
+  .infoblock td.val{color:var(--text); font-weight:bold;}
+  
+  .step{
+    background:var(--card); border-left:5px solid var(--blue-neon);
+    border-radius:0 8px 8px 0; padding:14px 16px; margin:16px 0;
+    overflow-x:auto;
+  }
+  .step .label{
+    display:block; font-family:'Nunito',sans-serif; font-weight:bold;
+    color:var(--blue-neon); margin-bottom:8px; text-transform:uppercase; font-size:0.85em; letter-spacing:0.5px;
+  }
+  .step.alt{border-left-color:var(--purple);}
+  .step.alt .label{color:var(--purple);}
+  
+  .result{
+    background:linear-gradient(135deg, rgba(79,193,255,0.08), rgba(197,134,192,0.08));
+    border:2px solid var(--blue-neon); border-radius:8px; padding:16px; margin:18px 0;
+    overflow-x:auto;
+  }
+  .result .label{
+    display:block; font-family:'Nunito',sans-serif; font-weight:bold;
+    color:var(--yellow); text-transform:uppercase; font-size:0.8em; letter-spacing:1px; margin-bottom:8px;
+  }
+  .note{
+    border:2px dashed var(--yellow); border-radius:8px; padding:14px 16px; margin:18px 0;
+    background:rgba(220,220,170,0.04); font-size:0.95em;
+    overflow-x:auto;
+  }
+  .note .label{
+    display:block; font-family:'Nunito',sans-serif; font-weight:bold;
+    color:var(--yellow); margin-bottom:6px;
+  }
+  .rappel{
+    border:1px solid var(--purple); border-radius:8px; padding:14px 16px; margin:18px 0 24px;
+    background:rgba(197,134,192,0.06); font-size:0.93em;
+    overflow-x:auto;
+  }
+  .rappel .label{
+    display:flex; align-items:center; gap:8px; font-family:'Nunito',sans-serif; font-weight:bold;
+    color:var(--purple); text-transform:uppercase; font-size:0.78em; letter-spacing:1px; margin-bottom:8px;
+  }
+  .rappel .label::before{content:'💡'; font-size:1.1em;}
+  .rappel ul{margin:6px 0 0; padding-left:20px;}
+  .rappel li{margin-bottom:4px;}
+  .points{color:var(--text2); font-style:italic; font-size:0.9em;}
+  
+  table.data{border-collapse:collapse; width:100%; margin:16px 0; font-family:'Nunito',sans-serif; font-size:0.85em; display:block; overflow-x:auto; white-space:nowrap;}
+  table.data th, table.data td{border:1px solid var(--border); padding:7px 9px; text-align:center;}
+  table.data th{background:#2d2d30; color:var(--blue-neon);}
+  table.data td{color:var(--text);}
+  
+  mjx-container[display="true"]{
+    overflow-x:auto; overflow-y:hidden; max-width:100%;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .signature{color:var(--text2); text-align:right; font-size:0.85em; margin-top:60px; font-family:'Nunito',sans-serif;}
+
+  details.correction{
+    margin:22px 0 44px; border:1px solid var(--border); border-radius:10px;
+    background:var(--card); overflow:hidden;
+  }
+  details.correction > summary{
+    cursor:pointer; list-style:none; padding:13px 18px;
+    font-family:'Nunito',sans-serif; font-weight:800; font-size:0.95em;
+    color:#1c1c1e; background:linear-gradient(90deg,var(--blue-neon),var(--purple));
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    -webkit-user-select:none; user-select:none;
+    transition:filter .15s ease;
+  }
+  details.correction > summary:active{filter:brightness(0.9);}
+  details.correction[open] > .corr-body{animation:fadeSlide .35s ease;}
+  details.correction > summary::-webkit-details-marker{display:none;}
+  details.correction > summary::marker{content:'';}
+  details.correction > summary .arrow{
+    display:inline-block; transition:transform .25s ease; font-size:1.1em; flex-shrink:0;
+  }
+  details.correction[open] > summary .arrow{transform:rotate(180deg);}
+  details.correction > summary .txt{flex:1;}
+  details.correction > summary .txt::before{content:'▶ Afficher la correction';}
+  details.correction[open] > summary .txt::before{content:'▼ Correction';}
+  .corr-body{padding:18px 16px 6px;}
+
+  /* ── FOOTER PLEINE LARGEUR (100% WIDE) ── */
+  .footer {
+    background: var(--navy); color: white; padding: 28px 32px; width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px; margin-top: 60px;
+    font-family:'Nunito',sans-serif;
+    box-shadow: 0 -2px 14px rgba(0,0,0,.2);
+  }
+  .footer-left { display: flex; align-items: center; gap: 12px; }
+  .footer-logo { width: 36px; height: 36px; object-fit: contain; }
+  .footer-brand { font-weight: 800; font-size: 16px; color: white; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,.7); margin-top: 3px; }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a { color: white; text-decoration: none; font-size: 13px; font-weight: 700; transition: opacity .2s; }
+  .footer-links a:hover { opacity: .7; }
+
+  @media (max-width:600px){
+    .topbar { padding: 0 16px; }
+    .footer { padding: 20px 16px; }
+    .bac-container{ padding: 12px 10px 60px; }
+    h1{font-size:1.4em;}
+    h2{font-size:1.15em; margin-top:40px;}
+    h3{font-size:1.05em;}
+    .step, .result, .note, .rappel{padding:12px 12px;}
+    details.correction > summary{padding:11px 12px; font-size:0.85em;}
+    mjx-container[display="true"]{font-size:88% !important;}
+  }
+</style>
+</head>
+<body>
+
+<div id="mj-loader"><div class="mj-spinner"></div><div>Chargement des formules…</div></div>
+
+<!-- TOPBAR PLEINE LARGEUR -->
+<header class="topbar">
+  <div class="topbar-left">
+    <span class="topbar-brand">NERVEUX</span>
+  </div>
+  <div class="topbar-right">
+    <a href="exercices.html" class="return-link" onclick="if(history.length > 1){ history.back(); return false; }">
+      <span class="arrow">←</span>
+      <span>Retour aux exercices</span>
+    </a>
+  </div>
+</header>
+
+<!-- CONTENU DU BAC DANS UN CONTENEUR CENTRÉ DE 900PX -->
+<main class="bac-container">
+  <div id="bac-content"></div>
+</main>
+
+<!-- FOOTER PLEINE LARGEUR -->
+<footer class="footer">
+  <div class="footer-left">
+    <div>
+      <div class="footer-brand">NERVEUX</div>
+      <div class="footer-copy">© 2026 NERVEUX · Maths &amp; Physique pour les lycéens du Burkina Faso</div>
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="math.html">Maths</a>
+    <a href="exercices.html">Exercices</a>
+    <a href="about1.html">À propos</a>
+  </div>
+</footer>
+
+<!-- Fichiers de contenu BAC -->
+<script src="JS/bac_content_2024.js"></script>
+
+<script>
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id') || 'bac-d-2024-s1';
+
+  var registry = window.BAC_CONTENT_REGISTRY || {};
+  var wrap = document.getElementById('bac-content');
+  var html = registry[id];
+
+  if(html){
+    wrap.innerHTML = html;
+    function typesetWhenReady(){
+      if(window.MathJax && MathJax.typesetPromise){
+        MathJax.startup.promise.then(function(){
+          MathJax.typesetPromise([wrap]).catch(function(){});
+        });
+      } else {
+        setTimeout(typesetWhenReady, 200);
+      }
+    }
+    typesetWhenReady();
+  } else {
+    wrap.innerHTML = '<div style="text-align:center;padding:80px 20px;">'
+      +'<h2>Sujet introuvable</h2>'
+      +'<p>Le sujet demandé n\'est pas encore disponible (id : <code>'+id+'</code>).</p>'
+      +'<a href="exercices.html" style="color:#4fc1ff;">← Retour aux exercices</a>'
+      +'</div>';
+    revealPage();
+  }
+})();
+</script>
+</body>
+</html>
