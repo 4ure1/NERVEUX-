@@ -3270,7 +3270,8 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
     <line x1="0" y1="230" x2="760" y2="230" stroke="#dde1ec" stroke-width="1.5"/>
     
     <!-- Traits verticaux de guidage (colonne intermédiaire t = 0 à x = 420) -->
-    <line x1="420" y1="45" x2="420" y2="90" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="420" y1="45" x2="420" y2="58" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="420" y1="78" x2="420" y2="90" stroke="#cbd5e1" stroke-width="1.5"/>
     <line x1="420" y1="90" x2="420" y2="125" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
     <line x1="420" y1="150" x2="420" y2="185" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
     <line x1="420" y1="185" x2="420" y2="198" stroke="#cbd5e1" stroke-width="1.5"/>
@@ -3292,6 +3293,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
     <!-- ── Ligne x'(t) ── -->
     <text x="170" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
     <text x="295" y="68" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
+    <text x="420" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="700">1</text>
     <text x="545" y="68" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
     <text x="670" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
     
@@ -5004,12 +5006,14 @@ correction: `<h4> Proposition de Corrigé</h4>
     <line x1="330" y1="78" x2="330" y2="90" stroke="#cbd5e1" stroke-width="1.5"/>
     <line x1="330" y1="90" x2="330" y2="100" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
     <line x1="330" y1="124" x2="330" y2="185" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
-    <line x1="330" y1="185" x2="330" y2="230" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="330" y1="185" x2="330" y2="198" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="330" y1="218" x2="330" y2="230" stroke="#cbd5e1" stroke-width="1.5"/>
     <line x1="330" y1="230" x2="330" y2="268" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
     <line x1="330" y1="292" x2="330" y2="328" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
 
     <!-- Colonne t = 3π/4 (x = 500) -->
-    <line x1="500" y1="45" x2="500" y2="90" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="500" y1="45" x2="500" y2="58" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="500" y1="78" x2="500" y2="90" stroke="#cbd5e1" stroke-width="1.5"/>
     <line x1="500" y1="90" x2="500" y2="126" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
     <line x1="500" y1="150" x2="500" y2="185" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
     <line x1="500" y1="185" x2="500" y2="198" stroke="#cbd5e1" stroke-width="1.5"/>
@@ -5035,6 +5039,7 @@ correction: `<h4> Proposition de Corrigé</h4>
     <text x="245" y="68" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
     <text x="330" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
     <text x="415" y="68" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
+    <text x="500" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="700">−4</text>
     <text x="585" y="68" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
     <text x="670" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
     
@@ -5050,6 +5055,7 @@ correction: `<h4> Proposition de Corrigé</h4>
     
     <!-- ── Ligne y'(t) ── -->
     <text x="245" y="208" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
+    <text x="330" y="208" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="700">−1</text>
     <text x="415" y="208" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
     <text x="500" y="208" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
     <text x="585" y="208" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
@@ -5635,4 +5641,4 @@ correction: `<h4> Proposition de Corrigé</h4>
 ];
 
 if (typeof window !== 'undefined') { window.BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2004; }
-if (typeof global !== 'undefined') { global.BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2004; }
+if (typeof global !== 'undefined') { global.BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2004; }
