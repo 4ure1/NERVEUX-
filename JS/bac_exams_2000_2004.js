@@ -3249,8 +3249,8 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>\\(y'(t) = -\\sin t\\). \\(y'>0\\) sur \\([-\\dfrac{\\pi}{2};0]\\) (y croissante), \\(y'<0\\) sur \\([0;\\dfrac{\\pi}{2}]\\) (y décroissante).</p>
 <p>Points clés : \\(M(-\\dfrac{\\pi}{2}) = (e^{-1};0)\\approx(0{,}37;0)\\), \\(M(0)=(1;1)\\) (max de y), \\(M(\\dfrac{\\pi}{2})=(e;0)\\approx(2{,}72;0)\\).</p>
 
-<div class="tv-wrap diagram-wrap" style="margin:20px 0;text-align:center;overflow-x:auto;-webkit-overflow-scrolling:touch;">
-  <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;display:inline-block;vertical-align:middle;">
+<div class="tv-wrap diagram-wrap" style="margin:20px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+  <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;display:block;margin:0 auto;">
     <defs>
       <marker id="arr-g-tv-2008-conj" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/></marker>
       <marker id="arr-r-tv-2008-conj" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#b83232"/></marker>
@@ -3269,6 +3269,14 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
     <line x1="0" y1="185" x2="760" y2="185" stroke="#cbd5e1" stroke-width="2"/>
     <line x1="0" y1="230" x2="760" y2="230" stroke="#dde1ec" stroke-width="1.5"/>
     
+    <!-- Traits verticaux de guidage (colonne intermédiaire t = 0 à x = 420) -->
+    <line x1="420" y1="45" x2="420" y2="90" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="420" y1="90" x2="420" y2="125" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="420" y1="150" x2="420" y2="185" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="420" y1="185" x2="420" y2="198" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="420" y1="218" x2="420" y2="230" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="420" y1="262" x2="420" y2="328" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+
     <!-- Titres des lignes (Texte blanc standard) -->
     <text x="47.5" y="23" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="800" font-style="italic">t</text>
     <text x="47.5" y="68" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="800" font-style="italic">x '(t)</text>
@@ -3284,28 +3292,27 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
     <!-- ── Ligne x'(t) ── -->
     <text x="170" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
     <text x="295" y="68" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
-    <line x1="420" y1="45" x2="420" y2="90" stroke="#dde1ec" stroke-width="1" stroke-dasharray="3 3"/>
     <text x="545" y="68" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
     <text x="670" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
     
     <!-- ── Ligne x(t) ── -->
     <text x="170" y="165" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14.5" font-weight="900">e⁻¹ ≈ 0,37</text>
-    <line x1="220" y1="160" x2="615" y2="115" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-tv-2008-conj)"/>
-    <text x="420" y="137" text-anchor="middle" dominant-baseline="central" fill="#475569" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="700" paint-order="stroke" stroke="#ffffff" stroke-width="5" stroke-linejoin="round">1</text>
+    <!-- Flèche montante e^-1 -> 1 puis 1 -> e avec le 1 sous t=0 -->
+    <line x1="220" y1="160" x2="395" y2="142" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="420" y="137" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="900">1</text>
+    <line x1="445" y1="134" x2="615" y2="115" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-tv-2008-conj)"/>
     <text x="670" y="112" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14.5" font-weight="900">e ≈ 2,72</text>
     
     <!-- ── Ligne y'(t) ── -->
     <text x="295" y="208" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
-    <line x1="420" y1="185" x2="420" y2="198" stroke="#cbd5e1" stroke-width="1.5"/>
     <text x="420" y="208" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
-    <line x1="420" y1="218" x2="420" y2="230" stroke="#cbd5e1" stroke-width="1.5"/>
     <text x="545" y="208" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
     
     <!-- ── Ligne y(t) ── -->
     <text x="170" y="305" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">0</text>
-    <line x1="195" y1="300" x2="395" y2="252" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-tv-2008-conj)"/>
+    <line x1="195" y1="300" x2="395" y2="254" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-tv-2008-conj)"/>
     <text x="420" y="250" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">1</text>
-    <line x1="445" y1="252" x2="645" y2="300" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-r-tv-2008-conj)"/>
+    <line x1="445" y1="254" x2="645" y2="300" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-r-tv-2008-conj)"/>
     <text x="670" y="305" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">0</text>
   </svg>
 </div>
@@ -4971,8 +4978,8 @@ correction: `<h4> Proposition de Corrigé</h4>
 <p>\\(x'(t) = 4\\sin2t\\) ; zéros sur [0;π] : \\(t=0, \\dfrac{\\pi}{2}, \\pi\\).</p>
 <p>\\(y'(t) = -\\sin t-\\cos t = -\\sqrt{2}\\cos(t-\\dfrac{\\pi}{4})\\) ; zéro : \\(t=\\dfrac{3\\pi}{4}\\).</p>
 
-<div class="tv-wrap diagram-wrap" style="margin:20px 0;text-align:center;overflow-x:auto;-webkit-overflow-scrolling:touch;">
-  <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;display:inline-block;vertical-align:middle;">
+<div class="tv-wrap diagram-wrap" style="margin:20px 0;overflow-x:auto;-webkit-overflow-scrolling:touch;">
+  <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;display:block;margin:0 auto;">
     <defs>
       <marker id="arr-g-tv-2012-conj" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/></marker>
       <marker id="arr-r-tv-2012-conj" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#b83232"/></marker>
@@ -4990,6 +4997,25 @@ correction: `<h4> Proposition de Corrigé</h4>
     <line x1="0" y1="90" x2="760" y2="90" stroke="#dde1ec" stroke-width="1.5"/>
     <line x1="0" y1="185" x2="760" y2="185" stroke="#cbd5e1" stroke-width="2"/>
     <line x1="0" y1="230" x2="760" y2="230" stroke="#dde1ec" stroke-width="1.5"/>
+
+    <!-- Traits verticaux de guidage (colonnes intermédiaires π/2 et 3π/4) -->
+    <!-- Colonne t = π/2 (x = 330) -->
+    <line x1="330" y1="45" x2="330" y2="58" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="330" y1="78" x2="330" y2="90" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="330" y1="90" x2="330" y2="100" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="330" y1="124" x2="330" y2="185" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="330" y1="185" x2="330" y2="230" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="330" y1="230" x2="330" y2="268" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="330" y1="292" x2="330" y2="328" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+    <!-- Colonne t = 3π/4 (x = 500) -->
+    <line x1="500" y1="45" x2="500" y2="90" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="500" y1="90" x2="500" y2="126" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="500" y1="150" x2="500" y2="185" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="500" y1="185" x2="500" y2="198" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="500" y1="218" x2="500" y2="230" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="500" y1="230" x2="500" y2="295" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <line x1="500" y1="320" x2="500" y2="328" stroke="#dde1ec" stroke-width="1.2" stroke-dasharray="3 3"/>
     
     <!-- Titres des lignes (Texte blanc standard) -->
     <text x="47.5" y="23" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="800" font-style="italic">t</text>
@@ -4998,7 +5024,7 @@ correction: `<h4> Proposition de Corrigé</h4>
     <text x="47.5" y="208" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="800" font-style="italic">y '(t)</text>
     <text x="47.5" y="280" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14.5" font-weight="800" font-style="italic">y(t)</text>
     
-    <!-- Valeurs de t (bien aérées de 160 à 670) -->
+    <!-- Valeurs de t -->
     <text x="160" y="23" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">0</text>
     <text x="330" y="23" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">π/2</text>
     <text x="500" y="23" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">3π/4</text>
@@ -5007,9 +5033,7 @@ correction: `<h4> Proposition de Corrigé</h4>
     <!-- ── Ligne x'(t) ── -->
     <text x="160" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
     <text x="245" y="68" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
-    <line x1="330" y1="45" x2="330" y2="58" stroke="#cbd5e1" stroke-width="1.5"/>
     <text x="330" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
-    <line x1="330" y1="78" x2="330" y2="90" stroke="#cbd5e1" stroke-width="1.5"/>
     <text x="415" y="68" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
     <text x="585" y="68" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
     <text x="670" y="68" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
@@ -5018,24 +5042,26 @@ correction: `<h4> Proposition de Corrigé</h4>
     <text x="160" y="165" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−2</text>
     <line x1="185" y1="160" x2="305" y2="115" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-tv-2012-conj)"/>
     <text x="330" y="112" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">2</text>
-    <line x1="355" y1="115" x2="645" y2="160" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-r-tv-2012-conj)"/>
-    <text x="500" y="137" text-anchor="middle" dominant-baseline="central" fill="#475569" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="700" paint-order="stroke" stroke="#ffffff" stroke-width="5" stroke-linejoin="round">0</text>
+    <!-- Flèche 2 -> 0 puis 0 -> -2 avec le zéro sous 3π/4 -->
+    <line x1="355" y1="116" x2="475" y2="134" stroke="#b83232" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="500" y="138" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="900">0</text>
+    <line x1="525" y1="142" x2="645" y2="160" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-r-tv-2012-conj)"/>
     <text x="670" y="165" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−2</text>
     
     <!-- ── Ligne y'(t) ── -->
     <text x="245" y="208" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
     <text x="415" y="208" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
-    <line x1="500" y1="185" x2="500" y2="198" stroke="#cbd5e1" stroke-width="1.5"/>
     <text x="500" y="208" text-anchor="middle" dominant-baseline="central" fill="#64748b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="700">0</text>
-    <line x1="500" y1="218" x2="500" y2="230" stroke="#cbd5e1" stroke-width="1.5"/>
     <text x="585" y="208" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
     
     <!-- ── Ligne y(t) ── -->
     <text x="160" y="252" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">1</text>
-    <line x1="185" y1="256" x2="450" y2="305" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-r-tv-2012-conj)"/>
-    <text x="330" y="280" text-anchor="middle" dominant-baseline="central" fill="#475569" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="700" paint-order="stroke" stroke="#ffffff" stroke-width="5" stroke-linejoin="round">−1</text>
+    <!-- Flèche 1 -> -1 puis -1 -> -√2 avec le -1 sous π/2 -->
+    <line x1="185" y1="256" x2="305" y2="274" stroke="#b83232" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="330" y="280" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="900">−1</text>
+    <line x1="355" y1="284" x2="445" y2="302" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-r-tv-2012-conj)"/>
     <text x="500" y="308" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="900">−√2 ≈ −1,4</text>
-    <line x1="545" y1="305" x2="645" y2="275" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-tv-2012-conj)"/>
+    <line x1="550" y1="304" x2="645" y2="274" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-tv-2012-conj)"/>
     <text x="670" y="270" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−1</text>
   </svg>
 </div>
