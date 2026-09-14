@@ -13,7 +13,7 @@
 <!-- MathJax config -->
 <script>
 window.MathJax = {
-  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
   options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] },
   startup: {
     pageReady: function(){
@@ -59,8 +59,19 @@ setTimeout(revealPage, 6000);
     --red:      #b83232;
   }
 
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
   body{
     background:var(--bg); color:var(--text);
@@ -94,6 +105,7 @@ setTimeout(revealPage, 6000);
     box-shadow:0 2px 12px rgba(0,0,0,.18); position:sticky; top:0; z-index:200;
   }
   .topbar-left{ display:flex; align-items:center; gap:12px; }
+  .topbar-logo{ height:38px; width:auto; object-fit:contain; }
   .topbar-brand{
     font-weight:900; font-size:18px; letter-spacing:1px;
     color:white; text-decoration:none; font-family:'Nunito',sans-serif;
@@ -120,12 +132,7 @@ setTimeout(revealPage, 6000);
     position:absolute; top:6px; left:0; right:0;
     font-size:80px; opacity:.03; letter-spacing:20px; pointer-events:none; color:white;
   }
-  .bac-hero-label{
-    display:inline-block; background:var(--gold-dim); border:1px solid rgba(212,160,23,.35);
-    color:var(--gold); border-radius:20px; padding:4px 14px;
-    font-size:11px; font-weight:900; letter-spacing:1px; text-transform:uppercase;
-    margin-bottom:12px;
-  }
+
   .bac-hero h1{
     font-family:'Merriweather', serif; font-size:clamp(18px,4vw,28px);
     color:white; font-weight:700; letter-spacing:0; animation:none;
@@ -140,6 +147,7 @@ setTimeout(revealPage, 6000);
   /* ── CONTENEUR ── */
   .bac-container{
     max-width:860px; margin:0 auto; padding:32px 20px 100px;
+    position:relative; z-index:1;
   }
 
   /* ── TYPOGRAPHIE DU CONTENU ── */
@@ -237,9 +245,9 @@ setTimeout(revealPage, 6000);
   }
   .rappel-toggle{
     display:flex; align-items:center; justify-content:space-between; gap:10px;
-    padding:12px 16px; cursor:pointer; user-select:none;
+    padding:11px 16px; cursor:pointer; user-select:none;
     background:rgba(212,160,23,.08); border:none; width:100%;
-    font-family:'Nunito',sans-serif; font-weight:900; font-size:0.8em;
+    font-family:'Nunito',sans-serif; font-weight:900; font-size:0.82em;
     color:var(--navy); text-transform:uppercase; letter-spacing:1px;
     transition:background .2s;
   }
@@ -247,14 +255,14 @@ setTimeout(revealPage, 6000);
   .rappel-toggle:hover{ background:rgba(212,160,23,.18); }
   .rappel-toggle-left{ display:flex; align-items:center; gap:10px; }
 
-  /* ── SVG Cerveau (rappel toggle icon) ── */
+  /* ── Logo Cerveau NERVEUX (rappel toggle icon) ── */
   .brain-icon{
-    width:26px; height:24px; flex-shrink:0;
-    color:var(--navy); display:block;
-    transition:color .35s ease, transform .3s ease;
+    width:32px; height:28px; flex-shrink:0;
+    display:block; object-fit:contain;
+    transition:transform .3s ease;
   }
   .rappel-wrap.open .brain-icon{
-    color:var(--gold);
+    filter:none;
   }
   @keyframes brainPulse{
     0%   { transform:scale(1) rotate(0deg); }
@@ -296,22 +304,121 @@ setTimeout(revealPage, 6000);
     display:flex; align-items:center; gap:8px; font-family:'Nunito',sans-serif; font-weight:900;
     color:var(--navy); text-transform:uppercase; font-size:0.78em; letter-spacing:1px; margin-bottom:10px;
   }
-  .rappel .label::before{ content:'💡'; font-size:1.1em; }
+  .rappel .label::before{ content:''; }
   .rappel ul{ margin:6px 0 0; padding-left:20px; }
   .rappel li{ margin-bottom:4px; }
 
   /* ── TABLEAU DE DONNÉES ── */
   table.data{
-    border-collapse:collapse; width:100%; margin:16px 0;
-    font-family:'Nunito',sans-serif; font-size:0.85em;
-    display:block; overflow-x:auto; white-space:nowrap;
+    border-collapse:separate; border-spacing:0; width:100%; margin:18px auto;
+    font-family:'Nunito',sans-serif; font-size:13.5px;
+    display:table;
   }
   table.data th, table.data td{
-    border:1px solid var(--border); padding:7px 10px; text-align:center;
+    border:1px solid var(--border); padding:10px 14px; text-align:center;
   }
-  table.data th{ background:var(--navy); color:white; font-weight:800; }
-  table.data td{ color:var(--text); background:white; }
-  table.data tr:nth-child(even) td{ background:var(--surface2); }
+  table.data th{ background:var(--navy) !important; color:white !important; font-weight:800; }
+  table.data td{ color:var(--navy); background:white; font-weight:700; }
+  table.data tr:nth-child(even) td{ background:#f8fafc; }
+
+  /* ── TABLEAU DE VARIATION ── */
+  .tv-wrap{
+    overflow-x:auto; margin:20px 0;
+    font-family:'Nunito', sans-serif;
+  }
+  .tv{
+    border-collapse:collapse;
+    min-width:100%;
+    font-size:0.9em;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+  }
+  .tv td, .tv th{
+    border:1px solid #c8cfe0;
+    padding:0;
+    text-align:center;
+    min-width:44px;
+    height:42px;
+    vertical-align:middle;
+  }
+  /* Colonne d'en-tête (libellés à gauche) */
+  .tv .tv-header{
+    background:var(--navy);
+    color:white;
+    font-weight:900;
+    font-size:0.82em;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    padding:0 14px;
+    min-width:80px;
+    white-space:nowrap;
+  }
+  /* Ligne de x */
+  .tv .tv-x td{
+    background:#f0f3fa;
+    font-weight:800;
+    color:var(--navy);
+    font-size:0.9em;
+  }
+  /* Séparateurs verticaux (bornes et points critiques) */
+  .tv .tv-border{
+    border-left:2px solid var(--navy) !important;
+    border-right:2px solid var(--navy) !important;
+    background:#f7f9fc !important;
+    color:var(--navy);
+    font-weight:900;
+    font-size:0.88em;
+  }
+  /* Ligne signe de f' */
+  .tv .tv-sign td{
+    font-size:1.05em;
+    font-weight:900;
+    background:#fafbfe;
+  }
+  .tv .tv-sign .pos{ color:#1a7a5e; }
+  .tv .tv-sign .neg{ color:#b83232; }
+  .tv .tv-sign .zero{ color:var(--navy); font-style:italic; font-size:0.85em; }
+  .tv .tv-sign .nd{ color:var(--text2); font-style:italic; font-size:0.78em; }
+
+  /* Ligne de variation — cellules avec flèche */
+  .tv .tv-var td{
+    height:72px;
+    position:relative;
+    background:white;
+    padding:4px 2px;
+  }
+  /* Valeurs aux bornes/points critiques */
+  .tv-val{
+    display:block;
+    font-weight:900;
+    font-size:0.88em;
+    color:var(--navy);
+    line-height:1.1;
+  }
+  .tv-val.top{
+    position:absolute; top:5px; left:50%; transform:translateX(-50%);
+  }
+  .tv-val.bot{
+    position:absolute; bottom:5px; left:50%; transform:translateX(-50%);
+  }
+  /* Flèches SVG de variation */
+  .tv-arrow{
+    display:flex; align-items:center; justify-content:center;
+    height:100%; width:100%;
+  }
+  .tv-arrow svg{
+    width:28px; height:44px;
+  }
+  /* Trait vertical (point de non-dérivabilité) */
+  .tv-vbar{
+    display:block;
+    width:2px; height:60px;
+    background:var(--navy);
+    margin:0 auto;
+    position:relative;
+  }
 
   /* ── MATH ── */
   mjx-container[display="true"]{
@@ -367,6 +474,7 @@ setTimeout(revealPage, 6000);
 
   /* ── FOOTER ── */
   .footer{
+    position:relative; z-index:10;
     background:var(--navy); color:white; padding:28px 32px; width:100%;
     display:flex; justify-content:space-between; align-items:center;
     flex-wrap:wrap; gap:16px; margin-top:60px;
@@ -406,12 +514,62 @@ setTimeout(revealPage, 6000);
     width: min(95vw, 900px);
     aspect-ratio: 1/1;
     transform: translate(-50%, -50%);
-    background: url("https://i.ibb.co/35D50p1X/watermark.jpg") center/contain no-repeat;
-    opacity: 0.10;
-    pointer-events: none;
-    z-index: 9999;
+    background: url("logo-nerveux.png") center/contain no-repeat;
+    opacity: 0.035;
     mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 0;
   }
+
+/* ── NERVEUX TABLE STYLES (harmonized 2025 standard) ── */
+#bac-content table:not(.infoblock table), table.vtab, table.data {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin: 16px auto !important;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13.5px;
+  box-shadow: 0 1px 4px rgba(34,45,70,0.04);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid #cbd5e1 !important;
+  background: #ffffff;
+  display: table !important;
+  width: 100% !important;
+  max-width: 100%;
+}
+#bac-content table:not(.infoblock table) thead tr,
+#bac-content table:not(.infoblock table) tr:first-child,
+#bac-content table:not(.infoblock table) tr[style*="background"],
+table.vtab thead tr,
+table.vtab tr:first-child,
+table.data thead tr,
+table.data tr:first-child {
+  background: #f0f3fa !important;
+}
+#bac-content table:not(.infoblock table) th, table.vtab th, table.data th {
+  background: #f0f3fa !important;
+  color: #1e293b !important;
+  font-weight: 800;
+  padding: 9px 12px !important;
+  border: 1px solid #cbd5e1 !important;
+  text-align: center;
+  vertical-align: middle;
+}
+#bac-content table:not(.infoblock table) td, table.vtab td, table.data td {
+  border: 1px solid #dde1ec !important;
+  text-align: center;
+  vertical-align: middle;
+  padding: 9px 12px !important;
+  color: #1e293b;
+  font-weight: 600;
+  background: #ffffff;
+}
+#bac-content table:not(.infoblock table) tr:nth-child(even) td, table.vtab tr:nth-child(even) td, table.data tr:nth-child(even) td {
+  background: #fcfdfe;
+}
+#bac-content table:not(.infoblock table) tr:hover td, table.vtab tr:hover td, table.data tr:hover td {
+  background: #f8fafc;
+}
 </style>
 </head>
 <body>
@@ -423,10 +581,11 @@ setTimeout(revealPage, 6000);
 <!-- TOPBAR -->
 <header class="topbar">
   <div class="topbar-left">
+    <img src="logo-nerveux.png" alt="NERVEUX" class="topbar-logo">
     <span class="topbar-brand">NERVEUX</span>
   </div>
   <div class="topbar-right">
-    <a href="index.html" class="return-link" onclick="if(history.length > 1){ history.back(); return false; }">
+    <a href="index.html" class="return-link">
       <span class="arrow">←</span>
       <span>Retour aux exercices</span>
     </a>
@@ -435,7 +594,7 @@ setTimeout(revealPage, 6000);
 
 <!-- HERO BAND -->
 <div class="bac-hero" id="bac-hero">
-  <div class="bac-hero-label">🎓 Baccalauréat · Série D · Burkina Faso</div>
+
   <h1 id="bac-hero-title">Sujet BAC</h1>
   <div class="subtitle" id="bac-hero-sub"></div>
 </div>
@@ -460,33 +619,433 @@ setTimeout(revealPage, 6000);
   </div>
 </footer>
 
-<!-- Fichiers de contenu BAC -->
-<script src="JS/bac_content_2024.js"></script>
+<!-- Fichiers de contenu BAC unique -->
+<script src="JS/bac_exams_2000_2004.js?v=20260914_v15"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260914_v15"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260914_v15"></script>
+<script src="JS/bac_content_2023_2025.js?v=20260914_v15"></script>
+<script src="JS/curve_hover.js"></script>
+<script src="JS/desmos_init.js"></script>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   makeTV(cfg) — Génère un vrai tableau de variation en SVG
+   aux couleurs du site NERVEUX (navy/gold/green/red)
+
+   cfg = {
+     caption : 'Tableau de variation de f',   // légende
+     bounds  : ['-∞', '-1', '0', '+∞'],       // valeurs de x aux bornes
+     highlight: [false, true, false, false],  // rouge pour discontinuité
+     // Pour chaque borne : ce qui s'affiche dans la ligne f'(x)
+     //   '0' → zéro, '|' → double barre, '' → rien
+     signAtBound: ['', '|', '0', ''],
+     // Pour chaque INTERVALLE entre bornes : signe de f'(x)
+     //   '+' vert, '-' rouge, '' rien
+     signs   : ['+', '-', '+'],
+     // Pour chaque borne : valeur de f (val) et position (top/bot/mid)
+     fAtBound: [
+       { val:'-∞', pos:'bot' },
+       { val:'+∞', pos:'top' },   // avant la discontiuité = top
+       { val:'-∞', pos:'bot' },   // juste après
+       { val:'+∞', pos:'top' }
+     ],
+     // Pour chaque INTERVALLE : sens de la flèche ('up'/'down')
+     arrows  : ['up', 'down', 'up'],
+   }
+   ════════════════════════════════════════════════════════════ */
+function makeTV(cfg) {
+  var navy='#222d46', gold='#c9961e', green='#1a7a5e',
+      red='#b83232', textCol='#1a1a2e', text2='#6a7080',
+      borderCol='#c8cfe0', surface='#f0f3fa', white='#ffffff';
+
+  var HW=82, BW=80, IW=76;
+  var XH=44, SH=44, VH=84, CAP=26;
+
+  var n   = cfg.bounds.length;
+  var m   = n - 1;
+  var W   = HW + n*BW + m*IW;
+  var TH  = XH + SH + VH;         // tableau height (sans caption)
+  var FH  = TH + CAP;             // full height
+
+  var parts = [];
+  function p(s){ parts.push(s); }
+
+  p('<svg viewBox="0 0 '+W+' '+FH+'" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;display:block;font-family:Georgia,serif;">');
+
+  // ── fond global ──
+  p('<rect width="'+W+'" height="'+FH+'" fill="'+white+'" rx="8"/>');
+
+  // ── helper positions ──
+  function bx(i){ return HW + i*(BW+IW); }        // left edge of boundary i
+  function bcx(i){ return bx(i) + BW/2; }          // center x of boundary i
+  function ix(i){ return bx(i) + BW; }             // left edge of interval i
+  function icx(i){ return ix(i) + IW/2; }          // center x of interval i
+
+  // ── lignes horizontales internes ──
+  p('<line x1="0" y1="'+XH+'" x2="'+W+'" y2="'+XH+'" stroke="'+borderCol+'" stroke-width="1"/>');
+  p('<line x1="0" y1="'+(XH+SH)+'" x2="'+W+'" y2="'+(XH+SH)+'" stroke="'+borderCol+'" stroke-width="1"/>');
+
+  // ── colonne d'en-tête ──
+  p('<rect x="0" y="0" width="'+HW+'" height="'+TH+'" fill="'+navy+'" rx="0"/>');
+  p('<rect x="0" y="0" width="8" height="'+TH+'" fill="'+navy+'" rx="0"/>'); // flush left corner
+  // Labels
+  var labels=[{t:'x',y:XH/2,sz:17,it:true},{t:"f\u2019(x)",y:XH+SH/2,sz:13,it:true},{t:'f',y:XH+SH+VH/2,sz:17,it:true}];
+  labels.forEach(function(l){
+    p('<text x="'+HW/2+'" y="'+l.y+'" text-anchor="middle" dominant-baseline="middle" font-size="'+l.sz+'" fill="white"'+(l.it?' font-style="italic"':'')+'>'+l.t+'</text>');
+  });
+
+  // Ligne verticale après en-tête
+  p('<line x1="'+HW+'" y1="0" x2="'+HW+'" y2="'+TH+'" stroke="'+navy+'" stroke-width="2"/>');
+
+  // ── Caption ──
+  var capText = cfg.caption || '';
+  p('<text x="'+(W/2)+'" y="'+(TH+CAP/2)+'" text-anchor="middle" dominant-baseline="middle" font-size="11.5" fill="'+text2+'" font-style="italic">'+capText+'</text>');
+
+  // ── Colonnes de bornes ──
+  for(var i=0;i<n;i++){
+    var cx=bcx(i);
+    var hl=(cfg.highlight&&cfg.highlight[i]);
+    var sab=(cfg.signAtBound&&cfg.signAtBound[i])||'';
+    var fv=(cfg.fAtBound&&cfg.fAtBound[i]);
+
+    // Ligne x — label de la borne
+    var xcolor=hl?red:navy;
+    p('<text x="'+cx+'" y="'+(XH/2)+'" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="bold" fill="'+xcolor+'">'+cfg.bounds[i]+'</text>');
+
+    // Ligne signe f'(x) à la borne
+    if(sab==='0'){
+      p('<text x="'+cx+'" y="'+(XH+SH/2)+'" text-anchor="middle" dominant-baseline="middle" font-size="13" font-style="italic" fill="'+navy+'">0</text>');
+    } else if(sab==='|'){
+      // double barre
+      p('<line x1="'+(cx-3)+'" y1="'+(XH+6)+'" x2="'+(cx-3)+'" y2="'+(XH+SH-6)+'" stroke="'+navy+'" stroke-width="1.8"/>');
+      p('<line x1="'+(cx+3)+'" y1="'+(XH+6)+'" x2="'+(cx+3)+'" y2="'+(XH+SH-6)+'" stroke="'+navy+'" stroke-width="1.8"/>');
+    }
+
+    // Ligne variation f à la borne
+    if(fv){
+      var vy;
+      var dbas=(fv.pos==='bot');
+      var dhaut=(fv.pos==='top');
+      if(dhaut)  vy=XH+SH+12;
+      else if(dbas) vy=XH+SH+VH-8;
+      else vy=XH+SH+VH/2;
+      var db=dhaut?'hanging':(dbas?'auto':'middle');
+      var isInf=(fv.val==='+\u221e'||fv.val==='-\u221e'||fv.val==='\u2212\u221e');
+      var vcolor=isInf?gold:navy;
+      p('<text x="'+cx+'" y="'+vy+'" text-anchor="middle" dominant-baseline="'+db+'" font-size="13" font-weight="bold" fill="'+vcolor+'">'+fv.val+'</text>');
+    }
+
+    // Lignes verticales de séparation (s'interrompent à f'(x) et aussi au niveau de f si la valeur est au milieu)
+    var hasMidF = fv && (fv.pos==='mid');
+    if(i>0){
+      var lx=bx(i);
+      p('<line x1="'+lx+'" y1="'+XH+'" x2="'+lx+'" y2="'+(XH+SH-14)+'" stroke="'+borderCol+'" stroke-width="1"/>');
+      if(hasMidF){
+        p('<line x1="'+lx+'" y1="'+(XH+SH+14)+'" x2="'+lx+'" y2="'+(XH+SH+VH/2-14)+'" stroke="'+borderCol+'" stroke-width="1"/>');
+        p('<line x1="'+lx+'" y1="'+(XH+SH+VH/2+14)+'" x2="'+lx+'" y2="'+TH+'" stroke="'+borderCol+'" stroke-width="1"/>');
+      } else {
+        p('<line x1="'+lx+'" y1="'+(XH+SH+14)+'" x2="'+lx+'" y2="'+TH+'" stroke="'+borderCol+'" stroke-width="1"/>');
+      }
+    }
+    if(i<n-1){
+      var rx=bx(i)+BW;
+      p('<line x1="'+rx+'" y1="'+XH+'" x2="'+rx+'" y2="'+(XH+SH-14)+'" stroke="'+borderCol+'" stroke-width="1"/>');
+      if(hasMidF){
+        p('<line x1="'+rx+'" y1="'+(XH+SH+14)+'" x2="'+rx+'" y2="'+(XH+SH+VH/2-14)+'" stroke="'+borderCol+'" stroke-width="1"/>');
+        p('<line x1="'+rx+'" y1="'+(XH+SH+VH/2+14)+'" x2="'+rx+'" y2="'+TH+'" stroke="'+borderCol+'" stroke-width="1"/>');
+      } else {
+        p('<line x1="'+rx+'" y1="'+(XH+SH+14)+'" x2="'+rx+'" y2="'+TH+'" stroke="'+borderCol+'" stroke-width="1"/>');
+      }
+    }
+
+    // Zone grisée pour discontinuité (double barre)
+    if(sab==='|'){
+      p('<rect x="'+(bx(i)+1)+'" y="'+(XH+SH+1)+'" width="'+(BW-2)+'" height="'+(VH-2)+'" fill="'+surface+'" opacity="0.8"/>');
+    }
+  }
+
+  // ── Colonnes d'intervalles ──
+  for(var j=0;j<m;j++){
+    var cx2=icx(j);
+    var sign=(cfg.signs&&cfg.signs[j])||'';
+    var arrow=(cfg.arrows&&cfg.arrows[j])||'';
+
+    // Signe de f'(x) dans l'intervalle
+    if(sign==='+'){
+      p('<text x="'+cx2+'" y="'+(XH+SH/2)+'" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="bold" fill="'+green+'">+</text>');
+    } else if(sign==='-'){
+      p('<text x="'+cx2+'" y="'+(XH+SH/2)+'" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="bold" fill="'+red+'">\u2212</text>');
+    }
+
+    // Flèche de variation
+    var pad=18;
+    var x1a=ix(j)+pad, x2a=ix(j)+IW-pad;
+    var y1a, y2a, color2;
+    if(arrow==='up'){
+      y1a=XH+SH+VH-pad; y2a=XH+SH+pad; color2=green;
+    } else if(arrow==='down'){
+      y1a=XH+SH+pad; y2a=XH+SH+VH-pad; color2=red;
+    }
+    if(arrow==='up'||arrow==='down'){
+      p('<line x1="'+x1a+'" y1="'+y1a+'" x2="'+x2a+'" y2="'+y2a+'" stroke="'+color2+'" stroke-width="2.5" stroke-linecap="round"/>');
+      // tête de flèche
+      var ang=Math.atan2(y2a-y1a, x2a-x1a);
+      var al=10;
+      var ax1=x2a-al*Math.cos(ang-0.5), ay1=y2a-al*Math.sin(ang-0.5);
+      var ax2=x2a-al*Math.cos(ang+0.5), ay2=y2a-al*Math.sin(ang+0.5);
+      p('<polyline points="'+x2a+','+y2a+' '+ax1+','+ay1+' '+ax2+','+ay2+'" fill="none" stroke="'+color2+'" stroke-width="2.5" stroke-linejoin="round"/>');
+    }
+  }
+
+  // ── Cadre extérieur ──
+  p('<rect x="0.5" y="0.5" width="'+(W-1)+'" height="'+(FH-1)+'" fill="none" stroke="'+borderCol+'" stroke-width="1.5" rx="7.5"/>');
+
+  p('</svg>');
+  return parts.join('');
+}
+
+
+/* Rendu automatique des <div class="tv-placeholder" data-tv='...'> */
+function renderTVPlaceholders(root){
+  root.querySelectorAll('.tv-placeholder').forEach(function(el){
+    try{
+      var cfg=JSON.parse(el.getAttribute('data-tv'));
+      el.innerHTML='<div class="tv-wrap">'+makeTV(cfg)+'</div>';
+    }catch(e){ el.textContent='[Erreur tableau de variation]'; }
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════
+   transformAllVTabs(root) — Convertit automatiquement TOUS les
+   tableaux de variation HTML (<table class="vtab"> ou <table> avec variations)
+   en diagrammes vectoriels SVG aux couleurs et au standard NERVEUX
+   ══════════════════════════════════════════════════════════════ */
+function transformAllVTabs(root) {
+  if (!root) return;
+  var tables = root.querySelectorAll('table');
+  tables.forEach(function(tbl) {
+    // Check if table looks like a variation table
+    var rows = tbl.querySelectorAll('tr');
+    if (rows.length < 3) return;
+
+    var fullText = tbl.textContent;
+    var hasVarKeywords = fullText.includes('↗') || fullText.includes('↘') || fullText.includes("f'") || fullText.includes("h'") || fullText.includes("g'") || fullText.includes("x'") || fullText.includes("y'");
+    if (!hasVarKeywords) return;
+
+    var r1 = Array.from(rows[0].querySelectorAll('th, td')).map(function(c){ return c.textContent.trim().replace(/\\\(|\\\)/g, '').replace(/\$/g, ''); });
+    var r2Cells = Array.from(rows[1].querySelectorAll('th, td'));
+    var r3Cells = Array.from(rows[2].querySelectorAll('th, td'));
+
+    var xHeader = r1[0] || '';
+    if (!xHeader.match(/^[xt]$/i)) return; // Ignore les tableaux de probabilités X / P(X=k)
+
+    var bounds = [];
+    var boundIndices = [];
+    for (var i = 1; i < r1.length; i++) {
+      if (r1[i] !== '') {
+        bounds.push(r1[i]);
+        boundIndices.push(i);
+      }
+    }
+    if (bounds.length < 2) return;
+
+    var signAtBound = [];
+    var signs = [];
+    for (var j = 0; j < boundIndices.length; j++) {
+      var colIdx = boundIndices[j];
+      var c2 = r2Cells[colIdx];
+      var txt2 = c2 ? c2.textContent.trim().replace(/\\\(|\\\)/g, '').replace(/\$/g, '') : '';
+      if (txt2 === '||' || txt2.includes('||') || (c2 && c2.classList.contains('undef'))) signAtBound.push('|');
+      else if (txt2 === '0' || (c2 && c2.classList.contains('zero'))) signAtBound.push('0');
+      else signAtBound.push('');
+
+      if (j < boundIndices.length - 1) {
+        var nextCol = boundIndices[j + 1];
+        var s = '';
+        for (var k = colIdx + 1; k < nextCol; k++) {
+          var midC = r2Cells[k];
+          if (midC) {
+            var midT = midC.textContent.trim().replace(/\\\(|\\\)/g, '').replace(/\$/g, '');
+            if (midT === '+' || midC.classList.contains('pos') || midC.classList.contains('arr-up')) s = '+';
+            else if (midT === '−' || midT === '-' || midC.classList.contains('neg') || midC.classList.contains('arr-dn')) s = '-';
+          }
+        }
+        signs.push(s);
+      }
+    }
+
+    var fAtBound = [];
+    var arrows = [];
+    for (var j2 = 0; j2 < boundIndices.length; j2++) {
+      var colIdx2 = boundIndices[j2];
+      var c3 = r3Cells[colIdx2];
+      var val = c3 ? c3.textContent.trim().replace(/\\\(|\\\)/g, '').replace(/\$/g, '') : '';
+      var pos = 'mid';
+      if (val.includes('-inf') || val.includes('-∞') || val.includes('−∞')) pos = 'bot';
+      else if (val.includes('+inf') || val.includes('+∞')) pos = 'top';
+      fAtBound.push({ val: val, pos: pos });
+
+      if (j2 < boundIndices.length - 1) {
+        var nextCol2 = boundIndices[j2 + 1];
+        var arr = '';
+        for (var k2 = colIdx2 + 1; k2 < nextCol2; k2++) {
+          var midC2 = r3Cells[k2];
+          if (midC2) {
+            var midT2 = midC2.textContent.trim();
+            if (midT2.includes('↗') || midC2.classList.contains('arr-up')) arr = 'up';
+            else if (midT2.includes('↘') || midC2.classList.contains('arr-dn')) arr = 'down';
+          }
+        }
+        arrows.push(arr);
+      }
+    }
+
+    for (var a = 0; a < fAtBound.length; a++) {
+      if (a === 0 && arrows[0] === 'up') fAtBound[a].pos = 'bot';
+      else if (a === 0 && arrows[0] === 'down') fAtBound[a].pos = 'top';
+      else if (a === fAtBound.length - 1 && arrows[arrows.length - 1] === 'up') fAtBound[a].pos = 'top';
+      else if (a === fAtBound.length - 1 && arrows[arrows.length - 1] === 'down') fAtBound[a].pos = 'bot';
+      else if (a > 0 && a < fAtBound.length - 1) {
+        if (arrows[a - 1] === 'up' && arrows[a] === 'down') fAtBound[a].pos = 'top';
+        else if (arrows[a - 1] === 'down' && arrows[a] === 'up') fAtBound[a].pos = 'bot';
+      }
+    }
+
+    var cfg = {
+      caption: 'Tableau de variation',
+      bounds: bounds.map(function(b){ return b.replace(/-inf/g, '−∞').replace(/\+inf/g, '+∞').replace(/-\infty/g, '−∞').replace(/\+\infty/g, '+∞'); }),
+      signAtBound: signAtBound,
+      signs: signs,
+      fAtBound: fAtBound.map(function(f){ return { val: f.val.replace(/-inf/g, '−∞').replace(/\+inf/g, '+∞').replace(/-\infty/g, '−∞').replace(/\+\infty/g, '+∞'), pos: f.pos }; }),
+      arrows: arrows
+    };
+
+    var div = document.createElement('div');
+    div.className = 'diagram-wrap';
+    div.innerHTML = makeTV(cfg);
+    tbl.parentNode.replaceChild(div, tbl);
+  });
+}
+</script>
 
 <script>
 (function(){
   var params = new URLSearchParams(window.location.search);
-  var id = params.get('id') || 'bac-d-2024-s1';
+  var id = params.get('id') || 'bac-2024-D-juillet-1er';
+  try { sessionStorage.setItem('last_viewed_bac', id); } catch(e) {}
 
   var registry = window.BAC_CONTENT_REGISTRY || {};
   var wrap = document.getElementById('bac-content');
   var html = registry[id];
+  if(!html && typeof BAC_CONTENT_2023_2025 !== 'undefined'){
+    for(var k=0; k<BAC_CONTENT_2023_2025.length; k++){
+      if(BAC_CONTENT_2023_2025[k] && BAC_CONTENT_2023_2025[k].id === id){
+        html = BAC_CONTENT_2023_2025[k].html;
+        break;
+      }
+    }
+  }
+  if(!html && typeof BAC_CONTENT_2024 !== 'undefined'){
+    for(var k2=0; k2<BAC_CONTENT_2024.length; k2++){
+      if(BAC_CONTENT_2024[k2] && BAC_CONTENT_2024[k2].id === id){
+        html = BAC_CONTENT_2024[k2].html;
+        break;
+      }
+    }
+  }
+  if(!html){
+    var exam = findBacExam(id);
+    html = buildBacExamHTML(exam);
+  }
+
+  function escHTML(value){
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function findBacExam(targetId){
+    var groups = [
+      typeof BAC_EXAMS_2000_2004 !== 'undefined' ? BAC_EXAMS_2000_2004 : null,
+      typeof BAC_EXAMS_2014_2022 !== 'undefined' ? BAC_EXAMS_2014_2022 : (typeof BAC_EXAMS_2019_2022 !== 'undefined' ? BAC_EXAMS_2019_2022 : null),
+      typeof BAC_EXAMS_2023_2025 !== 'undefined' ? BAC_EXAMS_2023_2025 : null
+    ];
+    for(var i=0;i<groups.length;i++){
+      var list = groups[i];
+      if(!Array.isArray(list)) continue;
+      for(var j=0;j<list.length;j++){
+        if(list[j] && list[j].id === targetId) return list[j];
+      }
+    }
+    return null;
+  }
+
+  function buildBacExamHTML(exam){
+    if(!exam || !Array.isArray(exam.parts) || !exam.parts.length) return '';
+    var out = [];
+    out.push('<h1>'+escHTML(exam.title || 'Sujet BAC')+'</h1>');
+    out.push('<div class="subtitle">'+escHTML([exam.region, exam.series ? 'Serie '+exam.series : '', exam.tour].filter(Boolean).join(' - '))+'</div>');
+    out.push('<div class="infoblock"><table><tr><td>Annee</td><td class="val">'+escHTML(exam.year || '')+'</td><td>Serie</td><td class="val">'+escHTML(exam.series || '')+'</td></tr><tr><td>Session</td><td class="val">'+escHTML(exam.tour || '')+'</td><td>Pays</td><td class="val">'+escHTML(exam.region || '')+'</td></tr></table></div>');
+    if(Array.isArray(exam.topics) && exam.topics.length){
+      out.push('<div class="note"><span class="label">Notions</span><ul>');
+      exam.topics.forEach(function(topic){ out.push('<li>'+escHTML(topic)+'</li>'); });
+      out.push('</ul></div>');
+    }
+    exam.parts.forEach(function(part){
+      out.push('<h2>'+escHTML(part.label || 'Partie')+'</h2>');
+      if(part.problem) out.push(part.problem);
+      if(part.rappel) out.push(part.rappel);
+      if(part.correction){
+        out.push('<details class="correction"><summary><span class="txt"></span><span class="arrow">▾</span></summary><div class="corr-body">'+part.correction+'</div></details>');
+      }
+    });
+    out.push('<div class="signature">- Fin du sujet - NERVEUX · Maths Terminale D · Burkina Faso</div>');
+    return out.join('');
+  }
 
   if(html){
     wrap.innerHTML = html;
 
-    // ── Peupler le hero band ──────────────────────────────────────
+    // ── Peupler le hero band & titre & lien retour ───────────────
     var heroTitle = document.getElementById('bac-hero-title');
     var heroSub   = document.getElementById('bac-hero-sub');
     var contentH1 = wrap.querySelector('h1');
     var contentSub = wrap.querySelector('.subtitle');
+    var bacName = '';
     if(contentH1 && heroTitle){
       heroTitle.textContent = contentH1.textContent;
+      bacName = contentH1.textContent.trim();
       contentH1.style.display = 'none'; // masquer le doublon
     }
     if(contentSub && heroSub){
       heroSub.textContent = contentSub.textContent;
+      if(!bacName) bacName = contentSub.textContent.trim();
       contentSub.style.display = 'none';
+    }
+
+    // Récupérer ou formater le nom lisible du BAC (ex: BAC 2025 1er tour)
+    var cleanBac = params.get('bac') || '';
+    if(!cleanBac && exam){
+      cleanBac = 'BAC ' + (exam.year || '') + ' ' + (exam.tour || '');
+      cleanBac = cleanBac.trim();
+    }
+    if(!cleanBac && bacName){
+      cleanBac = bacName.replace(/—/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+    if(cleanBac){
+      document.title = cleanBac + ' — NERVEUX';
+      if(window.history && window.history.replaceState){
+        var newUrl = 'bac-viewer.html?id=' + encodeURIComponent(id) + '&bac=' + encodeURIComponent(cleanBac);
+        window.history.replaceState({}, '', newUrl);
+      }
+    }
+
+    // Mettre à jour le lien de retour vers la carte exacte du BAC sur l'accueil
+    var returnLink = document.querySelector('.return-link');
+    if(returnLink){
+      returnLink.href = 'index.html?openBac=' + encodeURIComponent(id);
     }
     // ─────────────────────────────────────────────────────────────
 
@@ -505,12 +1064,7 @@ setTimeout(revealPage, 6000);
     });
     // ─────────────────────────────────────────────────────────────
 
-    var SVG_BRAIN = '<svg viewBox="0 0 100 90" class="brain-icon" xmlns="http://www.w3.org/2000/svg">'
-      + '<path d="M35 8 C22 8 14 18 15 28 C7 31 4 42 10 50 C6 58 10 68 20 70 C21 78 30 84 40 82 C44 84 48 84 50 82 L50 20 C50 12 43 8 35 8 Z M50 20 L50 82 C52 84 56 84 60 82 C70 84 79 78 80 70 C90 68 94 58 90 50 C96 42 93 31 85 28 C86 18 78 8 65 8 C57 8 50 12 50 20 Z"'
-      + ' fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>'
-      + '<path d="M35 8 C40 14 38 22 32 26 M65 8 C60 14 62 22 68 26 M15 28 C24 30 28 38 24 44 M85 28 C76 30 72 38 76 44 M10 50 C20 52 26 58 22 64 M90 50 C80 52 74 58 78 64"'
-      + ' fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.6"/>'
-      + '</svg>';
+    var SVG_BRAIN = '<img src="logo-nerveux.png" class="brain-icon" alt="NERVEUX" />';
     var SVG_CHEVRON_RIGHT = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6,3 12,9 6,15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
     wrap.querySelectorAll('.rappel').forEach(function(rappel) {
@@ -561,6 +1115,10 @@ setTimeout(revealPage, 6000);
       rappel.parentNode.replaceChild(wrap_div, rappel);
     });
     // ─────────────────────────────────────────────────────────────
+
+    renderTVPlaceholders(wrap);
+    // transformAllVTabs(wrap); // disabled: native SVGs are used
+    if(window.attachCurveHoverTooltips) window.attachCurveHoverTooltips(wrap);
 
     function typesetWhenReady(){
       if(window.MathJax && MathJax.typesetPromise){
