@@ -2044,7 +2044,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>\\([-\\pi;3\\pi] = [-\\pi;\\pi]\\cup[\\pi;3\\pi]\\). On obtient (C₂) en translatant (C₁) du vecteur \\(\\vec{u}\\binom{2\\pi}{0}\\).</p>`
     },
     {
-      label: 'Problème — f(x) = 2x+1−xe^{x−1}, suite (U_n) et intégrale (12 pts)',
+      label: 'Problème — f(x) = 2x+1−x·exp(x−1), suite (Uₙ) et intégrale (12 pts)',
       problem: `<p>On considère la fonction f définie sur \\(\\mathbb{R}\\) par \\(f(x) = 2x+1-xe^{x-1}\\). On note \\((C_f)\\) sa courbe dans un repère orthonormé \\((O;\\vec{i};\\vec{j})\\) (unité 2 cm).</p>
 
 <p><strong>Partie A — Étude de f</strong></p>
@@ -2393,7 +2393,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p> Prix estimé : <strong>155 FCFA</strong>.</p>`
     },
     {
-      label: 'Problème — f(x) = e^{−x}sin x, primitives, aire, volume, suite (U_n) (12 pts)',
+      label: 'Problème — f(x) = exp(−x)·sin x, primitives, aire, volume, suite (Uₙ) (12 pts)',
       problem: `<p>On considère la fonction \\(f\\) définie sur \\([0;+\\infty[\\) par \\(f(x) = e^{-x}\\sin x\\) et \\((C_f)\\) sa courbe dans un repère orthonormé \\((O;\\vec{i};\\vec{j})\\) (2 cm en abscisse, 10 cm en ordonnées).</p>
 
 <p><strong>Partie A — Étude de f</strong></p>
@@ -3018,7 +3018,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>\\(P(X\\geq6) = P(X=6)+P(X=9) = \\dfrac{3}{8}+\\dfrac{1}{8} = \\dfrac{1}{2}\\)</p>`
     },
     {
-      label: 'Problème — EDO y\'+y=x−1 & f(x)=e^{-x}+x−2, intégrales (12 pts)',
+      label: 'Problème — EDO y'+y=x−1 et f(x)=exp(−x)+x−2, intégrales (12 pts)',
       problem: `<p><strong>Partie A — Équation différentielle</strong></p>
 <p>Soit \\((E): y'+y = x-1\\).</p>
 <p><strong>1)</strong> Trouver \\(a\\) et \\(b\\) tels que \\(U(x) = ax+b\\) soit solution de (E).</p>
@@ -3213,7 +3213,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 
   parts: [
     {
-      label: 'Exercice I — Courbe paramétrique x(t)=e^{sin t}, y(t)=cos t (4 pts)',
+      label: 'Exercice I — Courbe paramétrique x(t)=exp(sin t), y(t)=cos t (4 pts)',
       problem: `<p>Dans le plan muni d'un repère orthonormal \\((O;\\vec{i};\\vec{j})\\), unité 2 cm, on considère la courbe (Γ) de représentation paramétrique :</p>
 <p>\\[\\begin{cases}x(t) = e^{\\sin t} \\\\ y(t) = \\cos t\\end{cases}, \\quad t\\in\\mathbb{R}\\]</p>
 <p><strong>1)</strong> Montrer que x et y sont périodiques de période \\(2\\pi\\).</p>
@@ -3687,7 +3687,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p> \\(T = 5\\) heures.</p>`
     },
     {
-      label: 'Problème — f(x) = (e^{2x}−1)/e^x et x−x ln x, bijection, intégrales, courbe param. (12 pts)',
+      label: 'Problème — f(x) = (exp(2x)−1)/exp(x) et x−x·ln x, bijection, intégrales, courbe param. (12 pts)',
       problem: `<p>Soit f définie sur \\(\\mathbb{R}\\) par :</p>
 <p>\\[f(x) = \\begin{cases}\\dfrac{e^{2x}-1}{e^x} & \\text{si } x\\leq0 \\\\ x-x\\ln x & \\text{si } x>0\\end{cases}\\]</p>
 <p>Courbe (C) dans \\((O;\\vec{i};\\vec{j})\\), unité 2 cm.</p>
@@ -4458,7 +4458,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>3b°)</strong> \\(150 = -0{,}3x+240 \\Rightarrow x = 300\\) F.</p>`
     },
     {
-      label: 'Exercice II — Complexes : suite z_n = a^n z₀, |a|=\\dfrac{\\sqrt{2}}{2}, r_n→0 (4 pts)',
+      label: 'Exercice II — Complexes : suite zₙ = aⁿ·z₀, |a|=√2/2, rₙ→0 (4 pts)',
       problem: `<p>Soient \\(a = \\dfrac{\\sqrt{3}+1}{4}+\\dfrac{i(\\sqrt{3}-1)}{4}\\) et \\(z_0=6+6i\\). Pour tout entier \\(n\\geq1\\) : \\(z_n = a^n z_0\\).</p>
 <p><strong>1) a)</strong> Exprimer \\(z_1\\) et \\(a^2\\) sous forme algébrique. Écrire \\(z_1\\) sous forme exponentielle et montrer que \\(a^2 = \\dfrac{1}{2}e^{i\\dfrac{\\pi}{6}}\\).</p>
 <p><strong>b)</strong> Exprimer \\(z_3\\) et \\(z_7\\) en fonction de \\(z_1\\) et \\(a^2\\) ; en déduire leurs formes exponentielles.</p>
@@ -4500,7 +4500,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>Géométriquement : \\(r_n = OM_n\\to0\\), donc la suite de points \\(M_n\\) converge vers l'<strong>origine O</strong>.</p>`
     },
     {
-      label: 'Problème — f(x) = e^x/(1+e^x), centre de symétrie, aire A_n, volume, courbe param. (12 pts)',
+      label: 'Problème — f(x) = exp(x)/(1+exp(x)), centre de symétrie, aire Aₙ, volume, courbe param. (12 pts)',
       problem: `<p>Soit \\(f(x) = \\dfrac{e^x}{1+e^x}\\). Courbe (C) dans \\((O;\\vec{i};\\vec{j})\\), unité 4 cm.</p>
 
 <p><strong>Partie A</strong></p>
@@ -4669,7 +4669,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
   topics: ['Suite d\'intégrales', 'Géométrie dans l\'espace', 'Fonctions & Logarithmes', 'Primitives, Aires & Courbes'],
   parts: [
     {
-      label: 'Exercice I — Suite I_n = ∫₀¹ x^n/(1+x)dx (4 pts)',
+      label: 'Exercice I — Suite Iₙ = ∫₀¹ xⁿ/(1+x)dx (4 pts)',
       problem: `<p>On considère la suite \\((I_n)\\) définie par \\(I_n = \\displaystyle\\int_0^1\\dfrac{x^n}{1+x}dx\\), \\(n\\in\\mathbb{N}\\).</p>
 <p><strong>1)</strong> Calculer \\(I_0\\), \\(I_0+I_1\\) et en déduire \\(I_1\\).</p>
 <p><strong>2)</strong> Calculer \\(I_n+I_{n+1}\\) en fonction de n.</p>
@@ -5138,7 +5138,7 @@ correction: `<h4> Proposition de Corrigé</h4>
 <p>\\[\\boxed{n_\\min = 14}\\]</p>`
     },
     {
-      label: 'Problème — f(x)=(x+ln|1−x|)/(1−x), centre I(1;−1), intégrales, suite u_{n+1}=4−e^{−u_n} (12 pts)',
+      label: 'Problème — f(x)=(x+ln|1−x|)/(1−x), centre I(1;−1), intégrales, suite uₙ₊₁=4−exp(−uₙ) (12 pts)',
       problem: `<p>Soit \\(f(x) = \\dfrac{x+\\ln|1-x|}{1-x}\\), définie sur \\(\\mathbb{R}\\setminus\\{1\\}\\). Courbe (𝒞) dans \\((O;\\vec{i};\\vec{j})\\), unité 2 cm.</p>
 
 <p><strong>Partie A</strong></p>
