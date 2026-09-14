@@ -3018,7 +3018,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>\\(P(X\\geq6) = P(X=6)+P(X=9) = \\dfrac{3}{8}+\\dfrac{1}{8} = \\dfrac{1}{2}\\)</p>`
     },
     {
-      label: 'Problème — EDO y'+y=x−1 et f(x)=exp(−x)+x−2, intégrales (12 pts)',
+      label: "Problème — EDO y'+y=x−1 et f(x)=exp(−x)+x−2, intégrales (12 pts)",
       problem: `<p><strong>Partie A — Équation différentielle</strong></p>
 <p>Soit \\((E): y'+y = x-1\\).</p>
 <p><strong>1)</strong> Trouver \\(a\\) et \\(b\\) tels que \\(U(x) = ax+b\\) soit solution de (E).</p>
@@ -5633,3 +5633,6 @@ correction: `<h4> Proposition de Corrigé</h4>
   ]
 }
 ];
+
+if (typeof window !== 'undefined') { window.BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2004; }
+if (typeof global !== 'undefined') { global.BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2004; }
