@@ -13,7 +13,7 @@ const EXERCISES = [
     type: "written",
     title: "Forme algébrique et module d'un nombre complexe",
     problem: "Soit $z = 3 + 4i$. Calculer le module $|z|$ et donner le conjugué $\\bar{z}$.",
-    solution: "Le module de $z = a + bi$ est $|z| = \\sqrt{a^2 + b^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9+16} = 5$.\nLe conjugué est $\\bar{z} = 3 - 4i$."
+    solution: "Le module de $z = a + bi$ est $|z| = \\sqrt{a^2 + b^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9+16} = 5$.\\nLe conjugué est $\\bar{z} = 3 - 4i$."
   },
   {
     id: "ex-cplx-2",

@@ -1,7 +1,7 @@
 // ============================================================
 //  Contenu complet des sujets BAC — Série D — Burkina Faso
 //  Toutes les formules et étapes de calcul sont nettoyées.
-//  Les sauts de ligne LaTeX dans les systèmes/cases utilisent \\\\
+//  Les sauts de ligne LaTeX dans les systèmes/cases utilisent \\
 // ============================================================
 
 const BAC_CONTENT_2024 = [
@@ -25,12 +25,12 @@ const BAC_CONTENT_2024 = [
   <li>Écrire $a=(3-i)^2$ sous la forme algébrique. <span class="points">(0,25 pt)</span></li>
   <li>On considère le polynôme $P$ défini par $P(z)=z^3+(-1+i)z^2+(2+2i)z+8i$.
     <ol type="a">
-      <li>Démontrer que l'équation $P(z)=0$ admet une unique solution imaginaire pure $\\alpha i\\,;\\ (\\alpha\\in\\mathbb{R}^*)$. <span class="points">(0,25 pt)</span></li>
+      <li>Démontrer que l'équation $P(z)=0$ admet une unique solution imaginaire pure $\\alpha i ; (\\alpha\\in\\mathbb{R}^*)$. <span class="points">(0,25 pt)</span></li>
       <li>Déterminer les nombres complexes $a, b$ et $c$ tels que $P(z)=(z-\\alpha i)(az^2+bz+c)$. <span class="points">(0,5 pt)</span></li>
       <li>Résoudre dans $\\mathbb{C}$ l'équation $P(z)=0$. <span class="points">(0,5 pt)</span></li>
     </ol>
   </li>
-  <li>On considère les points $A$, $B$ et $C$ d'affixes respectives $-1-i\\,;\\ 2-2i\\,;\\ 2i$.
+  <li>On considère les points $A$, $B$ et $C$ d'affixes respectives $-1-i ; 2-2i ; 2i$.
     <ol type="a">
       <li>Placer les points $A$, $B$ et $C$ dans le repère. <span class="points">(0,5 pt)</span></li>
       <li>Quelle est la nature du triangle $ABC$ ? Justifier. <span class="points">(0,5 pt)</span></li>
@@ -144,12 +144,12 @@ const BAC_CONTENT_2024 = [
   <p>D'après l'Étape 1, nous savons que $(3-i)^2 = 8-6i$. Une racine carrée complexe de $\\Delta$ est donc :</p>
   $$\\delta = 3 - i$$
   <p>Calculons maintenant les deux solutions de l'équation du second degré :</p>
-  $$z_1 = \\frac{-B - \\delta}{2A} = \\frac{-(-1+3i) - (3-i)}{2(1)} = \\frac{1 - 3i - 3 + i}{2} = \\frac{-2 - 2i}{2} = -1 - i$$
-  $$z_2 = \\frac{-B + \\delta}{2A} = \\frac{-(-1+3i) + (3-i)}{2(1)} = \\frac{1 - 3i + 3 - i}{2} = \\frac{4 - 4i}{2} = 2 - 2i$$
+  $$z_1 = \\dfrac{-B - \\delta}{2A} = \\dfrac{-(-1+3i) - (3-i)}{2(1)} = \\dfrac{1 - 3i - 3 + i}{2} = \\dfrac{-2 - 2i}{2} = -1 - i$$
+  $$z_2 = \\dfrac{-B + \\delta}{2A} = \\dfrac{-(-1+3i) + (3-i)}{2(1)} = \\dfrac{1 - 3i + 3 - i}{2} = \\dfrac{4 - 4i}{2} = 2 - 2i$$
 </div>
 <div class="result">
   <span class="label">Résultat</span>
-  $$S_{\\mathbb{C}} = \\{\\,2i\\,;\\ 2-2i\\,;\\ -1-i\\,\\}$$
+  $$S_{\\mathbb{C}} = \\{\\,2i ; 2-2i ; -1-i\\,\\}$$
 </div>
 
 <div class="step alt">
@@ -158,10 +158,10 @@ const BAC_CONTENT_2024 = [
   $$z_B - z_A = (2-2i) - (-1-i) = 2 - 2i + 1 + i = 3 - i$$
   $$z_C - z_A = 2i - (-1-i) = 2i + 1 + i = 1 + 3i$$
   <p>Effectuons le quotient en multipliant numérateur et dénominateur par le conjugué $(1-3i)$ :</p>
-  $$\\frac{z_B - z_A}{z_C - z_A} = \\frac{3-i}{1+3i} = \\frac{(3-i)(1-3i)}{(1+3i)(1-3i)}$$
+  $$\\dfrac{z_B - z_A}{z_C - z_A} = \\dfrac{3-i}{1+3i} = \\dfrac{(3-i)(1-3i)}{(1+3i)(1-3i)}$$
   $$\\text{Numérateur : } (3-i)(1-3i) = 3 - 9i - i + 3i^2 = 3 - 10i - 3 = -10i$$
   $$\\text{Dénominateur : } (1+3i)(1-3i) = 1^2 - (3i)^2 = 1 - (-9) = 10$$
-  $$\\frac{z_B - z_A}{z_C - z_A} = \\frac{-10i}{10} = -i$$
+  $$\\dfrac{z_B - z_A}{z_C - z_A} = \\dfrac{-10i}{10} = -i$$
   <p>Interprétation géométrique du résultat $-i$ :</p>
   <ul>
     <li><strong>Angle $(\\overrightarrow{AC}, \\overrightarrow{AB})$ :</strong> $\\arg(-i) = -\\dfrac{\\pi}{2} \\pmod{2\\pi}$, donc les droites $(AB)$ et $(AC)$ sont perpendiculaires. Le triangle est <strong>rectangle en A</strong>.</li>
@@ -193,7 +193,7 @@ const BAC_CONTENT_2024 = [
   <p><strong>1. Cercle circonscrit à ABC :</strong></p>
   <p>Puisque le triangle $ABC$ est rectangle en $A$, son cercle circonscrit $(\\mathcal{C})$ a pour diamètre l'hypoténuse $[BC]$.</p>
   <p>Le centre $I$ de ce cercle est le milieu de $[BC]$ :</p>
-  $$z_I = \\frac{z_B + z_C}{2} = \\frac{(2-2i) + 2i}{2} = \\frac{2}{2} = 1 \\implies I(1\\,;0)$$
+  $$z_I = \\dfrac{z_B + z_C}{2} = \\dfrac{(2-2i) + 2i}{2} = \\dfrac{2}{2} = 1 \\implies I(1\\ ; 0)$$
   <p>Le rayon $R$ de ce cercle est égal à la distance $IC$ :</p>
   $$R = |z_C - z_I| = |2i - 1| = |-1 + 2i| = \\sqrt{(-1)^2 + 2^2} = \\sqrt{1 + 4} = \\sqrt{5}$$
   <p><strong>2. Vérification pour le point E(2+2i) :</strong></p>
@@ -204,7 +204,7 @@ const BAC_CONTENT_2024 = [
 </div>
 <div class="result">
   <span class="label">Résultat</span>
-  <p>Les quatre points $A, B, C$ et $E$ appartiennent tous au même cercle de <strong>centre $I(1\\,;0)$</strong> et de <strong>rayon $R = \\sqrt{5}$</strong> (soit $\\approx 2{,}24$ cm).</p>
+  <p>Les quatre points $A, B, C$ et $E$ appartiennent tous au même cercle de <strong>centre $I(1\\ ; 0)$</strong> et de <strong>rayon $R = \\sqrt{5}$</strong> (soit $\\approx 2{,}24$ cm).</p>
 </div>
 
 </div>
@@ -214,7 +214,7 @@ const BAC_CONTENT_2024 = [
 
 <p>Le tableau suivant donne la consommation d'électricité des Burkinabès (GWh) entre 2015 et 2020.</p>
 
-<table class="data">
+<table class="vtab">
   <tr><th>Années</th><td>2015</td><td>2016</td><td>2017</td><td>2018</td><td>2019</td><td>2020</td></tr>
   <tr><th>Rang $x_i$</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
   <tr><th>Conso $y_i$ (GWh)</th><td>1200</td><td>1317</td><td>1452</td><td>1568</td><td>1686</td><td>1858</td></tr>
@@ -263,28 +263,28 @@ const BAC_CONTENT_2024 = [
 <div class="step">
   <span class="label">Étape 2a — Calcul détaillé des coordonnées des points moyens A et B</span>
   <p><strong>1. Sous-nuage des 3 premiers points (2015, 2016, 2017) :</strong></p>
-  $$x_A = \\frac{1 + 2 + 3}{3} = \\frac{6}{3} = 2$$
-  $$y_A = \\frac{1200 + 1317 + 1452}{3} = \\frac{3969}{3} = 1323$$
+  $$x_A = \\dfrac{1 + 2 + 3}{3} = \\dfrac{6}{3} = 2$$
+  $$y_A = \\dfrac{1200 + 1317 + 1452}{3} = \\dfrac{3969}{3} = 1323$$
   <p><strong>2. Sous-nuage des 3 derniers points (2018, 2019, 2020) :</strong></p>
-  $$x_B = \\frac{4 + 5 + 6}{3} = \\frac{15}{3} = 5$$
-  $$y_B = \\frac{1568 + 1686 + 1858}{3} = \\frac{5112}{3} = 1704$$
+  $$x_B = \\dfrac{4 + 5 + 6}{3} = \\dfrac{15}{3} = 5$$
+  $$y_B = \\dfrac{1568 + 1686 + 1858}{3} = \\dfrac{5112}{3} = 1704$$
 </div>
 <div class="result">
   <span class="label">Résultat</span>
-  $$A(2\\,;1323) \\qquad B(5\\,;1704)$$
+  $$A(2\\ ; 1323) \\qquad B(5\\ ; 1704)$$
 </div>
 
 <div class="step">
   <span class="label">Étape 2c — Calcul de l'équation réduite de (AB) : y = mx + p</span>
   <p><strong>1. Calcul du coefficient directeur m :</strong></p>
-  $$m = \\frac{y_B - y_A}{x_B - x_A} = \\frac{1704 - 1323}{5 - 2} = \\frac{381}{3} = 127$$
+  $$m = \\dfrac{y_B - y_A}{x_B - x_A} = \\dfrac{1704 - 1323}{5 - 2} = \\dfrac{381}{3} = 127$$
   <p><strong>2. Calcul de l'ordonnée à l'origine p (en utilisant le point A) :</strong></p>
   $$y_A = m x_A + p \\implies 1323 = 127 \\times 2 + p$$
   $$1323 = 254 + p \\implies p = 1323 - 254 = 1069$$
 </div>
 <div class="result">
   <span class="label">Résultat</span>
-  $$(AB) :\\ y = 127x + 1069$$
+  $$(AB) :\ y = 127x + 1069$$
 </div>
 
 <div class="step">
@@ -305,7 +305,7 @@ const BAC_CONTENT_2024 = [
   $$127x + 1069 = 5641$$
   $$127x = 5641 - 1069$$
   $$127x = 4572$$
-  $$x = \\frac{4572}{127} = 36$$
+  $$x = \\dfrac{4572}{127} = 36$$
   <p>Retrouvons l'année correspondant au rang $x = 36$ :</p>
   $$\\text{Année} = 2015 + 36 - 1 = 2050$$
 </div>
@@ -322,7 +322,7 @@ const BAC_CONTENT_2024 = [
 <h3>Partie A</h3>
 
 <p>Soit $f$ la fonction définie par :</p>
-$$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in\\,]-\\infty;2[ \\\\[8pt] \\sqrt{x^2-x-2} & \\text{si } x\\in[2;+\\infty[ \\end{cases}$$
+$$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in ]-\\infty;2[ \\\\[8pt] \\sqrt{x^2-x-2} & \\text{si } x\\in[2;+\\infty[ \\end{cases}$$
 
 <ol>
   <li>Montrer que $D_f=\\,]-\\infty;-1[\\,\\cup\\,]-1;+\\infty[$. <span class="points">(0,25 pt)</span></li>
@@ -336,7 +336,7 @@ $$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in\\,]-\\infty;2[ \\\
   </ol></li>
   <li>Étudier la continuité de $f$ en 2. <span class="points">(0,5 pt)</span></li>
   <li><ol type="a">
-    <li>Calculer $\\displaystyle\\lim_{x\\to 2^-}\\frac{f(x)-f(2)}{x-2}$ et $\\displaystyle\\lim_{x\\to 2^+}\\frac{f(x)-f(2)}{x-2}$. Déduire la dérivabilité en 2. <span class="points">(1,5 pt)</span></li>
+    <li>Calculer $\\displaystyle\\lim_{x\\to 2^-}\\dfrac{f(x)-f(2)}{x-2}$ et $\\displaystyle\\lim_{x\\to 2^+}\\dfrac{f(x)-f(2)}{x-2}$. Déduire la dérivabilité en 2. <span class="points">(1,5 pt)</span></li>
     <li>Interprétation géométrique. <span class="points">(0,5 pt)</span></li>
   </ol></li>
 </ol>
@@ -371,12 +371,12 @@ $$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in\\,]-\\infty;2[ \\\
 <div class="step">
   <span class="label">Étape 2a — Calculs détaillés des limites aux bornes</span>
   <p><strong>1. Limite en $-\\infty$ :</strong></p>
-  $$\\lim_{x\\to -\\infty} f(x) = \\lim_{x\\to -\\infty} \\frac{x^2-4}{x+1} = \\lim_{x\\to -\\infty} \\frac{x^2}{x} = \\lim_{x\\to -\\infty} x = -\\infty$$
+  $$\\lim_{x\\to -\\infty} f(x) = \\lim_{x\\to -\\infty} \\dfrac{x^2-4}{x+1} = \\lim_{x\\to -\\infty} \\dfrac{x^2}{x} = \\lim_{x\\to -\\infty} x = -\\infty$$
 
   <p><strong>2. Limites à gauche et à droite de $-1$ :</strong></p>
   <p>Au numérateur : $(-1)^2 - 4 = 1 - 4 = -3$. Au dénominateur : $x+1 \\to 0$.</p>
-  $$\\text{Si } x < -1 \\implies x+1 < 0 \\implies \\lim_{x\\to -1^-} \\frac{-3}{0^-} = +\\infty$$
-  $$\\text{Si } x > -1 \\implies x+1 > 0 \\implies \\lim_{x\\to -1^+} \\frac{-3}{0^+} = -\\infty$$
+  $$\\text{Si } x < -1 \\implies x+1 < 0 \\implies \\lim_{x\\to -1^-} \\dfrac{-3}{0^-} = +\\infty$$
+  $$\\text{Si } x > -1 \\implies x+1 > 0 \\implies \\lim_{x\\to -1^+} \\dfrac{-3}{0^+} = -\\infty$$
 
   <p><strong>3. Limite en $+\\infty$ :</strong></p>
   $$\\lim_{x\\to +\\infty} f(x) = \\lim_{x\\to +\\infty} \\sqrt{x^2-x-2} = \\lim_{x\\to +\\infty} \\sqrt{x^2} = \\lim_{x\\to +\\infty} x = +\\infty$$
@@ -388,12 +388,12 @@ $$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in\\,]-\\infty;2[ \\\
 
 <div class="step">
   <span class="label">Étape 2b — Démonstration de l'asymptote oblique y = x - 1/2 en +∞</span>
-  <p>Calculons la limite de la différence $f(x) - \\left(x - \\frac{1}{2}\\right)$ en $+\\infty$ :</p>
-  $$f(x) - \\left(x - \\frac{1}{2}\\right) = \\sqrt{x^2-x-2} - \\left(x - \\frac{1}{2}\\right)$$
-  <p>Multiplions et divisons par la quantité conjuguée $\\sqrt{x^2-x-2} + \\left(x - \\frac{1}{2}\\right)$ :</p>
-  $$= \\frac{\\left(\\sqrt{x^2-x-2}\\right)^2 - \\left(x - \\frac{1}{2}\\right)^2}{\\sqrt{x^2-x-2} + \\left(x - \\frac{1}{2}\\right)}$$
-  $$\\text{Développons le numérateur : } (x^2 - x - 2) - \\left(x^2 - x + \\frac{1}{4}\\right) = x^2 - x - 2 - x^2 + x - \\frac{1}{4} = -2 - \\frac{1}{4} = -\\frac{9}{4}$$
-  $$f(x) - \\left(x - \\frac{1}{2}\\right) = \\frac{-\\frac{9}{4}}{\\sqrt{x^2-x-2} + \\left(x - \\frac{1}{2}\\right)}$$
+  <p>Calculons la limite de la différence $f(x) - \\left(x - \\dfrac{1}{2}\\right)$ en $+\\infty$ :</p>
+  $$f(x) - \\left(x - \\dfrac{1}{2}\\right) = \\sqrt{x^2-x-2} - \\left(x - \\dfrac{1}{2}\\right)$$
+  <p>Multiplions et divisons par la quantité conjuguée $\\sqrt{x^2-x-2} + \\left(x - \\dfrac{1}{2}\\right)$ :</p>
+  $$= \\dfrac{\\left(\\sqrt{x^2-x-2}\\right)^2 - \\left(x - \\dfrac{1}{2}\\right)^2}{\\sqrt{x^2-x-2} + \\left(x - \\dfrac{1}{2}\\right)}$$
+  $$\\text{Développons le numérateur : } (x^2 - x - 2) - \\left(x^2 - x + \\dfrac{1}{4}\\right) = x^2 - x - 2 - x^2 + x - \\dfrac{1}{4} = -2 - \\dfrac{1}{4} = -\\dfrac{9}{4}$$
+  $$f(x) - \\left(x - \\dfrac{1}{2}\\right) = \\dfrac{-\\dfrac{9}{4}}{\\sqrt{x^2-x-2} + \\left(x - \\dfrac{1}{2}\\right)}$$
   <p>Quand $x \\to +\\infty$, le dénominateur tend vers $+\\infty$, donc le quotient tend vers 0.</p>
 </div>
 <div class="result">
@@ -404,19 +404,19 @@ $$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in\\,]-\\infty;2[ \\\
 <div class="step">
   <span class="label">Étape 3a — Décomposition de f(x) sur ]-∞; 2[ par identification</span>
   <p>On cherche $a, b, c$ tels que :</p>
-  $$\\frac{x^2-4}{x+1} = a x + b + \\frac{c}{x+1} = \\frac{(ax+b)(x+1) + c}{x+1} = \\frac{a x^2 + (a+b)x + (b+c)}{x+1}$$
+  $$\\dfrac{x^2-4}{x+1} = a x + b + \\dfrac{c}{x+1} = \\dfrac{(ax+b)(x+1) + c}{x+1} = \\dfrac{a x^2 + (a+b)x + (b+c)}{x+1}$$
   <p>Par identification terme à terme avec le numérateur $x^2 + 0x - 4$ :</p>
   $$\\begin{cases} a = 1 \\\\[3pt] a + b = 0 \\implies b = -a = -1 \\\\[3pt] b + c = -4 \\implies -1 + c = -4 \\implies c = -3 \\end{cases}$$
 </div>
 <div class="result">
   <span class="label">Résultat</span>
-  $$f(x) = x - 1 - \\frac{3}{x+1} \\quad \\text{pour tout } x \\in \\,]-\\infty; 2[$$
+  $$f(x) = x - 1 - \\dfrac{3}{x+1} \\quad \\text{pour tout } x \\in \\,]-\\infty ; 2[$$
 </div>
 
 <div class="step">
   <span class="label">Étape 3b — Asymptote oblique y = x - 1 en -∞</span>
   <p>D'après la question 3a : $f(x) - (x-1) = -\\dfrac{3}{x+1}$.</p>
-  $$\\lim_{x\\to -\\infty} [f(x) - (x-1)] = \\lim_{x\\to -\\infty} \\left(-\\frac{3}{x+1}\\right) = 0$$
+  $$\\lim_{x\\to -\\infty} [f(x) - (x-1)] = \\lim_{x\\to -\\infty} \\left(-\\dfrac{3}{x+1}\\right) = 0$$
 </div>
 <div class="result">
   <span class="label">Résultat</span>
@@ -426,7 +426,7 @@ $$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in\\,]-\\infty;2[ \\\
 <div class="step">
   <span class="label">Étape 4 — Étude complète de la continuité en x = 2</span>
   <p>Calculons la limite à gauche en 2 ($x < 2$) :</p>
-  $$\\lim_{x\\to 2^-} f(x) = \\lim_{x\\to 2^-} \\frac{x^2-4}{x+1} = \\frac{2^2 - 4}{2 + 1} = \\frac{0}{3} = 0$$
+  $$\\lim_{x\\to 2^-} f(x) = \\lim_{x\\to 2^-} \\dfrac{x^2-4}{x+1} = \\dfrac{2^2 - 4}{2 + 1} = \\dfrac{0}{3} = 0$$
   <p>Calculons la limite à droite en 2 ($x > 2$) :</p>
   $$\\lim_{x\\to 2^+} f(x) = \\lim_{x\\to 2^+} \\sqrt{x^2-x-2} = \\sqrt{2^2 - 2 - 2} = \\sqrt{0} = 0$$
   <p>Valeur exacte de $f(2) = \\sqrt{2^2 - 2 - 2} = 0$.</p>
@@ -440,15 +440,15 @@ $$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in\\,]-\\infty;2[ \\\
 <div class="step">
   <span class="label">Étape 5a — Calculs des deux taux d'accroissement en x = 2</span>
   <p><strong>1. Dérivabilité à gauche (x < 2) :</strong></p>
-  $$\\lim_{x\\to 2^-} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x\\to 2^-} \\frac{\\frac{x^2-4}{x+1} - 0}{x - 2} = \\lim_{x\\to 2^-} \\frac{x^2-4}{(x-2)(x+1)}$$
+  $$\\lim_{x\\to 2^-} \\dfrac{f(x) - f(2)}{x - 2} = \\lim_{x\\to 2^-} \\dfrac{\\dfrac{x^2-4}{x+1} - 0}{x - 2} = \\lim_{x\\to 2^-} \\dfrac{x^2-4}{(x-2)(x+1)}$$
   <p>Factorisons $x^2-4 = (x-2)(x+2)$ et simplifions par $(x-2)$ :</p>
-  $$= \\lim_{x\\to 2^-} \\frac{(x-2)(x+2)}{(x-2)(x+1)} = \\lim_{x\\to 2^-} \\frac{x+2}{x+1} = \\frac{2+2}{2+1} = \\frac{4}{3}$$
+  $$= \\lim_{x\\to 2^-} \\dfrac{(x-2)(x+2)}{(x-2)(x+1)} = \\lim_{x\\to 2^-} \\dfrac{x+2}{x+1} = \\dfrac{2+2}{2+1} = \\dfrac{4}{3}$$
   <p>La fonction est donc dérivable à gauche en 2, et $f'_g(2) = \\dfrac{4}{3}$.</p>
 
   <p><strong>2. Dérivabilité à droite (x > 2) :</strong></p>
-  $$\\lim_{x\\to 2^+} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x\\to 2^+} \\frac{\\sqrt{x^2-x-2} - 0}{x - 2} = \\lim_{x\\to 2^+} \\frac{\\sqrt{(x-2)(x+1)}}{x - 2}$$
+  $$\\lim_{x\\to 2^+} \\dfrac{f(x) - f(2)}{x - 2} = \\lim_{x\\to 2^+} \\dfrac{\\sqrt{x^2-x-2} - 0}{x - 2} = \\lim_{x\\to 2^+} \\dfrac{\\sqrt{(x-2)(x+1)}}{x - 2}$$
   <p>Pour $x > 2$, $x-2 = \\sqrt{(x-2)^2}$, donc :</p>
-  $$= \\lim_{x\\to 2^+} \\sqrt{\\frac{(x-2)(x+1)}{(x-2)^2}} = \\lim_{x\\to 2^+} \\sqrt{\\frac{x+1}{x-2}} = \\sqrt{\\frac{3}{0^+}} = +\\infty$$
+  $$= \\lim_{x\\to 2^+} \\sqrt{\\dfrac{(x-2)(x+1)}{(x-2)^2}} = \\lim_{x\\to 2^+} \\sqrt{\\dfrac{x+1}{x-2}} = \\sqrt{\\dfrac{3}{0^+}} = +\\infty$$
 </div>
 <div class="result">
   <span class="label">Résultat</span>
@@ -457,7 +457,7 @@ $$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in\\,]-\\infty;2[ \\\
 
 <div class="note">
   <span class="label">Interprétation géométrique en x = 2</span>
-  <p>Au point $(2\\,;0)$, la courbe $(\\mathcal{C})$ présente un <strong>point anguleux</strong> :</p>
+  <p>Au point $(2\\ ; 0)$, la courbe $(\\mathcal{C})$ présente un <strong>point anguleux</strong> :</p>
   <ul>
     <li>À gauche, une demi-tangente oblique de pente $m = \\dfrac{4}{3}$.</li>
     <li>À droite, une demi-tangente verticale dirigée vers le haut.</li>
@@ -498,42 +498,99 @@ $$f(x)=\\begin{cases} \\dfrac{x^2-4}{x+1} & \\text{si } x\\in\\,]-\\infty;2[ \\\
   <span class="label">Étape 1a — Calculs détaillés des dérivées et étude des signes</span>
   <p><strong>1. Sur $]-\\infty;-1[$ et $]-1;2[$ :</strong></p>
   <p>En utilisant $f(x) = x - 1 - \\dfrac{3}{x+1}$ :</p>
-  $$f'(x) = 1 - 3 \\left(-\\frac{1}{(x+1)^2}\\right) = 1 + \\frac{3}{(x+1)^2}$$
+  $$f'(x) = 1 - 3 \\left(-\\dfrac{1}{(x+1)^2}\\right) = 1 + \\dfrac{3}{(x+1)^2}$$
   <p>Comme $(x+1)^2 > 0$ et $3 > 0$, la dérivée $f'(x) > 0$ est strictement positive sur tout le domaine. $f$ est <strong>strictement croissante</strong> sur $]-\\infty;-1[$ et sur $]-1;2[$.</p>
 
   <p><strong>2. Sur $]2;+\\infty[$ :</strong></p>
   <p>En utilisant la formule de dérivée de $\\sqrt{u}$ qui est $\\dfrac{u'}{2\\sqrt{u}}$ avec $u(x) = x^2-x-2$ et $u'(x) = 2x-1$ :</p>
-  $$f'(x) = \\frac{2x - 1}{2\\sqrt{x^2-x-2}}$$
+  $$f'(x) = \\dfrac{2x - 1}{2\\sqrt{x^2-x-2}}$$
   <p>Pour $x > 2$, $2x-1 > 3 > 0$ et la racine au dénominateur est strictement positive. Ainsi $f'(x) > 0$. $f$ est <strong>strictement croissante</strong> sur $]2;+\\infty[$.</p>
+</div>
+
+<div class="diagram-wrap">
+  <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;">
+    <defs>
+      <marker id="arr-green-24" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/>
+      </marker>
+      <linearGradient id="forbid-grad-24" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fee2e2" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#fee2e2" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect x="1" y="1" width="758" height="258" rx="10" fill="#ffffff" stroke="#dde1ec" stroke-width="1.5"/>
+    <path d="M 1 10 C 1 5 5 1 10 1 L 95 1 L 95 259 L 10 259 C 5 259 1 255 1 250 Z" fill="#222d46"/>
+    <line x1="0" y1="50" x2="760" y2="50" stroke="#dde1ec" stroke-width="1.5"/>
+    <line x1="0" y1="100" x2="760" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
+    <line x1="95" y1="0" x2="95" y2="260" stroke="#dde1ec" stroke-width="1.5"/>
+
+    <text x="47.5" y="26" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="'Nunito', sans-serif" font-size="16" font-weight="800" font-style="italic">x</text>
+    <text x="47.5" y="75" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="'Nunito', sans-serif" font-size="14" font-weight="800" font-style="italic">f '(x)</text>
+    <text x="47.5" y="165" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="'Nunito', sans-serif" font-size="16" font-weight="800" font-style="italic">f(x)</text>
+    <text x="47.5" y="188" text-anchor="middle" dominant-baseline="central" fill="rgba(255,255,255,0.65)" font-family="'Nunito', sans-serif" font-size="11" font-weight="700">Variations</text>
+
+    <!-- Ligne x -->
+    <text x="145" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="'Nunito', sans-serif" font-size="17" font-weight="800">−∞</text>
+    <text x="335" y="26" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="'Nunito', sans-serif" font-size="16" font-weight="900">−1</text>
+    <text x="540" y="26" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="'Nunito', sans-serif" font-size="16" font-weight="900">2</text>
+    <text x="705" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="'Nunito', sans-serif" font-size="17" font-weight="800">+∞</text>
+
+    <!-- Double barre en -1 -->
+    <rect x="328" y="50" width="14" height="209" fill="url(#forbid-grad-24)"/>
+    <line x1="332" y1="50" x2="332" y2="259" stroke="#b83232" stroke-width="2"/>
+    <line x1="338" y1="50" x2="338" y2="259" stroke="#b83232" stroke-width="2"/>
+
+    <!-- Trait vertical en 2 (saute en 0) -->
+    <line x1="540" y1="50" x2="540" y2="100" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="540" y1="100" x2="540" y2="168" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="540" y1="196" x2="540" y2="259" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Ligne f'(x) -->
+    <text x="235" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="'Nunito', sans-serif" font-size="22" font-weight="900">+</text>
+    <text x="435" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="'Nunito', sans-serif" font-size="22" font-weight="900">+</text>
+    <text x="625" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="'Nunito', sans-serif" font-size="22" font-weight="900">+</text>
+
+    <!-- Ligne f(x) -->
+    <text x="145" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="'Nunito', sans-serif" font-size="15" font-weight="800">−∞</text>
+    <line x1="165" y1="225" x2="295" y2="135" stroke="#1a7a5e" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-green-24)"/>
+    <text x="310" y="125" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="'Nunito', sans-serif" font-size="15" font-weight="800">+∞</text>
+
+    <text x="360" y="238" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="'Nunito', sans-serif" font-size="15" font-weight="800">−∞</text>
+    <line x1="382" y1="230" x2="522" y2="187" stroke="#1a7a5e" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <text x="540" y="182" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="'Nunito', sans-serif" font-size="16" font-weight="900">0</text>
+    
+    <line x1="558" y1="177" x2="685" y2="137" stroke="#1a7a5e" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-green-24)"/>
+    <text x="705" y="125" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="'Nunito', sans-serif" font-size="15" font-weight="800">+∞</text>
+  </svg>
+</div>
 </div>
 
 <div class="step">
   <span class="label">Étape 2 — Équation complète de la tangente (T) au point d'abscisse x = 0</span>
   <p>L'équation d'une tangente en $x_0$ est donnée par $y = f'(x_0)(x - x_0) + f(x_0)$. Ici $x_0 = 0$ :</p>
-  $$f(0) = \\frac{0^2 - 4}{0 + 1} = \\frac{-4}{1} = -4$$
-  $$f'(0) = 1 + \\frac{3}{(0+1)^2} = 1 + 3 = 4$$
+  $$f(0) = \\dfrac{0^2 - 4}{0 + 1} = \\dfrac{-4}{1} = -4$$
+  $$f'(0) = 1 + \\dfrac{3}{(0+1)^2} = 1 + 3 = 4$$
   $$y = 4(x - 0) + (-4) \\implies y = 4x - 4$$
 </div>
 <div class="result">
   <span class="label">Résultat</span>
-  $$(T) :\\ y = 4x - 4$$
+  $$(T) :\ y = 4x - 4$$
 </div>
 
 <div class="step">
   <span class="label">Étape 3 — Points d'intersection avec l'axe des abscisses (Ox) (y = 0)</span>
   <p><strong>1. Sur $]-\\infty;2[$ :</strong></p>
-  $$f(x) = 0 \\iff \\frac{x^2-4}{x+1} = 0 \\iff x^2 - 4 = 0 \\iff (x-2)(x+2) = 0$$
-  <p>Les solutions sont $x = -2$ et $x = 2$. Seule $x = -2$ est strictement inférieure à 2. D'où le point <strong>$(-2\\,;0)$</strong>.</p>
+  $$f(x) = 0 \\iff \\dfrac{x^2-4}{x+1} = 0 \\iff x^2 - 4 = 0 \\iff (x-2)(x+2) = 0$$
+  <p>Les solutions sont $x = -2$ et $x = 2$. Seule $x = -2$ est strictement inférieure à 2. D'où le point <strong>$(-2\\ ; 0)$</strong>.</p>
 
   <p><strong>2. Sur $[2;+\\infty[$ :</strong></p>
   $$f(x) = 0 \\iff \\sqrt{x^2-x-2} = 0 \\iff x^2 - x - 2 = 0 \\iff (x-2)(x+1) = 0$$
-  <p>Les solutions sont $x = 2$ et $x = -1$. Seule $x = 2$ appartient à $[2;+\\infty[$. D'où le point <strong>$(2\\,;0)$</strong>.</p>
+  <p>Les solutions sont $x = 2$ et $x = -1$. Seule $x = 2$ appartient à $[2;+\\infty[$. D'où le point <strong>$(2\\ ; 0)$</strong>.</p>
 </div>
 <div class="result">
   <span class="label">Résultat</span>
-  <p>Les deux points d'intersection de la courbe $(\\mathcal{C})$ avec l'axe $(Ox)$ sont <strong>$(-2\\,;0)$</strong> et <strong>$(2\\,;0)$</strong>.</p>
-</div>
-
+  <p>Les deux points d'intersection de la courbe $(\\mathcal{C})$ avec l'axe $(Ox)$ sont <strong>$(-2\\ ; 0)$</strong> et <strong>$(2\\ ; 0)$</strong>.</p>
 </div>
 </details>
 

@@ -17,9 +17,9 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script src="JS/exercises.js"></script>
 <script src="JS/new_exercises_terminale_d.js"></script>
-<script src="JS/bac_exams_2000_2004.js?v=20260914_v19"></script>
-<script src="JS/bac_exams_2014_2022.js?v=20260914_v19"></script>
-<script src="JS/bac_exams_2023_2025.js?v=20260914_v19"></script>
+<script src="JS/bac_exams_2000_2004.js?v=20260915_v20"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260915_v20"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260915_v20"></script>
 <script src="JS/curve_hover.js"></script>
 <script src="JS/desmos_init.js"></script>
 <script>
@@ -280,36 +280,47 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 }
 .bac-section-title::after { content: ''; flex: 1; height: 1px; background: var(--gold-dim); }
 .bac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 18px; }
-/* ── NERVEUX TABLE STYLES (harmonized 2025 standard) ── */
+/* ── NERVEUX TABLE STYLES (harmonized 2025 standard - Navy & White Headers) ── */
 table.vtab, table.data, .problem-box table, .solution-box table, .bac-problem-box table, .bac-correction-box table {
   border-collapse: separate !important;
   border-spacing: 0 !important;
   display: table !important;
   width: 100% !important;
-  margin: 16px auto !important;
+  margin: 18px auto !important;
   font-family: 'Nunito', sans-serif;
   font-size: 13.5px;
-  box-shadow: 0 1px 4px rgba(34,45,70,0.04);
+  box-shadow: 0 2px 10px rgba(34,45,70,0.06);
   border-radius: 8px;
   overflow: hidden;
-  border: 1.5px solid #cbd5e1 !important;
+  border: 1.5px solid #222d46 !important;
   background: #ffffff;
 }
-table.vtab thead tr, table.vtab tr:first-child, table.data thead tr, table.data tr:first-child,
-.problem-box table thead tr, .problem-box table tr:first-child,
-.solution-box table thead tr, .solution-box table tr:first-child,
-.bac-problem-box table thead tr, .bac-problem-box table tr:first-child,
-.bac-correction-box table thead tr, .bac-correction-box table tr:first-child {
-  background: #f0f3fa !important;
-}
+table.vtab thead tr, table.vtab tr:first-child th, table.data thead tr, table.data tr:first-child th,
+.problem-box table thead tr, .problem-box table tr:first-child th,
+.solution-box table thead tr, .solution-box table tr:first-child th,
+.bac-problem-box table thead tr, .bac-problem-box table tr:first-child th,
+.bac-correction-box table thead tr, .bac-correction-box table tr:first-child th,
 table.vtab th, table.data th, .problem-box th, .solution-box th, .bac-problem-box th, .bac-correction-box th {
-  background: #f0f3fa !important;
-  color: #1e293b !important;
+  background: #222d46 !important;
+  color: #ffffff !important;
   font-weight: 800;
-  padding: 9px 12px !important;
-  border: 1px solid #cbd5e1 !important;
+  padding: 10px 14px !important;
+  border: 1px solid #1a233a !important;
   text-align: center;
   vertical-align: middle;
+}
+table.vtab th *, table.data th *, .problem-box th *, .solution-box th *, .bac-problem-box th *, .bac-correction-box th * {
+  color: #ffffff !important;
+}
+table.vtab th mjx-container, table.data th mjx-container,
+table.vtab th .MathJax, table.data th .MathJax,
+.problem-box th mjx-container, .solution-box th mjx-container,
+.bac-problem-box th mjx-container, .bac-correction-box th mjx-container {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+table.vtab th svg, table.data th svg {
+  fill: #ffffff !important;
 }
 table.vtab td, table.data td, .problem-box td, .solution-box td, .bac-problem-box td, .bac-correction-box td {
   border: 1px solid #dde1ec !important;
@@ -321,10 +332,10 @@ table.vtab td, table.data td, .problem-box td, .solution-box td, .bac-problem-bo
   background: #ffffff;
 }
 table.vtab tr:nth-child(even) td, table.data tr:nth-child(even) td, .problem-box tr:nth-child(even) td, .solution-box tr:nth-child(even) td, .bac-problem-box tr:nth-child(even) td, .bac-correction-box tr:nth-child(even) td {
-  background: #fcfdfe;
+  background: #f8fafc;
 }
 table.vtab tr:hover td, table.data tr:hover td, .problem-box tr:hover td, .solution-box tr:hover td, .bac-problem-box tr:hover td, .bac-correction-box tr:hover td {
-  background: #f8fafc;
+  background: #f1f5f9;
 }
 /* ── BAC CARD ── */
 .bac-card {
@@ -1181,6 +1192,14 @@ function handleBacReturn() {
   }
   if (!openBacId) return;
 
+  // Nettoyer immédiatement l'URL pour ne pas laisser un vieux openBac persister dans l'historique du navigateur
+  if (window.history && window.history.replaceState) {
+    try {
+      const cleanUrl = window.location.pathname;
+      window.history.replaceState({}, '', cleanUrl);
+    } catch(e) {}
+  }
+
   // 1. Force open BAC category immediately without height transition delay
   const bacBody = document.getElementById('body-bac');
   if (bacBody) {
@@ -1237,6 +1256,9 @@ function handleBacReturn() {
 buildDOM();
 restorePageState();
 handleBacReturn();
+window.addEventListener('pageshow', function(e) {
+  handleBacReturn();
+});
 </script>
 <!-- FLOATING FEEDBACK BUTTON -->
 <button class="float-feedback" onclick="openFeedback('general')">

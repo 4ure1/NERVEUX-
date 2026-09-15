@@ -521,39 +521,55 @@ setTimeout(revealPage, 6000);
     z-index: 0;
   }
 
-/* ── NERVEUX TABLE STYLES (harmonized 2025 standard) ── */
+/* ── NERVEUX TABLE STYLES (harmonized 2025 standard - Navy & White Headers) ── */
 #bac-content table:not(.infoblock table), table.vtab, table.data {
   border-collapse: separate !important;
   border-spacing: 0 !important;
-  margin: 16px auto !important;
+  margin: 18px auto !important;
   font-family: 'Nunito', sans-serif;
   font-size: 13.5px;
-  box-shadow: 0 1px 4px rgba(34,45,70,0.04);
+  box-shadow: 0 2px 10px rgba(34,45,70,0.06);
   border-radius: 8px;
   overflow: hidden;
-  border: 1.5px solid #cbd5e1 !important;
+  border: 1.5px solid #222d46 !important;
   background: #ffffff;
   display: table !important;
   width: 100% !important;
   max-width: 100%;
 }
 #bac-content table:not(.infoblock table) thead tr,
-#bac-content table:not(.infoblock table) tr:first-child,
-#bac-content table:not(.infoblock table) tr[style*="background"],
+#bac-content table:not(.infoblock table) tr:first-child th,
 table.vtab thead tr,
-table.vtab tr:first-child,
+table.vtab tr:first-child th,
 table.data thead tr,
-table.data tr:first-child {
-  background: #f0f3fa !important;
-}
+table.data tr:first-child th,
 #bac-content table:not(.infoblock table) th, table.vtab th, table.data th {
-  background: #f0f3fa !important;
-  color: #1e293b !important;
+  background: #222d46 !important;
+  color: #ffffff !important;
   font-weight: 800;
-  padding: 9px 12px !important;
-  border: 1px solid #cbd5e1 !important;
+  padding: 10px 14px !important;
+  border: 1px solid #1a233a !important;
   text-align: center;
   vertical-align: middle;
+}
+#bac-content table:not(.infoblock table) th *,
+table.vtab th *,
+table.data th * {
+  color: #ffffff !important;
+}
+#bac-content table:not(.infoblock table) th mjx-container,
+table.vtab th mjx-container,
+table.data th mjx-container,
+#bac-content table:not(.infoblock table) th .MathJax,
+table.vtab th .MathJax,
+table.data th .MathJax {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+#bac-content table:not(.infoblock table) th svg,
+table.vtab th svg,
+table.data th svg {
+  fill: #ffffff !important;
 }
 #bac-content table:not(.infoblock table) td, table.vtab td, table.data td {
   border: 1px solid #dde1ec !important;
@@ -565,10 +581,10 @@ table.data tr:first-child {
   background: #ffffff;
 }
 #bac-content table:not(.infoblock table) tr:nth-child(even) td, table.vtab tr:nth-child(even) td, table.data tr:nth-child(even) td {
-  background: #fcfdfe;
+  background: #f8fafc;
 }
 #bac-content table:not(.infoblock table) tr:hover td, table.vtab tr:hover td, table.data tr:hover td {
-  background: #f8fafc;
+  background: #f1f5f9;
 }
 </style>
 </head>
@@ -620,10 +636,10 @@ table.data tr:first-child {
 </footer>
 
 <!-- Fichiers de contenu BAC unique -->
-<script src="JS/bac_exams_2000_2004.js?v=20260914_v19"></script>
-<script src="JS/bac_exams_2014_2022.js?v=20260914_v19"></script>
-<script src="JS/bac_exams_2023_2025.js?v=20260914_v19"></script>
-<script src="JS/bac_content_2023_2025.js?v=20260914_v19"></script>
+<script src="JS/bac_exams_2000_2004.js?v=20260915_v20"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260915_v20"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260915_v20"></script>
+<script src="JS/bac_content_2023_2025.js?v=20260915_v20"></script>
 <script src="JS/curve_hover.js"></script>
 <script src="JS/desmos_init.js"></script>
 
@@ -933,6 +949,15 @@ function transformAllVTabs(root) {
   var params = new URLSearchParams(window.location.search);
   var id = params.get('id') || 'bac-2024-D-juillet-1er';
   try { sessionStorage.setItem('last_viewed_bac', id); } catch(e) {}
+
+  // Mettre à jour immédiatement le lien de retour vers la carte exacte sur l'accueil
+  var returnLink = document.querySelector('.return-link');
+  if(returnLink){
+    returnLink.href = 'index.html?openBac=' + encodeURIComponent(id);
+    returnLink.addEventListener('click', function(e){
+      try { sessionStorage.setItem('last_viewed_bac', id); } catch(err) {}
+    });
+  }
 
   var registry = window.BAC_CONTENT_REGISTRY || {};
   var wrap = document.getElementById('bac-content');

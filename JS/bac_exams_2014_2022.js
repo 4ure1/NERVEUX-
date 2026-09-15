@@ -556,7 +556,7 @@ const BAC_EXAMS_2014_2022 = [
 <p>\\[\\boxed{\\text{Aire}(ABDE) = \\sqrt{2} \\text{ u.a.}}\\]</p>`
     },
     {
-      label: 'Problème — Fonction f(x) = x + 1 + (x+1)e^(-2x) (12 pts)',
+      label: 'Problème — Fonction f(x) = x + 1 + (x+1)·exp(−2x) (12 pts)',
       problem: `<p>On considère la fonction f définie sur \\(\\mathbb{R}\\) par \\(f(x) = x+1+(x+1)e^{-2x}\\). On désigne par (C) sa courbe représentative dans le plan muni d'un repère orthonormal \\((O;\\vec{i};\\vec{j})\\) (unité 2 cm).</p>
 
 <p><strong>Partie A — Fonction auxiliaire</strong></p>
@@ -1176,7 +1176,7 @@ const BAC_EXAMS_2014_2022 = [
 <p>\\[V(X) = E(X^2)-[E(X)]^2 = \\dfrac{521}{45}-\\dfrac{49}{25} = \\dfrac{521\\times25-49\\times45}{1125} = \\dfrac{13025-2205}{1125} = \\dfrac{10820}{1125} = \\boxed{\\dfrac{2164}{225}}\\]</p>`
     },
     {
-      label: 'Problème — Équation diff. & fonction h(x) = e^(1-3x)/(1+e^(-3x)) (12 pts)',
+      label: 'Problème — Équation diff. & fonction h(x) = exp(1−3x)/(1+exp(−3x)) (12 pts)',
       problem: `<p><strong>Partie A (équation différentielle)</strong></p>
 <p>On considère l'équation différentielle \\((E) : y' - 3y = \\dfrac{-3e}{(1+e^{-3x})^2}\\).</p>
 <p>On donne une fonction \\(\\varphi\\) dérivable sur \\(\\mathbb{R}\\) et la fonction f définie sur \\(\\mathbb{R}\\) par \\(f(x) = e^{-3x}\\varphi(x)\\).</p>
@@ -1435,7 +1435,7 @@ const BAC_EXAMS_2014_2022 = [
 <p>\\[V = \\dfrac{1}{3} \\times \\mathcal{A} \\times d(I;(ABC)) = \\dfrac{1}{3} \\times \\dfrac{7}{2} \\times \\dfrac{12}{7} = \\dfrac{1}{3} \\times 6 = 2 \\text{ unités de volume}\\]</p>`
     },
     {
-      label: 'Problème — Fonction f(x) = ln(x)/(1+x) et e^(1/(x-1)), intégrales (12 pts)',
+      label: 'Problème — Fonction f(x) = ln(x)/(1+x) et exp(1/(x−1)), intégrales (12 pts)',
       problem: `<p>On considère la fonction f définie sur \\(\\mathbb{R}\\) par :</p>
 <p>\\[f(x) = \\begin{cases} \ \\dfrac{ \\ln x}{1+x} & \\text{si } x \\geq 1 \\\\ e^{ \\dfrac{1}{x-1}} & \\text{si } x < 1 \\end{cases}\\]</p>
 <p>On note (C) la courbe représentative de f dans le plan muni d'un repère orthogonal \\((O;\\vec{i};\\vec{j})\\) tel que \\(\\|\\vec{i}\\| = 1\\) cm et \\(\\|\\vec{j}\\| = 2\\) cm.</p>
@@ -1938,7 +1938,7 @@ const BAC_EXAMS_2014_2022 = [
 </div>`
     },
     {
-      label: 'Problème — Fonction f(x) = x(1+e^(2-x)), bijection, aire (12 pts)',
+      label: 'Problème — Fonction f(x) = x(1+exp(2−x)), bijection, aire (12 pts)',
       problem: `<p>On considère la fonction f définie sur \\(\\mathbb{R}\\) par \\(f(x) = x(1+e^{2-x})\\). On note (C) sa courbe dans un repère orthonormal \\((O;\\vec{i};\\vec{j})\\) (unité graphique 2 cm).</p>
 
 <p><strong>Partie A</strong></p>
@@ -4892,17 +4892,7 @@ Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'es
       problem: `<p><strong>1)</strong> Résoudre l'équation différentielle \\((E) : 2y' + y = 0\\).</p>
 <p><strong>2)</strong> On considère l'équation différentielle \\((E') : 2y' + y = (x+2)e^{-\\dfrac{x}{2}}\\). Déterminer les réels a et b tels que la fonction f définie par \\(f(x) = (ax^2 + bx)e^{-\\dfrac{x}{2}}\\) soit solution de (E').</p>
 
-<div class="tv-wrap diagram-wrap">
-  
-</div>
 
-<div class="tv-wrap diagram-wrap">
-  
-</div>
-
-<div class="tv-wrap diagram-wrap">
-  
-</div>
 <p><strong>3)</strong> Démontrer qu'une fonction g est solution de (E') si et seulement si \\(g - f\\) est solution de (E).</p>
 <p><strong>4)</strong> Déduire de ce qui précède la solution générale de l'équation (E').</p>`,
             rappel: `<div class="rappel">
@@ -4914,67 +4904,7 @@ Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'es
     <li><strong>Solution générale :</strong> $y(x) = C e^{-\\dfrac{x}{2}} + y_p(x)$.</li>
   </ul>
 </div>`,
-      correction: `
-<div class="tv-section">
-<svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <marker id="arr-g-21-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/></marker>
-    </defs>
-    <rect x="1" y="1" width="758" height="258" rx="10" fill="#ffffff" stroke="#dde1ec" stroke-width="1.5"/>
-    <path d="M 1 10 C 1 5 5 1 10 1 L 95 1 L 95 259 L 10 259 C 5 259 1 255 1 250 Z" fill="#222d46"/>
-    <line x1="0" y1="50" x2="760" y2="50" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="0" y1="100" x2="760" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="95" y1="0" x2="95" y2="260" stroke="#dde1ec" stroke-width="1.5"/>
-    <text x="47.5" y="26" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">x</text>
-    <text x="47.5" y="75" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="800" font-style="italic">f '(x)</text>
-    <text x="47.5" y="180" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">f(x)</text>
-    <text x="145" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">−∞</text>
-    <text x="705" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">+∞</text>
-    <text x="425" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="900">+</text>
-    <text x="145" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−∞</text>
-    <line x1="170" y1="225" x2="680" y2="135" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-21-f)"/>
-    <text x="705" y="125" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">+∞</text>
-  </svg>
-<svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <marker id="arr-g-21-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/></marker>
-    </defs>
-    <rect x="1" y="1" width="758" height="258" rx="10" fill="#ffffff" stroke="#dde1ec" stroke-width="1.5"/>
-    <path d="M 1 10 C 1 5 5 1 10 1 L 95 1 L 95 259 L 10 259 C 5 259 1 255 1 250 Z" fill="#222d46"/>
-    <line x1="0" y1="50" x2="760" y2="50" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="0" y1="100" x2="760" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="95" y1="0" x2="95" y2="260" stroke="#dde1ec" stroke-width="1.5"/>
-    <text x="47.5" y="26" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">x</text>
-    <text x="47.5" y="75" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="800" font-style="italic">f '(x)</text>
-    <text x="47.5" y="180" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">f(x)</text>
-    <text x="145" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">−∞</text>
-    <text x="705" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">+∞</text>
-    <text x="425" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="900">+</text>
-    <text x="145" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−∞</text>
-    <line x1="170" y1="225" x2="680" y2="135" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-21-f)"/>
-    <text x="705" y="125" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">+∞</text>
-  </svg>
-<svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <marker id="arr-g-21-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/></marker>
-    </defs>
-    <rect x="1" y="1" width="758" height="258" rx="10" fill="#ffffff" stroke="#dde1ec" stroke-width="1.5"/>
-    <path d="M 1 10 C 1 5 5 1 10 1 L 95 1 L 95 259 L 10 259 C 5 259 1 255 1 250 Z" fill="#222d46"/>
-    <line x1="0" y1="50" x2="760" y2="50" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="0" y1="100" x2="760" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="95" y1="0" x2="95" y2="260" stroke="#dde1ec" stroke-width="1.5"/>
-    <text x="47.5" y="26" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">x</text>
-    <text x="47.5" y="75" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="800" font-style="italic">f '(x)</text>
-    <text x="47.5" y="180" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">f(x)</text>
-    <text x="145" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">−∞</text>
-    <text x="705" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">+∞</text>
-    <text x="425" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="900">+</text>
-    <text x="145" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−∞</text>
-    <line x1="170" y1="225" x2="680" y2="135" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-21-f)"/>
-    <text x="705" y="125" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">+∞</text>
-  </svg>
-</div>
-<h4> Proposition de Corrigé</h4>
+      correction: `<h4> Proposition de Corrigé</h4>
 
 <p><strong>1) Résolution de (E) : 2y' + y = 0</strong></p>
 <p>\\(2y' = -y \\iff y' = -\\dfrac{1}{2}y\\). Équation différentielle du premier ordre linéaire homogène.</p>
@@ -5056,7 +4986,7 @@ Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'es
 <p>\\[S' = \\left(\\dfrac{3}{2}\\right)^{n+1} \\cdot 3^{1-2^{n+1}} = \\dfrac{3^{n+1}}{2^{n+1}} \\cdot 3^{1-2^{n+1}} = \\dfrac{3^{n+2-2^{n+1}}}{2^{n+1}}\\]</p>`
     },
     {
-      label: 'Problème — Fonction f(x) = (2x+3)e^(-x) + x − 1 (12 pts)',
+      label: 'Problème — Fonction f(x) = (2x+3)·exp(−x) + x − 1 (12 pts)',
       problem: `<p>Le plan est muni d'un repère orthonormal \\((O;\\vec{i};\\vec{j})\\) d'unité graphique 1 cm. On considère la fonction f définie sur \\(\\mathbb{R}\\) par \\(f(x) = (2x+3)e^{-x}+x-1\\). On note (C) la courbe représentative de f.</p>
 
 <p><strong>Partie A</strong></p>
@@ -6004,17 +5934,7 @@ Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'es
       label: 'Exercice 1 — Géométrie dans l\'espace (4 pts)',
       problem: `<p>L'espace est rapporté à un repère orthonormal \\((O;\\vec{i};\\vec{j};\\vec{k})\\) d'unité graphique 2 cm. Soient les points \\(A(1;2;-1)\\), \\(B(2;0;1)\\), \\(C(2;3;1)\\) et \\(D(3;-2;2)\\).</p>
 
-<div class="tv-wrap diagram-wrap">
-  
-</div>
 
-<div class="tv-wrap diagram-wrap">
-  
-</div>
-
-<div class="tv-wrap diagram-wrap">
-  
-</div>
 <p><strong>1) a)</strong> Calculer les coordonnées du vecteur \\(\\overrightarrow{AB} \\wedge \\overrightarrow{AC}\\).</p>
 <p><strong>b)</strong> Les points A, B, C déterminent-ils un plan ? Justifier.</p>
 <p><strong>c)</strong> Les points A, B, C et D sont-ils coplanaires ?</p>
@@ -6029,91 +5949,7 @@ Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'es
     <li><strong>Volume du tétraèdre :</strong> $V = \\dfrac{1}{6}|(\\overrightarrow{AB}\\wedge\\overrightarrow{AC})\\cdot\\overrightarrow{AD}|$.</li>
   </ul>
 </div>`,
-      correction: `
-<div class="tv-section">
-<svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <marker id="arr-g-22s2-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/></marker>
-      <marker id="arr-r-22s2-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#b83232"/></marker>
-    </defs>
-    <rect x="1" y="1" width="758" height="258" rx="10" fill="#ffffff" stroke="#dde1ec" stroke-width="1.5"/>
-    <path d="M 1 10 C 1 5 5 1 10 1 L 95 1 L 95 259 L 10 259 C 5 259 1 255 1 250 Z" fill="#222d46"/>
-    <line x1="0" y1="50" x2="760" y2="50" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="0" y1="100" x2="760" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="95" y1="0" x2="95" y2="260" stroke="#dde1ec" stroke-width="1.5"/>
-    <text x="47.5" y="26" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">x</text>
-    <text x="47.5" y="75" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="800" font-style="italic">f '(x)</text>
-    <text x="47.5" y="180" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">f(x)</text>
-    <text x="145" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">−∞</text>
-    <text x="425" y="26" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−1</text>
-    <text x="705" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">+∞</text>
-    <line x1="425" y1="50" x2="425" y2="64" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="425" y1="86" x2="425" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
-    <text x="285" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="900">+</text>
-    <text x="425" y="75" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">0</text>
-    <text x="565" y="75" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="900">−</text>
-    <text x="145" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−∞</text>
-    <line x1="170" y1="225" x2="400" y2="135" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-22s2-f)"/>
-    <text x="425" y="125" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">2</text>
-    <line x1="450" y1="135" x2="680" y2="225" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-r-22s2-f)"/>
-    <text x="705" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−∞</text>
-  </svg>
-<svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <marker id="arr-g-22s2-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/></marker>
-      <marker id="arr-r-22s2-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#b83232"/></marker>
-    </defs>
-    <rect x="1" y="1" width="758" height="258" rx="10" fill="#ffffff" stroke="#dde1ec" stroke-width="1.5"/>
-    <path d="M 1 10 C 1 5 5 1 10 1 L 95 1 L 95 259 L 10 259 C 5 259 1 255 1 250 Z" fill="#222d46"/>
-    <line x1="0" y1="50" x2="760" y2="50" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="0" y1="100" x2="760" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="95" y1="0" x2="95" y2="260" stroke="#dde1ec" stroke-width="1.5"/>
-    <text x="47.5" y="26" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">x</text>
-    <text x="47.5" y="75" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="800" font-style="italic">f '(x)</text>
-    <text x="47.5" y="180" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">f(x)</text>
-    <text x="145" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">−∞</text>
-    <text x="425" y="26" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−1</text>
-    <text x="705" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">+∞</text>
-    <line x1="425" y1="50" x2="425" y2="64" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="425" y1="86" x2="425" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
-    <text x="285" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="900">+</text>
-    <text x="425" y="75" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">0</text>
-    <text x="565" y="75" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="900">−</text>
-    <text x="145" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−∞</text>
-    <line x1="170" y1="225" x2="400" y2="135" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-22s2-f)"/>
-    <text x="425" y="125" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">2</text>
-    <line x1="450" y1="135" x2="680" y2="225" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-r-22s2-f)"/>
-    <text x="705" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−∞</text>
-  </svg>
-<svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <marker id="arr-g-22s2-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/></marker>
-      <marker id="arr-r-22s2-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#b83232"/></marker>
-    </defs>
-    <rect x="1" y="1" width="758" height="258" rx="10" fill="#ffffff" stroke="#dde1ec" stroke-width="1.5"/>
-    <path d="M 1 10 C 1 5 5 1 10 1 L 95 1 L 95 259 L 10 259 C 5 259 1 255 1 250 Z" fill="#222d46"/>
-    <line x1="0" y1="50" x2="760" y2="50" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="0" y1="100" x2="760" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="95" y1="0" x2="95" y2="260" stroke="#dde1ec" stroke-width="1.5"/>
-    <text x="47.5" y="26" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">x</text>
-    <text x="47.5" y="75" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="14" font-weight="800" font-style="italic">f '(x)</text>
-    <text x="47.5" y="180" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="800" font-style="italic">f(x)</text>
-    <text x="145" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">−∞</text>
-    <text x="425" y="26" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−1</text>
-    <text x="705" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">+∞</text>
-    <line x1="425" y1="50" x2="425" y2="64" stroke="#dde1ec" stroke-width="1.5"/>
-    <line x1="425" y1="86" x2="425" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
-    <text x="285" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="900">+</text>
-    <text x="425" y="75" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">0</text>
-    <text x="565" y="75" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="20" font-weight="900">−</text>
-    <text x="145" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−∞</text>
-    <line x1="170" y1="225" x2="400" y2="135" stroke="#1a7a5e" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-g-22s2-f)"/>
-    <text x="425" y="125" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">2</text>
-    <line x1="450" y1="135" x2="680" y2="225" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-r-22s2-f)"/>
-    <text x="705" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−∞</text>
-  </svg>
-</div>
-<h4> Proposition de Corrigé</h4>
+      correction: `<h4> Proposition de Corrigé</h4>
 
 <p><strong>1a) Produit vectoriel \\(\\overrightarrow{AB} \\wedge \\overrightarrow{AC}\\)</strong></p>
 <p>\\(\\overrightarrow{AB} = (1;-2;2)\\) et \\(\\overrightarrow{AC} = (1;1;2)\\).</p>
@@ -6217,7 +6053,7 @@ Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'es
 </table>`
     },
     {
-      label: 'Problème — Fonction f(x) = x² − 3 + 2(1−x)e^(1+x) (12 pts)',
+      label: 'Problème — Fonction f(x) = x² − 3 + 2(1−x)·exp(1+x) (12 pts)',
       problem: `<p>On considère la fonction f définie sur \\(\\mathbb{R}\\) par : \\(f(x) = x^2 - 3 + 2(1-x)e^{1+x}\\).</p>
 <p>On désigne par (C) la courbe représentative de f dans le plan rapporté à un repère orthonormal \\((O;\\vec{i};\\vec{j})\\) d'unité graphique 2 cm.</p>
 <p><strong>Partie A</strong></p>
@@ -6388,6 +6224,12 @@ Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'es
 }
 ];
 
-// Alias de retrocompatibilite
-if (typeof window !== 'undefined') { window.BAC_EXAMS_2019_2022 = BAC_EXAMS_2014_2022; }
-if (typeof global !== 'undefined') { global.BAC_EXAMS_2019_2022 = BAC_EXAMS_2014_2022; }
+// Export global et alias de retrocompatibilite
+if (typeof window !== 'undefined') {
+  window.BAC_EXAMS_2014_2022 = BAC_EXAMS_2014_2022;
+  window.BAC_EXAMS_2019_2022 = BAC_EXAMS_2014_2022;
+}
+if (typeof global !== 'undefined') {
+  global.BAC_EXAMS_2014_2022 = BAC_EXAMS_2014_2022;
+  global.BAC_EXAMS_2019_2022 = BAC_EXAMS_2014_2022;
+}
