@@ -298,6 +298,21 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
+/* ── FORMULES ENCADRÉES MATHJAX (oxed) EN VERT HARMONISÉ ── */
+g[data-mml-node="menclose"] > rect {
+  fill: #f3f8f7 !important;
+  stroke: rgba(26, 122, 94, 0.45) !important;
+  stroke-width: 75px !important;
+  rx: 120px !important;
+  ry: 120px !important;
+}
+mjx-menclose, mjx-fbox, [data-mml-node="menclose"] {
+  background: #f3f8f7 !important;
+  border: 1.5px solid rgba(26, 122, 94, 0.45) !important;
+  border-radius: 8px !important;
+  padding: 3px 8px !important;
+}
+
 
 /* ── NERVEUX TABLE STYLES (harmonized 2025 standard - Navy & White Headers) ── */
 table.vtab, table.data, .problem-box table, .solution-box table, .bac-problem-box table, .bac-correction-box table {
