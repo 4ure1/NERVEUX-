@@ -1,9 +1,9 @@
 // ══════════════════════════════════════════════════════════════════
 //  NERVEUX — Corrigés BAC Terminale D — Burkina Faso
 // ══════════════════════════════════════════════════════════════════
-// Années 2000–2004
+// Années 2000–2013
 
-const BAC_EXAMS_2000_2004 = [
+const BAC_EXAMS_2000_2013 = [
 {
   id: 'bac-2000-D-normale',
   year: 2000,
@@ -1664,7 +1664,7 @@ a) Montrer que pour tout \\(x \\in I\\), \\(f(x) \\in I\\).<br>
 b) Montrer que si \\(x \\in I\\) alors \\((1+e^{-1})^2 \\leq (1+e^{-x})^2 \\leq 4\\).<br>
 c) En déduire que pour tout \\(x \\in I\\), \\(|f'(x)| \\leq \\dfrac{e}{(1+e)^2}\\).</p>
 <p><strong>6°)</strong> Soit \\((U_n)_{n\\geq 0}\\) la suite définie par :
-\\[\\begin{cases}U_0 = \\dfrac{1}{2}\\ U_{n+1} = f(U_n),\\quad n \\in \\mathbb{N}\\end{cases}\\]
+\\[\\begin{cases}U_0 = \\dfrac{1}{2} \\\\ U_{n+1} = f(U_n),\\quad n \\in \\mathbb{N}\\end{cases}\\]
 a) Montrer que pour tout \\(n \\in \\mathbb{N}\\), \\(U_n \\in I\\).<br>
 b) On pose \\(k = \\dfrac{e}{1+e}\\). Montrer que pour tout \\(x \\in I\\), \\(|f(x)-\\alpha| \\leq k^2|x-\\alpha|\\).<br>
 c) En déduire que \\(|U_{n+1}-\\alpha| \\leq k^2|U_n-\\alpha|\\) puis que \\(|U_n-\\alpha| \\leq \\dfrac{1}{2}k^{2n}\\).<br>
@@ -3698,7 +3698,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
     {
       label: 'Problème — f(x) = (exp(2x)−1)/exp(x) et x−x·ln x, bijection, intégrales, courbe param. (12 pts)',
       problem: `<p>Soit f définie sur \\(\\mathbb{R}\\) par :</p>
-<p>\\[f(x) = \\begin{cases}\\dfrac{e^{2x}-1}{e^x} & \\text{si } x\\leq0 \\\\ x-x\\ln x & \\text{si } x>0\\end{cases}\\]</p>
+<p>\\[f(x) = \\begin{cases}\\dfrac{e^{2x}-1}{e^x} & \\text{si } x\\leq0 \\\\ x-x\ln x & \\text{si } x>0\\end{cases}\\]</p>
 <p>Courbe (C) dans \\((O;\\vec{i};\\vec{j})\\), unité 2 cm.</p>
 
 <p><strong>Partie A</strong></p>
@@ -3805,7 +3805,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>\\[\\int_\\alpha^e x\\ln x\\,dx = \\left[\\dfrac{x^2}{2}\\ln x\\right]_\\alpha^e - \\int_\\alpha^e\\dfrac{x}{2}dx = \\dfrac{e^2}{2} - \\dfrac{\\alpha^2\\ln\\alpha}{2} - \\left[\\dfrac{x^2}{4}\\right]_\\alpha^e = \\dfrac{e^2}{4}-\\dfrac{\\alpha^2\\ln\\alpha}{2}+\\dfrac{\\alpha^2}{4}\\]</p>
 
 <p><strong>1b)</strong></p>
-<p>\\(I(\\alpha) = \\int_\\alpha^e(x-x\\ln x)dx = \\int_\\alpha^e x\\,dx - \\int_\\alpha^e x\\ln x\\,dx\\)</p>
+<p>\\(I(\\alpha) = \\int_\\alpha^e(x-x\ln x)dx = \\int_\\alpha^e x\\,dx - \\int_\\alpha^e x\\ln x\\,dx\\)</p>
 <p>\\(= \\left[\\dfrac{x^2}{2}\\right]_\\alpha^e - \\left(\\dfrac{e^2}{4}-\\dfrac{\\alpha^2\\ln\\alpha}{2}+\\dfrac{\\alpha^2}{4}\\right) = \\dfrac{e^2-\\alpha^2}{2}-\\dfrac{e^2}{4}+\\dfrac{\\alpha^2\\ln\\alpha}{2}-\\dfrac{\\alpha^2}{4}\\)</p>
 <p>\\[\\boxed{I(\\alpha) = \\dfrac{e^2}{4}+\\dfrac{\\alpha^2\\ln\\alpha}{2}-\\dfrac{3\\alpha^2}{4}}\\]</p>
 
@@ -5330,7 +5330,7 @@ correction: `<h4> Proposition de Corrigé</h4>
 
 <p><strong>1. Récurrence</strong></p>
 <p>\\(u_1 = 4-e^{-1}\\approx3{,}6\\in]3;4[\\) (vérifié).</p>
-<p>Si \\(3 < u_n < 4\\) \(\implies\) \\(-4 < -u_n < -3\\) \(\implies\) \\(e^{-4} < e^{-u_n} < e^{-3}\\) \(\implies\) \\(4-e^{-3} < u_{n+1} < 4-e^{-4}\\) \(\implies\) \\(3{,}95 < u_{n+1} < 3{,}98\\) \(\implies\) \\(3 < u_{n+1} < 4\\).</p>
+<p>Si \\(3 < u_n < 4\\) \\(\\implies\\) \\(-4 < -u_n < -3\\) \\(\\implies\\) \\(e^{-4} < e^{-u_n} < e^{-3}\\) \\(\\implies\\) \\(4-e^{-3} < u_{n+1} < 4-e^{-4}\\) \\(\\implies\\) \\(3{,}95 < u_{n+1} < 3{,}98\\) \\(\\implies\\) \\(3 < u_{n+1} < 4\\).</p>
 
 <p><strong>2a.</strong> \\(u_{n+1}-u_n = e^{-u_{n-1}}-e^{-u_n} = e^{-u_n}(e^{u_n-u_{n-1}}-1)\\).</p>
 <p>\\(e^{-u_n}>0\\), donc signe de \\(u_{n+1}-u_n\\) = signe de \\(e^{u_n-u_{n-1}}-1\\) = signe de \\(u_n-u_{n-1}\\). </p>
@@ -5640,5 +5640,12 @@ correction: `<h4> Proposition de Corrigé</h4>
 }
 ];
 
-if (typeof window !== 'undefined') { window.BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2004; }
-if (typeof global !== 'undefined') { global.BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2004; }
+const BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2013;
+if (typeof window !== 'undefined') {
+  window.BAC_EXAMS_2000_2013 = BAC_EXAMS_2000_2013;
+  window.BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2013;
+}
+if (typeof global !== 'undefined') {
+  global.BAC_EXAMS_2000_2013 = BAC_EXAMS_2000_2013;
+  global.BAC_EXAMS_2000_2004 = BAC_EXAMS_2000_2013;
+}

@@ -82,7 +82,7 @@ const BAC_EXAMS_2014_2022 = [
   <ul>
     <li><strong>Équation linéaire $y' = ay$ :</strong> Les solutions sur $\\mathbb{R}$ sont de la forme $y(t) = C e^{at}$ où $C \\in \\mathbb{R}$ est une constante déterminée par la condition initiale.</li>
     <li><strong>Changement de variable :</strong> Pour $\\theta'(t) = -k(\\theta(t) - \\theta_1)$, en posant $\\Phi(t) = \\theta(t) - \\theta_1$, on obtient $\\Phi'(t) = -k\\Phi(t)$, d'où $\\Phi(t) = C e^{-kt}$ et $\\theta(t) = C e^{-kt} + \\theta_1$.</li>
-    <li><strong>Détermination des constantes :</strong> Utilisez $\\theta(0) = \\theta_0$ pour trouver $C = \\theta_0 - \\theta_1$, puis une mesure à date $t_1$ ($\\	heta(t_1) = \\theta_{mes}$) pour isoler la constante $k = -\\dfrac{1}{t_1}\\ln\\!\\left(\\dfrac{\\theta_{mes}-\\theta_1}{\\theta_0-\\theta_1}\\right)$.</li>
+    <li><strong>Détermination des constantes :</strong> Utilisez $\\theta(0) = \\theta_0$ pour trouver $C = \\theta_0 - \\theta_1$, puis une mesure à date $t_1$ ($\\theta(t_1) = \\theta_{mes}$) pour isoler la constante $k = -\\dfrac{1}{t_1}\\ln\\!\\left(\\dfrac{\\theta_{mes}-\\theta_1}{\\theta_0-\\theta_1}\\right)$.</li>
     <li><strong>Résolution temporelle :</strong> Pour trouver l'instant où $\\theta(t) = T_{cible}$, résolvez $e^{-kt} = \\dfrac{T_{cible}-\\theta_1}{C} \\iff t = -\\dfrac{1}{k}\\ln\\!\\left(\\dfrac{T_{cible}-\\theta_1}{C}\\right)$.</li>
   </ul>
 </div>`,
@@ -767,7 +767,7 @@ const BAC_EXAMS_2014_2022 = [
   <ul>
     <li><strong>Racine réelle d'un polynôme complexe :</strong> Posez $z_0 = x_0 \\in \\mathbb{R}$ dans $P(z_0)=0$, séparez partie réelle et partie imaginaire : $\\text{Re}(P(x_0)) = 0$ et $\\text{Im}(P(x_0)) = 0$. Le système donne la valeur unique de $x_0$.</li>
     <li><strong>Factorisation :</strong> Si $z_0$ est racine, $P(z) = (z-z_0)(z^2+az+b)$. Développez et identifiez les coefficients.</li>
-    <li><strong>Discriminant complexe $\\Delta$ :</strong> Pour $Az^2+Bz+C=0$, si $\\Delta \\in \\mathbb{C}$, cherchez $\\delta = x+iy$ tel que $\\delta^2 = \\Delta \\iff \\begin{cases}x^2-y^2 = \\text{Re}( \\\\ Delta) \\\\ 2xy = \\text{Im}( \\\\ Delta) \\\\ x^2+y^2 = | \\\\ Delta|\\end{cases}$. Les solutions sont $z = \\dfrac{-B \\pm \\delta}{2A}$.</li>
+    <li><strong>Discriminant complexe $\\Delta$ :</strong> Pour $Az^2+Bz+C=0$, si $\\Delta \\in \\mathbb{C}$, cherchez $\\delta = x+iy$ tel que $\\delta^2 = \\Delta \\iff \\begin{cases}x^2-y^2 = \\text{Re}(\Delta) \\\\ 2xy = \\text{Im}(\Delta) \\\\ x^2+y^2 = |\Delta|\\end{cases}$. Les solutions sont $z = \\dfrac{-B \\pm \\delta}{2A}$.</li>
     <li><strong>Nature d'un triangle par affixes :</strong> Calculez le rapport $\\dfrac{z_C-z_A}{z_B-z_A} = r e^{i\\theta}$. Si $r=1$ et $\\theta = \\pm\\dfrac{\\pi}{2}$ ($= \\pm i$), le triangle est rectangle isocèle en $A$.</li>
   </ul>
 </div>`,
@@ -1313,8 +1313,8 @@ const BAC_EXAMS_2014_2022 = [
 <p>\\(I_1 \\leq Uₙ \\leq e^n I_1\\). Mais \\(e^n I_1 \\to +\\infty\\) → l'encadrement ne donne pas directement la limite.</p>
 <p>Cependant, \\((U_n)\\) est croissante et minorée par \\(I_1 > 0\\), donc convergente vers \\(\\ell \\geq I_1\\).</p>
 <p>En passant à la limite dans l'encadrement :\\(I_1 \\leq \\ell \\leq \\lim_{n\\to\\infty}e^n I_1\\).</p>
-<p>La suite \((U_n)\) étant croissante et minorée par \(I_1 > 0\), elle converge vers :
-<p>\[\\boxed{\lim_{n\\to+\\infty}U_n = \\dfrac{e\ln2}{3}}\]</p>`
+<p>La suite \\((U_n)\\) étant croissante et minorée par \\(I_1 > 0\\), elle converge vers :
+<p>\\[\\boxed{\\lim_{n\\to+\\infty}U_n = \\dfrac{e\\ln2}{3}}\\]</p>`
     }
   ]
 },
@@ -1763,7 +1763,7 @@ const BAC_EXAMS_2014_2022 = [
     {
       label: 'Exercice 2 — Courbe paramétrique (4 pts)',
       problem: `<p>Le plan est rapporté à un repère orthonormal direct \\((O;\\vec{i};\\vec{j})\\). On considère la courbe paramétrée (Γ) définie par :</p>
-<p>\\[\\begin{cases} x(t) = t + \\\\ ln(1-t) \\\\ y(t) = te^t \\end{cases}, \\quad t \\in ]-\\infty;0]\\]</p>
+<p>\\[\\begin{cases} x(t) = t + \ln(1-t) \\ y(t) = te^t \\end{cases}, \\quad t \\in ]-\\infty;0]\\]</p>
 <p><strong>1) a)</strong> Étudier le sens de variation des fonctions coordonnées x et y sur \\(]-\\infty;0]\\).</p>
 <p><strong>b)</strong> Dresser un tableau de variation conjoint de x et y.</p>
 <p><strong>2) a)</strong> Déterminer les équations des tangentes à (Γ) aux points M(0) et M(−1) (M(t) étant le point de coordonnées \\((x(t);y(t))\\)).</p>
@@ -2221,7 +2221,7 @@ const BAC_EXAMS_2014_2022 = [
     {
       label: 'Problème — Fonction f définie par morceaux (12 pts)',
       problem: `<p>On considère la fonction f définie sur \\(\\mathbb{R}\\) par :</p>
-<p>\\[f(x) = \\begin{cases} \ \\sqrt{3-x} - x + 1 & \\text{si } x < 3 \\\\ e^{-x}+x-3 & \\text{si } x \\geq 3 \\end{cases}\\]</p>
+<p>\\[f(x) = \\begin{cases} \ \\sqrt{3-x} - x + 1 & \\text{si } x < 3 \\ e^{-x}+x-3 & \\text{si } x \\geq 3 \\end{cases}\\]</p>
 <p>On note (C) la courbe représentative de f dans le plan muni d'un repère orthonormal \\((O;\\vec{i};\\vec{j})\\), unité graphique 2 cm.</p>
 
 <p><strong>Partie A (10 pts)</strong></p>
@@ -2479,7 +2479,7 @@ const BAC_EXAMS_2014_2022 = [
       label: 'Problème — Courbe paramétrique et fonction g(x) = 1 − 1/x + ln x (12 pts)',
       problem: `<p><strong>Exercice 1 — Courbe paramétrique (4 pts)</strong></p>
 <p>On considère la courbe (C) de représentation paramétrique :</p>
-<p>\\[\\begin{cases} x(t) = \\\\ cos( \\pi - t) \\\\ y(t) = \\dfrac{ \\\\ sin^2 t}{2 + \\sin t} \\end{cases}, \\quad t \\in \\mathbb{R}\\]</p>
+<p>\\[\\begin{cases} x(t) = \\cos(\\pi - t) \\\\ y(t) = \\dfrac{\\sin^2 t}{2 + \\sin t} \\end{cases}, \\quad t \\in \\mathbb{R}\\]</p>
 <p><strong>1)</strong> Comparer M(t) et M(π − t) pour tout t réel. En déduire une restriction du domaine d'étude de (C).</p>
 <p><strong>2) a)</strong> Montrer que \\(x'(t) = -\\sin t\\) et \\(y'(t) = \\dfrac{\\sin t(4+\\sin t)}{(2+\\sin t)^2}\\).</p>
 <p><strong>b)</strong> Étudier le sens de variation de x et de y sur \\(\\left[-\\dfrac{\\pi}{2};\\dfrac{\\pi}{2}\\right]\\).</p>
@@ -2818,7 +2818,7 @@ const BAC_EXAMS_2014_2022 = [
   <ul>
     <li><strong>Forme trigonométrique :</strong> Pour $u = 1+i\\sqrt{3}$, le module est $|u| = \\sqrt{1+3} = 2$. L'argument $\\theta$ vérifie $\\cos\\theta = 1/2$ et $\\sin\\theta = \\sqrt{3}/2 \\implies \\theta = \\dfrac{\\pi}{3}$. Donc $u = 2e^{i\\dfrac{\\pi}{3}}$.</li>
     <li><strong>Racines carrées d'un complexe sous forme exponentielle :</strong> Les racines carrées de $u = r e^{i\\theta}$ sont $\\delta_1 = \\sqrt{r}e^{i\\theta/2} = \\sqrt{2}e^{i\\dfrac{\\pi}{6}} = \\sqrt{2}\\left(\\dfrac{\\sqrt{3}}{2}+\\dfrac{1}{2}i\\right) = \\dfrac{\\sqrt{6}+i\\sqrt{2}}{2}$ et $\\delta_2 = -\\delta_1$.</li>
-    <li><strong>Forme algébrique :</strong> On peut aussi résoudre $\\begin{cases}x^2-y^2=1 \\\\ 2xy= \\sqrt{3} \\\\ x^2+y^2=2\\end{cases}$.</li>
+    <li><strong>Forme algébrique :</strong> On peut aussi résoudre $\\begin{cases}x^2-y^2=1 \\\\ 2xy = \\sqrt{3} \\\\ x^2+y^2=2\\end{cases}$.</li>
     <li><strong>Application géométrique :</strong> L'angle $(\\overrightarrow{AB},\\overrightarrow{AC}) = \\arg\\!\\left(\\dfrac{z_C-z_A}{z_B-z_A}\\right)$ et le rapport de longueurs $\\dfrac{AC}{AB} = \\left|\\dfrac{z_C-z_A}{z_B-z_A}\\right|$.</li>
   </ul>
 </div>`,
@@ -3238,7 +3238,7 @@ const BAC_EXAMS_2014_2022 = [
 <p>\\(f'(t) + \\dfrac{1}{3}f(t) = \\dfrac{\\lambda}{3}e^{t/3} + \\dfrac{\\lambda}{3}e^{t/3} = \\dfrac{2\\lambda}{3}e^{t/3} = 2e^{t/3}\\)</p>
 <p>Donc \\(\\dfrac{2\\lambda}{3} = 2 \\Rightarrow \\lambda = 3\\).</p>
 <p>Une solution particulière de (2) est \(f(t) = 3e^{t/3}\), car \(f'(t) + \\dfrac{1}{3}f(t) = e^{t/3} + e^{t/3} = 2e^{t/3}\).</p>
-<p>Donc la solution générale de (2) est la somme de la solution générale de l'équation homogène (1) et de la solution particulière \(f(t)\) :</p>
+<p>Donc la solution générale de (2) est la somme de la solution générale de l'équation homogène (1) et de la solution particulière \\(f(t)\\) :</p>
 <p>\[\\boxed{y(t) = 3e^{\\frac{t}{3}} + ae^{-\\frac{t}{3}}, \\quad a \in \\mathbb{R}}\]</p>
 <p>\\[\\boxed{y(t) = 3e^{\\dfrac{t}{3}} + ae^{-\\dfrac{t}{3}}, \\quad a \\in \\mathbb{R}}\\]</p>
  
@@ -3697,7 +3697,7 @@ b) On répète trois fois l'expérience de manière indépendante. Calculer la p
     {
       label: 'Problème — Fonction par morceaux, ln, suite (Uₙ) (12 pts)',
       problem: `<p>On considère la fonction \\(f\\) définie sur \\(\\mathbb{R}\\) par :
-\\[f(x) = \\begin{cases} 2 - x + \\\\ ln(2x-3) & \\text{si } x \\geq 2 \\\\ -x + 1 + e^{x-2} & \\text{si } x < 2 \\end{cases}\\]
+\\[f(x) = \\begin{cases} 2 - x + \ln(2x-3) & \\text{si } x \\geq 2 \\\\ -x + 1 + e^{x-2} & \\text{si } x < 2 \\end{cases}\\]
 On note \\((C)\\) la courbe représentative de \\(f\\) dans un repère orthonormal \\((O;\\vec{i};\\vec{j})\\) d'unité graphique 4 cm. On notera \\(f'\\) la dérivée de \\(f\\).</p>
 
 <p><strong>Partie A</strong></p>
@@ -4419,7 +4419,7 @@ L'unité graphique est 2 cm, donc 1 u.a. = 4 cm².<br>
     {
       label: 'Problème — Fonction f(x) = 2(x−1)ln(1−x) et point fixe (12 pts)',
       problem: `<p>On considère la fonction f définie par :</p>
-<p>\\[f(x) = \\begin{cases} 2(x-1) \\\\ ln(1-x) & \\text{si } x < 1 \\\\ (x-2)e^{-x+1}+1 & \\text{si } x \\geq 1 \\end{cases}\\]</p>
+<p>\\[f(x) = \\begin{cases} 2(x-1)\ln(1-x) & \\text{si } x < 1 \\\\ (x-2)e^{-x+1}+1 & \\text{si } x \\geq 1 \\end{cases}\\]</p>
 <p>On note (C) sa courbe représentative dans le plan muni d'un repère orthonormal \\((O;\\vec{i};\\vec{j})\\). Unité graphique 2 cm.</p>
 
 <p><strong>Partie A</strong></p>
@@ -4469,25 +4469,25 @@ L'unité graphique est 2 cm, donc 1 u.a. = 4 cm².<br>
 <p>\\(\\lim_{x\\to1^-}f(x) = f(1) = 0\\) → f est <strong>continue en 1</strong>.</p>
 
 <p><strong>3) Dérivabilité en 1</strong></p>
-<p><em>À gauche de 1 :</em> Pour \(x < 1\), \(f(x) = 2(x-1)\ln(1-x)\) et \(f(1) = 0\).<br>
-\(\lim_{x\to1^-}\dfrac{f(x)-f(1)}{x-1} = \lim_{x\to1^-}\dfrac{2(x-1)\ln(1-x)}{x-1} = \lim_{x\to1^-} 2\ln(1-x) = -\infty\).<br>
-La courbe (C) admet en \((1;0)\) une <strong>demi-tangente verticale</strong> dirigée vers le haut à gauche.</p>
-<p><em>À droite de 1 :</em> Pour \(x > 1\), \(f(x) = (x-2)e^{-x+1}+1\) et \(f(1)=0\).<br>
-\(\lim_{x\to1^+}\dfrac{f(x)-f(1)}{x-1} = \lim_{x\to1^+}\dfrac{(x-2)e^{-x+1}+1}{x-1}\).<br>
-Posons \(X = x-1 \to 0^+\) : \(x-2 = X-1\) et \(-x+1 = -X\).<br>
-\(\dfrac{(X-1)e^{-X}+1}{X} = \dfrac{Xe^{-X} - (e^{-X}-1)}{X} = e^{-X} - \dfrac{e^{-X}-1}{X} \to 1 - (-1) = 2\).<br>
-La courbe (C) admet en \((1;0)\) une <strong>demi-tangente de pente 2</strong> à droite.</p>
-<p>Comme la limite à gauche est infinie et la limite à droite vaut 2, \(f\) n'est <strong>pas dérivable en 1</strong>. Le point \(A(1;0)\) est un <strong>point anguleux</strong>.</p>
+<p><em>À gauche de 1 :</em> Pour \\(x < 1\\), \\(f(x) = 2(x-1)\\ln(1-x)\\) et \\(f(1) = 0\\).<br>
+\\(\\lim_{x\\to1^-}\\dfrac{f(x)-f(1)}{x-1} = \\lim_{x\\to1^-}\\dfrac{2(x-1)\\ln(1-x)}{x-1} = \\lim_{x\\to1^-} 2\\ln(1-x) = -\\infty\\).<br>
+La courbe (C) admet en \\((1;0)\\) une <strong>demi-tangente verticale</strong> dirigée vers le haut à gauche.</p>
+<p><em>À droite de 1 :</em> Pour \\(x > 1\\), \\(f(x) = (x-2)e^{-x+1}+1\\) et \\(f(1)=0\\).<br>
+\\(\\lim_{x\\to1^+}\\dfrac{f(x)-f(1)}{x-1} = \\lim_{x\\to1^+}\\dfrac{(x-2)e^{-x+1}+1}{x-1}\\).<br>
+Posons \\(X = x-1 \\to 0^+\\) : \\(x-2 = X-1\\) et \\(-x+1 = -X\\).<br>
+\\(\\dfrac{(X-1)e^{-X}+1}{X} = \\dfrac{Xe^{-X} - (e^{-X}-1)}{X} = e^{-X} - \\dfrac{e^{-X}-1}{X} \\to 1 - (-1) = 2\\).<br>
+La courbe (C) admet en \\((1;0)\\) une <strong>demi-tangente de pente 2</strong> à droite.</p>
+<p>Comme la limite à gauche est infinie et la limite à droite vaut 2, \\(f\\) n'est <strong>pas dérivable en 1</strong>. Le point \\(A(1;0)\\) est un <strong>point anguleux</strong>.</p>
 
 <p><strong>4) Variations et tableau de variation de f</strong></p>
-<p><em>Sur \(]-\infty; 1[\) :</em> \(f'(x) = 2\ln(1-x) - 2 = 2(\ln(1-x)-1)\).<br>
-\(f'(x) = 0 \iff \ln(1-x) = 1 \iff 1-x = e \iff x = 1-e \approx -1{,}72\).<br>
-\(f'(x) > 0\) pour \(x < 1-e\) et \(f'(x) < 0\) pour \(1-e < x < 1\).<br>
-Maximum local : \(f(1-e) = 2(-e)\ln(e) = -2e \approx -5{,}44\).</p>
-<p><em>Sur \([1; +\infty[\) :</em> \(f'(x) = 1\cdot e^{-x+1} + (x-2)(-e^{-x+1}) = e^{-x+1}(1 - (x-2)) = (3-x)e^{-x+1}\).<br>
-\(f'(x) = 0 \iff x = 3\).<br>
-\(f'(x) > 0\) pour \(1 \leq x < 3\) et \(f'(x) < 0\) pour \(x > 3\).<br>
-Maximum local : \(f(3) = (3-2)e^{-2}+1 = e^{-2}+1 \approx 1{,}14\).</p>
+<p><em>Sur \\(]-\\infty; 1[\\) :</em> \\(f'(x) = 2\\ln(1-x) - 2 = 2(\\ln(1-x)-1)\\).<br>
+\\(f'(x) = 0 \\iff \\ln(1-x) = 1 \\iff 1-x = e \\iff x = 1-e \\approx -1{,}72\\).<br>
+\\(f'(x) > 0\\) pour \\(x < 1-e\\) et \\(f'(x) < 0\\) pour \\(1-e < x < 1\\).<br>
+Maximum local : \\(f(1-e) = 2(-e)\\ln(e) = -2e \\approx -5{,}44\\).</p>
+<p><em>Sur \\([1; +\\infty[\\) :</em> \\(f'(x) = 1\\cdot e^{-x+1} + (x-2)(-e^{-x+1}) = e^{-x+1}(1 - (x-2)) = (3-x)e^{-x+1}\\).<br>
+\\(f'(x) = 0 \\iff x = 3\\).<br>
+\\(f'(x) > 0\\) pour \\(1 \\leq x < 3\\) et \\(f'(x) < 0\\) pour \\(x > 3\\).<br>
+Maximum local : \\(f(3) = (3-2)e^{-2}+1 = e^{-2}+1 \\approx 1{,}14\\).</p>
 
 <div class="diagram-wrap">
   <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg">
@@ -4542,67 +4542,67 @@ Maximum local : \(f(3) = (3-2)e^{-2}+1 = e^{-2}+1 \approx 1{,}14\).</p>
 </div>
 
 <p><strong>5) Solution unique de f(x) = −2</strong></p>
-<p>Sur l'intervalle \(I = \left[-1; -\dfrac{1}{2}\right] \subset ]1-e; 1[\) :<br>
-\(f\) est continue et strictement décroissante.<br>
-\(f(-1) = 2(-2)\ln(2) = -4\ln 2 \approx -4 \times 0{,}69 = -2{,}76\).<br>
-\(f\left(-\dfrac{1}{2}\right) = 2\left(-\dfrac{3}{2}\right)\ln\left(\dfrac{3}{2}\right) = -3\ln\left(\dfrac{3}{2}\right) \approx -3 \times 0{,}40 = -1{,}20\).<br>
-Comme \(-2 \in [-2{,}76; -1{,}20]\), d'après le corollaire du théorème des valeurs intermédiaires (théorème de bijection), l'équation \(f(x) = -2\) admet une <strong>unique solution \(\alpha \in \left[-1; -\dfrac{1}{2}\right]\)</strong>.</p>
+<p>Sur l'intervalle \\(I = \\left[-1; -\\dfrac{1}{2}\\right] \\subset ]1-e; 1[\\) :<br>
+\\(f\\) est continue et strictement décroissante.<br>
+\\(f(-1) = 2(-2)\\ln(2) = -4\\ln 2 \\approx -4 \\times 0{,}69 = -2{,}76\\).<br>
+\\(f\\left(-\\dfrac{1}{2}\\right) = 2\\left(-\\dfrac{3}{2}\\right)\\ln\\left(\\dfrac{3}{2}\\right) = -3\\ln\\left(\\dfrac{3}{2}\\right) \\approx -3 \\times 0{,}40 = -1{,}20\\).<br>
+Comme \\(-2 \\in [-2{,}76; -1{,}20]\\), d'après le corollaire du théorème des valeurs intermédiaires (théorème de bijection), l'équation \\(f(x) = -2\\) admet une <strong>unique solution \\(\\alpha \\in \\left[-1; -\\dfrac{1}{2}\\right]\\)</strong>.</p>
 
 <p><strong>Partie B</strong></p>
-<p><strong>1) Décomposition de \(\dfrac{x^2-2x}{x-1}\)</strong></p>
-<p>Pour tout \(x < 1\) :<br>
-\(\dfrac{x^2-2x}{x-1} = \dfrac{x^2-x - x + 1 - 1}{x-1} = \dfrac{x(x-1) - (x-1) - 1}{x-1} = x - 1 - \dfrac{1}{x-1}\).<br>
-Donc \(\alpha = 1\), \(\beta = -1\) et \(\gamma = -1\).</p>
+<p><strong>1) Décomposition de \\(\\dfrac{x^2-2x}{x-1}\\)</strong></p>
+<p>Pour tout \\(x < 1\\) :<br>
+\\(\\dfrac{x^2-2x}{x-1} = \\dfrac{x^2-x - x + 1 - 1}{x-1} = \\dfrac{x(x-1) - (x-1) - 1}{x-1} = x - 1 - \\dfrac{1}{x-1}\\).<br>
+Donc \\(\\alpha = 1\\), \\(\\beta = -1\\) et \\(\\gamma = -1\\).</p>
 
 <p><strong>2) Intégration par parties de I</strong></p>
-<p>\(I = \displaystyle\int_0^{1-\frac{1}{e}} (x-1)\ln(1-x)\,dx\).<br>
-Posons \(u'(x) = x-1 \implies u(x) = \dfrac{(x-1)^2}{2}\) et \(v(x) = \ln(1-x) \implies v'(x) = -\dfrac{1}{1-x} = \dfrac{1}{x-1}\).<br>
-\(I = \left[\dfrac{(x-1)^2}{2}\ln(1-x)\right]_0^{1-\frac{1}{e}} - \displaystyle\int_0^{1-\frac{1}{e}} \dfrac{(x-1)^2}{2}\cdot\dfrac{1}{x-1}\,dx\)<br>
-\(= \left[\dfrac{(x-1)^2}{2}\ln(1-x)\right]_0^{1-\frac{1}{e}} - \dfrac{1}{2}\displaystyle\int_0^{1-\frac{1}{e}} (x-1)\,dx\)<br>
-Pour \(x = 1-\dfrac{1}{e}\) : \(1-x = \dfrac{1}{e}\), \(x-1 = -\dfrac{1}{e}\), \((x-1)^2 = \dfrac{1}{e^2}\), \(\ln(1-x) = -1\).<br>
-Pour \(x = 0\) : \(\ln(1) = 0\).<br>
-Le crochet vaut : \(\dfrac{1}{2e^2}(-1) - 0 = -\dfrac{1}{2e^2}\).<br>
-L'intégrale restante : \(\left[\dfrac{(x-1)^2}{4}\right]_0^{1-\frac{1}{e}} = \dfrac{1}{4e^2} - \dfrac{1}{4}\).<br>
-D'où \(I = -\dfrac{1}{2e^2} - \left(\dfrac{1}{4e^2} - \dfrac{1}{4}\right) = \dfrac{1}{4} - \dfrac{3}{4e^2} = \dfrac{e^2-3}{4e^2}\).</p>
+<p>\\(I = \\displaystyle\\int_0^{1-\\frac{1}{e}} (x-1)\\ln(1-x)\,dx\\).<br>
+Posons \\(u'(x) = x-1 \\implies u(x) = \\dfrac{(x-1)^2}{2}\\) et \\(v(x) = \\ln(1-x) \\implies v'(x) = -\\dfrac{1}{1-x} = \\dfrac{1}{x-1}\\).<br>
+\\(I = \\left[\\dfrac{(x-1)^2}{2}\\ln(1-x)\\right]_0^{1-\\frac{1}{e}} - \\displaystyle\\int_0^{1-\\frac{1}{e}} \\dfrac{(x-1)^2}{2}\\cdot\\dfrac{1}{x-1}\,dx\\)<br>
+\\(= \\left[\\dfrac{(x-1)^2}{2}\\ln(1-x)\\right]_0^{1-\\frac{1}{e}} - \\dfrac{1}{2}\\displaystyle\\int_0^{1-\\frac{1}{e}} (x-1)\,dx\\)<br>
+Pour \\(x = 1-\\dfrac{1}{e}\\) : \\(1-x = \\dfrac{1}{e}\\), \\(x-1 = -\\dfrac{1}{e}\\), \\((x-1)^2 = \\dfrac{1}{e^2}\\), \\(\\ln(1-x) = -1\\).<br>
+Pour \\(x = 0\\) : \\(\\ln(1) = 0\\).<br>
+Le crochet vaut : \\(\\dfrac{1}{2e^2}(-1) - 0 = -\\dfrac{1}{2e^2}\\).<br>
+L'intégrale restante : \\(\\left[\\dfrac{(x-1)^2}{4}\\right]_0^{1-\\frac{1}{e}} = \\dfrac{1}{4e^2} - \\dfrac{1}{4}\\).<br>
+D'où \\(I = -\\dfrac{1}{2e^2} - \\left(\\dfrac{1}{4e^2} - \\dfrac{1}{4}\\right) = \\dfrac{1}{4} - \\dfrac{3}{4e^2} = \\dfrac{e^2-3}{4e^2}\\).</p>
 
 <p><strong>3) Calcul d'aire</strong></p>
-<p>Sur \(\left[0; 1-\dfrac{1}{e}\right]\), \(x < 1\) et \(f(x) = 2(x-1)\ln(1-x)\).<br>
-Comme \(x-1 < 0\) et \(\ln(1-x) < 0\), \(f(x) > 0\).<br>
+<p>Sur \\(\\left[0; 1-\\dfrac{1}{e}\\right]\\), \\(x < 1\\) et \\(f(x) = 2(x-1)\\ln(1-x)\\).<br>
+Comme \\(x-1 < 0\\) et \\(\\ln(1-x) < 0\\), \\(f(x) > 0\\).<br>
 L'aire cherchée vaut :<br>
-\(\mathcal{A} = \displaystyle\int_0^{1-\frac{1}{e}} f(x)\,dx \times \|\vec{i}\| \times \|\vec{j}\| = 2I \times 4\,\text{cm}^2 = 8I\,\text{cm}^2 = 8\left(\dfrac{e^2-3}{4e^2}\right) = 2\left(1-\dfrac{3}{e^2}\right)\,\text{cm}^2\).<br>
-Numériquement : \(\mathcal{A} \approx 2(1 - 3 \times 0{,}13) = 2(1 - 0{,}39) = 1{,}22\,\text{cm}^2\).</p>
+\\(\\mathcal{A} = \\displaystyle\\int_0^{1-\\frac{1}{e}} f(x)\,dx \\times \|\\vec{i}\| \\times \|\\vec{j}\| = 2I \\times 4\,\\text{cm}^2 = 8I\,\\text{cm}^2 = 8\\left(\\dfrac{e^2-3}{4e^2}\\right) = 2\\left(1-\\dfrac{3}{e^2}\\right)\,\\text{cm}^2\\).<br>
+Numériquement : \\(\\mathcal{A} \\approx 2(1 - 3 \\times 0{,}13) = 2(1 - 0{,}39) = 1{,}22\,\\text{cm}^2\\).</p>
 
 <p><strong>Partie C</strong></p>
-<p><strong>1a) Équivalence (E) \(\iff h(x) = x\)</strong></p>
-<p>Pour \(x \in I = \left[-1; -\dfrac{1}{2}\right] < 1\) :<br>
-\(f(x) = -2 \iff 2(x-1)\ln(1-x) = -2 \iff (1-x)\ln(1-x) = 1 \iff \ln(1-x) = \dfrac{1}{1-x}\)<br>
-\(\iff 1-x = e^{\frac{1}{1-x}} \iff x = 1 - e^{\frac{1}{1-x}} = h(x)\).</p>
-<p><strong>1b) Stabilité de I par h : \(h(I) \subset I\)</strong></p>
-<p>\(h'(x) = -\left(\dfrac{1}{(1-x)^2}\right)e^{\frac{1}{1-x}}\) : comme exponentielle et carré sont strictement positifs, \(h'(x) < 0\).<br>
-\(h\) est strictement décroissante sur \(I\).<br>
-\(h(-1) = 1 - e^{1/2} \approx 1 - 1{,}648 = -0{,}648 \in I\).<br>
-\(h\left(-\dfrac{1}{2}\right) = 1 - e^{2/3} \approx 1 - 1{,}947 = -0{,}947 \in I\).<br>
-Donc pour tout \(x \in I\), \(h(x) \in I\).</p>
-<p><strong>1c) Inégalité \(|h'(x)| \leq \dfrac{7}{8}\)</strong></p>
-<p>Pour tout \(x \in \left[-1; -\dfrac{1}{2}\right]\), \(1-x \in \left[\dfrac{3}{2}; 2\right]\).<br>
-\(|h'(x)| = \dfrac{e^{1/(1-x)}}{(1-x)^2} \leq \dfrac{e^{2/3}}{(3/2)^2} = \dfrac{1{,}947}{2{,}25} \approx 0{,}865 < \dfrac{7}{8} = 0{,}875\).<br>
-D'où \(|h'(x)| \leq \dfrac{7}{8}\) pour tout \(x \in I\).</p>
-<p><strong>2a) \(u_n \in I\) par récurrence</strong></p>
-<p>Initialisation : \(u_0 = -1 \in I\) (vrai).<br>
-Hérédité : Si \(u_n \in I\), alors \(u_{n+1} = h(u_n) \in h(I) \subset I\).<br>
-Conclusion : Pour tout \(n \in \mathbb{N}\), \(u_n \in I\).</p>
+<p><strong>1a) Équivalence (E) \\(\\iff h(x) = x\\)</strong></p>
+<p>Pour \\(x \\in I = \\left[-1; -\\dfrac{1}{2}\\right] < 1\\) :<br>
+\\(f(x) = -2 \\iff 2(x-1)\\ln(1-x) = -2 \\iff (1-x)\\ln(1-x) = 1 \\iff \\ln(1-x) = \\dfrac{1}{1-x}\\)<br>
+\\(\\iff 1-x = e^{\\frac{1}{1-x}} \\iff x = 1 - e^{\\frac{1}{1-x}} = h(x)\\).</p>
+<p><strong>1b) Stabilité de I par h : \\(h(I) \\subset I\\)</strong></p>
+<p>\\(h'(x) = -\\left(\\dfrac{1}{(1-x)^2}\\right)e^{\\frac{1}{1-x}}\\) : comme exponentielle et carré sont strictement positifs, \\(h'(x) < 0\\).<br>
+\\(h\\) est strictement décroissante sur \\(I\\).<br>
+\\(h(-1) = 1 - e^{1/2} \\approx 1 - 1{,}648 = -0{,}648 \\in I\\).<br>
+\\(h\\left(-\\dfrac{1}{2}\\right) = 1 - e^{2/3} \\approx 1 - 1{,}947 = -0{,}947 \\in I\\).<br>
+Donc pour tout \\(x \\in I\\), \\(h(x) \\in I\\).</p>
+<p><strong>1c) Inégalité \\(|h'(x)| \\leq \\dfrac{7}{8}\\)</strong></p>
+<p>Pour tout \\(x \\in \\left[-1; -\\dfrac{1}{2}\\right]\\), \\(1-x \\in \\left[\\dfrac{3}{2}; 2\\right]\\).<br>
+\\(|h'(x)| = \\dfrac{e^{1/(1-x)}}{(1-x)^2} \\leq \\dfrac{e^{2/3}}{(3/2)^2} = \\dfrac{1{,}947}{2{,}25} \\approx 0{,}865 < \\dfrac{7}{8} = 0{,}875\\).<br>
+D'où \\(|h'(x)| \\leq \\dfrac{7}{8}\\) pour tout \\(x \\in I\\).</p>
+<p><strong>2a) \\(u_n \\in I\\) par récurrence</strong></p>
+<p>Initialisation : \\(u_0 = -1 \\in I\\) (vrai).<br>
+Hérédité : Si \\(u_n \\in I\\), alors \\(u_{n+1} = h(u_n) \\in h(I) \\subset I\\).<br>
+Conclusion : Pour tout \\(n \\in \\mathbb{N}\\), \\(u_n \\in I\\).</p>
 <p><strong>2b) Inégalité des accroissements finis</strong></p>
-<p>D'après le théorème des accroissements finis appliqué à \(h\) sur le segment reliant \(u_n\) et \(\alpha\) (tous deux dans \(I\)) :<br>
-\(|h(u_n) - h(\alpha)| \leq \sup_{x\in I}|h'(x)| \cdot |u_n - \alpha|\).<br>
-Comme \(h(u_n) = u_{n+1}\) et \(h(\alpha) = \alpha\), on a :<br>
-\(|u_{n+1} - \alpha| \leq \dfrac{7}{8}|u_n - \alpha|\).</p>
+<p>D'après le théorème des accroissements finis appliqué à \\(h\\) sur le segment reliant \\(u_n\\) et \\(\\alpha\\) (tous deux dans \\(I\\)) :<br>
+\\(|h(u_n) - h(\\alpha)| \\leq \\sup_{x\\in I}|h'(x)| \\cdot |u_n - \\alpha|\\).<br>
+Comme \\(h(u_n) = u_{n+1}\\) et \\(h(\\alpha) = \\alpha\\), on a :<br>
+\\(|u_{n+1} - \\alpha| \\leq \\dfrac{7}{8}|u_n - \\alpha|\\).</p>
 <p><strong>2c) Majoration de l'erreur</strong></p>
-<p>Par récurrence immédiate : \(|u_n - \alpha| \leq \left(\dfrac{7}{8}\right)^n |u_0 - \alpha|\).<br>
-Comme \(u_0 = -1\) et \(\alpha \in \left[-1; -\dfrac{1}{2}\right]\), \(|u_0 - \alpha| \leq -\dfrac{1}{2} - (-1) = \dfrac{1}{2}\).<br>
-Donc \(|u_n - \alpha| \leq \dfrac{1}{2}\left(\dfrac{7}{8}\right)^n\).</p>
+<p>Par récurrence immédiate : \\(|u_n - \\alpha| \\leq \\left(\\dfrac{7}{8}\\right)^n |u_0 - \\alpha|\\).<br>
+Comme \\(u_0 = -1\\) et \\(\\alpha \\in \\left[-1; -\\dfrac{1}{2}\\right]\\), \\(|u_0 - \\alpha| \\leq -\\dfrac{1}{2} - (-1) = \\dfrac{1}{2}\\).<br>
+Donc \\(|u_n - \\alpha| \\leq \\dfrac{1}{2}\\left(\\dfrac{7}{8}\\right)^n\\).</p>
 <p><strong>2d) Convergence</strong></p>
-<p>Comme \(\left|\dfrac{7}{8}\right| < 1\), \(\lim_{n\to+\infty} \left(\dfrac{7}{8}\right)^n = 0\).<br>
-Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'est-à-dire que \((u_n)\) <strong>converge vers \(\alpha\)</strong>.</p>
+<p>Comme \\(\\left|\\dfrac{7}{8}\\right| < 1\\), \\(\\lim_{n\\to+\\infty} \\left(\\dfrac{7}{8}\\right)^n = 0\\).<br>
+Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\), c'est-à-dire que \\((u_n)\\) <strong>converge vers \\(\\alpha\\)</strong>.</p>
 
 <div class="diagram-wrap" style="margin:20px 0;text-align:center;">
   <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:600;color:#374151;margin-bottom:8px;"> Tracé de la courbe (C) — BAC 2020 1er tour</div>
@@ -4780,7 +4780,7 @@ Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'es
     {
       label: 'Problème — Fonction f(x) = (x+2)²·exp(−x) et x·ln(1−2/x)+4 (12 pts)',
       problem: `<p>On considère la fonction f définie sur \\(\\mathbb{R}\\) par :</p>
-<p>\\[f(x) = \\begin{cases} (x+2)^2e^{-x} & \\text{si } x \\in [0;+ \\\\ infty[ \\\\ x \\ln \\\\ left(1- \\dfrac{2}{x} \\\\ right)+4 & \\text{si } x \\in ]- \\\\ infty;0[ \\end{cases}\\]</p>
+<p>\\[f(x) = \\begin{cases} (x+2)^2e^{-x} & \\text{si } x \\in [0;+\\infty[ \\\\ x\\ln\\left(1-\\dfrac{2}{x}\\right)+4 & \\text{si } x \\in ]-\\infty;0[ \\end{cases}\\]</p>
 <p>On désigne par (C) la courbe représentative de f dans le plan muni d'un repère orthonormé \\((O;\\vec{i};\\vec{j})\\) d'unité graphique 2 cm.</p>
 <p><strong>1)</strong> Calculer \\(\\displaystyle\\lim_{x\\to-\\infty}f(x)\\) et \\(\\displaystyle\\lim_{x\\to+\\infty}f(x)\\), puis en déduire deux asymptotes à (C).</p>
 <p><strong>2) a)</strong> Montrer que pour tout \\(x \\in ]-\\infty;0[\\), \\(f(x) = x\\ln|x-2|-x\\ln|x|+4\\).</p>
@@ -5642,7 +5642,7 @@ Par le théorème des gendarmes, \(\lim_{n\to+\infty} |u_n - \alpha| = 0\), c'es
     {
       label: 'Problème — Fonction f sur ]-1;+∞[ (12 pts)',
       problem: `<p>On considère la fonction f définie sur \\(]-1;+\\infty[\\) par :</p>
-<p>\\[f(x) = \\begin{cases} -x + 2 \\\\ ln(1+x) & \\text{si } x \\in ]-1;0[ \\\\ x - 1 + e^{-x} & \\text{si } x \\in [0;+ \\\\ infty[ \\end{cases}\\]</p>
+<p>\\[f(x) = \\begin{cases} -x + 2\\ln(1+x) & \\text{si } x \\in ]-1;0[ \\\\ x - 1 + e^{-x} & \\text{si } x \\in [0;+\\infty[ \\end{cases}\\]</p>
 <p>de courbe représentative (C) dans un repère orthonormal \\((O;\\vec{i};\\vec{j})\\) d'unité graphique 2 cm.</p>
 <p><strong>Partie A</strong></p>
 <p><strong>1) a)</strong> Étudier la continuité de f en 0.</p>
