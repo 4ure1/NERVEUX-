@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<script src="/JS/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sujet BAC — NERVEUX</title>
 <meta name="description" content="Sujet et correction complète d'un examen du Baccalauréat — NERVEUX Maths Terminale D Burkina Faso">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/Css/mobile.css">
 
 <!-- MathJax config -->
 <script>
@@ -518,19 +516,9 @@ mjx-menclose, mjx-fbox, [data-mml-node="menclose"] {
   .footer-links a:hover{ color:var(--gold); }
 
   /* ── RESPONSIVE ── */
-  @media(max-width:600px){
-    .topbar{ padding:0 16px; }
-    .bac-hero{ padding:28px 16px 22px; }
-    .bac-container{ padding:20px 12px 80px; }
-    .footer{ padding:20px 16px; }
-    #bac-content h1{ font-size:1.25em; margin-top:18px; }
-    #bac-content h2{ font-size:1em; margin-top:36px; }
-    .step, .result, .note, .rappel{ padding:12px 12px; }
-    .rappel-body{ padding:0 12px; }
-    .rappel-wrap.open .rappel-body{ padding:12px 12px 14px; }
-    details.correction > summary{ padding:12px 14px; font-size:0.85em; }
-    mjx-container[display="true"]{ font-size:88% !important; }
-  }
+  
+
+  
 
   /* ── FILIGRANE NERVEUX (Logo ImgBB) ── */
   #nx-watermark {
@@ -612,6 +600,124 @@ table.data th svg {
 #bac-content table:not(.infoblock table) tr:hover td, table.vtab tr:hover td, table.data tr:hover td {
   background: #f1f5f9;
 }
+
+/* ════════════════════════════════════════════════════════════════
+   BAC VIEWER RESPONSIVE MOBILE STYLES
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  * { box-sizing: border-box; }
+
+  /* ── Topbar ── */
+  .topbar {
+    padding: 0 10px !important;
+    height: 52px !important;
+    gap: 8px !important;
+  }
+  .topbar-brand { font-size: 13px !important; }
+  .topbar-logo { height: 28px !important; }
+  .return-link {
+    padding: 4px 9px !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+    gap: 4px !important;
+  }
+  .return-link span:not(.arrow) {
+    display: none !important;
+  }
+
+  /* ── Hero Band ── */
+  .bac-hero {
+    padding: 20px 12px 16px !important;
+    overflow: hidden !important;
+  }
+  .bac-hero h1 {
+    font-size: clamp(15px, 4vw, 20px) !important;
+    margin-bottom: 6px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  .bac-hero p {
+    font-size: 12px !important;
+    word-break: break-word !important;
+  }
+  .bac-hero::before { font-size: 48px !important; }
+
+  /* ── Container ── */
+  .bac-container {
+    padding: 14px 10px 70px !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .footer {
+    padding: 16px 12px !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    text-align: center !important;
+  }
+
+  /* ── Headings ── */
+  #bac-content h1 { font-size: 1.15em !important; margin-top: 14px !important; word-break: break-word !important; }
+  #bac-content h2 { font-size: 0.95em !important; margin-top: 24px !important; word-break: break-word !important; }
+
+  /* ── Boxes ── */
+  .step, .result, .note, .rappel {
+    padding: 10px 10px !important;
+    margin: 12px 0 !important;
+    border-radius: 8px !important;
+  }
+  .rappel-body { padding: 0 10px !important; }
+  .rappel-wrap.open .rappel-body { padding: 10px 10px 12px !important; }
+
+  /* ── Correction Section ── */
+  details.correction {
+    margin: 12px 0 24px !important;
+    border-radius: 8px !important;
+  }
+  details.correction > summary {
+    padding: 10px 12px !important;
+    font-size: 0.82em !important;
+  }
+  .corr-body {
+    padding: 12px 10px !important;
+    font-size: 0.92em !important;
+  }
+
+  /* ── Tables & Math Overflow ── */
+  #bac-content table:not(.infoblock table), table.vtab, table.data {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .infoblock {
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+  }
+  .infoblock table { font-size: 11px !important; }
+  .infoblock td { padding: 3px 5px !important; }
+
+  mjx-container[display="true"] {
+    font-size: 82% !important;
+    overflow-x: auto !important;
+    display: block !important;
+  }
+  mjx-container {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+
+  .diagram-wrap svg, .tv-wrap {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -662,10 +768,10 @@ table.data th svg {
 </footer>
 
 <!-- Fichiers de contenu BAC unique -->
-<script src="JS/bac_exams_2000_2004.js?v=20260915_v23"></script>
-<script src="JS/bac_exams_2014_2022.js?v=20260915_v23"></script>
-<script src="JS/bac_exams_2023_2025.js?v=20260915_v23"></script>
-<script src="JS/bac_content_2023_2025.js?v=20260915_v23"></script>
+<script src="JS/bac_exams_2000_2004.js?v=20260915_v24"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260915_v24"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260915_v24"></script>
+<script src="JS/bac_content_2023_2025.js?v=20260915_v24"></script>
 <script src="JS/curve_hover.js"></script>
 <script src="JS/desmos_init.js"></script>
 
@@ -1116,6 +1222,10 @@ function transformAllVTabs(root) {
 
     if(params.get('corr') === '1' || params.get('openCorr') === '1'){
       wrap.querySelectorAll('details.correction').forEach(function(det){ det.open = true; });
+      setTimeout(function(){
+        var first = wrap.querySelector('details.correction');
+        if(first) first.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }, 300);
     }
     // ─────────────────────────────────────────────────────────────
 

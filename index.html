@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<script src="/JS/theme.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NERVEUX — Exercices & Problèmes</title>
@@ -17,9 +16,9 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script src="JS/exercises.js"></script>
 <script src="JS/new_exercises_terminale_d.js"></script>
-<script src="JS/bac_exams_2000_2004.js?v=20260915_v23"></script>
-<script src="JS/bac_exams_2014_2022.js?v=20260915_v23"></script>
-<script src="JS/bac_exams_2023_2025.js?v=20260915_v23"></script>
+<script src="JS/bac_exams_2000_2004.js?v=20260915_v24"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260915_v24"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260915_v24"></script>
 <script src="JS/curve_hover.js"></script>
 <script src="JS/desmos_init.js"></script>
 <script>
@@ -34,7 +33,6 @@
   // This runs after both files are loaded
   EXERCISES.push(...EXERCISES_TERMINALE_D);
 </script>
-<link rel="stylesheet" href="/Css/mobile.css">
 
 <style>
 :root {
@@ -87,12 +85,9 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 .return-link:hover { background: rgba(255,255,255,0.14); color: white; }
 .return-link .arrow { font-size: 15px; }
 
-@media (max-width: 480px) {
-  .topbar { padding: 0 12px; }
-  .topbar-brand { font-size: 14px; }
-  .return-link { padding: 6px 11px; font-size: 12px; }
-  .return-link span:not(.arrow) { display: none; }
-}
+
+
+
 
 /* ── PAGE HERO ── */
 .page-hero {
@@ -107,7 +102,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
   font-size: 80px; opacity: .04; letter-spacing: 20px; pointer-events: none;
   color: white;
 }
-.page-hero h1 { font-family: 'Merriweather', serif; font-size: clamp(24px,5vw,40px); margin-bottom: 10px; color: white; }
+.page-hero h1 { font-family: 'Merriweather', serif; font-size: clamp(18px,5vw,40px); margin-bottom: 10px; color: white; word-break:break-word; }
 .page-hero h1 span { color: var(--accent); }
 .page-hero p { color: rgba(255,255,255,.55); font-size: 15px; max-width: 520px; margin: 0 auto 22px; }
 .hero-stats { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
@@ -267,11 +262,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
   transition: all .2s; box-shadow: 0 1px 4px rgba(0,0,0,.06);
 }
 .expand-all-btn:hover { background: var(--navy); color: white; border-color: var(--navy); }
-@media (max-width: 600px) {
-  .mod-header-title { font-size: 13px; }
-  .mod-toggle-btn span:not(.mod-toggle-icon) { display: none; }
-  .mod-toggle-btn { padding: 6px 10px; }
-}
+
 
 /* ── BAC SECTION ── */
 .bac-section-title {
@@ -279,7 +270,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
   margin: 38px 0 14px; display: flex; align-items: center; gap: 10px;
 }
 .bac-section-title::after { content: ''; flex: 1; height: 1px; background: var(--gold-dim); }
-.bac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 18px; }
+.bac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 18px; }
 .result {
   background: #f3f8f7;
   border: 1.5px solid rgba(26,122,94,0.35);
@@ -596,6 +587,202 @@ table.vtab tr:hover td, table.data tr:hover td, .problem-box tr:hover td, .solut
   font-size: 15px; color: var(--green); font-weight: 800;
 }
 .feedback-success .fs-icon { font-size: 40px; display: block; margin-bottom: 10px; }
+
+/* ════════════════════════════════════════════════════════════════
+   NERVEUX RESPONSIVE MOBILE STYLES (Consolidated & Cascading)
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero-stats { gap: 14px 20px; }
+  .main-content { padding: 0 16px; margin: 20px auto 60px; }
+  .search-wrap, .expand-bar { padding: 0 16px; }
+  .progress-inner { padding: 0 16px; }
+}
+
+@media (max-width: 600px) {
+  /* ── Body & Reset ── */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  * { box-sizing: border-box; }
+
+  /* ── Topbar ── */
+  .topbar {
+    padding: 0 12px !important;
+    height: 54px !important;
+  }
+  .topbar-brand { font-size: 13px !important; }
+  .topbar-logo { height: 28px !important; }
+  .return-link {
+    padding: 5px 10px !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+  }
+  .return-link span:not(.arrow) { display: none !important; }
+
+  /* ── Hero ── */
+  .page-hero {
+    padding: 24px 14px 20px !important;
+    overflow: hidden !important;
+  }
+  .page-hero h1 {
+    font-size: clamp(19px, 5.5vw, 26px) !important;
+    margin-bottom: 8px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  .page-hero p {
+    font-size: 12.5px !important;
+    margin: 0 auto 16px !important;
+    padding: 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  /* ── Stats Row ── */
+  .hero-stats {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px 12px !important;
+    justify-content: center !important;
+    margin-top: 14px !important;
+  }
+  .hero-stat {
+    min-width: 58px !important;
+    font-size: 10.5px !important;
+    padding: 4px 6px !important;
+    text-align: center !important;
+  }
+  .hero-stat span {
+    display: block !important;
+    font-size: 1.35em !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* ── Progress Bar ── */
+  .progress-band { padding: 8px 0 !important; }
+  .progress-inner { padding: 0 12px !important; }
+  .bar-label { font-size: 10px !important; }
+
+  /* ── Horizontal Scrollable Filters ── */
+  .filters-wrap {
+    position: sticky !important;
+    top: 54px !important;
+    z-index: 100 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  .filters-wrap::-webkit-scrollbar { display: none !important; }
+  .filters-inner {
+    padding: 8px 12px !important;
+    gap: 6px !important;
+    display: inline-flex !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    box-sizing: border-box !important;
+  }
+  .flabel { font-size: 9.5px !important; }
+  .filter-btn {
+    padding: 4px 10px !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+  }
+  .fsep { height: 16px !important; margin: 0 2px !important; }
+
+  /* ── Search & Expand Bar ── */
+  .search-wrap {
+    padding: 0 12px !important;
+    margin: 14px auto 0 !important;
+  }
+  .search-input {
+    font-size: 12.5px !important;
+    padding: 9px 12px !important;
+    border-radius: 10px !important;
+  }
+  .expand-bar {
+    padding: 0 12px !important;
+    margin: 10px auto 0 !important;
+  }
+  .expand-all-btn {
+    font-size: 10.5px !important;
+    padding: 5px 11px !important;
+  }
+
+  /* ── Main Content & Modules ── */
+  .main-content {
+    padding: 0 10px !important;
+    margin: 14px auto 60px !important;
+    overflow-x: hidden !important;
+  }
+  .mod-toggle-header {
+    padding: 10px 12px !important;
+    gap: 8px !important;
+    margin: 14px 0 0 !important;
+    border-radius: 10px !important;
+  }
+  .mod-toggle-header.open {
+    border-radius: 10px 10px 0 0 !important;
+  }
+  .mod-header-title {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+  }
+  .mod-header-meta {
+    gap: 5px !important;
+  }
+  .mod-count-pill, .mod-done-pill {
+    font-size: 9.5px !important;
+    padding: 2px 6px !important;
+  }
+  .mod-toggle-btn {
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+  }
+  .mod-toggle-btn span:not(.mod-toggle-icon) {
+    display: none !important;
+  }
+
+  /* ── Grids (Single Column) ── */
+  .exercise-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding: 10px !important;
+  }
+  .bac-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding: 10px !important;
+  }
+  .ex-card, .bac-card {
+    border-radius: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .bac-card-header, .bac-card-body {
+    padding: 10px 12px !important;
+  }
+  .bac-card-title {
+    font-size: 13px !important;
+  }
+
+  /* ── MathJax ── */
+  mjx-container[display="true"] {
+    font-size: 84% !important;
+    overflow-x: auto !important;
+    display: block !important;
+  }
+  mjx-container {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1336,7 +1523,6 @@ window.addEventListener('pageshow', function(e) {
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-<script src="JS/firebase-init.js"></script>
 
 <script>
 // ── FEEDBACK SYSTEM ──────────────────────────────────────────────
@@ -1422,6 +1608,5 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeFeedback();
 });
 </script>
-  <script src="/network.js" type="module"></script>
 </body>
 </html>
