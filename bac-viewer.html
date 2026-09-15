@@ -228,9 +228,9 @@ setTimeout(revealPage, 6000);
   }
 /* ── FORMULES ENCADRÉES MATHJAX (oxed) EN VERT HARMONISÉ ── */
 g[data-mml-node="menclose"] > rect {
-  fill: #f3f8f7 !important;
-  stroke: rgba(26, 122, 94, 0.45) !important;
-  stroke-width: 75px !important;
+  fill: none !important;
+  stroke: #1a7a5e !important;
+  stroke-width: 65px !important;
   rx: 120px !important;
   ry: 120px !important;
 }
@@ -449,17 +449,18 @@ mjx-menclose, mjx-fbox, [data-mml-node="menclose"] {
     margin-top:60px; font-family:'Nunito',sans-serif;
   }
 
-  /* ── CORRECTION (details/summary) ── */
+  /* ── CORRECTION (details/summary) ── Toute la partie correction en vert ── */
   details.correction{
-    margin:20px 0 40px; border:1.5px solid var(--border);
+    margin:20px 0 40px;
+    border: 2px solid #1a7a5e !important;
     border-radius:12px; overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,.06);
+    box-shadow:0 4px 16px rgba(26,122,94,0.12);
   }
   details.correction > summary{
     cursor:pointer; list-style:none; padding:14px 20px;
     font-family:'Nunito',sans-serif; font-weight:900; font-size:0.92em;
-    color:white;
-    background:linear-gradient(90deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color:white !important;
+    background: linear-gradient(90deg, #1a7a5e 0%, #125742 100%) !important;
     display:flex; align-items:center; justify-content:space-between; gap:10px;
     -webkit-user-select:none; user-select:none; transition:filter .15s ease;
   }
@@ -486,7 +487,16 @@ mjx-menclose, mjx-fbox, [data-mml-node="menclose"] {
   details.correction > summary .corr-txt-open{ display:none; }
   details.correction[open] > summary .corr-txt{ display:none; }
   details.correction[open] > summary .corr-txt-open{ display:block; }
-  .corr-body{ padding:20px 20px 10px; background:white; }
+  .corr-body{
+    padding:22px 24px 14px;
+    background: #f8fbf9 !important;
+    border-top: 1px solid rgba(26,122,94,0.2);
+  }
+  .corr-body h4{
+    color: #1a7a5e !important;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
 
   /* ── FOOTER ── */
   .footer{
@@ -652,10 +662,10 @@ table.data th svg {
 </footer>
 
 <!-- Fichiers de contenu BAC unique -->
-<script src="JS/bac_exams_2000_2004.js?v=20260915_v21"></script>
-<script src="JS/bac_exams_2014_2022.js?v=20260915_v21"></script>
-<script src="JS/bac_exams_2023_2025.js?v=20260915_v21"></script>
-<script src="JS/bac_content_2023_2025.js?v=20260915_v21"></script>
+<script src="JS/bac_exams_2000_2004.js?v=20260915_v22"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260915_v22"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260915_v22"></script>
+<script src="JS/bac_content_2023_2025.js?v=20260915_v22"></script>
 <script src="JS/curve_hover.js"></script>
 <script src="JS/desmos_init.js"></script>
 
@@ -1103,6 +1113,10 @@ function transformAllVTabs(root) {
         + '<span class="corr-txt-open">Masquer la correction</span>'
         + '<span class="arrow">' + SVG_CHEVRON + '</span>';
     });
+
+    if(params.get('corr') === '1' || params.get('openCorr') === '1'){
+      wrap.querySelectorAll('details.correction').forEach(function(det){ det.open = true; });
+    }
     // ─────────────────────────────────────────────────────────────
 
     var SVG_BRAIN = '<img src="logo-nerveux.png" class="brain-icon" alt="NERVEUX" />';
