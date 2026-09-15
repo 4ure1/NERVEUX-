@@ -25,7 +25,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>a)</strong> Calculer Z en fonction de θ.</p>
 <p><strong>b)</strong> Caractériser géométriquement la restriction de F au cercle de centre O et de rayon 1.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Nombres complexes, forme trigonométrique &amp ; ensembles géométriques</span>
+  <span class="label">Rappels de cours — Nombres complexes, forme trigonométrique &amp; ensembles géométriques</span>
   <ul>
     <li><strong>Forme exponentielle et inversion :</strong> Pour $z = r e^{i\\theta}$ ($r > 0$), on a $-1 = e^{i\\pi}$, d'où $-\\dfrac{1}{z} = \\dfrac{e^{i\\pi}}{r e^{i\\theta}} = \\dfrac{1}{r}e^{i(\\pi-\\theta)}$. Le module est $|f(z)| = \\dfrac{1}{r}$ et l'argument est $\\arg(f(z)) = \\pi - \\theta + 2k\\pi$.</li>
     <li><strong>Affixe du milieu :</strong> Le milieu $I$ du segment $[MM']$ a pour affixe $Z = \\dfrac{z + z'}{2} = \\dfrac{z + f(z)}{2}$.</li>
@@ -78,7 +78,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>b)</strong> Quelle sera la température au bout d'une heure ?</p>
 <p><em>On donne : \\(\\ln2 \\approx 0{,}70\\) ; \\(\\ln\\dfrac{3}{4} \\approx -0{,}29\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Équations différentielles du premier ordre &amp ; loi de refroidissement</span>
+  <span class="label">Rappels de cours — Équations différentielles du premier ordre &amp; loi de refroidissement</span>
   <ul>
     <li><strong>Équation linéaire $y' = ay$ :</strong> Les solutions sur $\\mathbb{R}$ sont de la forme $y(t) = C e^{at}$ où $C \\in \\mathbb{R}$ est une constante déterminée par la condition initiale.</li>
     <li><strong>Changement de variable :</strong> Pour $\\theta'(t) = -k(\\theta(t) - \\theta_1)$, en posant $\\Phi(t) = \\theta(t) - \\theta_1$, on obtient $\\Phi'(t) = -k\\Phi(t)$, d'où $\\Phi(t) = C e^{-kt}$ et $\\theta(t) = C e^{-kt} + \\theta_1$.</li>
@@ -149,7 +149,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>1)</strong> Donner une équation cartésienne de (Γ).</p>
 <p><strong>2)</strong> En déduire que (Γ) est une partie de (C).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions définies par morceaux, continuité, dérivabilité &amp ; asymptotes</span>
+  <span class="label">Rappels de cours — Fonctions définies par morceaux, continuité, dérivabilité &amp; asymptotes</span>
   <ul>
     <li><strong>Continuité en un point de raccord $x_0$ :</strong> $f$ est continue en $x_0 \\iff \\lim_{x \\to x_0^-} f(x) = \\lim_{x \\to x_0^+} f(x) = f(x_0)$.</li>
     <li><strong>Dérivabilité et point anguleux :</strong> Calculez $\\lim_{x \\to x_0^-} \\dfrac{f(x)-f(x_0)}{x-x_0} = f'_g(x_0)$ et $\\lim_{x \\to x_0^+} \\dfrac{f(x)-f(x_0)}{x-x_0} = f'_d(x_0)$. Si ces limites finies sont distinctes, $f$ n'est pas dérivable en $x_0$ et la courbe admet deux demi-tangentes formant un point anguleux.</li>
@@ -355,7 +355,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>b)</strong> En déduire qu'il suffit d'étudier (C) pour \\(t \\in [0;\\dfrac{\\pi}{2}]\\).</p>
 <p><strong>3)</strong> Étudier \\(t \\mapsto x(t)\\) et \\(t \\mapsto y(t)\\) sur \\([0;\\dfrac{\\pi}{2}]\\), dresser le tableau conjoint et tracer (C).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Courbes paramétriques &amp ; vecteurs tangents</span>
+  <span class="label">Rappels de cours — Courbes paramétriques &amp; vecteurs tangents</span>
   <ul>
     <li><strong>Réduction du domaine d'étude :</strong> Étudiez la périodicité commune de $x(t)$ et $y(t)$ ($T = 2\\pi$), puis la parité ($t \\mapsto -t$ symétrie axiale par $(Ox)$ ou $(Oy)$) pour restreindre l'intervalle à $[0 ; \\dfrac{\\pi}{2}]$.</li>
     <li><strong>Dérivées trigonométriques :</strong> $(\\cos t)' = -\\sin t$ et $(\\sin 2t)' = 2\\cos 2t$. Les zéros des dérivées donnent les tangentes horizontales ($y'=0, x'\\neq 0$) et verticales ($x'=0, y'\\neq 0$).</li>
@@ -515,7 +515,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>4) a)</strong> Déterminer les coordonnées du point E tel que ABDE soit un parallélogramme.</p>
 <p><strong>b)</strong> Calculer l'aire du parallélogramme ABDE.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Géométrie dans l'espace, produit vectoriel &amp ; volumes</span>
+  <span class="label">Rappels de cours — Géométrie dans l'espace, produit vectoriel &amp; volumes</span>
   <ul>
     <li><strong>Produit vectoriel $\\vec{u} \\wedge \\vec{v}$ :</strong> $\\begin{pmatrix}x \\\\ y \\\\ z\\end{pmatrix} \\wedge \\begin{pmatrix}x' \\\\ y' \\\\ z'\\end{pmatrix} = \\begin{pmatrix}yz'-zy' \\\\ zx'-xz' \\\\ xy'-yx'\\end{pmatrix}$. Il est orthogonal à $\\vec{u}$ et $\\vec{v}$.</li>
     <li><strong>Aire d'un triangle :</strong> $\\text{Aire}(ABC) = \\dfrac{1}{2}\\|\\overrightarrow{AB} \\wedge \\overrightarrow{AC}\\|$.</li>
@@ -581,7 +581,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>b)</strong> Calculer H'(x) et l'exprimer à l'aide de f(x).</p>
 <p><strong>c)</strong> En déduire le volume V en cm³ du solide engendré par la rotation du domaine délimité par (C), l'axe \\((Ox)\\) et les droites \\(x=-1\\) et \\(x=0\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions exponentielles, position relative &amp ; théorème de la bijection</span>
+  <span class="label">Rappels de cours — Fonctions exponentielles, position relative &amp; théorème de la bijection</span>
   <ul>
     <li><strong>Position relative de $(C)$ et $(\\Delta) : y = x+1$ :</strong> Étudiez le signe de la différence $d(x) = f(x)-(x+1) = (x+1)e^{-2x}$. Comme $e^{-2x}>0$, le signe de $d(x)$ est exactement celui de $x+1$.</li>
     <li><strong>Dérivée de produit $(u\\cdot v)' = u'v+uv'$ :</strong> Pour $f(x)=x+1+(x+1)e^{-2x}$, $f'(x) = 1 + 1\\cdot e^{-2x} + (x+1)(-2e^{-2x}) = 1-(2x+1)e^{-2x}$.</li>
@@ -763,7 +763,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>b)</strong> Soit D l'image de A par la translation de vecteur \\(\\overrightarrow{BC}\\). Calculer l'affixe de D.</p>
 <p><strong>c)</strong> Calculer \\(Z = \\dfrac{z_A}{z_A - z_B}\\). Déterminer le module et un argument de Z. En déduire la nature du triangle OAB.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Polynômes dans ℂ, racines réelles &amp ; factorisation</span>
+  <span class="label">Rappels de cours — Polynômes dans ℂ, racines réelles &amp; factorisation</span>
   <ul>
     <li><strong>Racine réelle d'un polynôme complexe :</strong> Posez $z_0 = x_0 \\in \\mathbb{R}$ dans $P(z_0)=0$, séparez partie réelle et partie imaginaire : $\\text{Re}(P(x_0)) = 0$ et $\\text{Im}(P(x_0)) = 0$. Le système donne la valeur unique de $x_0$.</li>
     <li><strong>Factorisation :</strong> Si $z_0$ est racine, $P(z) = (z-z_0)(z^2+az+b)$. Développez et identifiez les coefficients.</li>
@@ -817,7 +817,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>a)</strong> Les points A, B, C, D sont-ils coplanaires ?</p>
 <p><strong>b)</strong> Calculer \\(d(D;(ABC))\\) et en déduire le volume V (en u.v.) de la pyramide de sommet D et de base ABC.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Géométrie dans l'espace, orthogonalité &amp ; sphère</span>
+  <span class="label">Rappels de cours — Géométrie dans l'espace, orthogonalité &amp; sphère</span>
   <ul>
     <li><strong>Vecteurs orthogonaux :</strong> $\\vec{u} \\cdot \\vec{v} = xx'+yy'+zz'=0$.</li>
     <li><strong>Vecteur normal et plan :</strong> Un plan passant par $A(x_A;y_A;z_A)$ et de vecteur normal $\\vec{n}(a;b;c)$ a pour équation $a(x-x_A)+b(y-y_A)+c(z-z_A)=0$.</li>
@@ -891,7 +891,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>d)</strong> Déterminer le plus petit entier \\(n_0\\) tel que \\(|U_n-\\alpha| \\leq 10^{-3}\\) pour tout \\(n \\geq n_0\\).</p>
 <p><em>Données : \\(\\ln2 \\approx 0{,}69\\) ; \\(\\ln10 \\approx 2{,}3\\) ; \\(e^2 \\approx 7{,}39\\) ; \\(e^{2{,}5} \\approx 12{,}18\\) ; \\(\\dfrac{1}{e^2-1} \\approx 0{,}15\\) ; \\(\\dfrac{1}{e^{2{,}5}-1} \\approx 0{,}09\\) ; \\((e^2-1)^2 \\approx 40{,}83\\) ; \\((e^{2{,}5}-1)^2 \\approx 125\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions avec exponentielle, prolongement par continuité &amp ; points fixes</span>
+  <span class="label">Rappels de cours — Fonctions avec exponentielle, prolongement par continuité &amp; points fixes</span>
   <ul>
     <li><strong>Limite remarquable en 0 :</strong> $\\lim_{x\\to 0}\\dfrac{e^x-1}{x} = 1 \\implies \\lim_{x\\to 0}\\dfrac{x}{e^x-1} = 1$. Ainsi $\\lim_{x\\to 0}f(x) = 1+2 = 3 = f(0)$ : $f$ est prolongeable par continuité en 0.</li>
     <li><strong>Dérivée de quotient :</strong> $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v-uv'}{v^2}$. Pour $f(x)=\\dfrac{x}{e^x-1}+2$, $f'(x) = \\dfrac{(1-x)e^x-1}{(e^x-1)^2} = \\dfrac{g(x)}{(e^x-1)^2}$.</li>
@@ -1129,7 +1129,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>4)</strong> Calculer l'espérance mathématique de X.</p>
 <p><strong>5)</strong> Calculer la variance de X. <em>(Résultats sous forme de fractions irréductibles.)</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Dénombrement, tirages simultanés &amp ; variables aléatoires</span>
+  <span class="label">Rappels de cours — Dénombrement, tirages simultanés &amp; variables aléatoires</span>
   <ul>
     <li><strong>Tirage simultané de $p$ éléments parmi $n$ :</strong> L'univers comporte $\\text{Card}(\\Omega) = \\binom{n}{p} = C_n^p = \\dfrac{n!}{p!(n-p)!}$ issues équiprobables.</li>
     <li><strong>Variable aléatoire discrète $X$ :</strong> Déterminez l'ensemble des valeurs prises par $X$, puis pour chaque valeur $x_i$, calculez $P(X=x_i) = \\dfrac{\\text{nombre de cas favorables}}{\\text{Card}(\\Omega)}$.</li>
@@ -1206,7 +1206,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>b)</strong> En déduire la limite de \\((U_n)\\).</p>
 <p><em>On donne : \\(e \\approx 2{,}7\\) ; \\(e^3 \\approx 20\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Équations différentielles avec second membre &amp ; calcul intégral</span>
+  <span class="label">Rappels de cours — Équations différentielles avec second membre &amp; calcul intégral</span>
   <ul>
     <li><strong>Solution générale $y = y_0 + y_p$ :</strong> La solution générale de $y'-3y=g(x)$ est la somme de la solution générale de l'équation sans second membre ($y_0 = C e^{3x}$) et d'une solution particulière $y_p$.</li>
     <li><strong>Intégration par changement de variable / forme $u'/u$ :</strong> Pour calculer $\\int \\dfrac{e^{-3x}}{1+e^{-3x}}dx$, remarquez la forme $-\\dfrac{1}{3}\\dfrac{u'(x)}{u(x)}$ avec $u(x)=1+e^{-3x} > 0$, dont une primitive est $-\\dfrac{1}{3}\\ln(1+e^{-3x})$.</li>
@@ -1342,7 +1342,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>c)</strong> Interpréter géométriquement le module et un argument de Z.</p>
 <p><strong>d)</strong> Quelle est la nature exacte du triangle ABC puis du quadrilatère ABCD ?</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Équations de degré 4 dans ℂ &amp ; racines imaginaires pures</span>
+  <span class="label">Rappels de cours — Équations de degré 4 dans ℂ &amp; racines imaginaires pures</span>
   <ul>
     <li><strong>Racine imaginaire pure $z_0 = iy$ ($y\\in\\mathbb{R}$) :</strong> Injectez $iy$ dans $P(z)=0$ avec $(iy)^2=-y^2$, $(iy)^3=-iy^3$, $(iy)^4=y^4$. Séparez partie réelle et partie imaginaire pour déterminer $y$.</li>
     <li><strong>Racines conjuguées :</strong> Si les coefficients de départ ont des propriétés réelles ou par symétrie, les racines imaginaires pures apparaissent souvent par paires opposées $\\pm iy_0$.</li>
@@ -1403,7 +1403,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>3) a)</strong> Calculer l'aire \\(\\mathcal{A}\\) du triangle ABC en unité d'aire.</p>
 <p><strong>b)</strong> Déterminer le volume V (en unité de volume) de la pyramide de sommet I et de base le triangle ABC.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Produit vectoriel, équation de plan &amp ; distance point-plan</span>
+  <span class="label">Rappels de cours — Produit vectoriel, équation de plan &amp; distance point-plan</span>
   <ul>
     <li><strong>Produit vectoriel $\\vec{u} \\wedge \\vec{v}$ :</strong> $\\begin{pmatrix}x_1 \\\\ y_1 \\\\ z_1\\end{pmatrix} \\wedge \\begin{pmatrix}x_2 \\\\ y_2 \\\\ z_2\\end{pmatrix} = \\begin{pmatrix}y_1 z_2 - z_1 y_2 \\\\ z_1 x_2 - x_1 z_2 \\\\ x_1 y_2 - y_1 x_2\\end{pmatrix}$. Si $\\vec{u}\\wedge\\vec{v}\\neq\\vec{0}$, les vecteurs forment une base du plan.</li>
     <li><strong>Équation cartésienne de $(ABC)$ :</strong> $\\vec{n} = \\overrightarrow{AB}\\wedge\\overrightarrow{AC} = (a;b;c) \\implies ax+by+cz+d=0$.</li>
@@ -1466,7 +1466,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>6)</strong> En déduire les valeurs exactes de \\(J_1\\) et \\(J_2\\).</p>
 <p><em>Données : \\(\\ln(3{,}5) \\approx 1{,}25\\) ; \\(\\ln 2 \\approx 0{,}7\\) ; \\(e^{-1} \\approx 0{,}37\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions ln, exponentielles par morceaux &amp ; suites d'intégrales</span>
+  <span class="label">Rappels de cours — Fonctions ln, exponentielles par morceaux &amp; suites d'intégrales</span>
   <ul>
     <li><strong>Dérivée de $\\dfrac{\\ln x}{1+x}$ :</strong> $\\left(\\dfrac{\\ln x}{1+x}\\right)' = \\dfrac{\\dfrac{1}{x}(1+x)-\\ln x}{(1+x)^2} = \\dfrac{1+x-x\\ln x}{x(1+x)^2} = \\dfrac{g(x)}{x(1+x)^2}$.</li>
     <li><strong>Théorème de la bijection :</strong> Si $f$ est continue et strictement monotone sur $[1;+\\infty[$, alors $f([1;+\\infty[) = [f(1); \\lim_{+\\infty} f[$ est un intervalle bijection.</li>
@@ -1728,7 +1728,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>c)</strong> Donner l'équation de la droite \\((G_1G_2)\\) sous la forme \\(y = ax+b\\). Tracer cette droite.</p>
 <p><strong>3)</strong> Estimer la longueur de la face d'un descendant du cheval qui aurait une longueur de crâne de 23,2 cm.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Statistiques à deux variables &amp ; ajustement affine</span>
+  <span class="label">Rappels de cours — Statistiques à deux variables &amp; ajustement affine</span>
   <ul>
     <li><strong>Moyennes et point moyen :</strong> $\\bar{x} = \\dfrac{1}{N}\\sum x_i$, $\\bar{y} = \\dfrac{1}{N}\\sum y_i$. Le point moyen $G(\\bar{x}; \\bar{y})$ appartient toujours à la droite de régression.</li>
     <li><strong>Variances et covariance :</strong> $V(X) = \\dfrac{1}{N}\\sum x_i^2 - \\bar{x}^2$, $\\text{Cov}(X,Y) = \\dfrac{1}{N}\\sum x_i y_i - \\bar{x}\\bar{y}$.</li>
@@ -1769,7 +1769,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>2) a)</strong> Déterminer les équations des tangentes à (Γ) aux points M(0) et M(−1) (M(t) étant le point de coordonnées \\((x(t);y(t))\\)).</p>
 <p><strong>b)</strong> L'unité étant 2 cm, tracer les tangentes et la courbe (Γ) dans le repère.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Courbes paramétrées &amp ; étude cinématique</span>
+  <span class="label">Rappels de cours — Courbes paramétrées &amp; étude cinématique</span>
   <ul>
     <li><strong>Domaine d'étude :</strong> Identifiez les contraintes de définition (ex: $1-t > 0 \\iff t < 1$).</li>
     <li><strong>Dérivées coordonnées :</strong> $x'(t) = 1 - \\dfrac{1}{1-t} = \\dfrac{-t}{1-t}$ et $y'(t) = 1\\cdot e^t + t e^t = (1+t)e^t$.</li>
@@ -1959,7 +1959,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>1)</strong> Calculer l'aire \\(A(\\lambda)\\) de la partie du plan limitée par (C), la droite (∆) et les droites \\(x = 0\\) et \\(x = \\lambda\\) où \\(\\lambda \\in \\mathbb{R}^*_+\\).</p>
 <p><strong>2)</strong> Calculer \\(\\displaystyle\\lim_{\\lambda\\to+\\infty} A(\\lambda)\\) puis interpréter géométriquement.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions exponentielles, bijection &amp ; dérivée de la réciproque</span>
+  <span class="label">Rappels de cours — Fonctions exponentielles, bijection &amp; dérivée de la réciproque</span>
   <ul>
     <li><strong>Dérivée de $f(x)=x(1+e^(2-x))$ :</strong> $f'(x) = 1\\cdot(1+e^{2-x}) + x(-e^{2-x}) = 1+(1-x)e^{2-x}$. On a $f'(x) \\ge 0$, nul seulement en $x=2$ (point d'inflexion à tangente oblique).</li>
     <li><strong>Théorème de la bijection :</strong> $f$ continue et strictement croissante de $\\mathbb{R}$ vers $\\mathbb{R}$ réalise une bijection.</li>
@@ -2131,7 +2131,7 @@ const BAC_EXAMS_2014_2022 = [
 </ul>
 <p>Calculer \\(P(A)\\), \\(P(B)\\), \\(P(C)\\), \\(P(D)\\), \\(P(E)\\) et \\(P(F)\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Probabilités, combinatoire &amp ; propriétés des entiers</span>
+  <span class="label">Rappels de cours — Probabilités, combinatoire &amp; propriétés des entiers</span>
   <ul>
     <li><strong>Tirage simultané :</strong> $\\text{Card}(\\Omega) = \\binom{12}{3} = \\dfrac{12 \\times 11 \\times 10}{6} = 220$.</li>
     <li><strong>Événements élémentaires :</strong> Pour dénombrer les tirages réalisant une condition (ex: nombres pairs, multiples de 3), comptez d'abord le nombre d'éléments disponibles $k$ vérifiant cette condition dans l'urne, puis calculez $\\binom{k}{3}$.</li>
@@ -2179,7 +2179,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>4)</strong> Soit \\(Vₙ = \\dfrac{U_n}{1-U_n}\\). Montrer que \\((V_n)\\) est une suite géométrique de raison 3 et de premier terme \\(V_0 = 1\\).</p>
 <p><strong>5)</strong> Exprimer \\(V_n\\) puis \\(U_n\\) en fonction de \\(n\\). En déduire \\(\\displaystyle\\lim_{n\\to+\\infty}U_n\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Suites récurrentes homographiques &amp ; suite auxiliaire</span>
+  <span class="label">Rappels de cours — Suites récurrentes homographiques &amp; suite auxiliaire</span>
   <ul>
     <li><strong>Démonstration par récurrence :</strong> Pour prouver $0 < Uₙ < 1$, vérifiez pour $n=0$ (initialisation), puis supposez $0 < Uₙ < 1$ et étudiez $U_{n+1} = \\dfrac{3U_n}{1+2U_n}$ (hérédité).</li>
     <li><strong>Suite auxiliaire $Vₙ = \\dfrac{Uₙ-1}{Uₙ}$ :</strong> Calculez $V_{n+1} = \\dfrac{U_{n+1}-1}{U_{n+1}} = \\dfrac{\\dfrac{3U_n}{1+2U_n}-1}{\\dfrac{3U_n}{1+2U_n}} = \\dfrac{U_n-1}{3U_n} = \\dfrac{1}{3}V_n$. La suite $(V_n)$ est géométrique de raison $q = 1/3$.</li>
@@ -2238,7 +2238,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>Partie B (2 pts)</strong></p>
 <p>Calculer l'aire \\(\\mathcal{A}\\) de la partie du plan limitée par (C), l'axe des abscisses et la droite \\(x = 3\\), pour \\(x \\in [3 ; +\\infty[\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions avec discontinuité (saut), dérivabilité &amp ; TVI</span>
+  <span class="label">Rappels de cours — Fonctions avec discontinuité (saut), dérivabilité &amp; TVI</span>
   <ul>
     <li><strong>Discontinuité / Saut en $x_0 = 3$ :</strong> Si $\\lim_{x\\to 3^-} f(x) = -2$ et $f(3) = e^{-3} \\approx 0{,}05$, alors $\\lim_{x\\to 3^-} f(x) \\neq f(3)$ : la fonction n'est pas continue en 3, elle présente un saut fini.</li>
     <li><strong>Tableau de variation avec saut :</strong> Le tableau trace une ligne verticale continue séparant la limite à gauche $-2$ de la valeur à droite $e^{-3}$.</li>
@@ -2420,7 +2420,7 @@ const BAC_EXAMS_2014_2022 = [
 </ul>
 <p>Calculer les probabilités \\(P(A)\\), \\(P(B)\\), \\(P(C)\\), \\(P(D)\\), \\(P(E)\\) et \\(P(F)\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Probabilités combinatoires &amp ; équiprobabilité</span>
+  <span class="label">Rappels de cours — Probabilités combinatoires &amp; équiprobabilité</span>
   <ul>
     <li><strong>Dénombrement simultané :</strong> $\\text{Card}(\\Omega) = \\binom{n}{p} = C_n^p$.</li>
     <li><strong>Multiples et divisibilité :</strong> Dans $\\{1, 2, \\dots, 12\\}$, il y a 6 pairs $\\{2,4,6,8,10,12\\}$ et 4 multiples de 3 $\\{3,6,9,12\\}$. Les multiples communs (multiples de 6) sont $\\{6, 12\\}$.</li>
@@ -2461,7 +2461,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>4)</strong> Soit \\(Vₙ = \\dfrac{U_n}{1-U_n}\\). Montrer que \\((V_n)\\) est géométrique de raison 3 et de premier terme 1.</p>
 <p><strong>5)</strong> Exprimer \\(U_n\\) en fonction de n. Calculer \\(\\displaystyle\\lim_{n\\to+\\infty}U_n\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Suites récurrentes, monotonie &amp ; encadrement</span>
+  <span class="label">Rappels de cours — Suites récurrentes, monotonie &amp; encadrement</span>
   <ul>
     <li><strong>Monotonie par étude de signe :</strong> Pour étudier le sens de variation de $(U_n)$, étudiez le signe de $U_{n+1}-Uₙ = \\dfrac{3U_n}{1+2U_n}-Uₙ = \\dfrac{2U_n(1-U_n)}{1+2U_n}$. Comme $0 < Uₙ < 1$, ce terme est strictement positif : $(U_n)$ est croissante.</li>
     <li><strong>Théorème de convergence monotone :</strong> Toute suite croissante et majorée par 1 est convergente. Sa limite $L$ vérifie $L = \\dfrac{3L}{1+2L} \\implies L = 1$.</li>
@@ -2508,7 +2508,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>Partie D (1,5 pt)</strong></p>
 <p>Soit \\(a > 0\\). Calculer l'aire de la partie du plan délimitée par (T), \\(y = 0\\), \\(x = 1\\), \\(x = e^a\\). Calculer la limite de cette aire quand \\(a \\to +\\infty\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Étude de fonction logarithme g(x) = 1 - \\dfrac{1}{x} + ln x &amp ; paramétrique</span>
+  <span class="label">Rappels de cours — Étude de fonction logarithme g(x) = 1 - \\dfrac{1}{x} + ln x &amp; paramétrique</span>
   <ul>
     <li><strong>Fonction pivot $g(x)$ :</strong> $g'(x) = \\dfrac{1}{x^2}+\\dfrac{1}{x} = \\dfrac{1+x}{x^2} > 0$ sur $]0;+\\infty[$. Comme $g(1)=0$, $g(x)<0$ sur $]0;1[$ et $g(x)>0$ sur $]1;+\\infty[$.</li>
     <li><strong>Lien $f'(x) = g(x)$ :</strong> La dérivée de $f(x)=(x-1)\\ln x$ est $f'(x) = 1\\cdot\\ln x + (x-1)\\dfrac{1}{x} = \\ln x + 1 - \\dfrac{1}{x} = g(x)$. Les variations de $f$ découlent directement du signe de $g$.</li>
@@ -2814,7 +2814,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>a)</strong> Donner une interprétation géométrique du module et de l'argument de \\(f(z)\\).</p>
 <p><strong>b)</strong> Déduire et construire l'ensemble (E) des points M d'affixe z tels que \\(f(z)\\) soit un nombre imaginaire pur non nul.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Racines carrées complexes &amp ; forme trigonométrique</span>
+  <span class="label">Rappels de cours — Racines carrées complexes &amp; forme trigonométrique</span>
   <ul>
     <li><strong>Forme trigonométrique :</strong> Pour $u = 1+i\\sqrt{3}$, le module est $|u| = \\sqrt{1+3} = 2$. L'argument $\\theta$ vérifie $\\cos\\theta = 1/2$ et $\\sin\\theta = \\sqrt{3}/2 \\implies \\theta = \\dfrac{\\pi}{3}$. Donc $u = 2e^{i\\dfrac{\\pi}{3}}$.</li>
     <li><strong>Racines carrées d'un complexe sous forme exponentielle :</strong> Les racines carrées de $u = r e^{i\\theta}$ sont $\\delta_1 = \\sqrt{r}e^{i\\theta/2} = \\sqrt{2}e^{i\\dfrac{\\pi}{6}} = \\sqrt{2}\\left(\\dfrac{\\sqrt{3}}{2}+\\dfrac{1}{2}i\\right) = \\dfrac{\\sqrt{6}+i\\sqrt{2}}{2}$ et $\\delta_2 = -\\delta_1$.</li>
@@ -2892,7 +2892,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>3)</strong> Soit Y la variable aléatoire égale au nombre de fois que l'événement A se réalise au cours de 5 tirages indépendants. Y suit la loi binomiale de paramètres \\(n = 5\\) et \\(p = P(A)\\).</p>
 <p>Calculer \\(P(Y = 3)\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Variable aléatoire, espérance &amp ; schéma de Bernoulli</span>
+  <span class="label">Rappels de cours — Variable aléatoire, espérance &amp; schéma de Bernoulli</span>
   <ul>
     <li><strong>Loi de probabilité :</strong> Énumérez toutes les valeurs possibles de $X$, calculez chaque probabilité $P(X=x_i) = \\dfrac{\\binom{K}{x_i}\\binom{N-K}{p-x_i}}{\\binom{N}{p}}$, et présentez les résultats sous forme de tableau.</li>
     <li><strong>Espérance mathématique :</strong> $E(X) = \\sum x_i P(X=x_i)$. Représente la moyenne théorique obtenue sur un grand nombre d'expériences.</li>
@@ -2975,7 +2975,7 @@ const BAC_EXAMS_2014_2022 = [
  
 <p><em>On donne : \\(e \\approx 2{,}72\\) ; \\(e^3 \\approx 20{,}09\\) ; \\(e^{-3} \\approx 0{,}05\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions définies par morceaux, prolongement &amp ; calcul d'aire</span>
+  <span class="label">Rappels de cours — Fonctions définies par morceaux, prolongement &amp; calcul d'aire</span>
   <ul>
     <li><strong>Continuité en 0 :</strong> $\\lim_{x\\to 0^-} \\dfrac{xe^x}{e^x+1} = \\dfrac{0}{2} = 0$, et $\\lim_{x\\to 0^+} (x^2\\ln x - x^2) = 0 - 0 = 0$ (croissances comparées $\\lim_{x\\to 0^+}x^n\\ln x = 0$). Ainsi $f$ est continue en 0 avec $f(0)=0$.</li>
     <li><strong>Dérivée sur chaque intervalle :</strong> Sur $]-\\infty;0[$, $f'(x) = \\dfrac{e^x(e^x+x+1)}{(e^x+1)^2}$. Sur $]0;+\\infty[$, $f'(x) = 2x\\ln x + x^2\\dfrac{1}{x} - 2x = x(2\\ln x-1)$.</li>
@@ -3270,7 +3270,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>4) a)</strong> Déterminer l'ensemble (e) des points M d'affixe z tels que \\(|f(z)| = \\sqrt{2}\\).</p>
 <p><strong>b)</strong> Déterminer l'ensemble (F) des points M d'affixe z tels que \\(\\arg[f(z)] = \\dfrac{\\pi}{2} + k\\pi\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Configurations complexes, modules &amp ; cercle circonscrit</span>
+  <span class="label">Rappels de cours — Configurations complexes, modules &amp; cercle circonscrit</span>
   <ul>
     <li><strong>Distance entre deux points :</strong> $AB = |z_B - z_A|$.</li>
     <li><strong>Triangle rectangle isocèle :</strong> $\\dfrac{z_C-z_A}{z_B-z_A} = \\pm i \\iff AB = AC$ et $(\\overrightarrow{AB},\\overrightarrow{AC}) = \\pm\\dfrac{\\pi}{2}$.</li>
@@ -3338,7 +3338,7 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>Partie D (1,5 pts)</strong></p>
 <p>Soit \\(a > 0\\). Calculer l'aire de la partie délimitée par (T), l'axe des abscisses et les droites \\(x=1\\) et \\(x=e^a\\). Calculer la limite de cette aire quand \\(a\\to+\\infty\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions avec valeur absolue, branches infinies &amp ; IPP</span>
+  <span class="label">Rappels de cours — Fonctions avec valeur absolue, branches infinies &amp; IPP</span>
   <ul>
     <li><strong>Étude de $|x|$ :</strong> Pour $x > 0$, $|x|=x \\implies f(x)=(x-1)\\ln x$. Pour $x < 0$, $|x|=-x \\implies f(x)=(x-1)\\ln(-x)$.</li>
     <li><strong>Asymptote verticale :</strong> $\\lim_{x\\to 0} f(x) = (0-1)(-\\infty) = +\\infty \\implies$ la droite $x=0$ (axe des ordonnées) est asymptote verticale.</li>
@@ -3573,7 +3573,7 @@ c) Calculer \\(\\dfrac{z_C - z_A}{z_B - z_A}\\), puis interpréter graphiquement
 a) Calculer l'affixe du point \\(D\\).<br>
 b) Donner la nature exacte du quadrilatère \\(ABDC\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Racines imaginaires pures &amp ; factorisation dans ℂ</span>
+  <span class="label">Rappels de cours — Racines imaginaires pures &amp; factorisation dans ℂ</span>
   <ul>
     <li><strong>Recherche de racine imaginaire pure $z_0 = ib$ ($b\\in\\mathbb{R}$) :</strong> Injectez $ib$ dans $P(z)=0$, développez avec $i^2=-1, i^3=-i$. Annulez la partie réelle et la partie imaginaire pour trouver $b$.</li>
     <li><strong>Factorisation :</strong> Écrivez $P(z) = (z-ib)(z^2+\\alpha z+\\beta)$ et identifiez les coefficients.</li>
@@ -3632,7 +3632,7 @@ b) On répète trois fois l'expérience de manière indépendante. Calculer la p
 
 <p><em>On donne : \\(\\dfrac{23}{110} \\approx 0{,}2\\) ; \\(\\dfrac{87}{110} \\approx 0{,}7\\)</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Variables aléatoires discrètes, loi de probabilité &amp ; espérance</span>
+  <span class="label">Rappels de cours — Variables aléatoires discrètes, loi de probabilité &amp; espérance</span>
   <ul>
     <li><strong>Tirage simultané :</strong> $\\text{Card}(\\Omega) = \\binom{n}{p} = C_n^p$.</li>
     <li><strong>Variable aléatoire $X$ (somme des numéros) :</strong> Déterminez la valeur minimale et maximale possible de la somme pour trouver toutes les valeurs de $X(\\Omega)$.</li>
@@ -3735,7 +3735,7 @@ b) \\(|Uₙ - \\alpha| \\leq \\left(\\dfrac{2}{3}\\right)^n\\).</p>
 
 <p><em>Données numériques : \\(\\ln 2 \\approx 0{,}7\\) ; \\(\\ln 3 \\approx 1{,}1\\) ; \\(\\ln 5 \\approx 1{,}6\\) ; \\(\\ln 10 \\approx 2{,}3\\) ; \\(\\ln\\dfrac{2}{3} \\approx -0{,}4\\) ; \\(e^{-1} \\approx 0{,}3\\) ; \\(e^{-12} \\approx 0{,}1\\)</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions raccordées, point anguleux &amp ; TVI</span>
+  <span class="label">Rappels de cours — Fonctions raccordées, point anguleux &amp; TVI</span>
   <ul>
     <li><strong>Continuité au point de raccord $x=2$ :</strong> Vérifiez que $\\lim_{x\\to 2^-} (-x+1+e^{x-2}) = -2+1+1 = 0$ et $f(2) = 2-2+\\ln(1) = 0$. $f$ est donc continue en 2.</li>
     <li><strong>Dérivabilité à gauche et à droite :</strong> $\\lim_{x\\to 2^-}\\dfrac{f(x)-f(2)}{x-2} = -1+1 = 0$ et $\\lim_{x\\to 2^+}\\dfrac{f(x)-f(2)}{x-2} = -1+2 = 1$. Les demi-tangentes ont des pentes différentes ($0$ et $1$) : point anguleux en $(2;0)$.</li>
@@ -4314,7 +4314,7 @@ L'unité graphique est 2 cm, donc 1 u.a. = 4 cm².<br>
 <p><strong>b)</strong> Exprimer \\(v_n\\) en fonction de n. En déduire \\(u_n\\) en fonction de n.</p>
 <p><strong>c)</strong> En déduire \\(Sₙ = v_0+v_1+\\cdots+v_n\\) en fonction de n puis \\(\\displaystyle\\lim_{n\\to+\\infty}S_n\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Suites récurrentes homographiques &amp ; suite géométrique auxiliaire</span>
+  <span class="label">Rappels de cours — Suites récurrentes homographiques &amp; suite géométrique auxiliaire</span>
   <ul>
     <li><strong>Suite homographique $u_{n+1} = \\dfrac{a uₙ + b}{c uₙ + d}$ :</strong> Pour linéariser, on utilise une suite auxiliaire $vₙ = \\dfrac{uₙ - \\alpha}{uₙ - \\beta}$, où $\\alpha, \\beta$ sont les points fixes solutions de $x = \\dfrac{ax+b}{cx+d}$.</li>
     <li><strong>Montrer que $(vₙ)$ est géométrique :</strong> Calculez $v_{n+1} = \\dfrac{u_{n+1}+2}{u_{n+1}-1}$, remplacez $u_{n+1}$ par son expression en fonction de $u_n$, simplifiez le quotient pour obtenir $v_{n+1} = q \\cdot v_n$.</li>
@@ -4388,7 +4388,7 @@ L'unité graphique est 2 cm, donc 1 u.a. = 4 cm².<br>
 <p><strong>a)</strong> La distance de freinage pour une vitesse de 150 km/h.</p>
 <p><strong>b)</strong> La vitesse pour une distance de freinage de 250 m.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Statistiques à deux variables, nuage de points &amp ; ajustement affine</span>
+  <span class="label">Rappels de cours — Statistiques à deux variables, nuage de points &amp; ajustement affine</span>
   <ul>
     <li><strong>Point moyen $G(\\bar{x}; \\bar{y})$ :</strong> $\\bar{x} = \\dfrac{1}{N}\\sum x_i$ et $\\bar{y} = \\dfrac{1}{N}\\sum y_i$.</li>
     <li><strong>Variance et Covariance :</strong> $V(X) = \\dfrac{1}{N}\\sum x_i^2 - \\bar{x}^2$ et $\\text{Cov}(X,Y) = \\dfrac{1}{N}\\sum x_i y_i - \\bar{x}\\bar{y}$.</li>
@@ -4445,7 +4445,7 @@ L'unité graphique est 2 cm, donc 1 u.a. = 4 cm².<br>
 <p><strong>d)</strong> Déduire que \\((u_n)\\) est convergente et préciser sa limite.</p>
 <p><em>On donne : \\(\\dfrac{2}{e}\\approx0{,}73\\) ; \\(\\dfrac{1}{e^2}\\approx0{,}13\\) ; \\(\\ln2=0{,}69\\) ; \\(\\ln\\dfrac{3}{2}=0{,}40\\) ; \\(e^{\\dfrac{3}{2}}=1{,}947\\) ; \\(e^{\\dfrac{1}{2}}=1{,}648\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions raccordées, logarithme &amp ; décomposition en éléments simples</span>
+  <span class="label">Rappels de cours — Fonctions raccordées, logarithme &amp; décomposition en éléments simples</span>
   <ul>
     <li><strong>Dérivée de $(x-1)\\ln(1-x)$ :</strong> $u = x-1, u'=1$ ; $v=\\ln(1-x), v' = \\dfrac{-1}{1-x} = \\dfrac{1}{x-1}$. D'où $( (x-1)\\ln(1-x) )' = 1\\cdot\\ln(1-x) + (x-1)\\dfrac{1}{x-1} = \\ln(1-x) + 1$.</li>
     <li><strong>Point anguleux au raccord :</strong> Comparez la dérivée à gauche et la dérivée à droite en $x=1$. Si $f'_g(1) \\neq f'_d(1)$, il y a deux demi-tangentes sécantes.</li>
@@ -4680,7 +4680,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>b)</strong> Déduire l'expression de \\(f(x)\\) pour \\(x \\in \\mathbb{R}\\).</p>
 <p><strong>c)</strong> Déterminer la solution h de (E) qui s'annule en 0.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Équations différentielles y'+ay = P(x) &amp ; solution particulière polynomiale</span>
+  <span class="label">Rappels de cours — Équations différentielles y'+ay = P(x) &amp; solution particulière polynomiale</span>
   <ul>
     <li><strong>Structure de la solution générale :</strong> $y(x) = y_0(x) + y_p(x)$, où $y_0(x) = C e^{-ax}$ est la solution générale de l'équation homogène $y'+ay=0$.</li>
     <li><strong>Solution particulière pour un polynôme de degré 1 :</strong> Cherchez $y_p(x) = ax+b$. Calculez $y_p'(x)=a$, injectez dans l'équation et identifiez les coefficients de $x$ et le terme constant.</li>
@@ -4726,7 +4726,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>b)</strong> Calculer \\(I-J\\)</p>
 <p><strong>c)</strong> Déduire les valeurs de I et J.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Intégrales trigonométriques &amp ; formules de linéarisation</span>
+  <span class="label">Rappels de cours — Intégrales trigonométriques &amp; formules de linéarisation</span>
   <ul>
     <li><strong>Formules de duplication :</strong> $\\cos^2 x = \\dfrac{1+\\cos 2x}{2}$ et $\\sin^2 x = \\dfrac{1-\\cos 2x}{2}$.</li>
     <li><strong>Linéarisation de $\\cos^4 x$ :</strong> $\\cos^4 x = (\\cos^2 x)^2 = \\left(\\dfrac{1+\\cos 2x}{2}\\right)^2 = \\dfrac{1+2\\cos 2x+\\cos^2 2x}{4} = \\dfrac{1+2\\cos 2x+\\dfrac{1+\\cos 4x}{2}}{4} = \\dfrac{3+4\\cos 2x+\\cos 4x}{8}$.</li>
@@ -4799,7 +4799,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>b)</strong> À l'aide d'une intégration par parties, calculer \\(I=\\displaystyle\\int_0^3(2x+4)e^{-x}\\,dx\\).</p>
 <p><strong>c)</strong> Calculer en cm² l'aire du domaine limité par la courbe (C), l'axe des abscisses et les droites \\(x=0\\) et \\(x=3\\). <em>On donne \\(e^{-2}\\approx0{,}14\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions raccordées exponentielle/logarithme &amp ; IPP</span>
+  <span class="label">Rappels de cours — Fonctions raccordées exponentielle/logarithme &amp; IPP</span>
   <ul>
     <li><strong>Dérivée de $(x+2)^2 e⁻ˣ$ :</strong> $u=(x+2)^2 \\implies u'=2(x+2)$ ; $v=e^{-x} \\implies v'=-e^{-x}$. D'où $f'(x) = 2(x+2)e^{-x} - (x+2)^2 e^{-x} = -(x^2+2x)e^{-x} = -x(x+2)e^{-x}$.</li>
     <li><strong>Limite en $-\\infty$ pour $x\\ln(1-\\dfrac{2}{x})$ :</strong> Poser $X = -\\dfrac{2}{x} \\to 0$. Alors $x\\ln(1-\\dfrac{2}{x}) = -2\\dfrac{\\ln(1+X)}{X} \\xrightarrow{X\\to 0} -2\\times 1 = -2$. D'où $\\lim_{x\\to-\\infty}f(x) = -2+4 = 2$.</li>
@@ -4923,7 +4923,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p>\\(f(x) = (ax^2+bx)e^{-\\dfrac{x}{2}}\\)</p>
 <p>\\(2f'(x)+f(x) = \\left(4ax+2b-ax^2-bx+ax^2+bx\\right)e^{-\\dfrac{x}{2}} = (4ax+2b)e^{-\\dfrac{x}{2}}\\)</p>
 <p>On veut \\((4ax+2b)e^{-\\dfrac{x}{2}} = (x+2)e^{-\\dfrac{x}{2}}\\), donc :</p>
-<p>\\(4a = 1 \\Rightarrow a = \\dfrac{1}{4}\\) &nbsp ; et &nbsp ; \\(2b = 2 \\Rightarrow b = 1\\)</p>
+<p>\\(4a = 1 \\Rightarrow a = \\dfrac{1}{4}\\) &nbsp; et &nbsp; \\(2b = 2 \\Rightarrow b = 1\\)</p>
 <p>\\[\\boxed{f(x) = \\left(\\dfrac{x^2}{4}+x\\right)e^{-\\dfrac{x}{2}}}\\]</p>
 
 <p><strong>3) Équivalence</strong></p>
@@ -4949,7 +4949,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>a)</strong> Calculer S en fonction de n.</p>
 <p><strong>b)</strong> Prouver que \\(S' = \\left(\\dfrac{3}{2}\\right)^{n+1} e^S\\) puis exprimer S' en fonction de n.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Suites non linéaires &amp ; passage au logarithme</span>
+  <span class="label">Rappels de cours — Suites non linéaires &amp; passage au logarithme</span>
   <ul>
     <li><strong>Suite $u_{n+1} = a (uₙ)^2$ :</strong> En multipliant par $a$, on a $a u_{n+1} = (a u_n)^2$. En posant $vₙ = \\ln(a u_n)$, on obtient $v_{n+1} = \\ln((a u_n)^2) = 2\\ln(a u_n) = 2 v_n$ : la suite $(v_n)$ est géométrique de raison $q = 2$.</li>
     <li><strong>Expression de $vₙ$ et retour à $uₙ$ :</strong> $vₙ = v_0 \\cdot 2^n \\implies \\ln(a u_n) = v_0 \\cdot 2^n \\implies uₙ = \\dfrac{1}{a} e^{v_0 \\cdot 2^n}$.</li>
@@ -5014,7 +5014,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>Partie C</strong></p>
 <p>Soit D la partie du plan limitée par l'axe des ordonnées, la droite \\((\\Delta)\\), la courbe (C) et la droite d'équation \\(x = 2\\). À l'aide d'une intégration par parties, calculer l'aire de D en cm². <em>On donne : \\(e \\approx 2{,}72\\) ; \\(\\ln(2) \\approx 0{,}69\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions avec exponentielle, asymptote oblique &amp ; position relative</span>
+  <span class="label">Rappels de cours — Fonctions avec exponentielle, asymptote oblique &amp; position relative</span>
   <ul>
     <li><strong>Asymptote oblique en $+\\infty$ :</strong> $\\lim_{x\\to+\\infty} [f(x)-(x-1)] = \\lim_{x\\to+\\infty} (2x+3)e^{-x} = 0$ (croissances comparées) $\\implies y = x-1$ est asymptote oblique à $(C)$.</li>
     <li><strong>Position relative :</strong> Le signe de $f(x)-(x-1) = (2x+3)e^{-x}$ est exactement le signe de $2x+3$ (car $e^{-x}>0$). $(C)$ est au-dessus de $(\\Delta)$ pour $x > -3/2$, et en-dessous pour $x < -3/2$.</li>
@@ -5074,7 +5074,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p>f croissante sur \\(]-\\infty;0]\\), décroissante sur \\([0;\\alpha]\\), croissante sur \\([\\alpha;+\\infty[\\).</p>
 
 <p><strong>4) Tableau de variation</strong></p>
-<p>\\(f(0) = 3+0-1 = 2\\) &nbsp ; \\(f(\\alpha) = (2\\alpha+3)e^{-\\alpha}+\\alpha-1\\) (minimum local)</p>
+<p>\\(f(0) = 3+0-1 = 2\\) &nbsp; \\(f(\\alpha) = (2\\alpha+3)e^{-\\alpha}+\\alpha-1\\) (minimum local)</p>
 
 
 
@@ -5207,7 +5207,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p>• l'ensemble \\((T_2)\\) tel que \\(z' \\in i\\mathbb{R}^*\\)</p>
 <p>• l'ensemble \\((T_3)\\) tel que \\(|z'| = 1\\)</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Simplification de fractions complexes &amp ; module/argument</span>
+  <span class="label">Rappels de cours — Simplification de fractions complexes &amp; module/argument</span>
   <ul>
     <li><strong>Simplification de quotients complexes :</strong> Multipliez numérateur et dénominateur par le conjugué du dénominateur : $\\dfrac{a+ib}{c+id} = \\dfrac{(a+ib)(c-id)}{c^2+d^2}$. Pour diviser par $i$, multipliez par $-i$ : $\\dfrac{z}{i} = -iz$.</li>
     <li><strong>Forme exponentielle :</strong> Pour $u = 1-i$, $|u| = \\sqrt{1^2+(-1)^2} = \\sqrt{2}$, $\\arg(u) = -\\dfrac{\\pi}{4} \\implies u = \\sqrt{2}e^{-i\\dfrac{\\pi}{4}}$.</li>
@@ -5270,7 +5270,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>b)</strong> Déterminer la loi de probabilité de X.</p>
 <p><strong>c)</strong> Calculer l'espérance mathématique E(X) de X.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Loi hypergéométrique, tirages simultanés &amp ; probabilités</span>
+  <span class="label">Rappels de cours — Loi hypergéométrique, tirages simultanés &amp; probabilités</span>
   <ul>
     <li><strong>Tirage simultané sans remise :</strong> L'univers comporte $\\text{Card}(\\Omega) = \\binom{N}{n}$ issues équiprobables.</li>
     <li><strong>Loi du nombre de billets gagnants $X$ :</strong> Parmi $N=10$ billets dont $K=3$ gagnants et $7$ perdants, si on tire $n=5$ billets, $P(X=k) = \\dfrac{\\binom{3}{k}\\binom{7}{5-k}}{\\binom{10}{5}}$ pour $k \\in \\{0, 1, 2, 3\\}$.</li>
@@ -5359,7 +5359,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>2)</strong> Soit \\(\\alpha\\) un réel strictement positif. Calculer en cm², l'aire \\(A(\\alpha)\\) de la partie du plan limitée par la courbe (C), l'axe des abscisses et les droites d'équations \\(x=0\\) et \\(x=\\alpha\\).</p>
 <p><strong>3)</strong> Calculer \\(\\displaystyle\\lim_{\\alpha \\to +\\infty} A(\\alpha)\\). <em>On donne : \\(\\sqrt{5} \\approx 2{,}2\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Position relative courbe/tangente &amp ; fonction auxiliaire</span>
+  <span class="label">Rappels de cours — Position relative courbe/tangente &amp; fonction auxiliaire</span>
   <ul>
     <li><strong>Tangente en 0 :</strong> $(T) : y = f'(0)(x-0)+f(0)$.</li>
     <li><strong>Position relative $(C)$ et $(T)$ :</strong> Étudiez le signe de $d(x) = f(x)-y_T = 3xe^{-x}h(x)$. Comme $h(x) \\le 0$ pour tout $x$ (avec $h(0)=0$) et $e^{-x}>0$, le signe de $d(x)$ est exactement le signe opposé de $x$.</li>
@@ -5539,7 +5539,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>b)</strong> Donner une interprétation géométrique d'un argument de Z. En déduire l'ensemble (E) des points M d'affixes z tel que Z soit un nombre réel non nul.</p>
 <p><strong>c)</strong> Soit D l'image de C par la translation de vecteur \\(\\vec{u}\\) d'affixe \\(z_{\\vec{u}} = -5 + i\\). Déterminer l'affixe d du point D puis calculer \\(\\dfrac{b-a}{d-a}\\). En déduire que D est un point de (E).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Polynômes complexes, racine évidente &amp ; géométrie</span>
+  <span class="label">Rappels de cours — Polynômes complexes, racine évidente &amp; géométrie</span>
   <ul>
     <li><strong>Racine évidente :</strong> Si $P(1)=0$, alors $P(z) = (z-1)(z^2+az+b)$. Identifiez les coefficients pour trouver le trinôme du second degré.</li>
     <li><strong>Résolution de $z^2+az+b=0$ :</strong> Calculez $\\Delta = a^2-4b < 0 \\implies z_{1,2} = \\dfrac{-a \\pm i\\sqrt{|\\Delta|}}{2}$.</li>
@@ -5594,7 +5594,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>c)</strong> Dresser le tableau de variation conjoint de x et de y sur \\([0;\\pi]\\).</p>
 <p><strong>3)</strong> Tracer (C) après avoir placé les points remarquables avec les tangentes associées. (On admettra qu'au point de paramètre 0, la demi-tangente à (C) est verticale.) <em>On donne : \\(\\sqrt{3} \\approx 1{,}7\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Courbes paramétriques avec sin(2t) et cos(2t) &amp ; tangentes</span>
+  <span class="label">Rappels de cours — Courbes paramétriques avec sin(2t) et cos(2t) &amp; tangentes</span>
   <ul>
     <li><strong>Dérivées trigonométriques :</strong> $(\\sin 2t)' = 2\\cos 2t$ et $(\\cos 2t)' = -2\\sin 2t$. D'où $x'(t) = 2\\cos t - 2\\cos 2t$ et $y'(t) = -2\\sin t + 2\\sin 2t$.</li>
     <li><strong>Factorisation trigonométrique :</strong> Utilisez $\\cos p - \\cos q = -2\\sin\\dfrac{p+q}{2}\\sin\\dfrac{p-q}{2}$ et $\\sin 2t - \\sin t = 2\\sin\\dfrac{t}{2}\\cos\\dfrac{3t}{2}$ pour déterminer facilement les zéros et les signes de $x'(t)$ et $y'(t)$.</li>
@@ -5663,7 +5663,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>a)</strong> Calculer en intégrant par parties \\(I = \\displaystyle\\int_0^1 (x-1)e^{-x}\\,dx\\).</p>
 <p><strong>b)</strong> Calculer le volume V en cm³. <em>On donne : \\(e \\approx 2{,}7\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions définies par morceaux, bijection réciproque &amp ; volumes de révolution</span>
+  <span class="label">Rappels de cours — Fonctions définies par morceaux, bijection réciproque &amp; volumes de révolution</span>
   <ul>
     <li><strong>Continuité et dérivabilité en 0 :</strong> Vérifiez $\\lim_{x\\to 0^-} f(x) = \\lim_{x\\to 0^+} f(x) = f(0)$. Calculez les taux d'accroissement à gauche et à droite pour déterminer les demi-tangentes.</li>
     <li><strong>Bijection réciproque $h^{-1}$ :</strong> Si $h$ est la restriction continue et strictement croissante de $f$ sur $]-1;0[$, elle est bijective de $]-1;0[$ sur $]-\\infty;0[$. La courbe $(\\Gamma)$ de $h^{-1}$ est le symétrique de $(C)$ par rapport à la première bissectrice $(y=x)$.</li>
@@ -5945,7 +5945,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>2)</strong> Calculer en cm² l'aire du triangle ABC.</p>
 <p><strong>3)</strong> Calculer en cm³ le volume du tétraèdre ABCD.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Géométrie vectorielle dans l'espace, produit mixte &amp ; tétraèdre</span>
+  <span class="label">Rappels de cours — Géométrie vectorielle dans l'espace, produit mixte &amp; tétraèdre</span>
   <ul>
     <li><strong>Produit vectoriel $\\vec{u}\\wedge\\vec{v}$ :</strong> Déterminant formel $\\begin{vmatrix}\ \\vec{i} & \\vec{j} & \\vec{k} \\\\ x_1&y_1&z_1 \\\\ x_2&y_2&z_2\\end{vmatrix}$. Si $\\overrightarrow{AB}\\wedge\\overrightarrow{AC} \\neq \\vec{0}$, les points $A,B,C$ définissent un plan unique.</li>
     <li><strong>Coplanarité et produit mixte :</strong> $A, B, C, D$ sont coplanaires $\\iff (\\overrightarrow{AB}\\wedge\\overrightarrow{AC})\\cdot\\overrightarrow{AD} = 0$.</li>
@@ -5994,7 +5994,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>b)</strong> Calculer l'espérance mathématique de X.</p>
 <p><strong>c)</strong> Déterminer la fonction de répartition de X.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Probabilités tricolores, variable aléatoire &amp ; fonction de répartition</span>
+  <span class="label">Rappels de cours — Probabilités tricolores, variable aléatoire &amp; fonction de répartition</span>
   <ul>
     <li><strong>Dénombrement par couleurs :</strong> Pour $N = N_1+N_2+N_3$, le nombre de tirages de $p$ boules est $\\binom{N}{p}$. Décomposez les événements « au moins un » ou « un seul de couleur C » par réunion d'événements disjoints.</li>
     <li><strong>Probabilité conditionnelle :</strong> $P(F|E) = \\dfrac{P(F\\cap E)}{P(E)}$.</li>
@@ -6080,7 +6080,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p><strong>b)</strong> Comparer h et f sur \\(]-\\infty;0]\\).</p>
 <p><strong>c)</strong> Sans étudier les variations de h, déduire la construction de la courbe (C') de h. Justifier. <em>On donne \\(e^3 \\approx 20{,}08\\) ; \\(e \\approx 2{,}72\\) ; \\(e^2 \\approx 7{,}4\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions avec exponentielle, primitives, parité &amp ; volume de révolution</span>
+  <span class="label">Rappels de cours — Fonctions avec exponentielle, primitives, parité &amp; volume de révolution</span>
   <ul>
     <li><strong>Factorisation pour lever une indétermination en $+\\infty$ :</strong> Mettez $x^2$ en facteur pour faire apparaître les croissances comparées $\\dfrac{e^x}{x} \\to +\\infty$.</li>
     <li><strong>Primitive de $(1-x)e¹⁺ˣ$ :</strong> Vérifiez par dérivation que $G(x) = (-x+2)e^{1+x}$ a pour dérivée $G'(x) = (-1)e^{1+x} + (-x+2)e^{1+x} = (1-x)e^{1+x}$.</li>

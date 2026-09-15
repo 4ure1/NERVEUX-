@@ -35,7 +35,7 @@ const BAC_EXAMS_2000_2013 = [
 <p><strong>b)</strong> À partir de quelle année y aura-t-il deux fois moins de naissances qu'en 1988 ?</p>
 <p><strong>3)</strong> Déterminer A et B.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Statistiques &amp ; Droite d'ajustement</span>
+  <span class="label">Rappels de cours — Statistiques &amp; Droite d'ajustement</span>
   <ul>
     <li><strong>Droite de Mayer :</strong> On divise la série en deux sous-groupes de mêmes effectifs. On calcule les points moyens $G_1(\\bar{x}_1 ; \\bar{y}_1)$ et $G_2(\\bar{x}_2 ; \\bar{y}_2)$, puis la droite passe par ces deux points.</li>
     <li><strong>Équation de la droite :</strong> $y = ax + b$ où $a = \\dfrac{\\bar{y}_2 - \\bar{y}_1}{\\bar{x}_2 - \\bar{x}_1}$ et $b = \\bar{y}_1 - a\\bar{x}_1$.</li>
@@ -75,7 +75,7 @@ const BAC_EXAMS_2000_2013 = [
 <p><strong>4) a)</strong> Déterminer l'affixe du point D image de A dans la rotation de centre O et d'angle \\(\\alpha = 2(\\overrightarrow{OA};\\overrightarrow{OB})\\).</p>
 <p><strong>b)</strong> Quelle est la nature du quadrilatère OABD ? Justifier. (On prendra \\(\\sqrt{3} \\approx 1{,}7\\).)</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Nombres complexes &amp ; argument</span>
+  <span class="label">Rappels de cours — Nombres complexes &amp; argument</span>
   <ul>
     <li><strong>Module :</strong> $|z| = |x + iy| = \\sqrt{x^2 + y^2}$. Distance à l'origine dans le plan complexe.</li>
     <li><strong>Argument :</strong> $\\arg(z) = \\theta$ tel que $z = r e^{i\\theta}$ (forme exponentielle), avec $r = |z|$.</li>
@@ -150,7 +150,7 @@ const BAC_EXAMS_2000_2013 = [
 <p><strong>b)</strong> Exprimer A en fonction de K, puis en déduire un encadrement de A.</p>
 <p><em>On donne : \\(\\ln 2 = 0{,}69\\), \\(\\ln 3 = 1{,}09\\), \\(\\alpha = 2{,}85\\) et \\(f(\\alpha) = 0{,}25\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions logarithme &amp ; tableau de variations</span>
+  <span class="label">Rappels de cours — Fonctions logarithme &amp; tableau de variations</span>
   <ul>
     <li><strong>Dérivée :</strong> $(\\ln u)' = \\dfrac{u'}{u}$. En particulier $\\left(\\ln(x-a)\\right)' = \\dfrac{1}{x-a}$.</li>
     <li><strong>Limites classiques :</strong> $\\lim_{x \\to +\\infty} \\ln x = +\\infty$, $\\lim_{x \\to 0^+} \\ln x = -\\infty$, $\\lim_{x \\to +\\infty} \\dfrac{\\ln x}{x} = 0$.</li>
@@ -350,7 +350,7 @@ const BAC_EXAMS_2000_2013 = [
   <ul>
     <li><strong>Équation du type $y'' + \\omega^2 y = 0$ :</strong> Solution générale $y = A\\cos(\\omega t) + B\\sin(\\omega t)$.</li>
     <li><strong>Conditions initiales :</strong> On injecte $y(t_0)$ et $y'(t_0)$ pour déterminer $A$ et $B$.</li>
-    <li><strong>Amplitude &amp ; phase :</strong> On peut écrire $y = C\\cos(\\omega t + \\varphi)$ où $C = \\sqrt{A^2+B^2}$.</li>
+    <li><strong>Amplitude &amp; phase :</strong> On peut écrire $y = C\\cos(\\omega t + \\varphi)$ où $C = \\sqrt{A^2+B^2}$.</li>
     <li><strong>Tangente à l'origine :</strong> La pente de la tangente en $t_0$ vaut $y'(t_0)$.</li>
   </ul>
 </div>`,
@@ -399,7 +399,7 @@ const BAC_EXAMS_2000_2013 = [
   </li>
 </ol>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Probabilités &amp ; loi d'une variable aléatoire</span>
+  <span class="label">Rappels de cours — Probabilités &amp; loi d'une variable aléatoire</span>
   <ul>
     <li><strong>Loi de X :</strong> Tableau donnant $P(X = k)$ pour chaque valeur $k$ de X. La somme vaut 1.</li>
     <li><strong>Espérance :</strong> $E(X) = \\sum_k k \\cdot P(X=k)$ — valeur moyenne de X.</li>
@@ -490,7 +490,7 @@ const BAC_EXAMS_2000_2013 = [
   <li>Calculer en cm² l'aire de la partie du plan délimitée par \\((C_f)\\), la droite d'équation \\(x = \\dfrac{3}{2}\\) et les axes du repère.</li>
 </ol>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Étude de fonction, bijection &amp ; intégrale</span>
+  <span class="label">Rappels de cours — Étude de fonction, bijection &amp; intégrale</span>
   <ul>
     <li><strong>Bijection :</strong> $f$ est bijective de $I$ vers $J$ si elle est continue et strictement monotone sur $I$, et $f(I) = J$.</li>
     <li><strong>Fonction réciproque :</strong> $(f^{-1})'(y) = \\dfrac{1}{f'(f^{-1}(y))}$ — la courbe de $f^{-1}$ est le symétrique de $(C_f)$ par rapport à $y=x$.</li>
@@ -789,7 +789,7 @@ Sur \\(]0 ; 1]\\) : \\(x^3 > 0\\) donc \\((C_f)\\) est <strong>au-dessus</strong
   </li>
 </ol>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Application complexe &amp ; transformation du plan</span>
+  <span class="label">Rappels de cours — Application complexe &amp; transformation du plan</span>
   <ul>
     <li><strong>Application affine :</strong> $f(z) = az + b$ est une similitude directe si $a \\neq 0$, de rapport $|a|$ et d'angle $\\arg(a)$.</li>
     <li><strong>Point fixe :</strong> $f(z_0) = z_0 \\iff az_0 + b = z_0 \\iff z_0 = \\dfrac{b}{1-a}$ (si $a \\neq 1$).</li>
@@ -836,7 +836,7 @@ Sur \\(]0 ; 1]\\) : \\(x^3 > 0\\) donc \\((C_f)\\) est <strong>au-dessus</strong
   </li>
 </ol>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Probabilités conditionnelles &amp ; loi de X</span>
+  <span class="label">Rappels de cours — Probabilités conditionnelles &amp; loi de X</span>
   <ul>
     <li><strong>Probabilité conditionnelle :</strong> $P(A|B) = \\dfrac{P(A \\cap B)}{P(B)}$ si $P(B) > 0$.</li>
     <li><strong>Tirages sans remise :</strong> Les probabilités changent après chaque tirage — l'effectif total diminue.</li>
@@ -900,7 +900,7 @@ Sur \\(]0 ; 1]\\) : \\(x^3 > 0\\) donc \\((C_f)\\) est <strong>au-dessus</strong
 </ol>
 <p><em>On donne : \\(e \\approx 2{,}72\\) ; \\(e^2 \\approx 7{,}39\\) ; \\(\\lim_{x\\to 0}x\\ln x = 0\\) ; \\(\\lim_{x\\to 0}\\dfrac{e^x-1}{x}=1\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions par morceaux, suites &amp ; intégrales</span>
+  <span class="label">Rappels de cours — Fonctions par morceaux, suites &amp; intégrales</span>
   <ul>
     <li><strong>Continuité en $a$ :</strong> $f$ continue en $a \\iff \\lim_{x\\to a^-} f(x) = \\lim_{x\\to a^+} f(x) = f(a)$.</li>
     <li><strong>Dérivabilité en $a$ :</strong> Vérifier que les dérivées à gauche et à droite sont égales en $a$.</li>
@@ -1099,7 +1099,7 @@ b) Calculer l'espérance mathématique, la variance et l'écart type de \\(X\\).
 <p><em>On donne :</em> \\(\\dfrac{\\ln(0{,}03)}{\\ln(0{,}8)} \\approx 15{,}95\\)</p>`,
 
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Dénombrement &amp ; probabilités</span>
+  <span class="label">Rappels de cours — Dénombrement &amp; probabilités</span>
   <ul>
     <li><strong>Arrangement :</strong> $A_n^k = \\dfrac{n!}{(n-k)!}$ — tirages ordonnés sans remise.</li>
     <li><strong>Combinaison :</strong> $\\binom{n}{k} = \\dfrac{n!}{k!(n-k)!}$ — tirages non ordonnés sans remise.</li>
@@ -1251,7 +1251,7 @@ b) Calculer en cm³ le volume \\(V(\\lambda)\\) du solide engendré par la rotat
 <p><em>On donne :</em> \\(e \\approx 2{,}7\\) ; \\(e^{-1} \\approx 0{,}4\\) ; \\(e^{-2} \\approx 0{,}13\\) ; \\(e^2 \\approx 7{,}3\\)</p>`,
 
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions exponentielles, primitives &amp ; volumes</span>
+  <span class="label">Rappels de cours — Fonctions exponentielles, primitives &amp; volumes</span>
   <ul>
     <li><strong>Dérivée :</strong> $(e^{ax+b})' = a\\,e^{ax+b}$, $(xe^x)' = (1+x)e^x$.</li>
     <li><strong>Primitive :</strong> $\\int e^{ax}\\,dx = \\dfrac{1}{a}e^{ax} + C$, $\\int xe^x\\,dx = (x-1)e^x + C$ (par IPP).</li>
@@ -1672,7 +1672,7 @@ d) En déduire que \\((U_n)\\) est convergente et préciser sa limite.</p>
 <p><em>On donne :</em> \\(e \\approx 2{,}72\\) ; \\(e^{-1} \\approx 0{,}37\\) ; \\(e^{-0{,}5} \\approx 0{,}61\\) ; \\(e^{0{,}5} \\approx 1{,}65\\)</p>`,
 
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonction logistique, bijection &amp ; suite</span>
+  <span class="label">Rappels de cours — Fonction logistique, bijection &amp; suite</span>
   <ul>
     <li><strong>Fonction logistique :</strong> $f(x) = \\dfrac{1}{1+e^{-x}}$, à valeurs dans $]0;1[$, strictement croissante sur $\\mathbb{R}$.</li>
     <li><strong>Bijection réciproque (logit) :</strong> $f^{-1}(y) = \\ln\\!\\left(\\dfrac{y}{1-y}\\right)$ — définie sur $]0;1[$.</li>
@@ -1854,7 +1854,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>b)</strong> Le point D est l'image de B par la translation de vecteur \\(\\vec{u}\\) d'affixe \\(2+4i\\). Calculer l'affixe \\(z_D\\).</p>
 <p><strong>c)</strong> Déterminer la nature du quadrilatère ABDC.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Complexes &amp ; quadrilatères</span>
+  <span class="label">Rappels de cours — Complexes &amp; quadrilatères</span>
   <ul>
     <li><strong>Milieu :</strong> Le milieu $I$ de $[AB]$ a pour affixe $z_I = \\dfrac{z_A + z_B}{2}$.</li>
     <li><strong>Quadrilatère :</strong> ABCD est un carré $\\iff$ les diagonales sont de même milieu, de même longueur et perpendiculaires.</li>
@@ -2075,7 +2075,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>b)</strong> Montrer que \\(A = (\\alpha-1)\\left(\\alpha-\\dfrac{1}{\\alpha}\\right)\\).</p>
 <p><em>On donne : \\(e\\approx2{,}72\\) ; \\(\\ln\\dfrac{5}{2}\\approx0{,}92\\) ; \\(\\ln\\dfrac{48}{19}\\approx0{,}93\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions exp, suites &amp ; intégrales</span>
+  <span class="label">Rappels de cours — Fonctions exp, suites &amp; intégrales</span>
   <ul>
     <li><strong>Dérivée :</strong> $(xe^x)' = (1+x)e^x$, $(xe^{x-1})' = e^{x-1}(1+x)$.</li>
     <li><strong>Croissances comparées :</strong> $\\lim_{x\\to+\\infty} x e^{-x} = 0$, $\\lim_{x\\to-\\infty} x e^x = 0$.</li>
@@ -2292,7 +2292,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>b)</strong> Calculer le module et l'argument de \\(\\dfrac{Z_A}{Z_B}\\).</p>
 <p><strong>c)</strong> En déduire la nature du quadrilatère ABDC.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Complexes, systèmes &amp ; géométrie</span>
+  <span class="label">Rappels de cours — Complexes, systèmes &amp; géométrie</span>
   <ul>
     <li><strong>Résolution d'un système complexe :</strong> On peut identifier parties réelles et imaginaires pour obtenir un système 2×2 réel.</li>
     <li><strong>Vecteurs dans $\\mathbb{C}$ :</strong> $\\overrightarrow{AB} \\parallel \\overrightarrow{CD} \\iff \\dfrac{z_D - z_C}{z_B - z_A} \\in \\mathbb{R}$.</li>
@@ -2364,7 +2364,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>a)</strong> La quantité disponible pour un prix de vente de 150 FCFA.</p>
 <p><strong>b)</strong> Le prix de vente si la quantité disponible est de 20 000 unités.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Ajustement affine &amp ; statistiques</span>
+  <span class="label">Rappels de cours — Ajustement affine &amp; statistiques</span>
   <ul>
     <li><strong>Moyenne :</strong> $\\bar{x} = \\dfrac{1}{n}\\sum x_i$, $\\bar{y} = \\dfrac{1}{n}\\sum y_i$.</li>
     <li><strong>Droite de régression :</strong> $y = ax + b$ avec $a = \\dfrac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}$ et $b = \\bar{y} - a\\bar{x}$.</li>
@@ -2421,7 +2421,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>b)</strong> En déduire que \\(|U_n|\\leq\\dfrac{2n}{1+n^2}\\).</p>
 <p><strong>2°)</strong> Calculer \\(\\displaystyle\\lim_{n\\to+\\infty}U_n\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — $e^{-x}\\sin x$, IPP, aire &amp ; suite</span>
+  <span class="label">Rappels de cours — $e^{-x}\\sin x$, IPP, aire &amp; suite</span>
   <ul>
     <li><strong>Primitive de $e^{ax}\\sin(bx)$ :</strong> Utiliser deux IPP successives pour obtenir $\\int e^{ax}\\sin(bx)\\,dx = \\dfrac{e^{ax}(a\\sin bx - b\\cos bx)}{a^2+b^2} + C$.</li>
     <li><strong>Signe de $f$ :</strong> $e^{-x} > 0$ toujours, donc le signe de $f(x) = e^{-x}\\sin x$ est celui de $\\sin x$.</li>
@@ -2626,7 +2626,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>b)</strong> Calculer l'affixe de D = t(C).</p>
 <p><strong>c)</strong> Donner la nature exacte du quadrilatère ABDC. Justifier.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Polynômes complexes &amp ; racines</span>
+  <span class="label">Rappels de cours — Polynômes complexes &amp; racines</span>
   <ul>
     <li><strong>Racine évidente :</strong> Si $P(z_0) = 0$, alors $(z - z_0)$ divise $P(z)$. On effectue la division euclidienne.</li>
     <li><strong>Racines conjuguées :</strong> Si $P$ est à coefficients réels, les racines complexes vont par paires conjuguées $z_0$ et $\\bar{z}_0$.</li>
@@ -2678,7 +2678,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>b)</strong> Exprimer \\(U_n\\) puis \\(V_n\\) en fonction de n.</p>
 <p><strong>c)</strong> Calculer \\(\\displaystyle\\lim_{n\\to+\\infty}U_n\\) et \\(\\displaystyle\\lim_{n\\to+\\infty}V_n\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Suites géométriques &amp ; arithmétiques</span>
+  <span class="label">Rappels de cours — Suites géométriques &amp; arithmétiques</span>
   <ul>
     <li><strong>Suite géométrique :</strong> $V_{n+1} = r \\cdot V_n \\Rightarrow V_n = V_0 \\cdot r^n$. Converge vers 0 si $|r| < 1$.</li>
     <li><strong>Changement de variable :</strong> Poser $V_n = U_n - \\ell$ (où $\\ell$ est le point fixe) ramène à une suite géométrique.</li>
@@ -2741,7 +2741,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>1°)</strong> Montrer que (Γ) est une partie de (C).</p>
 <p><strong>2°)</strong> Tracer (Γ) en pointillés sur le même graphique.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions $\\ln$, bijection &amp ; courbe paramétrique</span>
+  <span class="label">Rappels de cours — Fonctions $\\ln$, bijection &amp; courbe paramétrique</span>
   <ul>
     <li><strong>Dérivées utiles :</strong> $(\\ln x)' = \\dfrac{1}{x}$, $\\left(\\dfrac{\\ln x}{x}\\right)' = \\dfrac{1 - \\ln x}{x^2}$.</li>
     <li><strong>Bijection :</strong> $f$ est bijective sur $I$ si elle est continue et strictement monotone sur $I$.</li>
@@ -2979,7 +2979,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>d)</strong> Calculer l'espérance mathématique E(X).</p>
 <p><strong>3)</strong> Les tee-shirts sont répartis équitablement aux 3 membres. Quelle est la probabilité que chaque membre reparte avec au moins 2 tee-shirts ?</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Probabilités &amp ; événements</span>
+  <span class="label">Rappels de cours — Probabilités &amp; événements</span>
   <ul>
     <li><strong>Probabilité totale :</strong> $P(A) = P(A|B)P(B) + P(A|\\bar{B})P(\\bar{B})$ (partition de l'univers).</li>
     <li><strong>Indépendance :</strong> $A$ et $B$ indépendants $\\iff P(A \\cap B) = P(A) \\cdot P(B)$.</li>
@@ -3223,7 +3223,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>4)</strong> Tracer la courbe (Γ).</p>
 <p><em>On donne : \\(e\\approx2{,}72\\) ; \\(e^{-1}\\approx0{,}37\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Courbes paramétriques &amp ; tangentes</span>
+  <span class="label">Rappels de cours — Courbes paramétriques &amp; tangentes</span>
   <ul>
     <li><strong>Dérivées :</strong> $x'(t) = \\cos(t)\\,e^{\\sin t}$, $y'(t) = -\\sin t$.</li>
     <li><strong>Tangente en $M(t_0)$ :</strong> Vecteur directeur $(x'(t_0), y'(t_0))$. Horizontale si $y'=0$, verticale si $x'=0$.</li>
@@ -3433,7 +3433,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>Partie C</strong></p>
 <p>Soit (Γ) de représentation paramétrique \\(x(t) = t+3\\), \\(y(t) = \\sqrt{t^2-3t+2}\\), \\(t>-1\\). Montrer que (Γ) est une partie de (C).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions par morceaux &amp ; asymptotes obliques</span>
+  <span class="label">Rappels de cours — Fonctions par morceaux &amp; asymptotes obliques</span>
   <ul>
     <li><strong>Asymptote oblique $y = ax+b$ :</strong> $a = \\lim_{x\\to\\pm\\infty} \\dfrac{f(x)}{x}$, $b = \\lim_{x\\to\\pm\\infty} (f(x) - ax)$.</li>
     <li><strong>Asymptote verticale en $x_0$ :</strong> $\\lim_{x\\to x_0} f(x) = \\pm\\infty$.</li>
@@ -3668,7 +3668,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>b)</strong> Déterminer le temps T à partir duquel la température dépasse 500°C.</p>
 <p><em>On donne : \\(\\left(\\dfrac{7}{8}\\right)^3\\approx0{,}7\\) ; \\(\\ln\\dfrac{7}{8}\\approx-0{,}13\\) ; \\(\\ln\\dfrac{25}{48}\\approx-0{,}65\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Équation différentielle &amp ; modélisation</span>
+  <span class="label">Rappels de cours — Équation différentielle &amp; modélisation</span>
   <ul>
     <li><strong>Loi de Newton (refroidissement) :</strong> $\\dfrac{d\\theta}{dt} = -k(\\theta - \\theta_{ext})$ — température $\\theta$ d'un corps en contact avec un milieu à $\\theta_{ext}$.</li>
     <li><strong>Solution :</strong> $\\theta(t) = \\theta_{ext} + (\\theta_0 - \\theta_{ext})e^{-kt}$, où $\\theta_0 = \\theta(0)$.</li>
@@ -3724,7 +3724,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>1)</strong> Montrer que (Γ) est une partie de (C).</p>
 <p><strong>2)</strong> Déterminer les coordonnées du vecteur vitesse à \\(t=\\dfrac{\\pi}{4}\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions $e^x$, $\\ln x$, bijection &amp ; paramétrique</span>
+  <span class="label">Rappels de cours — Fonctions $e^x$, $\\ln x$, bijection &amp; paramétrique</span>
   <ul>
     <li><strong>$e^{2x} - 1)/e^x = e^x - e^{-x}$ :</strong> Simplifier en multipliant/divisant par $e^x$.</li>
     <li><strong>Dérivée de $x\\ln x$ :</strong> $(x\\ln x)' = \\ln x + 1$. Primitive : $\\int \\ln x\\,dx = x\\ln x - x + C$.</li>
@@ -3858,7 +3858,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>d)</strong> E est l'image de D par la rotation de centre O et d'angle \\(\\dfrac{\\pi}{2}\\). Calculer l'affixe de E.</p>
 <p><strong>e)</strong> Pour quelles valeurs de n, \\(c^n\\) est-il réel ?</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Polynômes complexes, translations &amp ; rotations</span>
+  <span class="label">Rappels de cours — Polynômes complexes, translations &amp; rotations</span>
   <ul>
     <li><strong>Racine évidente :</strong> Essayer $z_0 \\in \\{0, 1, -1, i, -i, 1+i, 1-i, \\ldots\\}$ dans $P(z)$.</li>
     <li><strong>Translation :</strong> $t_b : z \\mapsto z + b$ — déplace chaque point de l'affixe $b$.</li>
@@ -3905,7 +3905,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>a)</strong> Pour \\(n=5\\), calculer la probabilité d'obtenir exactement 2 fois un tirage de 3 boules rouges.</p>
 <p><strong>b)</strong> Pour \\(n=2\\), noter S : « le nombre total de boules rouges obtenues après les deux tirages est 3 ». Calculer P(S).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Tirages avec/sans remise &amp ; probabilités</span>
+  <span class="label">Rappels de cours — Tirages avec/sans remise &amp; probabilités</span>
   <ul>
     <li><strong>Tirage sans remise :</strong> La composition de l'urne change après chaque tirage.</li>
     <li><strong>Tirage avec remise :</strong> On remet la boule avant le prochain tirage — loi binomiale applicable.</li>
@@ -3963,7 +3963,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>a)</strong> Montrer que \\(U_n = -n+2\\ln(n+1)\\).</p>
 <p><strong>b)</strong> Démontrer que \\(S_n = 2\\ln[(n+1)!]-\\dfrac{n(n+1)}{2}\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions $e^{-x}$, intégrales &amp ; suites</span>
+  <span class="label">Rappels de cours — Fonctions $e^{-x}$, intégrales &amp; suites</span>
   <ul>
     <li><strong>Dérivée :</strong> $((x+1)^2 e^{-x})' = (x+1)(1-x)e^{-x}$ (règle du produit avec $u=(x+1)^2$, $v=e^{-x}$).</li>
     <li><strong>IPP :</strong> $\\int (x+1)^2 e^{-x}\\,dx$ — deux IPP successives. Primitives : $-(x^2+4x+5)e^{-x}+C$.</li>
@@ -4148,7 +4148,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>b)</strong> (F) : image par f est un imaginaire pur non nul.</p>
 <p><strong>c)</strong> (D) : image par f a pour module 1.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Nombres complexes &amp ; transformations</span>
+  <span class="label">Rappels de cours — Nombres complexes &amp; transformations</span>
   <ul>
     <li><strong>Conjugué :</strong> $\\overline{z} = x - iy$, $z \\cdot \\overline{z} = |z|^2$.</li>
     <li><strong>Partie réelle / imaginaire :</strong> $\\text{Re}(z) = \\dfrac{z + \\overline{z}}{2}$, $\\text{Im}(z) = \\dfrac{z - \\overline{z}}{2i}$.</li>
@@ -4198,7 +4198,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>3) a)</strong> Production en décembre 2008 (rang 12). <strong>b)</strong> Lecture graphique.</p>
 <p><strong>4)</strong> L'atelier a-t-il fermé en décembre 2008 ? (seuil : 350 pulls).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Régression &amp ; droite de Mayer</span>
+  <span class="label">Rappels de cours — Régression &amp; droite de Mayer</span>
   <ul>
     <li><strong>Droite de Mayer :</strong> Diviser en deux demi-séries, calculer $G_1$ et $G_2$, tracer la droite $G_1G_2$.</li>
     <li><strong>Équation de la droite :</strong> $y - \\bar{y}_1 = \\dfrac{\\bar{y}_2 - \\bar{y}_1}{\\bar{x}_2 - \\bar{x}_1}(x - \\bar{x}_1)$.</li>
@@ -4255,7 +4255,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>Soit (Γ) : \\(x(t)=-e^{-t}\\), \\(y(t)=4te^t\\), \\(t<0\\).</p>
 <p><strong>1)</strong> Montrer que (Γ) est l'image d'une partie de (C) par la symétrie orthogonale d'axe \\((O;\\vec{i})\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions par morceaux, asymptotes &amp ; intégrales</span>
+  <span class="label">Rappels de cours — Fonctions par morceaux, asymptotes &amp; intégrales</span>
   <ul>
     <li><strong>$\\lim_{x\\to -\\infty} \\ln(-x)/x$ :</strong> Croissances comparées — $\\ln |x|$ croît moins vite que $x$, donc $\\to 0$.</li>
     <li><strong>Asymptote oblique :</strong> $y = ax + b$ si $\\lim_{x\\to\\pm\\infty}(f(x)-ax-b) = 0$.</li>
@@ -4445,7 +4445,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>a)</strong> Le nombre d'acheteurs pour un prix de 650 F.</p>
 <p><strong>b)</strong> Le prix pour 150 acheteurs.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Statistiques bidimensionnelles &amp ; ajustement</span>
+  <span class="label">Rappels de cours — Statistiques bidimensionnelles &amp; ajustement</span>
   <ul>
     <li><strong>Nuage de points :</strong> $(x_i, y_i)$ représentés dans un repère — on cherche la droite qui les ajuste au mieux.</li>
     <li><strong>Droite de Mayer :</strong> Passe par $G_1(\\bar{x}_1, \\bar{y}_1)$ et $G_2(\\bar{x}_2, \\bar{y}_2)$ (moyennes des deux demi-séries).</li>
@@ -4537,7 +4537,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>1)</strong> Équation cartésienne de (Γ).</p>
 <p><strong>2)</strong> Comment obtenir (Γ) à partir de (C) ? Construire (Γ) en pointillés.</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Sigmoïde, symétrie centrale &amp ; intégrales</span>
+  <span class="label">Rappels de cours — Sigmoïde, symétrie centrale &amp; intégrales</span>
   <ul>
     <li><strong>Sigmoïde :</strong> $f(x) = \\dfrac{e^x}{1+e^x} = \\dfrac{1}{1+e^{-x}}$ — valeurs dans $]0;1[$, $f'(x) = f(x)(1-f(x))$.</li>
     <li><strong>Centre de symétrie en $I(a;b)$ :</strong> $f(a+t) + f(a-t) = 2b$ pour tout $t$.</li>
@@ -4782,7 +4782,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>c)</strong> Expression de F(x).</p>
 <p><strong>3)</strong> Calculer en cm² l'aire A entre (C), (C') et \\(x=1\\), \\(x=e\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions $\\ln$, primitives &amp ; calcul d'aire</span>
+  <span class="label">Rappels de cours — Fonctions $\\ln$, primitives &amp; calcul d'aire</span>
   <ul>
     <li><strong>Dérivée :</strong> $\\left(\\dfrac{-2}{x}\\right)' = \\dfrac{2}{x^2}$, $(\\ln x)' = \\dfrac{1}{x}$, $(x\\ln x)' = \\ln x + 1$.</li>
     <li><strong>Primitive de $\\ln x$ :</strong> $\\int \\ln x\\,dx = x\\ln x - x + C$.</li>
@@ -5143,7 +5143,7 @@ correction: `<h4> Proposition de Corrigé</h4>
 <p><strong>c.</strong> Plus petit entier n tel que \\(S_n\\geq0{,}999\\).</p>
 <p><em>On donne : \\((0{,}6)^{10}\\approx0{,}00604\\) ; \\(\\ln(0{,}001)\\approx-6{,}90\\) ; \\(\\ln(0{,}6)\\approx-0{,}51\\).</em></p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Loi binomiale &amp ; suites</span>
+  <span class="label">Rappels de cours — Loi binomiale &amp; suites</span>
   <ul>
     <li><strong>Dé équilibré :</strong> Chaque face a la même probabilité $\\dfrac{1}{n}$ d'apparaître.</li>
     <li><strong>Loi $B(n,p)$ :</strong> $P(X=k) = \\binom{n}{k}p^k(1-p)^{n-k}$, $E(X)=np$, $V(X)=np(1-p)$.</li>
@@ -5193,7 +5193,7 @@ correction: `<h4> Proposition de Corrigé</h4>
 <p><strong>b.</strong> Sens de variation de \\((u_n)\\).</p>
 <p><strong>3.</strong> Convergence de \\((u_n)\\).</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions $\\ln|\\cdot|$, symétrie &amp ; suites récurrentes</span>
+  <span class="label">Rappels de cours — Fonctions $\\ln|\\cdot|$, symétrie &amp; suites récurrentes</span>
   <ul>
     <li><strong>$\\ln|1-x|$ :</strong> Défini pour $x \\neq 1$. Dérivée : $\\dfrac{-1}{1-x} = \\dfrac{1}{x-1}$.</li>
     <li><strong>Centre de symétrie $I(a,b)$ :</strong> $f(a+t) + f(a-t) = 2b$ pour tout $t$ dans le domaine.</li>
@@ -5367,7 +5367,7 @@ correction: `<h4> Proposition de Corrigé</h4>
 <p><strong>4. a.</strong> Affixe de H (4e sommet du parallélogramme COFH) et montrer que COFH est un carré.</p>
 <p><strong>b.</strong> Nature du triangle AGH. (\\(\\sqrt{3}\\approx1{,}7\\))</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Polynômes &amp ; figures géométriques complexes</span>
+  <span class="label">Rappels de cours — Polynômes &amp; figures géométriques complexes</span>
   <ul>
     <li><strong>Factorisation :</strong> Si $z_0$ est racine de $P$, alors $P(Z) = (Z - z_0)Q(Z)$. Faire la division euclidienne.</li>
     <li><strong>Racines d'un trinôme :</strong> $aZ^2 + bZ + c = 0 \\Rightarrow \\Delta = b^2 - 4ac$, $Z = \\dfrac{-b \\pm \\sqrt{\\Delta}}{2a}$.</li>
@@ -5466,7 +5466,7 @@ correction: `<h4> Proposition de Corrigé</h4>
 <p><strong>2.</strong> Suite \\(u_n = \\displaystyle\\int_1^n f(x)dx\\) pour \\(n>0\\).</p>
 <p><strong>a.</strong> Calculer \\(u_n\\). <strong>b.</strong> Convergence ?</p>`,
             rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions rationnelles-ln, asymptotes &amp ; symétrie</span>
+  <span class="label">Rappels de cours — Fonctions rationnelles-ln, asymptotes &amp; symétrie</span>
   <ul>
     <li><strong>Asymptote oblique $y = x-2$ :</strong> $f(x) - (x-2) = -\\dfrac{\\ln|x|}{x} \\to 0$ quand $x \\to \\pm\\infty$ (croissances comparées).</li>
     <li><strong>Dérivée :</strong> $\\left(\\dfrac{-\\ln|x|}{x}\\right)' = \\dfrac{\\ln|x| - 1}{x^2}$.</li>
