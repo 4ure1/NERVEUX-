@@ -39,6 +39,24 @@ setTimeout(revealPage, 6000);
 </script>
 
 <style>
+
+/* ── INVISIBLE SCROLLBARS (Touch scrolling remains active without green dashes) ── */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+*::-webkit-scrollbar,
+mjx-container::-webkit-scrollbar,
+mjx-container *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+mjx-container:not([display="true"]) {
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+
   /* ── VARIABLES NERVEUX ── */
   :root{
     --navy:     #222d46;
@@ -62,15 +80,15 @@ setTimeout(revealPage, 6000);
     margin: 0;
     padding: 0;
   }
-  /* Subtle scrollbar for scrollable containers */
+  /* Invisible scrollbars everywhere (touch scroll remains fully active without green dashes) */
   mjx-container,
   .corr-body p,
   .step p,
   #bac-content p,
   table.vtab,
   table.data {
-    scrollbar-width: thin !important;
-    scrollbar-color: rgba(26,122,94,0.4) transparent !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
   }
   mjx-container::-webkit-scrollbar,
   .corr-body p::-webkit-scrollbar,
@@ -78,16 +96,16 @@ setTimeout(revealPage, 6000);
   #bac-content p::-webkit-scrollbar,
   table.vtab::-webkit-scrollbar,
   table.data::-webkit-scrollbar {
-    display: block !important;
-    height: 4px !important;
-    width: 4px !important;
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
   }
   mjx-container::-webkit-scrollbar-thumb,
   .corr-body p::-webkit-scrollbar-thumb,
   .step p::-webkit-scrollbar-thumb,
   #bac-content p::-webkit-scrollbar-thumb {
-    background: rgba(26,122,94,0.4) !important;
-    border-radius: 4px !important;
+    display: none !important;
+    background: transparent !important;
   }
   html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
@@ -633,9 +651,8 @@ mjx-container {
 mjx-container:not([display="true"]) {
   display: inline-block !important;
   max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  -webkit-overflow-scrolling: touch !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
   vertical-align: middle !important;
 }
 mjx-container[display="true"] {
@@ -644,6 +661,12 @@ mjx-container[display="true"] {
   overflow-x: auto !important;
   overflow-y: hidden !important;
   -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+}
+mjx-container[display="true"]::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 .problem-box p,
 .solution-box p,
@@ -673,17 +696,34 @@ mjx-container[display="true"] {
 
   /* ── Topbar ── */
   .topbar {
-    padding: 0 10px !important;
-    height: 52px !important;
+    padding: 0 14px !important;
+    height: 56px !important;
     gap: 8px !important;
   }
-  .topbar-brand { font-size: 13px !important; }
-  .topbar-logo { height: 28px !important; }
+  .topbar-brand { font-size: 14px !important; }
+  .topbar-logo { height: 30px !important; }
   .return-link {
-    padding: 4px 9px !important;
-    font-size: 11px !important;
-    white-space: nowrap !important;
-    gap: 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.14) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+    text-decoration: none !important;
+  }
+  .return-link .arrow {
+    font-size: 22px !important;
+    line-height: 1 !important;
+    color: #ffffff !important;
+    display: block !important;
   }
   .return-link span:not(.arrow) {
     display: none !important;
@@ -717,6 +757,20 @@ mjx-container[display="true"] {
     flex-direction: column !important;
     gap: 6px !important;
     text-align: center !important;
+  }
+
+  
+  /* ── Signature et fin de sujet compacte sur mobile ── */
+  .signature {
+    text-align: center !important;
+    font-size: 0.72em !important;
+    margin: 32px auto 12px !important;
+    opacity: 0.65 !important;
+    padding: 0 12px !important;
+    line-height: 1.4 !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    display: block !important;
   }
 
   /* ── Headings ── */
@@ -826,10 +880,10 @@ mjx-container[display="true"] {
 </footer>
 
 <!-- Fichiers de contenu BAC unique -->
-<script src="JS/bac_exams_2000_2004.js?v=20260915_v25"></script>
-<script src="JS/bac_exams_2014_2022.js?v=20260915_v25"></script>
-<script src="JS/bac_exams_2023_2025.js?v=20260915_v25"></script>
-<script src="JS/bac_content_2023_2025.js?v=20260915_v25"></script>
+<script src="JS/bac_exams_2000_2004.js?v=20260915_v26"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260915_v26"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260915_v26"></script>
+<script src="JS/bac_content_2023_2025.js?v=20260915_v26"></script>
 <script src="JS/curve_hover.js"></script>
 <script src="JS/desmos_init.js"></script>
 

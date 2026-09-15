@@ -2192,18 +2192,13 @@ const BAC_EXAMS_2014_2022 = [
 <p><strong>1) Récurrence : \\(0 < U_n < 1\\)</strong></p>
 <p><em>Initialisation :</em> \\(U_0 = \\dfrac{1}{2}\\), et \\(0 < \\dfrac{1}{2} < 1\\).</p>
 <p><em>Hérédité :</em> Supposons \\(0 < U_n < 1\\). Alors \\(1 + 2U_n > 1 > 0\\) et \\(3U_n > 0\\), donc \\(U_{n+1} = \\dfrac{3U_n}{1+2U_n} > 0\\).</p>
-\\[\\begin{aligned}
-U_{n+1} - 1 &= \\dfrac{3U_n}{1+2U_n} - 1 \\\\\\\\
-&= \\dfrac{3U_n - (1+2U_n)}{1+2U_n} = \\dfrac{U_n - 1}{1+2U_n} < 0 \\quad (\\text{car } U_n < 1)
-\\end{aligned}\\]
+<p>\\[ U_{n+1} - 1 = \\dfrac{3U_n}{1+2U_n} - 1 = \\dfrac{3U_n - (1+2U_n)}{1+2U_n} \\]</p>
+<p>\\[ = \\dfrac{U_n - 1}{1+2U_n} < 0 \\quad (\\text{car } U_n < 1) \\]</p>
 <p>Par récurrence, \\(0 < U_n < 1\\) pour tout \\(n \\in \\mathbb{N}\\).</p>
 
 <p><strong>2) Monotonie de \\((U_n)\\)</strong></p>
-\\[\\begin{aligned}
-U_{n+1} - U_n &= \\dfrac{3U_n}{1+2U_n} - U_n \\\\\\\\
-&= \\dfrac{3U_n - U_n(1+2U_n)}{1+2U_n} \\\\\\\\
-&= \\dfrac{2U_n(1-U_n)}{1+2U_n}
-\\end{aligned}\\]
+<p>\\[ U_{n+1} - U_n = \\dfrac{3U_n}{1+2U_n} - U_n \\]</p>
+<p>\\[ = \\dfrac{3U_n - U_n(1+2U_n)}{1+2U_n} = \\dfrac{2U_n(1-U_n)}{1+2U_n} \\]</p>
 <p>Comme \\(0 < U_n < 1\\) : \\(U_n > 0\\), \\(1 - U_n > 0\\), \\(1+2U_n > 0\\), donc \\(U_{n+1} - U_n > 0\\).</p>
 <p>\\((U_n)\\) est <strong>strictement croissante</strong>.</p>
 
@@ -2212,10 +2207,8 @@ U_{n+1} - U_n &= \\dfrac{3U_n}{1+2U_n} - U_n \\\\\\\\
 
 <p><strong>4) \\((V_n)\\) est géométrique</strong></p>
 <p>\\(V_0 = \\dfrac{U_0}{1-U_0} = \\dfrac{1/2}{1 - 1/2} = 1\\).</p>
-\\[\\begin{aligned}
-V_{n+1} &= \\dfrac{U_{n+1}}{1-U_{n+1}} = \\dfrac{\\dfrac{3U_n}{1+2U_n}}{1 - \\dfrac{3U_n}{1+2U_n}} \\\\\\\\
-&= \\dfrac{\\dfrac{3U_n}{1+2U_n}}{\\dfrac{1-U_n}{1+2U_n}} = \\dfrac{3U_n}{1-U_n} = 3V_n
-\\end{aligned}\\]
+<p>\\[ V_{n+1} = \\dfrac{U_{n+1}}{1-U_{n+1}} = \\dfrac{\\dfrac{3U_n}{1+2U_n}}{1 - \\dfrac{3U_n}{1+2U_n}} \\]</p>
+<p>\\[ = \\dfrac{\\dfrac{3U_n}{1+2U_n}}{\\dfrac{1-U_n}{1+2U_n}} = \\dfrac{3U_n}{1-U_n} = 3V_n \\]</p>
 <p>\\((V_n)\\) est <strong>géométrique de raison 3 et de premier terme \\(V_0 = 1\\)</strong>.</p>
 
 <p><strong>5) Expression de \\(Vₙ\\), \\(Uₙ\\) et limite</strong></p>

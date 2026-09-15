@@ -16,9 +16,9 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script src="JS/exercises.js"></script>
 <script src="JS/new_exercises_terminale_d.js"></script>
-<script src="JS/bac_exams_2000_2004.js?v=20260915_v25"></script>
-<script src="JS/bac_exams_2014_2022.js?v=20260915_v25"></script>
-<script src="JS/bac_exams_2023_2025.js?v=20260915_v25"></script>
+<script src="JS/bac_exams_2000_2004.js?v=20260915_v26"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260915_v26"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260915_v26"></script>
 <script src="JS/curve_hover.js"></script>
 <script src="JS/desmos_init.js"></script>
 <script>
@@ -35,6 +35,24 @@
 </script>
 
 <style>
+
+/* ── INVISIBLE SCROLLBARS (Touch scrolling remains active without green dashes) ── */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+*::-webkit-scrollbar,
+mjx-container::-webkit-scrollbar,
+mjx-container *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+mjx-container:not([display="true"]) {
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+
 :root {
   --navy: #222d46;
   --blue: #0b2c5f;
@@ -624,9 +642,8 @@ mjx-container {
 mjx-container:not([display="true"]) {
   display: inline-block !important;
   max-width: 100% !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  -webkit-overflow-scrolling: touch !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
   vertical-align: middle !important;
 }
 mjx-container[display="true"] {
@@ -635,6 +652,12 @@ mjx-container[display="true"] {
   overflow-x: auto !important;
   overflow-y: hidden !important;
   -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+}
+mjx-container[display="true"]::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 .problem-box p,
 .solution-box p,
@@ -672,15 +695,33 @@ mjx-container[display="true"] {
 
   /* ── Topbar ── */
   .topbar {
-    padding: 0 12px !important;
-    height: 54px !important;
+    padding: 0 14px !important;
+    height: 56px !important;
   }
-  .topbar-brand { font-size: 13px !important; }
-  .topbar-logo { height: 28px !important; }
+  .topbar-brand { font-size: 14px !important; }
+  .topbar-logo { height: 30px !important; }
   .return-link {
-    padding: 5px 10px !important;
-    font-size: 11px !important;
-    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.14) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+    text-decoration: none !important;
+  }
+  .return-link .arrow {
+    font-size: 22px !important;
+    line-height: 1 !important;
+    color: #ffffff !important;
+    display: block !important;
   }
   .return-link span:not(.arrow) { display: none !important; }
 
@@ -1168,7 +1209,7 @@ function buildExCard(ex) {
   card.dataset.diff   = ex.diff;
   card.dataset.type   = ex.type;
   card.dataset.kind   = 'exercise';
-  card.dataset.search = (ex.title+' '+ex.desc+' '+ex.module).toLowerCase();
+  card.dataset.search = (ex.title+' '+(ex.desc||'')+' '+ex.module).toLowerCase();
   const typePill = ex.type==='qcm'
     ? '<span class="type-pill">QCM</span>'
     : '<span class="type-pill">Rédigé</span>';
@@ -1178,9 +1219,9 @@ function buildExCard(ex) {
       <div class="ex-card-title">${ex.title}</div>
       ${BADGE[ex.diff]||''}
     </div>
-    <div class="ex-card-desc">${ex.desc}</div>
+    ${ex.desc ? `<div class="ex-card-desc">${ex.desc}</div>` : ''}
     <div class="ex-card-footer">
-      <span class="lesson-tag">${ex.lesson} ${typePill}</span>
+      <span class="lesson-tag">${ex.lesson ? ex.lesson + ' ' : ''}${typePill}</span>
       <button class="solve-btn" onclick="openModal('${ex.id}')">Résoudre →</button>
     </div>`;
   return card;
