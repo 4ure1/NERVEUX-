@@ -61,13 +61,33 @@ setTimeout(revealPage, 6000);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important;
   }
-  *::-webkit-scrollbar {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
+  /* Subtle scrollbar for scrollable containers */
+  mjx-container,
+  .corr-body p,
+  .step p,
+  #bac-content p,
+  table.vtab,
+  table.data {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(26,122,94,0.4) transparent !important;
+  }
+  mjx-container::-webkit-scrollbar,
+  .corr-body p::-webkit-scrollbar,
+  .step p::-webkit-scrollbar,
+  #bac-content p::-webkit-scrollbar,
+  table.vtab::-webkit-scrollbar,
+  table.data::-webkit-scrollbar {
+    display: block !important;
+    height: 4px !important;
+    width: 4px !important;
+  }
+  mjx-container::-webkit-scrollbar-thumb,
+  .corr-body p::-webkit-scrollbar-thumb,
+  .step p::-webkit-scrollbar-thumb,
+  #bac-content p::-webkit-scrollbar-thumb {
+    background: rgba(26,122,94,0.4) !important;
+    border-radius: 4px !important;
   }
   html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
@@ -601,6 +621,44 @@ table.data th svg {
   background: #f1f5f9;
 }
 
+
+/* ── MATHJAX & LONG CALCULATION RESPONSIVE RULES ── */
+mjx-container {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  vertical-align: middle !important;
+}
+mjx-container:not([display="true"]) {
+  display: inline-block !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  vertical-align: middle !important;
+}
+mjx-container[display="true"] {
+  display: block !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+.problem-box p,
+.solution-box p,
+.bac-problem-box p,
+.bac-correction-box p,
+.corr-body p,
+.step p,
+#bac-content p,
+.step,
+.result {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ════════════════════════════════════════════════════════════════
    BAC VIEWER RESPONSIVE MOBILE STYLES
    ════════════════════════════════════════════════════════════════ */
@@ -768,10 +826,10 @@ table.data th svg {
 </footer>
 
 <!-- Fichiers de contenu BAC unique -->
-<script src="JS/bac_exams_2000_2004.js?v=20260915_v24"></script>
-<script src="JS/bac_exams_2014_2022.js?v=20260915_v24"></script>
-<script src="JS/bac_exams_2023_2025.js?v=20260915_v24"></script>
-<script src="JS/bac_content_2023_2025.js?v=20260915_v24"></script>
+<script src="JS/bac_exams_2000_2004.js?v=20260915_v25"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260915_v25"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260915_v25"></script>
+<script src="JS/bac_content_2023_2025.js?v=20260915_v25"></script>
 <script src="JS/curve_hover.js"></script>
 <script src="JS/desmos_init.js"></script>
 

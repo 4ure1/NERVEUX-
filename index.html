@@ -16,9 +16,9 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script src="JS/exercises.js"></script>
 <script src="JS/new_exercises_terminale_d.js"></script>
-<script src="JS/bac_exams_2000_2004.js?v=20260915_v24"></script>
-<script src="JS/bac_exams_2014_2022.js?v=20260915_v24"></script>
-<script src="JS/bac_exams_2023_2025.js?v=20260915_v24"></script>
+<script src="JS/bac_exams_2000_2004.js?v=20260915_v25"></script>
+<script src="JS/bac_exams_2014_2022.js?v=20260915_v25"></script>
+<script src="JS/bac_exams_2023_2025.js?v=20260915_v25"></script>
 <script src="JS/curve_hover.js"></script>
 <script src="JS/desmos_init.js"></script>
 <script>
@@ -52,13 +52,37 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
 }
-*::-webkit-scrollbar {
+/* Clean touch scrolling on long equations without showing scrollbars on inline math */
+.problem-box p, .solution-box p, .bac-problem-box p, .bac-correction-box p,
+.corr-body p, .step p, #bac-content p, .step, .result, .problem-box, .solution-box {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+mjx-container[display="true"] {
+  display: block !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: 4px 0 !important;
+}
+mjx-container:not([display="true"]) {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  vertical-align: middle !important;
+  scrollbar-width: none !important;
+}
+mjx-container:not([display="true"])::-webkit-scrollbar {
   display: none !important;
   width: 0 !important;
   height: 0 !important;
+}
+table.vtab, table.data {
+  scrollbar-width: thin;
 }
 html { scroll-behavior: smooth; }
 body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
@@ -588,6 +612,44 @@ table.vtab tr:hover td, table.data tr:hover td, .problem-box tr:hover td, .solut
 }
 .feedback-success .fs-icon { font-size: 40px; display: block; margin-bottom: 10px; }
 
+
+/* ── MATHJAX & LONG CALCULATION RESPONSIVE RULES ── */
+mjx-container {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  vertical-align: middle !important;
+}
+mjx-container:not([display="true"]) {
+  display: inline-block !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  vertical-align: middle !important;
+}
+mjx-container[display="true"] {
+  display: block !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+.problem-box p,
+.solution-box p,
+.bac-problem-box p,
+.bac-correction-box p,
+.corr-body p,
+.step p,
+#bac-content p,
+.step,
+.result {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ════════════════════════════════════════════════════════════════
    NERVEUX RESPONSIVE MOBILE STYLES (Consolidated & Cascading)
    ════════════════════════════════════════════════════════════════ */
@@ -771,16 +833,70 @@ table.vtab tr:hover td, table.data tr:hover td, .problem-box tr:hover td, .solut
     font-size: 13px !important;
   }
 
-  /* ── MathJax ── */
-  mjx-container[display="true"] {
-    font-size: 84% !important;
-    overflow-x: auto !important;
-    display: block !important;
+
+  /* ── Modals Responsive (Full Width on Mobile) ── */
+  .modal-overlay,
+  .bac-modal-overlay {
+    padding: 6px !important;
+    align-items: center !important;
   }
-  mjx-container {
+  .modal,
+  .bac-modal {
     max-width: 100% !important;
-    overflow-x: auto !important;
+    width: 100% !important;
+    max-height: 94vh !important;
+    border-radius: 12px !important;
+    margin: 0 !important;
   }
+  .modal {
+    padding: 20px 14px !important;
+  }
+  .bac-modal-head {
+    padding: 14px 12px 0 !important;
+  }
+  .bac-modal-title {
+    font-size: 14px !important;
+    padding-right: 28px !important;
+  }
+  .bac-modal-close {
+    top: 10px !important;
+    right: 12px !important;
+    font-size: 24px !important;
+  }
+  .bac-parts-nav {
+    gap: 4px !important;
+    padding-bottom: 10px !important;
+  }
+  .bac-part-tab {
+    padding: 5px 11px !important;
+    font-size: 11px !important;
+  }
+  .bac-part-content {
+    padding: 12px 10px 20px !important;
+  }
+  .bac-problem-box,
+  .bac-correction-box,
+  .problem-box,
+  .solution-box {
+    padding: 12px 10px !important;
+    font-size: 13px !important;
+    border-radius: 8px !important;
+    line-height: 1.7 !important;
+  }
+  .bac-correction-btn,
+  .solution-toggle {
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+  }
+
+  /* ── MathJax Sizing on Mobile ── */
+  mjx-container {
+    font-size: 88% !important;
+  }
+  mjx-container[display="true"] {
+    font-size: 82% !important;
+  }
+
 }
 
 </style>
