@@ -324,7 +324,9 @@ mjx-menclose, mjx-fbox, [data-mml-node="menclose"] {
   }
   .rappel-wrap.open .rappel-toggle{ background:rgba(212,160,23,.14); }
   .rappel-toggle:hover{ background:rgba(212,160,23,.18); }
-  .rappel-toggle-left{ display:flex; align-items:center; gap:10px; }
+  .rappel-toggle-left{ display:flex; align-items:center; gap:12px; flex:1; min-width:0; text-align:left; }
+  .rappel-title{ flex:1; min-width:0; text-align:left; line-height:1.35; word-break:break-word; }
+  .rappel-title mjx-container{ font-size:1.15em !important; margin:0 3px !important; vertical-align:middle; text-transform:none !important; }
 
   /* ── Logo Cerveau NERVEUX (rappel toggle icon) ── */
   .brain-icon{
@@ -1384,7 +1386,7 @@ function transformAllVTabs(root) {
 
     wrap.querySelectorAll('.rappel').forEach(function(rappel) {
       var labelEl = rappel.querySelector('.label');
-      var labelText = labelEl ? labelEl.textContent.trim() : 'Rappel de cours';
+      var labelHTML = labelEl ? labelEl.innerHTML.trim() : 'Rappel de cours';
 
       var bodyContent = document.createElement('div');
       Array.from(rappel.childNodes).forEach(function(node) {
@@ -1400,7 +1402,7 @@ function transformAllVTabs(root) {
       btn.innerHTML =
         '<span class="rappel-toggle-left">'
         + SVG_BRAIN
-        + labelText
+        + '<span class="rappel-title">' + labelHTML + '</span>'
         + '</span>'
         + '<span class="rappel-arrow">' + SVG_CHEVRON_RIGHT + '</span>';
 
