@@ -2316,8 +2316,9 @@ const BAC_EXAMS_2014_2022 = [
     <text x="425" y="26" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">3</text>
     <text x="705" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">+∞</text>
     <!-- Trait de séparation complet (saut / discontinuité) qui descend jusqu'en bas -->
-    <line x1="422" y1="50" x2="422" y2="100" stroke="#b83232" stroke-width="2"/>
-    <line x1="428" y1="50" x2="428" y2="100" stroke="#b83232" stroke-width="2"/>
+    <rect x="419" y="50" width="12" height="209" fill="url(#forbid-grad-17-1-f)"/>
+    <line x1="422" y1="50" x2="422" y2="259" stroke="#b83232" stroke-width="2"/>
+    <line x1="428" y1="50" x2="428" y2="259" stroke="#b83232" stroke-width="2"/>
     <text x="285" y="75" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">−</text>
     <text x="565" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="900">+</text>
     <text x="145" y="125" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="16" font-weight="900">+∞</text>
