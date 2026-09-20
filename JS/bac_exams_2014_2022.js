@@ -266,7 +266,7 @@ const BAC_EXAMS_2014_2022 = [
 <p>\\[\\boxed{F(x) = \\left(\\dfrac{x^2}{2}-\\dfrac{3x}{2}+\\dfrac{5}{4}\\right)e^{2x}}\\]</p>
 
 <p><strong>3) Volume 𝒱(α)</strong></p>
-<p>\\[\\mathcal{V}(\\alpha) = \\pi\\int_\\alpha^0[f(x)]^2\\,dx\\times8\\text{ cm}^3 = 8\\pi\\int_\\alpha^0(1-x)^2e^{2x}\\,dx = 8\\pi[F(x)]_\\alpha^0\\]</p>
+<p>\\[\\mathcal{V}(\\alpha) = \\pi \\int_\\alpha^0[f(x)]^2\\,dx\\times8\\text{ cm}^3 = 8\\pi \\int_\\alpha^0(1-x)^2e^{2x}\\,dx = 8\\pi[F(x)]_\\alpha^0\\]</p>
 <p>\\(F(0) = \\dfrac{5}{4}\\) et \\(F(\\alpha) = \\left(\\dfrac{\\alpha^2}{2}-\\dfrac{3\\alpha}{2}+\\dfrac{5}{4}\\right)e^{2\\alpha}\\).</p>
 <p>\\[\\mathcal{V}(\\alpha) = 8\\pi\\left[\\dfrac{5}{4}-\\left(\\dfrac{\\alpha^2}{2}-\\dfrac{3\\alpha}{2}+\\dfrac{5}{4}\\right)e^{2\\alpha}\\right] = 2\\pi\\left[5-(2\\alpha^2-6\\alpha+5)e^{2\\alpha}\\right]\\text{ cm}^3\\]</p>
 
@@ -680,7 +680,7 @@ const BAC_EXAMS_2014_2022 = [
 <p>\\(H'(x) = [f(x)]^2\\)</p>
 
 <p><strong>2c) Volume V</strong></p>
-<p>\\[V = \\pi\\int_{-1}^0[f(x)]^2\\,dx\\times8 = 8\\pi[H(x)]_{-1}^0\\text{ cm}^3\\]</p>
+<p>\\[V = \\pi \\int_{-1}^0[f(x)]^2\\,dx\\times8 = 8\\pi[H(x)]_{-1}^0\\text{ cm}^3\\]</p>
 <p>\\(H(0) = 0-\\left(0+0+\\dfrac{5}{2}\\right)e^0-\\dfrac{1}{32}(0+0+13)e^0 = -\\dfrac{5}{2}-\\dfrac{13}{32} = -\\dfrac{80+13}{32} = -\\dfrac{93}{32}\\)</p>
 <p>\\(H(-1) = -\\dfrac{1}{3}+1-1-\\left(1-3+\\dfrac{5}{2}\\right)e^2-\\dfrac{1}{32}(8-20+13)e^4 = -\\dfrac{1}{3}-\\dfrac{1}{2}e^2-\\dfrac{1}{32}e^4\\)</p>
 <p>\\([H(x)]_{-1}^0 = H(0)-H(-1) = -\\dfrac{93}{32}+\\dfrac{1}{3}+\\dfrac{e^2}{2}+\\dfrac{e^4}{32} = \\dfrac{e^4+16e^2-248}{96}+\\dfrac{e^4}{32}\\)... </p>
@@ -767,7 +767,7 @@ const BAC_EXAMS_2014_2022 = [
   <ul>
     <li><strong>Racine réelle d'un polynôme complexe :</strong> Posez $z_0 = x_0 \\in \\mathbb{R}$ dans $P(z_0)=0$, séparez partie réelle et partie imaginaire : $\\text{Re}(P(x_0)) = 0$ et $\\text{Im}(P(x_0)) = 0$. Le système donne la valeur unique de $x_0$.</li>
     <li><strong>Factorisation :</strong> Si $z_0$ est racine, $P(z) = (z-z_0)(z^2+az+b)$. Développez et identifiez les coefficients.</li>
-    <li><strong>Discriminant complexe $\\Delta$ :</strong> Pour $Az^2+Bz+C=0$, si $\\Delta \\in \\mathbb{C}$, cherchez $\\delta = x+iy$ tel que $\\delta^2 = \\Delta \\iff \\begin{cases}x^2-y^2 = \\text{Re}(\Delta) \\\\ 2xy = \\text{Im}(\Delta) \\\\ x^2+y^2 = |\Delta|\\end{cases}$. Les solutions sont $z = \\dfrac{-B \\pm \\delta}{2A}$.</li>
+    <li><strong>Discriminant complexe $\\Delta$ :</strong> Pour $Az^2+Bz+C=0$, si $\\Delta \\in \\mathbb{C}$, cherchez $\\delta = x+iy$ tel que $\\delta^2 = \\Delta \\iff \\begin{cases}x^2-y^2 = \\text{Re}(\\Delta) \\\\ 2xy = \\text{Im}(\\Delta) \\\\ x^2+y^2 = |\\Delta|\\end{cases}$. Les solutions sont $z = \\dfrac{-B \\pm \\delta}{2A}$.</li>
     <li><strong>Nature d'un triangle par affixes :</strong> Calculez le rapport $\\dfrac{z_C-z_A}{z_B-z_A} = r e^{i\\theta}$. Si $r=1$ et $\\theta = \\pm\\dfrac{\\pi}{2}$ ($= \\pm i$), le triangle est rectangle isocèle en $A$.</li>
   </ul>
 </div>`,
@@ -1763,7 +1763,7 @@ const BAC_EXAMS_2014_2022 = [
     {
       label: 'Exercice 2 — Courbe paramétrique (4 pts)',
       problem: `<p>Le plan est rapporté à un repère orthonormal direct \\((O;\\vec{i};\\vec{j})\\). On considère la courbe paramétrée (Γ) définie par :</p>
-<p>\\[\\begin{cases} x(t) = t + \ln(1-t) \\ y(t) = te^t \\end{cases}, \\quad t \\in ]-\\infty;0]\\]</p>
+<p>\\[\\begin{cases} x(t) = t + \\ln(1-t) \\ y(t) = te^t \\end{cases}, \\quad t \\in ]-\\infty;0]\\]</p>
 <p><strong>1) a)</strong> Étudier le sens de variation des fonctions coordonnées x et y sur \\(]-\\infty;0]\\).</p>
 <p><strong>b)</strong> Dresser un tableau de variation conjoint de x et y.</p>
 <p><strong>2) a)</strong> Déterminer les équations des tangentes à (Γ) aux points M(0) et M(−1) (M(t) étant le point de coordonnées \\((x(t);y(t))\\)).</p>
@@ -2533,7 +2533,7 @@ const BAC_EXAMS_2014_2022 = [
 
 <p>Pour y'(t) : \\(y(t) = \\dfrac{\\sin^2 t}{2+\\sin t}\\).</p>
 <p>\\(y'(t) = \\dfrac{2\\sin t\\cos t(2+\\sin t) - \\sin^2 t \\cos t}{(2+\\sin t)^2} = \\dfrac{\\cos t\\sin t(2(2+\\sin t)-\\sin t)}{(2+\\sin t)^2} = \\dfrac{\\cos t\\sin t(4+\\sin t)}{(2+\\sin t)^2}\\)</p>
-<p><p>\\[\\boxed{y'(t) = \\dfrac{\sin t\cos t(4+\sin t)}{(2+\sin t)^2}}\\]</p>
+<p><p>\\[\\boxed{y'(t) = \\dfrac{\\sin t\\cos t(4+\\sin t)}{(2+\\sin t)^2}}\\]</p>
 
 <p><strong>2b) Sens de variation sur \\(\\left[-\\dfrac{\\pi}{2};\\dfrac{\\pi}{2}\\right]\\)</strong></p>
 <p><em>Signe de x'(t) = −sin t :</em></p>
@@ -3239,7 +3239,7 @@ const BAC_EXAMS_2014_2022 = [
 <p>Donc \\(\\dfrac{2\\lambda}{3} = 2 \\Rightarrow \\lambda = 3\\).</p>
 <p>Une solution particulière de (2) est \\(f(t) = 3e^{t/3}\\), car \\(f'(t) + \\dfrac{1}{3}f(t) = e^{t/3} + e^{t/3} = 2e^{t/3}\\).</p>
 <p>Donc la solution générale de (2) est la somme de la solution générale de l'équation homogène (1) et de la solution particulière \\(f(t)\\) :</p>
-<p>\\[\\boxed{y(t) = 3e^{\\frac{t}{3}} + ae^{-\\frac{t}{3}}, \\quad a \in \\mathbb{R}}\\]</p>
+<p>\\[\\boxed{y(t) = 3e^{\\frac{t}{3}} + ae^{-\\frac{t}{3}}, \\quad a \\in \\mathbb{R}}\\]</p>
 <p>\\[\\boxed{y(t) = 3e^{\\dfrac{t}{3}} + ae^{-\\dfrac{t}{3}}, \\quad a \\in \\mathbb{R}}\\]</p>
  
 <p><strong>2b) Équivalence</strong></p>
@@ -3697,7 +3697,7 @@ b) On répète trois fois l'expérience de manière indépendante. Calculer la p
     {
       label: 'Problème — Fonction par morceaux, ln, suite (Uₙ) (12 pts)',
       problem: `<p>On considère la fonction \\(f\\) définie sur \\(\\mathbb{R}\\) par :
-\\[f(x) = \\begin{cases} 2 - x + \ln(2x-3) & \\text{si } x \\geq 2 \\\\ -x + 1 + e^{x-2} & \\text{si } x < 2 \\end{cases}\\]
+\\[f(x) = \\begin{cases} 2 - x + \\ln(2x-3) & \\text{si } x \\geq 2 \\\\ -x + 1 + e^{x-2} & \\text{si } x < 2 \\end{cases}\\]
 On note \\((C)\\) la courbe représentative de \\(f\\) dans un repère orthonormal \\((O;\\vec{i};\\vec{j})\\) d'unité graphique 4 cm. On notera \\(f'\\) la dérivée de \\(f\\).</p>
 
 <p><strong>Partie A</strong></p>
@@ -3765,8 +3765,8 @@ donc \\(\\dfrac{f(x)}{x-2} = \\dfrac{2-x+\\ln(2x-3)}{x-2} \\approx \\dfrac{-(x-2
 <p><strong>3a)</strong> \\(\\lim_{x\\to-\\infty}(-x+1+e^{x-2}) = +\\infty\\) (car \\(-x\\to+\\infty\\) et \\(e^{x-2}\\to0\\)).</p>
 
 <p><strong>3c) Limite de [f(x)+x] en +∞ et interprétation géométrique</strong></p>
-<p>\\[\lim_{x\\to+\\infty}[f(x)+x] = \lim_{x\\to+\\infty}[2+\ln(2x-3)] = +\\infty\\]</p>
-<p>Comme \\(\lim_{x\\to+\\infty}\\dfrac{f(x)}{x} = -1\\) et \\(\lim_{x\\to+\\infty}[f(x)-(-1)x] = +\\infty\\), la courbe \\((C)\\) admet une <strong>branche parabolique de direction la droite d'équation \\(y = -x\\)</strong> au voisinage de \\(+\\infty\\).</p>
+<p>\\[\\lim_{x\\to+\\infty}[f(x)+x] = \\lim_{x\\to+\\infty}[2+\\ln(2x-3)] = +\\infty\\]</p>
+<p>Comme \\(\\lim_{x\\to+\\infty}\\dfrac{f(x)}{x} = -1\\) et \\(\\lim_{x\\to+\\infty}[f(x)-(-1)x] = +\\infty\\), la courbe \\((C)\\) admet une <strong>branche parabolique de direction la droite d'équation \\(y = -x\\)</strong> au voisinage de \\(+\\infty\\).</p>
 
 <p><strong>4) Asymptote oblique en \\(-\\infty\\)</strong></p>
 <p>Pour \\(x<2\\) : \\(f(x) = -x+1+e^{x-2}\\).<br>
@@ -4039,7 +4039,7 @@ correction: `<h4>📋 Proposition de Corrigé</h4>
 <p><em>En \\(t=\\dfrac{\\pi}{2}\\) :</em> \\(M(\\dfrac{\\pi}{2})=(1;0)\\), vecteur vitesse \\((0;3)\\) → tangente <strong>verticale</strong> : \\[\\boxed{(T_{\\pi/2}) : x = 1}\\]</p>
 
 <p><strong>4b) Tracé de la courbe (Γ) et de ses tangentes</strong></p>
-<p>On trace la portion correspondant à \\(t \in \left[0 ; \dfrac{\pi}{2}\right]\\) en plaçant les points remarquables \\(M(0)(0;1)\\), \\(M\left(\dfrac{\pi}{3}\right)\left(\dfrac{\sqrt{3}}{2};-1\right)\\), \\(M\left(\dfrac{\pi}{2}\right)(1;0)\\) et leurs tangentes respectives. Par symétrie orthogonale par rapport à l'axe \\((Oy)\\) puis par rapport à l'axe \\((Ox)\\), on obtient l'intégralité de la courbe fermée \\((\Gamma)\\), avec ses deux points doubles en \\(\left(\pm\dfrac{1}{2} ; 0\right)\\).</p>
+<p>On trace la portion correspondant à \\(t \\in \\left[0 ; \\dfrac{\\pi}{2}\\right]\\) en plaçant les points remarquables \\(M(0)(0;1)\\), \\(M\\left(\\dfrac{\\pi}{3}\\right)\\left(\\dfrac{\\sqrt{3}}{2};-1\\right)\\), \\(M\\left(\\dfrac{\\pi}{2}\\right)(1;0)\\) et leurs tangentes respectives. Par symétrie orthogonale par rapport à l'axe \\((Oy)\\) puis par rapport à l'axe \\((Ox)\\), on obtient l'intégralité de la courbe fermée \\((\\Gamma)\\), avec ses deux points doubles en \\(\\left(\\pm\\dfrac{1}{2} ; 0\\right)\\).</p>
 
 <div class="diagram-wrap" style="margin:20px 0;text-align:center;">
   <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:600;color:#374151;margin-bottom:8px;"> Tracé de la courbe paramétrique (Γ) et de ses tangentes — BAC 2019 2nd tour</div>
@@ -4375,7 +4375,7 @@ Comme \\(e^{-x+1} > 0\\), \\(f(x)-(x-3) > 0\\) pour tout \\(x\\).<br>
 \\[\\boxed{(T) : y = -1(x-1) + 0 \\iff y = -x+1}\\]</p>
 
 <p><strong>4) Tracé de la courbe (C), de l'asymptote (D) et de la tangente (T)</strong></p>
-<p>On place le point de tangence \\(A(1;0)\\) avec sa tangente \\((T) : y = -x+1\\), le minimum absolu en \\(\alpha \approx 1{,}35\\) (\\(f(\alpha) \approx -0{,}15\\)), l'asymptote oblique \\((D) : y = x-3\\) vers laquelle la courbe tend en \\(+\infty\\) en restant strictement au-dessus, et la branche parabolique de direction \\((Oy)\\) en \\(-\infty\\).</p>
+<p>On place le point de tangence \\(A(1;0)\\) avec sa tangente \\((T) : y = -x+1\\), le minimum absolu en \\(\\alpha \\approx 1{,}35\\) (\\(f(\\alpha) \\approx -0{,}15\\)), l'asymptote oblique \\((D) : y = x-3\\) vers laquelle la courbe tend en \\(+\\infty\\) en restant strictement au-dessus, et la branche parabolique de direction \\((Oy)\\) en \\(-\\infty\\).</p>
 
 <div class="diagram-wrap" style="margin:20px 0;text-align:center;">
   <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:600;color:#374151;margin-bottom:8px;"> Tracé de la courbe (C), de l'asymptote (D) et de la tangente (T) — BAC 2019 2nd tour</div>
@@ -4594,7 +4594,7 @@ L'unité graphique est 2 cm, donc 1 u.a. = 4 cm².<br>
     {
       label: 'Problème — Fonction f(x) = 2(x−1)ln(1−x) et point fixe (12 pts)',
       problem: `<p>On considère la fonction f définie par :</p>
-<p>\\[f(x) = \\begin{cases} 2(x-1)\ln(1-x) & \\text{si } x < 1 \\\\ (x-2)e^{-x+1}+1 & \\text{si } x \\geq 1 \\end{cases}\\]</p>
+<p>\\[f(x) = \\begin{cases} 2(x-1)\\ln(1-x) & \\text{si } x < 1 \\\\ (x-2)e^{-x+1}+1 & \\text{si } x \\geq 1 \\end{cases}\\]</p>
 <p>On note (C) sa courbe représentative dans le plan muni d'un repère orthonormal \\((O;\\vec{i};\\vec{j})\\). Unité graphique 2 cm.</p>
 
 <p><strong>Partie A</strong></p>
@@ -4730,10 +4730,10 @@ Comme \\(-2 \\in [-2{,}76; -1{,}20]\\), d'après le corollaire du théorème des
 Donc \\(\\alpha = 1\\), \\(\\beta = -1\\) et \\(\\gamma = -1\\).</p>
 
 <p><strong>2) Intégration par parties de I</strong></p>
-<p>\\(I = \\displaystyle\\int_0^{1-\\frac{1}{e}} (x-1)\\ln(1-x)\,dx\\).<br>
+<p>\\(I = \\displaystyle\\int_0^{1-\\frac{1}{e}} (x-1)\\ln(1-x)\\,dx\\).<br>
 Posons \\(u'(x) = x-1 \\implies u(x) = \\dfrac{(x-1)^2}{2}\\) et \\(v(x) = \\ln(1-x) \\implies v'(x) = -\\dfrac{1}{1-x} = \\dfrac{1}{x-1}\\).<br>
-\\(I = \\left[\\dfrac{(x-1)^2}{2}\\ln(1-x)\\right]_0^{1-\\frac{1}{e}} - \\displaystyle\\int_0^{1-\\frac{1}{e}} \\dfrac{(x-1)^2}{2}\\cdot\\dfrac{1}{x-1}\,dx\\)<br>
-\\(= \\left[\\dfrac{(x-1)^2}{2}\\ln(1-x)\\right]_0^{1-\\frac{1}{e}} - \\dfrac{1}{2}\\displaystyle\\int_0^{1-\\frac{1}{e}} (x-1)\,dx\\)<br>
+\\(I = \\left[\\dfrac{(x-1)^2}{2}\\ln(1-x)\\right]_0^{1-\\frac{1}{e}} - \\displaystyle\\int_0^{1-\\frac{1}{e}} \\dfrac{(x-1)^2}{2}\\cdot\\dfrac{1}{x-1}\\,dx\\)<br>
+\\(= \\left[\\dfrac{(x-1)^2}{2}\\ln(1-x)\\right]_0^{1-\\frac{1}{e}} - \\dfrac{1}{2}\\displaystyle\\int_0^{1-\\frac{1}{e}} (x-1)\\,dx\\)<br>
 Pour \\(x = 1-\\dfrac{1}{e}\\) : \\(1-x = \\dfrac{1}{e}\\), \\(x-1 = -\\dfrac{1}{e}\\), \\((x-1)^2 = \\dfrac{1}{e^2}\\), \\(\\ln(1-x) = -1\\).<br>
 Pour \\(x = 0\\) : \\(\\ln(1) = 0\\).<br>
 Le crochet vaut : \\(\\dfrac{1}{2e^2}(-1) - 0 = -\\dfrac{1}{2e^2}\\).<br>
@@ -4744,8 +4744,8 @@ D'où \\(I = -\\dfrac{1}{2e^2} - \\left(\\dfrac{1}{4e^2} - \\dfrac{1}{4}\\right)
 <p>Sur \\(\\left[0; 1-\\dfrac{1}{e}\\right]\\), \\(x < 1\\) et \\(f(x) = 2(x-1)\\ln(1-x)\\).<br>
 Comme \\(x-1 < 0\\) et \\(\\ln(1-x) < 0\\), \\(f(x) > 0\\).<br>
 L'aire cherchée vaut :<br>
-\\(\\mathcal{A} = \\displaystyle\\int_0^{1-\\frac{1}{e}} f(x)\,dx \\times \|\\vec{i}\| \\times \|\\vec{j}\| = 2I \\times 4\,\\text{cm}^2 = 8I\,\\text{cm}^2 = 8\\left(\\dfrac{e^2-3}{4e^2}\\right) = 2\\left(1-\\dfrac{3}{e^2}\\right)\,\\text{cm}^2\\).<br>
-Numériquement : \\(\\mathcal{A} \\approx 2(1 - 3 \\times 0{,}13) = 2(1 - 0{,}39) = 1{,}22\,\\text{cm}^2\\).</p>
+\\(\\mathcal{A} = \\displaystyle\\int_0^{1-\\frac{1}{e}} f(x)\\,dx \\times \|\\vec{i}\| \\times \|\\vec{j}\| = 2I \\times 4\\,\\text{cm}^2 = 8I\\,\\text{cm}^2 = 8\\left(\\dfrac{e^2-3}{4e^2}\\right) = 2\\left(1-\\dfrac{3}{e^2}\\right)\\,\\text{cm}^2\\).<br>
+Numériquement : \\(\\mathcal{A} \\approx 2(1 - 3 \\times 0{,}13) = 2(1 - 0{,}39) = 1{,}22\\,\\text{cm}^2\\).</p>
 
 <p><strong>Partie C</strong></p>
 <p><strong>1a) Équivalence (E) \\(\\iff h(x) = x\\)</strong></p>
@@ -5888,7 +5888,7 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 </div>
 
 <p><strong>3) Tracé de la courbe cardioïde (C) et de ses tangentes</strong></p>
-<p>On trace la portion correspondant à \\(t \in [0 ; \pi]\\) en plaçant le point de rebroussement \\(M(0)(0;1)\\), le maximum en \\(M\left(\dfrac{\pi}{3}\right)\left(\dfrac{\sqrt{3}}{2};\dfrac{3}{2}\right)\\), le point à tangente verticale \\(M\left(\dfrac{2\pi}{3}\right)\left(\dfrac{3\sqrt{3}}{2};-\dfrac{1}{2}\right)\\) et le point inférieur \\(M(\pi)(0;-3)\\). Par symétrie orthogonale par rapport à l'axe \\((Oy)\\), on complète le tracé pour \\(t \in [-\pi ; 0]\\) afin d'obtenir la cardioïde complète.</p>
+<p>On trace la portion correspondant à \\(t \\in [0 ; \\pi]\\) en plaçant le point de rebroussement \\(M(0)(0;1)\\), le maximum en \\(M\\left(\\dfrac{\\pi}{3}\\right)\\left(\\dfrac{\\sqrt{3}}{2};\\dfrac{3}{2}\\right)\\), le point à tangente verticale \\(M\\left(\\dfrac{2\\pi}{3}\\right)\\left(\\dfrac{3\\sqrt{3}}{2};-\\dfrac{1}{2}\\right)\\) et le point inférieur \\(M(\\pi)(0;-3)\\). Par symétrie orthogonale par rapport à l'axe \\((Oy)\\), on complète le tracé pour \\(t \\in [-\\pi ; 0]\\) afin d'obtenir la cardioïde complète.</p>
 
 <div class="diagram-wrap" style="margin:20px 0;text-align:center;">
   <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:600;color:#374151;margin-bottom:8px;"> Tracé de la courbe paramétrique cardioïde (C) et de ses tangentes — BAC 2022 1er tour</div>
@@ -6151,18 +6151,18 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 
 <p><strong>2a) Calcul de I par IPP</strong></p>
 <p>On pose \\(u(x) = x-1\\) et \\(v'(x) = e^{-x}\\), d'où \\(u'(x) = 1\\) et \\(v(x) = -e^{-x}\\) :</p>
-<p>\\[I = \int_0^1(x-1)e^{-x}\,dx = \\left[-(x-1)e^{-x}\\right]_0^1 - \int_0^1 1 \\cdot (-e^{-x})\,dx\\]</p>
-<p>\\[= \\left[-(x-1)e^{-x}\\right]_0^1 + \int_0^1 e^{-x}\,dx\\]</p>
+<p>\\[I = \\int_0^1(x-1)e^{-x}\\,dx = \\left[-(x-1)e^{-x}\\right]_0^1 - \\int_0^1 1 \\cdot (-e^{-x})\\,dx\\]</p>
+<p>\\[= \\left[-(x-1)e^{-x}\\right]_0^1 + \\int_0^1 e^{-x}\\,dx\\]</p>
 <p>\\(\\left[-(x-1)e^{-x}\\right]_0^1 = -(0)e^{-1} - [-(0-1)e^0] = -1\\).</p>
-<p>\\(\int_0^1 e^{-x}\,dx = \\left[-e^{-x}\\right]_0^1 = -e^{-1} - (-1) = 1 - e^{-1}\\).</p>
+<p>\\(\\int_0^1 e^{-x}\\,dx = \\left[-e^{-x}\\right]_0^1 = -e^{-1} - (-1) = 1 - e^{-1}\\).</p>
 <p>\\[\\boxed{I = -1 + (1 - e^{-1}) = -e^{-1} = -\\dfrac{1}{e} \\approx -0{,}37}\\]</p>
 
 <p><strong>2b) Volume V du solide de révolution</strong></p>
-<p>\\[V = \\pi\int_0^1[f(x)]^2\,dx = \\pi\int_0^1(x-1+e^{-x})^2\,dx\\]</p>
+<p>\\[V = \\pi \\int_0^1[f(x)]^2\\,dx = \\pi \\int_0^1(x-1+e^{-x})^2\\,dx\\]</p>
 <p>En développant : \\((x-1+e^{-x})^2 = (x-1)^2 + 2(x-1)e^{-x} + e^{-2x}\\).</p>
-<p>— \\(\int_0^1(x-1)^2\,dx = \\left[\\dfrac{(x-1)^3}{3}\\right]_0^1 = 0 - \\left(-\\dfrac{1}{3}\\right) = \\dfrac{1}{3}\\)</p>
-<p>— \\(\int_0^1 2(x-1)e^{-x}\,dx = 2I = -\\dfrac{2}{e}\\)</p>
-<p>— \\(\int_0^1 e^{-2x}\,dx = \\left[-\\dfrac{e^{-2x}}{2}\\right]_0^1 = \\dfrac{1 - e^{-2}}{2}\\)</p>
+<p>— \\(\\int_0^1(x-1)^2\\,dx = \\left[\\dfrac{(x-1)^3}{3}\\right]_0^1 = 0 - \\left(-\\dfrac{1}{3}\\right) = \\dfrac{1}{3}\\)</p>
+<p>— \\(\\int_0^1 2(x-1)e^{-x}\\,dx = 2I = -\\dfrac{2}{e}\\)</p>
+<p>— \\(\\int_0^1 e^{-2x}\\,dx = \\left[-\\dfrac{e^{-2x}}{2}\\right]_0^1 = \\dfrac{1 - e^{-2}}{2}\\)</p>
 <p>En sommant :</p>
 <p>\\[V = \\pi\\left(\\dfrac{1}{3} - \\dfrac{2}{e} + \\dfrac{1-e^{-2}}{2}\\right) = \\pi\\left(\\dfrac{5}{6} - \\dfrac{2}{e} - \\dfrac{1}{2e^2}\\right) \\text{ u.v.}\\]</p>
 <p>En cm³ (unité graphique 2 cm → 1 u.v. = 8 cm³) :</p>

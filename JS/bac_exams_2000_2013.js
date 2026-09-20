@@ -1411,7 +1411,7 @@ Donc \\(h'(x) \\geq 0\\) pour tout \\(x\\), avec \\(h'(0)=0\\) : \\(h\\) est cro
 \\[\\boxed{G(x) = (-x^2 - 10x - 26)\\,e^{-x}}\\]</p>
 
 <p><strong>b)</strong>
-\\[V(\\lambda) = \\pi\\int_{-4}^{\\lambda} f^2(x)\\,dx \\times \\text{U.V.} = \\pi\\int_{-4}^{\\lambda}(x+4)^2 e^{-x}\\,dx \\times 8\\,\\text{cm}^3\\]
+\\[V(\\lambda) = \\pi \\int_{-4}^{\\lambda} f^2(x)\\,dx \\times \\text{U.V.} = \\pi \\int_{-4}^{\\lambda}(x+4)^2 e^{-x}\\,dx \\times 8\\,\\text{cm}^3\\]
 \\[= \\pi[G(x)]_{-4}^{\\lambda}\\times 8 = \\pi\\left(G(\\lambda) - G(-4)\\right)\\times 8\\]
 \\[G(-4) = (-16+40-26)e^{4} = -2e^{4}\\]
 \\[\\boxed{V(\\lambda) = \\pi\\left(16e^{4} - 8(\\lambda^2+10\\lambda+26)\\,e^{-\\lambda}\\right)\\,\\text{cm}^3}\\]
@@ -2566,9 +2566,9 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>Par la même méthode : \\(\\Phi(x) = \\dfrac{-\\varphi'(x)-4\\varphi(x)}{8} = \\dfrac{-e^{-2x}(\\cos2x-\\sin2x)}{4}\\)</p>
 
 <p><strong>3c) Volume V</strong></p>
-<p>\\(V = \\pi\\int_0^\\pi[f(x)]^2\\,dx\\times U_V = \\pi\\int_0^\\pi e^{-2x}\\sin^2 x\\,dx\\times U_V\\)</p>
+<p>\\(V = \\pi \\int_0^\\pi[f(x)]^2\\,dx\\times U_V = \\pi \\int_0^\\pi e^{-2x}\\sin^2 x\\,dx\\times U_V\\)</p>
 <p>\\(\\sin^2 x = \\dfrac{1-\\cos2x}{2}\\) donc :</p>
-<p>\\(V = \\pi\\int_0^\\pi\\dfrac{e^{-2x}-e^{-2x}\\cos2x}{2}\\,dx\\times U_V = \\pi\\left[\\dfrac{-e^{-2x}}{4}-\\dfrac{\\Phi(x)}{2}\\right]_0^\\pi\\times U_V\\)</p>
+<p>\\(V = \\pi \\int_0^\\pi\\dfrac{e^{-2x}-e^{-2x}\\cos2x}{2}\\,dx\\times U_V = \\pi\\left[\\dfrac{-e^{-2x}}{4}-\\dfrac{\\Phi(x)}{2}\\right]_0^\\pi\\times U_V\\)</p>
 <p>Calcul : \\(\\left[\\dfrac{-e^{-2x}}{4}\\right]_0^\\pi = -\\dfrac{e^{-2\\pi}}{4}+\\dfrac{1}{4}\\)</p>
 <p>\\(\\left[-\\dfrac{\\Phi(x)}{2}\\right]_0^\\pi = \\dfrac{e^{-2x}(\\cos2x-\\sin2x)}{8}\\bigg|_0^\\pi = \\dfrac{e^{-2\\pi}}{8}-\\dfrac{1}{8}\\)</p>
 <p>\\(V = \\pi\\left(\\dfrac{1}{4}-\\dfrac{e^{-2\\pi}}{4}+\\dfrac{e^{-2\\pi}}{8}-\\dfrac{1}{8}\\right)\\times U_V = \\pi\\left(\\dfrac{1}{8}-\\dfrac{e^{-2\\pi}}{8}\\right)\\times U_V = \\dfrac{\\pi(1-e^{-2\\pi})}{8}\\times U_V\\)</p>
@@ -3191,7 +3191,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 
 <p><strong>2b) Volume V</strong></p>
 <p>\\(f(x) = e^{-x}+x-2\\), \\([f(x)]^2 = e^{-2x}+2(x-2)e^{-x}+(x-2)^2\\)</p>
-<p>\\(V = \\pi\\int_2^4[f(x)]^2dx = \\pi\\left(\\left[-\\dfrac{e^{-2x}}{2}\\right]_2^4 + 2I + \\left[\\dfrac{(x-2)^3}{3}\\right]_2^4\\right)\\)</p>
+<p>\\(V = \\pi \\int_2^4[f(x)]^2dx = \\pi\\left(\\left[-\\dfrac{e^{-2x}}{2}\\right]_2^4 + 2I + \\left[\\dfrac{(x-2)^3}{3}\\right]_2^4\\right)\\)</p>
 <p>\\(= \\pi\\left(\\dfrac{e^{-4}-e^{-8}}{2}+2(e^{-2}-3e^{-4})+\\dfrac{8}{3}\\right)\\)</p>
 <p>En approximant avec \\(e^{-2}\\approx0{,}14\\), \\(e^{-4}\\approx0{,}02\\) :</p>
 <p>\\(V\\approx\\pi\\left(0{,}01+2(0{,}14-0{,}06)+2{,}67\\right) \\approx \\pi(0{,}01+0{,}16+2{,}67) \\approx 2{,}84\\pi \\approx 8{,}94\\text{ cm}^3\\)</p>
@@ -3698,7 +3698,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
     {
       label: 'Problème — f(x) = (exp(2x)−1)/exp(x) et x−x·ln x, bijection, intégrales, courbe param. (12 pts)',
       problem: `<p>Soit f définie sur \\(\\mathbb{R}\\) par :</p>
-<p>\\[f(x) = \\begin{cases}\\dfrac{e^{2x}-1}{e^x} & \\text{si } x\\leq0 \\\\ x-x\ln x & \\text{si } x>0\\end{cases}\\]</p>
+<p>\\[f(x) = \\begin{cases}\\dfrac{e^{2x}-1}{e^x} & \\text{si } x\\leq0 \\\\ x-x\\ln x & \\text{si } x>0\\end{cases}\\]</p>
 <p>Courbe (C) dans \\((O;\\vec{i};\\vec{j})\\), unité 2 cm.</p>
 
 <p><strong>Partie A</strong></p>
@@ -3805,7 +3805,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>\\[\\int_\\alpha^e x\\ln x\\,dx = \\left[\\dfrac{x^2}{2}\\ln x\\right]_\\alpha^e - \\int_\\alpha^e\\dfrac{x}{2}dx = \\dfrac{e^2}{2} - \\dfrac{\\alpha^2\\ln\\alpha}{2} - \\left[\\dfrac{x^2}{4}\\right]_\\alpha^e = \\dfrac{e^2}{4}-\\dfrac{\\alpha^2\\ln\\alpha}{2}+\\dfrac{\\alpha^2}{4}\\]</p>
 
 <p><strong>1b)</strong></p>
-<p>\\(I(\\alpha) = \\int_\\alpha^e(x-x\ln x)dx = \\int_\\alpha^e x\\,dx - \\int_\\alpha^e x\\ln x\\,dx\\)</p>
+<p>\\(I(\\alpha) = \\int_\\alpha^e(x-x\\ln x)dx = \\int_\\alpha^e x\\,dx - \\int_\\alpha^e x\\ln x\\,dx\\)</p>
 <p>\\(= \\left[\\dfrac{x^2}{2}\\right]_\\alpha^e - \\left(\\dfrac{e^2}{4}-\\dfrac{\\alpha^2\\ln\\alpha}{2}+\\dfrac{\\alpha^2}{4}\\right) = \\dfrac{e^2-\\alpha^2}{2}-\\dfrac{e^2}{4}+\\dfrac{\\alpha^2\\ln\\alpha}{2}-\\dfrac{\\alpha^2}{4}\\)</p>
 <p>\\[\\boxed{I(\\alpha) = \\dfrac{e^2}{4}+\\dfrac{\\alpha^2\\ln\\alpha}{2}-\\dfrac{3\\alpha^2}{4}}\\]</p>
 
@@ -3816,7 +3816,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p><strong>4°) Volume</strong></p>
 <p>\\(f(x) = e^x-e^{-x}\\) pour \\(x\\leq0\\). Sur \\([-1;0]\\) : \\(f(x)\\leq0\\).</p>
 <p>\\([f(x)]^2 = (e^x-e^{-x})^2 = e^{2x}-2+e^{-2x}\\)</p>
-<p>\\(V = 8\\pi\\int_{-1}^0(e^{2x}-2+e^{-2x})dx = 8\\pi\\left[\\dfrac{e^{2x}}{2}-2x-\\dfrac{e^{-2x}}{2}\\right]_{-1}^0\\)</p>
+<p>\\(V = 8\\pi \\int_{-1}^0(e^{2x}-2+e^{-2x})dx = 8\\pi\\left[\\dfrac{e^{2x}}{2}-2x-\\dfrac{e^{-2x}}{2}\\right]_{-1}^0\\)</p>
 <p>\\(= 8\\pi\\left[(0-0-\\dfrac{1}{2})-(\\dfrac{e^{-2}}{2}+2-\\dfrac{e^2}{2})\\right] = 8\\pi\\left[-\\dfrac{1}{2}-\\dfrac{e^{-2}}{2}-2+\\dfrac{e^2}{2}\\right]\\)</p>
 <p>\\[\\boxed{V = 4\\pi(e^2-e^{-2}-4)\\text{ cm}^3}\\]</p>
 
@@ -4649,7 +4649,7 @@ Par le théorème des gendarmes : \\(\\lim_{n\\to+\\infty}|U_n-\\alpha|=0\\), do
 <p>Identification : \\(a=1\\) et \\(a+b=0\\) → \\(\\boxed{a=1, b=-1}\\)</p>
 
 <p><strong>2a°)</strong></p>
-<p>\\(V(\\alpha) = \\pi\\int_\\alpha^0 f^2(x)dx = \\pi\\int_\\alpha^0\\dfrac{e^{2x}}{(1+e^x)^2}dx = \\pi\\int_\\alpha^0\\left(\\dfrac{e^x}{1+e^x}-\\dfrac{e^x}{(1+e^x)^2}\\right)dx\\)</p>
+<p>\\(V(\\alpha) = \\pi \\int_\\alpha^0 f^2(x)dx = \\pi \\int_\\alpha^0\\dfrac{e^{2x}}{(1+e^x)^2}dx = \\pi \\int_\\alpha^0\\left(\\dfrac{e^x}{1+e^x}-\\dfrac{e^x}{(1+e^x)^2}\\right)dx\\)</p>
 <p>\\(= \\pi\\left[\\ln(1+e^x)+\\dfrac{1}{1+e^x}\\right]_\\alpha^0 = \\pi\\left(\\ln2+\\dfrac{1}{2}-\\ln(1+e^\\alpha)-\\dfrac{1}{1+e^\\alpha}\\right)\\)</p>
 <p>\\[\\boxed{V(\\alpha) = \\pi\\left[\\ln2+\\dfrac{1}{2}-\\ln(1+e^\\alpha)-\\dfrac{1}{1+e^\\alpha}\\right]}\\]</p>
 
