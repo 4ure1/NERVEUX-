@@ -2533,7 +2533,7 @@ const BAC_EXAMS_2014_2022 = [
 
 <p>Pour y'(t) : \\(y(t) = \\dfrac{\\sin^2 t}{2+\\sin t}\\).</p>
 <p>\\(y'(t) = \\dfrac{2\\sin t\\cos t(2+\\sin t) - \\sin^2 t \\cos t}{(2+\\sin t)^2} = \\dfrac{\\cos t\\sin t(2(2+\\sin t)-\\sin t)}{(2+\\sin t)^2} = \\dfrac{\\cos t\\sin t(4+\\sin t)}{(2+\\sin t)^2}\\)</p>
-<p><p>\[\\boxed{y'(t) = \\dfrac{\sin t\cos t(4+\sin t)}{(2+\sin t)^2}}\]</p>
+<p><p>\\[\\boxed{y'(t) = \\dfrac{\sin t\cos t(4+\sin t)}{(2+\sin t)^2}}\\]</p>
 
 <p><strong>2b) Sens de variation sur \\(\\left[-\\dfrac{\\pi}{2};\\dfrac{\\pi}{2}\\right]\\)</strong></p>
 <p><em>Signe de x'(t) = −sin t :</em></p>
@@ -3237,9 +3237,9 @@ const BAC_EXAMS_2014_2022 = [
 <p>\\(f'(t) = \\dfrac{\\lambda}{3}e^{t/3}\\)</p>
 <p>\\(f'(t) + \\dfrac{1}{3}f(t) = \\dfrac{\\lambda}{3}e^{t/3} + \\dfrac{\\lambda}{3}e^{t/3} = \\dfrac{2\\lambda}{3}e^{t/3} = 2e^{t/3}\\)</p>
 <p>Donc \\(\\dfrac{2\\lambda}{3} = 2 \\Rightarrow \\lambda = 3\\).</p>
-<p>Une solution particulière de (2) est \(f(t) = 3e^{t/3}\), car \(f'(t) + \\dfrac{1}{3}f(t) = e^{t/3} + e^{t/3} = 2e^{t/3}\).</p>
+<p>Une solution particulière de (2) est \\(f(t) = 3e^{t/3}\\), car \\(f'(t) + \\dfrac{1}{3}f(t) = e^{t/3} + e^{t/3} = 2e^{t/3}\\).</p>
 <p>Donc la solution générale de (2) est la somme de la solution générale de l'équation homogène (1) et de la solution particulière \\(f(t)\\) :</p>
-<p>\[\\boxed{y(t) = 3e^{\\frac{t}{3}} + ae^{-\\frac{t}{3}}, \\quad a \in \\mathbb{R}}\]</p>
+<p>\\[\\boxed{y(t) = 3e^{\\frac{t}{3}} + ae^{-\\frac{t}{3}}, \\quad a \in \\mathbb{R}}\\]</p>
 <p>\\[\\boxed{y(t) = 3e^{\\dfrac{t}{3}} + ae^{-\\dfrac{t}{3}}, \\quad a \\in \\mathbb{R}}\\]</p>
  
 <p><strong>2b) Équivalence</strong></p>
@@ -3765,8 +3765,8 @@ donc \\(\\dfrac{f(x)}{x-2} = \\dfrac{2-x+\\ln(2x-3)}{x-2} \\approx \\dfrac{-(x-2
 <p><strong>3a)</strong> \\(\\lim_{x\\to-\\infty}(-x+1+e^{x-2}) = +\\infty\\) (car \\(-x\\to+\\infty\\) et \\(e^{x-2}\\to0\\)).</p>
 
 <p><strong>3c) Limite de [f(x)+x] en +∞ et interprétation géométrique</strong></p>
-<p>\[\lim_{x\\to+\\infty}[f(x)+x] = \lim_{x\\to+\\infty}[2+\ln(2x-3)] = +\\infty\]</p>
-<p>Comme \(\lim_{x\\to+\\infty}\\dfrac{f(x)}{x} = -1\) et \(\lim_{x\\to+\\infty}[f(x)-(-1)x] = +\\infty\), la courbe \((C)\) admet une <strong>branche parabolique de direction la droite d'équation \(y = -x\)</strong> au voisinage de \(+\\infty\).</p>
+<p>\\[\lim_{x\\to+\\infty}[f(x)+x] = \lim_{x\\to+\\infty}[2+\ln(2x-3)] = +\\infty\\]</p>
+<p>Comme \\(\lim_{x\\to+\\infty}\\dfrac{f(x)}{x} = -1\\) et \\(\lim_{x\\to+\\infty}[f(x)-(-1)x] = +\\infty\\), la courbe \\((C)\\) admet une <strong>branche parabolique de direction la droite d'équation \\(y = -x\\)</strong> au voisinage de \\(+\\infty\\).</p>
 
 <p><strong>4) Asymptote oblique en \\(-\\infty\\)</strong></p>
 <p>Pour \\(x<2\\) : \\(f(x) = -x+1+e^{x-2}\\).<br>
@@ -5838,23 +5838,23 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p>Interprétation : l'aire entre (C) et (\\(\\Delta\\)) sur \\([1;+\\infty[\\) est <strong>finie</strong> et vaut \\(\\dfrac{4}{e}\\text{ cm}^2\\).</p>
 
 <p><strong>2a) Calcul de I par IPP</strong></p>
-<p>On pose \(u(x) = x-1\) et \(v'(x) = e^{-x}\), d'où \(u'(x) = 1\) et \(v(x) = -e^{-x}\) :</p>
-<p>\[I = \int_0^1(x-1)e^{-x}\,dx = \\left[-(x-1)e^{-x}\\right]_0^1 - \int_0^1 1 \\cdot (-e^{-x})\,dx\]</p>
-<p>\[= \\left[-(x-1)e^{-x}\\right]_0^1 + \int_0^1 e^{-x}\,dx\]</p>
-<p>\(\\left[-(x-1)e^{-x}\\right]_0^1 = -(0)e^{-1} - [-(0-1)e^0] = -1\).</p>
-<p>\(\int_0^1 e^{-x}\,dx = \\left[-e^{-x}\\right]_0^1 = -e^{-1} - (-1) = 1 - e^{-1}\).</p>
-<p>\[\\boxed{I = -1 + (1 - e^{-1}) = -e^{-1} = -\\dfrac{1}{e} \\approx -0{,}37}\]</p>
+<p>On pose \\(u(x) = x-1\\) et \\(v'(x) = e^{-x}\\), d'où \\(u'(x) = 1\\) et \\(v(x) = -e^{-x}\\) :</p>
+<p>\\[I = \int_0^1(x-1)e^{-x}\,dx = \\left[-(x-1)e^{-x}\\right]_0^1 - \int_0^1 1 \\cdot (-e^{-x})\,dx\\]</p>
+<p>\\[= \\left[-(x-1)e^{-x}\\right]_0^1 + \int_0^1 e^{-x}\,dx\\]</p>
+<p>\\(\\left[-(x-1)e^{-x}\\right]_0^1 = -(0)e^{-1} - [-(0-1)e^0] = -1\\).</p>
+<p>\\(\int_0^1 e^{-x}\,dx = \\left[-e^{-x}\\right]_0^1 = -e^{-1} - (-1) = 1 - e^{-1}\\).</p>
+<p>\\[\\boxed{I = -1 + (1 - e^{-1}) = -e^{-1} = -\\dfrac{1}{e} \\approx -0{,}37}\\]</p>
 
 <p><strong>2b) Volume V du solide de révolution</strong></p>
-<p>\[V = \\pi\int_0^1[f(x)]^2\,dx = \\pi\int_0^1(x-1+e^{-x})^2\,dx\]</p>
-<p>En développant : \((x-1+e^{-x})^2 = (x-1)^2 + 2(x-1)e^{-x} + e^{-2x}\).</p>
-<p>— \(\int_0^1(x-1)^2\,dx = \\left[\\dfrac{(x-1)^3}{3}\\right]_0^1 = 0 - \\left(-\\dfrac{1}{3}\\right) = \\dfrac{1}{3}\)</p>
-<p>— \(\int_0^1 2(x-1)e^{-x}\,dx = 2I = -\\dfrac{2}{e}\)</p>
-<p>— \(\int_0^1 e^{-2x}\,dx = \\left[-\\dfrac{e^{-2x}}{2}\\right]_0^1 = \\dfrac{1 - e^{-2}}{2}\)</p>
+<p>\\[V = \\pi\int_0^1[f(x)]^2\,dx = \\pi\int_0^1(x-1+e^{-x})^2\,dx\\]</p>
+<p>En développant : \\((x-1+e^{-x})^2 = (x-1)^2 + 2(x-1)e^{-x} + e^{-2x}\\).</p>
+<p>— \\(\int_0^1(x-1)^2\,dx = \\left[\\dfrac{(x-1)^3}{3}\\right]_0^1 = 0 - \\left(-\\dfrac{1}{3}\\right) = \\dfrac{1}{3}\\)</p>
+<p>— \\(\int_0^1 2(x-1)e^{-x}\,dx = 2I = -\\dfrac{2}{e}\\)</p>
+<p>— \\(\int_0^1 e^{-2x}\,dx = \\left[-\\dfrac{e^{-2x}}{2}\\right]_0^1 = \\dfrac{1 - e^{-2}}{2}\\)</p>
 <p>En sommant :</p>
-<p>\[V = \\pi\\left(\\dfrac{1}{3} - \\dfrac{2}{e} + \\dfrac{1-e^{-2}}{2}\\right) = \\pi\\left(\\dfrac{5}{6} - \\dfrac{2}{e} - \\dfrac{1}{2e^2}\\right) \\text{ u.v.}\]</p>
+<p>\\[V = \\pi\\left(\\dfrac{1}{3} - \\dfrac{2}{e} + \\dfrac{1-e^{-2}}{2}\\right) = \\pi\\left(\\dfrac{5}{6} - \\dfrac{2}{e} - \\dfrac{1}{2e^2}\\right) \\text{ u.v.}\\]</p>
 <p>En cm³ (unité graphique 2 cm → 1 u.v. = 8 cm³) :</p>
-<p>\[\\boxed{V = 8\\pi\\left(\\dfrac{5}{6} - \\dfrac{2}{e} - \\dfrac{1}{2e^2}\\right) \\approx 8\\pi(0{,}833 - 0{,}736 - 0{,}068) \\approx 0{,}73\\text{ cm}^3}\]</p>
+<p>\\[\\boxed{V = 8\\pi\\left(\\dfrac{5}{6} - \\dfrac{2}{e} - \\dfrac{1}{2e^2}\\right) \\approx 8\\pi(0{,}833 - 0{,}736 - 0{,}068) \\approx 0{,}73\\text{ cm}^3}\\]</p>
 
 <p>\\[V = \\pi\\left(\\dfrac{1}{3} + \\dfrac{2}{e} - 4 + \\dfrac{1-e^{-2}}{2}\\right) = \\pi\\left(\\dfrac{1}{3} + \\dfrac{2}{e} - 4 + \\dfrac{1}{2} - \\dfrac{1}{2e^2}\\right)\\]</p>
 <p>\\(\\approx \\pi\\left(0{,}33 + 0{,}74 - 4 + 0{,}5 - 0{,}07\\right) = \\pi \\times (-2{,}5) \\approx -7{,}85\\)</p>
