@@ -4036,7 +4036,111 @@ correction: `<h4>📋 Proposition de Corrigé</h4>
 <p><strong>4a) Tangentes</strong></p>
 <p><em>En \\(t=0\\) :</em> \\(M(0)=(0;1)\\), vecteur vitesse \\((x'(0);y'(0))=(1;0)\\) → tangente <strong>horizontale</strong> : \\[\\boxed{(T_0) : y = 1}\\]</p>
 <p><em>En \\(t=\\dfrac{\\pi}{3}\\) :</em> \\(M(\\dfrac{\\pi}{3})=(\\dfrac{\\sqrt{3}}{2};-1)\\), vecteur vitesse \\((\\dfrac{1}{2};0)\\) → tangente <strong>horizontale</strong> : \\[\\boxed{(T_{\\pi/3}) : y = -1}\\]</p>
-<p><em>En \\(t=\\dfrac{\\pi}{2}\\) :</em> \\(M(\\dfrac{\\pi}{2})=(1;0)\\), vecteur vitesse \\((0;3)\\) → tangente <strong>verticale</strong> : \\[\\boxed{(T_{\\pi/2}) : x = 1}\\]</p>`
+<p><em>En \\(t=\\dfrac{\\pi}{2}\\) :</em> \\(M(\\dfrac{\\pi}{2})=(1;0)\\), vecteur vitesse \\((0;3)\\) → tangente <strong>verticale</strong> : \\[\\boxed{(T_{\\pi/2}) : x = 1}\\]</p>
+
+<p><strong>4b) Tracé de la courbe (Γ) et de ses tangentes</strong></p>
+<p>On trace la portion correspondant à \\(t \in \left[0 ; \dfrac{\pi}{2}\right]\\) en plaçant les points remarquables \\(M(0)(0;1)\\), \\(M\left(\dfrac{\pi}{3}\right)\left(\dfrac{\sqrt{3}}{2};-1\right)\\), \\(M\left(\dfrac{\pi}{2}\right)(1;0)\\) et leurs tangentes respectives. Par symétrie orthogonale par rapport à l'axe \\((Oy)\\) puis par rapport à l'axe \\((Ox)\\), on obtient l'intégralité de la courbe fermée \\((\Gamma)\\), avec ses deux points doubles en \\(\left(\pm\dfrac{1}{2} ; 0\right)\\).</p>
+
+<div class="diagram-wrap" style="margin:20px 0;text-align:center;">
+  <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:600;color:#374151;margin-bottom:8px;"> Tracé de la courbe paramétrique (Γ) et de ses tangentes — BAC 2019 2nd tour</div>
+  <svg viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;">
+    <defs>
+      <marker id="arr-tan-19" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#ef4444"/>
+      </marker>
+    </defs>
+    
+    <!-- Grille de fond -->
+    <!-- Grille verticale : x = -1, -0.5, 0.5, 1 -->
+    <line x1="200.0" y1="40" x2="200.0" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+    <line x1="290.0" y1="40" x2="290.0" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+    <line x1="470.0" y1="40" x2="470.0" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+    <line x1="560.0" y1="40" x2="560.0" y2="440" stroke="#f1f5f9" stroke-width="1"/>
+    <!-- Grille horizontale : y = -1, -0.5, 0.5, 1 -->
+    <line x1="120" y1="60.0" x2="640" y2="60.0" stroke="#f1f5f9" stroke-width="1"/>
+    <line x1="120" y1="150.0" x2="640" y2="150.0" stroke="#f1f5f9" stroke-width="1"/>
+    <line x1="120" y1="330.0" x2="640" y2="330.0" stroke="#f1f5f9" stroke-width="1"/>
+    <line x1="120" y1="420.0" x2="640" y2="420.0" stroke="#f1f5f9" stroke-width="1"/>
+    
+    <!-- Boîte de délimitation [-1;1] x [-1;1] -->
+    <rect x="200.0" y="60.0" width="360.0" height="360.0" fill="none" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <!-- Axes cartésiens -->
+    <line x1="80" y1="240" x2="680" y2="240" stroke="#1f2937" stroke-width="1.5"/>
+    <text x="690" y="244" text-anchor="start" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" font-style="italic">x</text>
+    
+    <line x1="380" y1="450" x2="380" y2="30" stroke="#1f2937" stroke-width="1.5"/>
+    <text x="380" y="20" text-anchor="middle" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" font-style="italic">y</text>
+    <text x="368" y="256" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12" font-weight="500">O</text>
+
+    <!-- Graduations -->
+    <!-- Ox: -1, -0.5, 0.5, 1 -->
+    <line x1="200.0" y1="236" x2="200.0" y2="244" stroke="#1f2937" stroke-width="1.2"/>
+    <text x="200.0" y="258" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="500">-1</text>
+    <line x1="290.0" y1="236" x2="290.0" y2="244" stroke="#1f2937" stroke-width="1.2"/>
+    <text x="290.0" y="258" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="500">-0,5</text>
+    <line x1="470.0" y1="236" x2="470.0" y2="244" stroke="#1f2937" stroke-width="1.2"/>
+    <text x="470.0" y="258" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="500">0,5</text>
+    <line x1="560.0" y1="236" x2="560.0" y2="244" stroke="#1f2937" stroke-width="1.2"/>
+    <text x="560.0" y="258" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="500">1</text>
+
+    <!-- Oy: -1, 1 -->
+    <line x1="376" y1="60.0" x2="384" y2="60.0" stroke="#1f2937" stroke-width="1.2"/>
+    <text x="372" y="64.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="500">1</text>
+    <line x1="376" y1="420.0" x2="384" y2="420.0" stroke="#1f2937" stroke-width="1.2"/>
+    <text x="372" y="424.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="500">-1</text>
+
+    <!-- Tangentes remarquables (en rouge) -->
+    <!-- (T0) : y = 1 en M(0)(0; 1) -->
+    <line x1="310" y1="60.0" x2="450" y2="60.0" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4 3"/>
+    <circle cx="380" cy="60.0" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <text x="394" y="52.0" fill="#b91c1c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">M(0) (0; 1) [T₀: y = 1]</text>
+
+    <!-- (T_pi/3) : y = -1 en M(pi/3)(sqrt(3)/2; -1) -->
+    <line x1="475.9" y1="420.0" x2="595.9" y2="420.0" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4 3"/>
+    <circle cx="535.9" cy="420.0" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <text x="535.9" y="438.0" text-anchor="middle" fill="#b91c1c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">M(π/3) (√3/2; -1) [T_{π/3}: y = -1]</text>
+
+    <!-- Tangente symétrique en M(-pi/3)(-sqrt(3)/2; -1) -->
+    <line x1="174.1" y1="420.0" x2="274.1" y2="420.0" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <circle cx="224.1" cy="420.0" r="3.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- (T_pi/2) : x = 1 en M(pi/2)(1; 0) -->
+    <line x1="560.0" y1="180" x2="560.0" y2="300" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4 3"/>
+    <circle cx="560.0" cy="240" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <text x="568.0" y="232" fill="#b91c1c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">M(π/2) (1; 0) [T_{π/2}: x = 1]</text>
+
+    <!-- Tangente symétrique en M(-pi/2)(-1; 0) -->
+    <line x1="200.0" y1="180" x2="200.0" y2="300" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <circle cx="200.0" cy="240" r="3.5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- Points doubles (auto-intersection) en (0.5; 0) et (-0.5; 0) -->
+    <circle cx="470.0" cy="240" r="3.5" fill="#8b5cf6" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="290.0" cy="240" r="3.5" fill="#8b5cf6" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- Courbe complète (symétries) en bleu clair -->
+    <path d="M 380.0 60.0 L 384.7 60.6 L 389.4 62.2 L 394.1 65.0 L 398.8 68.8 L 403.5 73.7 L 408.2 79.6 L 412.8 86.5 L 417.4 94.4 L 422.0 103.1 L 426.6 112.7 L 431.1 123.1 L 435.6 134.2 L 440.1 146.0 L 444.5 158.3 L 448.9 171.1 L 453.2 184.4 L 457.5 198.0 L 461.7 211.8 L 465.9 225.9 L 470.0 240.0 L 474.0 254.1 L 478.0 268.2 L 482.0 282.0 L 485.8 295.6 L 489.6 308.9 L 493.3 321.7 L 496.9 334.0 L 500.4 345.8 L 503.9 356.9 L 507.3 367.3 L 510.6 376.9 L 513.8 385.6 L 516.9 393.5 L 519.9 400.4 L 522.8 406.3 L 525.6 411.2 L 528.3 415.0 L 531.0 417.8 L 533.5 419.4 L 535.9 420.0 L 538.2 419.4 L 540.4 417.8 L 542.5 415.0 L 544.4 411.2 L 546.3 406.3 L 548.0 400.4 L 549.7 393.5 L 551.2 385.6 L 552.6 376.9 L 553.9 367.3 L 555.0 356.9 L 556.1 345.8 L 557.0 334.0 L 557.8 321.7 L 558.5 308.9 L 559.0 295.6 L 559.4 282.0 L 559.8 268.2 L 559.9 254.1 L 560.0 240.0 L 559.9 225.9 L 559.8 211.8 L 559.4 198.0 L 559.0 184.4 L 558.5 171.1 L 557.8 158.3 L 557.0 146.0 L 556.1 134.2 L 555.0 123.1 L 553.9 112.7 L 552.6 103.1 L 551.2 94.4 L 549.7 86.5 L 548.0 79.6 L 546.3 73.7 L 544.4 68.8 L 542.5 65.0 L 540.4 62.2 L 538.2 60.6 L 535.9 60.0 L 533.5 60.6 L 531.0 62.2 L 528.3 65.0 L 525.6 68.8 L 522.8 73.7 L 519.9 79.6 L 516.9 86.5 L 513.8 94.4 L 510.6 103.1 L 507.3 112.7 L 503.9 123.1 L 500.4 134.2 L 496.9 146.0 L 493.3 158.3 L 489.6 171.1 L 485.8 184.4 L 482.0 198.0 L 478.0 211.8 L 474.0 225.9 L 470.0 240.0 L 465.9 254.1 L 461.7 268.2 L 457.5 282.0 L 453.2 295.6 L 448.9 308.9 L 444.5 321.7 L 440.1 334.0 L 435.6 345.8 L 431.1 356.9 L 426.6 367.3 L 422.0 376.9 L 417.4 385.6 L 412.8 393.5 L 408.2 400.4 L 403.5 406.3 L 398.8 411.2 L 394.1 415.0 L 389.4 417.8 L 384.7 419.4 L 380.0 420.0 L 375.3 419.4 L 370.6 417.8 L 365.9 415.0 L 361.2 411.2 L 356.5 406.3 L 351.8 400.4 L 347.2 393.5 L 342.6 385.6 L 338.0 376.9 L 333.4 367.3 L 328.9 356.9 L 324.4 345.8 L 319.9 334.0 L 315.5 321.7 L 311.1 308.9 L 306.8 295.6 L 302.5 282.0 L 298.3 268.2 L 294.1 254.1 L 290.0 240.0 L 286.0 225.9 L 282.0 211.8 L 278.0 198.0 L 274.2 184.4 L 270.4 171.1 L 266.7 158.3 L 263.1 146.0 L 259.6 134.2 L 256.1 123.1 L 252.7 112.7 L 249.4 103.1 L 246.2 94.4 L 243.1 86.5 L 240.1 79.6 L 237.2 73.7 L 234.4 68.8 L 231.7 65.0 L 229.0 62.2 L 226.5 60.6 L 224.1 60.0 L 221.8 60.6 L 219.6 62.2 L 217.5 65.0 L 215.6 68.8 L 213.7 73.7 L 212.0 79.6 L 210.3 86.5 L 208.8 94.4 L 207.4 103.1 L 206.1 112.7 L 205.0 123.1 L 203.9 134.2 L 203.0 146.0 L 202.2 158.3 L 201.5 171.1 L 201.0 184.4 L 200.6 198.0 L 200.2 211.8 L 200.1 225.9 L 200.0 240.0 L 200.1 254.1 L 200.2 268.2 L 200.6 282.0 L 201.0 295.6 L 201.5 308.9 L 202.2 321.7 L 203.0 334.0 L 203.9 345.8 L 205.0 356.9 L 206.1 367.3 L 207.4 376.9 L 208.8 385.6 L 210.3 393.5 L 212.0 400.4 L 213.7 406.3 L 215.6 411.2 L 217.5 415.0 L 219.6 417.8 L 221.8 419.4 L 224.1 420.0 L 226.5 419.4 L 229.0 417.8 L 231.7 415.0 L 234.4 411.2 L 237.2 406.3 L 240.1 400.4 L 243.1 393.5 L 246.2 385.6 L 249.4 376.9 L 252.7 367.3 L 256.1 356.9 L 259.6 345.8 L 263.1 334.0 L 266.7 321.7 L 270.4 308.9 L 274.2 295.6 L 278.0 282.0 L 282.0 268.2 L 286.0 254.1 L 290.0 240.0 L 294.1 225.9 L 298.3 211.8 L 302.5 198.0 L 306.8 184.4 L 311.1 171.1 L 315.5 158.3 L 319.9 146.0 L 324.4 134.2 L 328.9 123.1 L 333.4 112.7 L 338.0 103.1 L 342.6 94.4 L 347.2 86.5 L 351.8 79.6 L 356.5 73.7 L 361.2 68.8 L 365.9 65.0 L 370.6 62.2 L 375.3 60.6 L 380.0 60.0 Z" fill="none" stroke="#60a5fa" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Portion d'étude t dans [0; pi/2] en bleu soutenu -->
+    <path d="M 380.0 60.0 L 383.5 60.3 L 387.1 61.2 L 390.6 62.8 L 394.1 65.0 L 397.6 67.8 L 401.2 71.1 L 404.7 75.1 L 408.2 79.6 L 411.6 84.7 L 415.1 90.3 L 418.6 96.5 L 422.0 103.1 L 425.4 110.2 L 428.9 117.8 L 432.3 125.8 L 435.6 134.2 L 439.0 143.0 L 442.3 152.0 L 445.6 161.4 L 448.9 171.1 L 452.1 181.0 L 455.4 191.1 L 458.6 201.4 L 461.7 211.8 L 464.9 222.4 L 468.0 232.9 L 471.0 243.5 L 474.0 254.1 L 477.0 264.7 L 480.0 275.1 L 482.9 285.4 L 485.8 295.6 L 488.6 305.6 L 491.4 315.4 L 494.2 324.9 L 496.9 334.0 L 499.6 342.9 L 502.2 351.4 L 504.8 359.6 L 507.3 367.3 L 509.8 374.6 L 512.2 381.4 L 514.6 387.7 L 516.9 393.5 L 519.1 398.7 L 521.4 403.5 L 523.5 407.6 L 525.6 411.2 L 527.7 414.2 L 529.7 416.5 L 531.6 418.3 L 533.5 419.4 L 535.3 420.0 L 537.0 419.9 L 538.7 419.1 L 540.4 417.8 L 542.0 415.8 L 543.5 413.2 L 544.9 410.1 L 546.3 406.3 L 547.6 402.0 L 548.9 397.0 L 550.1 391.6 L 551.2 385.6 L 552.2 379.1 L 553.2 372.2 L 554.2 364.8 L 555.0 356.9 L 555.8 348.6 L 556.5 340.0 L 557.2 331.0 L 557.8 321.7 L 558.3 312.1 L 558.8 302.3 L 559.1 292.3 L 559.4 282.0 L 559.7 271.6 L 559.9 261.2 L 560.0 250.6 L 560.0 240.0" fill="none" stroke="#2563eb" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Légende -->
+    <g transform="translate(48, 48)">
+      <rect x="0" y="0" width="220" height="96" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.05))"/>
+      <line x1="12" y1="20" x2="36" y2="20" stroke="#2563eb" stroke-width="3.2"/>
+      <text x="44" y="24" fill="#1f2937" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="700">Portion t ∈ [0 ; π/2]</text>
+      
+      <line x1="12" y1="42" x2="36" y2="42" stroke="#60a5fa" stroke-width="2.2"/>
+      <text x="44" y="46" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="600">Courbe entière (Γ)</text>
+      
+      <line x1="12" y1="64" x2="36" y2="64" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="3 3"/>
+      <text x="44" y="68" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="600">Tangentes remarquables</text>
+
+      <circle cx="24" cy="84" r="3.5" fill="#8b5cf6"/>
+      <text x="44" y="88" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600">Points doubles (±½ ; 0)</text>
+    </g>
+  </svg>
+</div>`
     },
     {
       label: 'Exercice 2 — Géométrie dans l\'espace (4 pts)',
@@ -4269,6 +4373,77 @@ Comme \\(e^{-x+1} > 0\\), \\(f(x)-(x-3) > 0\\) pour tout \\(x\\).<br>
 <p>\\(f(1) = 1-3+(1-2+3)e^0 = -2 + 2 = 0\\).<br>
 \\(f'(1) = g(1) = 1 - (1-4+5)e^0 = 1 - 2 = -1\\).<br>
 \\[\\boxed{(T) : y = -1(x-1) + 0 \\iff y = -x+1}\\]</p>
+
+<p><strong>4) Tracé de la courbe (C), de l'asymptote (D) et de la tangente (T)</strong></p>
+<p>On place le point de tangence \\(A(1;0)\\) avec sa tangente \\((T) : y = -x+1\\), le minimum absolu en \\(\alpha \approx 1{,}35\\) (\\(f(\alpha) \approx -0{,}15\\)), l'asymptote oblique \\((D) : y = x-3\\) vers laquelle la courbe tend en \\(+\infty\\) en restant strictement au-dessus, et la branche parabolique de direction \\((Oy)\\) en \\(-\infty\\).</p>
+
+<div class="diagram-wrap" style="margin:20px 0;text-align:center;">
+  <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:600;color:#374151;margin-bottom:8px;"> Tracé de la courbe (C), de l'asymptote (D) et de la tangente (T) — BAC 2019 2nd tour</div>
+  <svg viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;">
+    <defs>
+    </defs>
+
+    <!-- Grille de fond -->
+    <!-- Lignes verticales x = -1 à 6 -->
+    <line x1="120.0" y1="30" x2="120.0" y2="450" stroke="#f1f5f9" stroke-width="1"/><line x1="180.0" y1="30" x2="180.0" y2="450" stroke="#f1f5f9" stroke-width="1"/><line x1="240.0" y1="30" x2="240.0" y2="450" stroke="#f1f5f9" stroke-width="1"/><line x1="300.0" y1="30" x2="300.0" y2="450" stroke="#f1f5f9" stroke-width="1"/><line x1="360.0" y1="30" x2="360.0" y2="450" stroke="#f1f5f9" stroke-width="1"/><line x1="420.0" y1="30" x2="420.0" y2="450" stroke="#f1f5f9" stroke-width="1"/><line x1="480.0" y1="30" x2="480.0" y2="450" stroke="#f1f5f9" stroke-width="1"/><line x1="540.0" y1="30" x2="540.0" y2="450" stroke="#f1f5f9" stroke-width="1"/>
+    <!-- Lignes horizontales y = -3 à 5 -->
+    <line x1="60" y1="470.0" x2="720" y2="470.0" stroke="#f1f5f9" stroke-width="1"/><line x1="60" y1="420.0" x2="720" y2="420.0" stroke="#f1f5f9" stroke-width="1"/><line x1="60" y1="370.0" x2="720" y2="370.0" stroke="#f1f5f9" stroke-width="1"/><line x1="60" y1="320.0" x2="720" y2="320.0" stroke="#f1f5f9" stroke-width="1"/><line x1="60" y1="270.0" x2="720" y2="270.0" stroke="#f1f5f9" stroke-width="1"/><line x1="60" y1="220.0" x2="720" y2="220.0" stroke="#f1f5f9" stroke-width="1"/><line x1="60" y1="170.0" x2="720" y2="170.0" stroke="#f1f5f9" stroke-width="1"/><line x1="60" y1="120.0" x2="720" y2="120.0" stroke="#f1f5f9" stroke-width="1"/><line x1="60" y1="70.0" x2="720" y2="70.0" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Axes cartésiens -->
+    <line x1="50" y1="320" x2="730" y2="320" stroke="#1f2937" stroke-width="1.5"/>
+    <text x="735" y="324" text-anchor="start" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" font-style="italic">x</text>
+    
+    <line x1="180" y1="460" x2="180" y2="25" stroke="#1f2937" stroke-width="1.5"/>
+    <text x="180" y="18" text-anchor="middle" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" font-style="italic">y</text>
+    <text x="170" y="336" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12" font-weight="500">O</text>
+
+    <!-- Graduations Ox -->
+    <line x1="120.0" y1="317" x2="120.0" y2="323" stroke="#1f2937" stroke-width="1.2"/><text x="120.0" y="336" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-1</text><line x1="240.0" y1="317" x2="240.0" y2="323" stroke="#1f2937" stroke-width="1.2"/><text x="240.0" y="336" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">1</text><line x1="300.0" y1="317" x2="300.0" y2="323" stroke="#1f2937" stroke-width="1.2"/><text x="300.0" y="336" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">2</text><line x1="360.0" y1="317" x2="360.0" y2="323" stroke="#1f2937" stroke-width="1.2"/><text x="360.0" y="336" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">3</text><line x1="420.0" y1="317" x2="420.0" y2="323" stroke="#1f2937" stroke-width="1.2"/><text x="420.0" y="336" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">4</text><line x1="480.0" y1="317" x2="480.0" y2="323" stroke="#1f2937" stroke-width="1.2"/><text x="480.0" y="336" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">5</text><line x1="540.0" y1="317" x2="540.0" y2="323" stroke="#1f2937" stroke-width="1.2"/><text x="540.0" y="336" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">6</text>
+
+    <!-- Graduations Oy -->
+    <line x1="177" y1="470.0" x2="183" y2="470.0" stroke="#1f2937" stroke-width="1.2"/><text x="172" y="474.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-3</text><line x1="177" y1="420.0" x2="183" y2="420.0" stroke="#1f2937" stroke-width="1.2"/><text x="172" y="424.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-2</text><line x1="177" y1="370.0" x2="183" y2="370.0" stroke="#1f2937" stroke-width="1.2"/><text x="172" y="374.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-1</text><line x1="177" y1="270.0" x2="183" y2="270.0" stroke="#1f2937" stroke-width="1.2"/><text x="172" y="274.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">1</text><line x1="177" y1="220.0" x2="183" y2="220.0" stroke="#1f2937" stroke-width="1.2"/><text x="172" y="224.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">2</text><line x1="177" y1="170.0" x2="183" y2="170.0" stroke="#1f2937" stroke-width="1.2"/><text x="172" y="174.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">3</text><line x1="177" y1="120.0" x2="183" y2="120.0" stroke="#1f2937" stroke-width="1.2"/><text x="172" y="124.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">4</text><line x1="177" y1="70.0" x2="183" y2="70.0" stroke="#1f2937" stroke-width="1.2"/><text x="172" y="74.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">5</text>
+
+    <!-- Asymptote oblique (D) : y = x - 3 -->
+    <line x1="150.0" y1="495.0" x2="552.0" y2="160.0" stroke="#64748b" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="518.0" y="211.0" fill="#475569" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="700">(D) : y = x − 3</text>
+
+    <!-- Tangente (T) : y = -x + 1 -->
+    <line x1="150.0" y1="245.0" x2="330.0" y2="395.0" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4 3"/>
+    <text x="140.0" y="237.0" fill="#b91c1c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">(T) : y = −x + 1</text>
+
+    <!-- Tangente horizontale en alpha : y = f(alpha) -->
+    <line x1="221.10000000000002" y1="327.7" x2="301.1" y2="327.7" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+    <!-- Courbe (C) -->
+    <path d="M 175.7 14.3 L 178.0 40.6 L 180.3 65.0 L 182.5 87.8 L 184.8 108.9 L 187.1 128.5 L 189.3 146.6 L 191.6 163.4 L 193.9 178.9 L 196.1 193.3 L 198.4 206.5 L 200.7 218.8 L 202.9 230.0 L 205.2 240.4 L 207.5 249.8 L 209.7 258.5 L 212.0 266.5 L 214.3 273.8 L 216.5 280.4 L 218.8 286.4 L 221.1 291.8 L 223.3 296.8 L 225.6 301.2 L 227.9 305.2 L 230.1 308.8 L 232.4 311.9 L 234.7 314.7 L 236.9 317.2 L 239.2 319.3 L 241.5 321.2 L 243.7 322.7 L 246.0 324.1 L 248.3 325.2 L 250.5 326.0 L 252.8 326.7 L 255.1 327.2 L 257.3 327.5 L 259.6 327.7 L 261.9 327.7 L 264.1 327.6 L 266.4 327.4 L 268.7 327.0 L 270.9 326.6 L 273.2 326.0 L 275.5 325.4 L 277.7 324.7 L 280.0 323.9 L 282.3 323.1 L 284.5 322.2 L 286.8 321.2 L 289.1 320.2 L 291.3 319.2 L 293.6 318.1 L 295.9 316.9 L 298.1 315.8 L 300.4 314.6 L 302.7 313.4 L 304.9 312.2 L 307.2 310.9 L 309.5 309.6 L 311.7 308.3 L 314.0 307.0 L 316.3 305.7 L 318.5 304.4 L 320.8 303.1 L 323.1 301.7 L 325.3 300.4 L 327.6 299.0 L 329.9 297.7 L 332.1 296.3 L 334.4 294.9 L 336.7 293.6 L 338.9 292.2 L 341.2 290.8 L 343.5 289.4 L 345.7 288.1 L 348.0 286.7 L 350.3 285.3 L 352.5 283.9 L 354.8 282.6 L 357.1 281.2 L 359.3 279.8 L 361.6 278.4 L 363.9 277.0 L 366.1 275.7 L 368.4 274.3 L 370.7 272.9 L 372.9 271.5 L 375.2 270.2 L 377.5 268.8 L 379.7 267.4 L 382.0 266.0 L 384.3 264.6 L 386.5 263.3 L 388.8 261.9 L 391.1 260.5 L 393.3 259.1 L 395.6 257.7 L 397.9 256.3 L 400.1 254.9 L 402.4 253.5 L 404.7 252.1 L 406.9 250.7 L 409.2 249.3 L 411.5 247.9 L 413.7 246.5 L 416.0 245.1 L 418.3 243.7 L 420.5 242.3 L 422.8 240.9 L 425.1 239.4 L 427.3 238.0 L 429.6 236.6 L 431.9 235.1 L 434.1 233.7 L 436.4 232.3 L 438.7 230.8 L 440.9 229.3 L 443.2 227.9 L 445.5 226.4 L 447.7 225.0 L 450.0 223.5 L 452.3 222.0 L 454.5 220.5 L 456.8 219.0 L 459.1 217.5 L 461.3 216.0 L 463.6 214.5 L 465.9 213.0 L 468.1 211.5 L 470.4 210.0 L 472.7 208.5 L 474.9 207.0 L 477.2 205.4 L 479.5 203.9 L 481.7 202.3 L 484.0 200.8 L 486.3 199.2 L 488.5 197.7 L 490.8 196.1 L 493.1 194.5 L 495.3 193.0 L 497.6 191.4 L 499.9 189.8 L 502.1 188.2 L 504.4 186.6 L 506.7 185.0 L 508.9 183.4 L 511.2 181.8 L 513.5 180.2 L 515.7 178.6 L 518.0 176.9 L 520.3 175.3 L 522.5 173.7 L 524.8 172.0 L 527.1 170.4 L 529.3 168.7 L 531.6 167.1 L 533.9 165.4 L 536.1 163.8 L 538.4 162.1 L 540.7 160.4 L 542.9 158.7 L 545.2 157.1 L 547.5 155.4 L 549.7 153.7 L 552.0 152.0" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="425.0" y="209.5" fill="#1d4ed8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="800">(C)</text>
+
+    <!-- Points remarquables -->
+    <!-- Point A(1; 0) -->
+    <circle cx="240.0" cy="320.0" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <text x="226.0" y="310.0" fill="#1e293b" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">A(1; 0)</text>
+
+    <!-- Minimum en alpha -->
+    <circle cx="261.1" cy="327.7" r="4.5" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+    <text x="269.1" y="343.7" fill="#047857" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">Min(α ≈ 1,35 ; −0,15)</text>
+
+    <!-- Légende -->
+    <g transform="translate(480, 50)">
+      <rect x="0" y="0" width="225" height="96" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.05))"/>
+      <line x1="12" y1="20" x2="36" y2="20" stroke="#2563eb" stroke-width="3"/>
+      <text x="44" y="24" fill="#1f2937" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="700">Courbe (C)</text>
+      
+      <line x1="12" y1="42" x2="36" y2="42" stroke="#64748b" stroke-width="2" stroke-dasharray="5 3"/>
+      <text x="44" y="46" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="600">Asymptote (D) : y = x − 3</text>
+      
+      <line x1="12" y1="64" x2="36" y2="64" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="3 3"/>
+      <text x="44" y="68" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="600">Tangente (T) : y = −x + 1</text>
+
+      <circle cx="24" cy="84" r="4" fill="#10b981"/>
+      <text x="44" y="88" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="600">Minimum en α</text>
+    </g>
+  </svg>
+</div>
 
 <p><strong>Partie C</strong></p>
 
@@ -5637,74 +5812,9 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
 <p>\\(y(\\dfrac{\\pi}{3}) = 2 \\cdot \\dfrac{1}{2} - \\cos\\dfrac{2\\pi}{3} = 1 + \\dfrac{1}{2} = \\dfrac{3}{2}\\)</p>
 <p>\\(x(\\dfrac{2\\pi}{3}) = 2\\sin\\dfrac{2\\pi}{3} - \\sin\\dfrac{4\\pi}{3} = \\sqrt{3} + \\dfrac{\\sqrt{3}}{2} = \\dfrac{3\\sqrt{3}}{2} \\approx 2{,}6\\)</p>
 <p>\\(y(\\dfrac{2\\pi}{3}) = 2 \\cdot (-\\dfrac{1}{2}) - (-\\dfrac{1}{2}) = -1 + \\dfrac{1}{2} = -\\dfrac{1}{2}\\)</p>
-<p>\\(M(\\pi) = (0 ; -2-1) = (0;-3)\\)</p>`
-    },
-    {
-      label: 'Problème — Fonction f sur ]-1;+∞[ (12 pts)',
-      problem: `<p>On considère la fonction f définie sur \\(]-1;+\\infty[\\) par :</p>
-<p>\\[f(x) = \\begin{cases} -x + 2\\ln(1+x) & \\text{si } x \\in ]-1;0[ \\\\ x - 1 + e^{-x} & \\text{si } x \\in [0;+\\infty[ \\end{cases}\\]</p>
-<p>de courbe représentative (C) dans un repère orthonormal \\((O;\\vec{i};\\vec{j})\\) d'unité graphique 2 cm.</p>
-<p><strong>Partie A</strong></p>
-<p><strong>1) a)</strong> Étudier la continuité de f en 0.</p>
-<p><strong>b)</strong> Étudier la dérivabilité de f en 0. Interpréter graphiquement le résultat.</p>
-<p><strong>2) a)</strong> Calculer \\(\\displaystyle\\lim_{x \\to -1^+} f(x)\\) et interpréter graphiquement le résultat.</p>
-<p><strong>b)</strong> Calculer \\(\\displaystyle\\lim_{x \\to +\\infty} f(x)\\).</p>
-<p><strong>c)</strong> Montrer que la droite \\((\\Delta)\\) d'équation \\(y = x-1\\) est une asymptote oblique à (C) au voisinage de \\(+\\infty\\).</p>
-<p><strong>3) a)</strong> Déterminer le sens de variation de f sur \\(]-1;0[\\) puis sur \\([0;+\\infty[\\) et dresser le tableau de variation de f.</p>
-<p><strong>b)</strong> Tracer la courbe (C) et ses asymptotes.</p>
-<p><strong>4)</strong> Soit h la restriction de f à l'intervalle \\(]-1;0[\\).</p>
-<p><strong>a)</strong> Montrer que h admet une bijection réciproque \\(h^{-1}\\) dont on précisera l'ensemble de définition.</p>
-<p><strong>b)</strong> Construire en pointillés la courbe \\((\\Gamma)\\) de \\(h^{-1}\\) dans le même repère que (C). Justifier la construction.</p>
-<p><strong>Partie B</strong></p>
-<p><strong>1)</strong> On considère un réel \\(\\alpha\\) supérieur à 1. Soit \\(A(\\alpha)\\) l'aire de la partie du plan délimitée par les droites d'équations \\(x=1\\) ; \\(x=\\alpha\\) ; \\(y=x-1\\) et la courbe (C).</p>
-<p><strong>a)</strong> Calculer en cm² l'aire \\(A(\\alpha)\\) en fonction de \\(\\alpha\\).</p>
-<p><strong>b)</strong> Calculer \\(\\displaystyle\\lim_{\\alpha \\to +\\infty} A(\\alpha)\\).</p>
-<p><strong>2)</strong> On considère \\(\\Sigma\\), la portion du plan comprise entre les droites \\(x=0\\) ; \\(x=1\\) ; l'axe des abscisses et la courbe (C). On note V le volume engendré par la rotation complète de \\(\\Sigma\\) autour de l'axe des abscisses.</p>
-<p><strong>a)</strong> Calculer en intégrant par parties \\(I = \\displaystyle\\int_0^1 (x-1)e^{-x}\\,dx\\).</p>
-<p><strong>b)</strong> Calculer le volume V en cm³. <em>On donne : \\(e \\approx 2{,}7\\).</em></p>`,
-            rappel: `<div class="rappel">
-  <span class="label">Rappels de cours — Fonctions définies par morceaux, bijection réciproque &amp; volumes de révolution</span>
-  <ul>
-    <li><strong>Continuité et dérivabilité en 0 :</strong> Vérifiez $\\lim_{x\\to 0^-} f(x) = \\lim_{x\\to 0^+} f(x) = f(0)$. Calculez les taux d'accroissement à gauche et à droite pour déterminer les demi-tangentes.</li>
-    <li><strong>Bijection réciproque $h^{-1}$ :</strong> Si $h$ est la restriction continue et strictement croissante de $f$ sur $]-1;0[$, elle est bijective de $]-1;0[$ sur $]-\\infty;0[$. La courbe $(\\Gamma)$ de $h^{-1}$ est le symétrique de $(C)$ par rapport à la première bissectrice $(y=x)$.</li>
-    <li><strong>Volume de révolution autour de $(Ox)$ :</strong> Le volume engendré par la rotation d'une courbe $y=f(x)$ sur $[a;b]$ autour de l'axe $(Ox)$ est donné par $V = \\pi \\int_a^b [f(x)]^2\\,dx \\times U_V$, où $U_V = \\|\\vec{i}\\|^3$ en cm³.</li>
-  </ul>
-</div>`,
-      correction: `<h4> Proposition de Corrigé</h4>
+<p>\\(M(\\pi) = (0 ; -2-1) = (0;-3)\\)</p>
 
-<p><strong>Partie A</strong></p>
-
-<p><strong>1a) Continuité en 0</strong></p>
-<p>\\(\\lim_{x\\to0^-}f(x) = \\lim_{x\\to0^-}(-x+2\\ln(1+x)) = 0 + 2\\ln 1 = 0\\)</p>
-<p>\\(f(0) = 0 - 1 + e^0 = 0\\)</p>
-<p>\\(\\lim_{x\\to0^-}f(x) = f(0) = 0\\) → f est <strong>continue en 0</strong>.</p>
-
-<p><strong>1b) Dérivabilité en 0</strong></p>
-<p>À gauche : \\(\\lim_{x\\to0^-}\\dfrac{f(x)-f(0)}{x-0} = \\lim_{x\\to0^-}\\dfrac{-x+2\\ln(1+x)}{x}\\)</p>
-<p>\\(= \\lim_{x\\to0^-}\\left(-1 + 2\\dfrac{\\ln(1+x)}{x}\\right) = -1 + 2 \\times 1 = 1\\)</p>
-<p>(car \\(\\displaystyle\\lim_{x\\to0}\\dfrac{\\ln(1+x)}{x} = 1\\))</p>
-<p>À droite : \\(\\lim_{x\\to0^+}\\dfrac{f(x)-f(0)}{x} = \\lim_{x\\to0^+}\\dfrac{x-1+e^{-x}}{x}\\)</p>
-<p>\\(= \\lim_{x\\to0^+}\\left(1 - \\dfrac{1}{x} + \\dfrac{e^{-x}}{x}\\right)\\). Comme \\(\\dfrac{e^{-x}-1}{x} \\to -1\\) :</p>
-<p>\\(= 1 + \\lim_{x\\to0^+}\\dfrac{e^{-x}-1}{x} = 1 + (-1) = 0\\)</p>
-<p>Les limites à gauche (1) et à droite (0) sont <strong>différentes</strong> → f n'est <strong>pas dérivable en 0</strong>.</p>
-<p>Interprétation : (C) admet un <strong>point anguleux</strong> en (0;0) avec demi-tangente de pente 1 à gauche et demi-tangente horizontale (pente 0) à droite.</p>
-
-<p><strong>2a) Limite en \\(-1^+\\)</strong></p>
-<p>\\(\\lim_{x\\to-1^+}f(x) = \\lim_{x\\to-1^+}(-x+2\\ln(1+x)) = 1 + 2\\ln(0^+) = 1 - \\infty = -\\infty\\)</p>
-<p>La droite \\(x = -1\\) est <strong>asymptote verticale</strong> à (C).</p>
-
-<p><strong>2b) Limite en \\(+\\infty\\)</strong></p>
-<p>\\(\\lim_{x\\to+\\infty}f(x) = \\lim_{x\\to+\\infty}(x-1+e^{-x}) = +\\infty\\) (car \\(e^{-x}\\to0\\)).</p>
-
-<p><strong>2c) Asymptote oblique</strong></p>
-<p>\\(f(x) - (x-1) = e^{-x} \\to 0\\) quand \\(x\\to+\\infty\\).</p>
-<p>La droite \\((\\Delta): y=x-1\\) est <strong>asymptote oblique</strong> à (C) en \\(+\\infty\\). De plus \\(e^{-x} > 0\\) donc (C) est <strong>au-dessus</strong> de \\((\\Delta)\\) sur \\([0;+\\infty[\\).</p>
-
-<p><strong>3a) Variations de f</strong></p>
-<p><em>Sur \\(]-1;0[\\) :</em> \\(f'(x) = -1 + \\dfrac{2}{1+x} = \\dfrac{1-x}{1+x}\\). Sur \\(]-1;0[\\), \\(1-x > 0\\) et \\(1+x > 0\\) donc \\(f'(x) > 0\\) → f <strong>croissante</strong>.</p>
-<p><em>Sur \\([0;+\\infty[\\) :</em> \\(f'(x) = 1 - e^{-x}\\). \\(f'(x) = 0 \\iff e^{-x} = 1 \\iff x = 0\\). Pour \\(x > 0\\) : \\(e^{-x} < 1\\) donc \\(f'(x) > 0\\) → f <strong>croissante</strong>.</p>
-
-
+<p><strong>2c) Tableau de variation conjoint</strong></p>
 <div class="diagram-wrap">
   <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg">
     <defs>
@@ -5774,6 +5884,208 @@ Par le théorème des gendarmes, \\(\\lim_{n\\to+\\infty} |u_n - \\alpha| = 0\\)
     <text x="510" y="275" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="900">−1/2</text>
     <line x1="535" y1="280" x2="675" y2="300" stroke="#b83232" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr-red-22-1-param)"/>
     <text x="700" y="300" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="15" font-weight="900">−3</text>
+  </svg>
+</div>
+
+<p><strong>3) Tracé de la courbe cardioïde (C) et de ses tangentes</strong></p>
+<p>On trace la portion correspondant à \\(t \in [0 ; \pi]\\) en plaçant le point de rebroussement \\(M(0)(0;1)\\), le maximum en \\(M\left(\dfrac{\pi}{3}\right)\left(\dfrac{\sqrt{3}}{2};\dfrac{3}{2}\right)\\), le point à tangente verticale \\(M\left(\dfrac{2\pi}{3}\right)\left(\dfrac{3\sqrt{3}}{2};-\dfrac{1}{2}\right)\\) et le point inférieur \\(M(\pi)(0;-3)\\). Par symétrie orthogonale par rapport à l'axe \\((Oy)\\), on complète le tracé pour \\(t \in [-\pi ; 0]\\) afin d'obtenir la cardioïde complète.</p>
+
+<div class="diagram-wrap" style="margin:20px 0;text-align:center;">
+  <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:600;color:#374151;margin-bottom:8px;"> Tracé de la courbe paramétrique cardioïde (C) et de ses tangentes — BAC 2022 1er tour</div>
+  <svg viewBox="0 0 760 500" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;">
+    <defs>
+    </defs>
+
+    <!-- Grille de fond -->
+    <!-- Lignes verticales x = -3 à 3 -->
+    <line x1="140.0" y1="30" x2="140.0" y2="460" stroke="#f1f5f9" stroke-width="1"/><line x1="220.0" y1="30" x2="220.0" y2="460" stroke="#f1f5f9" stroke-width="1"/><line x1="300.0" y1="30" x2="300.0" y2="460" stroke="#f1f5f9" stroke-width="1"/><line x1="380.0" y1="30" x2="380.0" y2="460" stroke="#f1f5f9" stroke-width="1"/><line x1="460.0" y1="30" x2="460.0" y2="460" stroke="#f1f5f9" stroke-width="1"/><line x1="540.0" y1="30" x2="540.0" y2="460" stroke="#f1f5f9" stroke-width="1"/><line x1="620.0" y1="30" x2="620.0" y2="460" stroke="#f1f5f9" stroke-width="1"/>
+    <!-- Lignes horizontales y = -3 à 2 -->
+    <line x1="80" y1="420.0" x2="680" y2="420.0" stroke="#f1f5f9" stroke-width="1"/><line x1="80" y1="340.0" x2="680" y2="340.0" stroke="#f1f5f9" stroke-width="1"/><line x1="80" y1="260.0" x2="680" y2="260.0" stroke="#f1f5f9" stroke-width="1"/><line x1="80" y1="180.0" x2="680" y2="180.0" stroke="#f1f5f9" stroke-width="1"/><line x1="80" y1="100.0" x2="680" y2="100.0" stroke="#f1f5f9" stroke-width="1"/><line x1="80" y1="20.0" x2="680" y2="20.0" stroke="#f1f5f9" stroke-width="1"/>
+
+    <!-- Axes cartésiens -->
+    <line x1="70" y1="180" x2="690" y2="180" stroke="#1f2937" stroke-width="1.5"/>
+    <text x="698" y="184" text-anchor="start" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" font-style="italic">x</text>
+    
+    <line x1="380" y1="465" x2="380" y2="25" stroke="#1f2937" stroke-width="1.5"/>
+    <text x="380" y="18" text-anchor="middle" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="13" font-weight="600" font-style="italic">y</text>
+    <text x="370" y="196" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="12" font-weight="500">O</text>
+
+    <!-- Graduations Ox -->
+    <line x1="140.0" y1="177" x2="140.0" y2="183" stroke="#1f2937" stroke-width="1.2"/><text x="140.0" y="196" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-3</text><line x1="220.0" y1="177" x2="220.0" y2="183" stroke="#1f2937" stroke-width="1.2"/><text x="220.0" y="196" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-2</text><line x1="300.0" y1="177" x2="300.0" y2="183" stroke="#1f2937" stroke-width="1.2"/><text x="300.0" y="196" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-1</text><line x1="460.0" y1="177" x2="460.0" y2="183" stroke="#1f2937" stroke-width="1.2"/><text x="460.0" y="196" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">1</text><line x1="540.0" y1="177" x2="540.0" y2="183" stroke="#1f2937" stroke-width="1.2"/><text x="540.0" y="196" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">2</text><line x1="620.0" y1="177" x2="620.0" y2="183" stroke="#1f2937" stroke-width="1.2"/><text x="620.0" y="196" text-anchor="middle" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">3</text>
+
+    <!-- Graduations Oy -->
+    <line x1="377" y1="420.0" x2="383" y2="420.0" stroke="#1f2937" stroke-width="1.2"/><text x="372" y="424.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-3</text><line x1="377" y1="340.0" x2="383" y2="340.0" stroke="#1f2937" stroke-width="1.2"/><text x="372" y="344.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-2</text><line x1="377" y1="260.0" x2="383" y2="260.0" stroke="#1f2937" stroke-width="1.2"/><text x="372" y="264.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">-1</text><line x1="377" y1="100.0" x2="383" y2="100.0" stroke="#1f2937" stroke-width="1.2"/><text x="372" y="104.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">1</text><line x1="377" y1="20.0" x2="383" y2="20.0" stroke="#1f2937" stroke-width="1.2"/><text x="372" y="24.0" text-anchor="end" fill="#4b5563" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="500">2</text>
+
+    <!-- Tangentes remarquables (en rouge) -->
+    <!-- En t = pi/3 : M(sqrt(3)/2; 1.5), tangente horizontale y = 1.5 -->
+    <line x1="399.3" y1="60.0" x2="499.3" y2="60.0" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4 3"/>
+    <line x1="260.7" y1="60.0" x2="360.7" y2="60.0" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+    <!-- En t = 2pi/3 : M(3*sqrt(3)/2; -0.5), tangente verticale x = 3*sqrt(3)/2 -->
+    <line x1="587.8" y1="170.0" x2="587.8" y2="270.0" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4 3"/>
+    <line x1="172.2" y1="170.0" x2="172.2" y2="270.0" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+    <!-- En t = pi : M(0; -3), tangente horizontale y = -3 -->
+    <line x1="320.0" y1="420.0" x2="440.0" y2="420.0" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4 3"/>
+
+    <!-- Courbe complète (symétrie Oy) en bleu clair -->
+    <path d="M 380.0 420.0 L 371.6 419.8 L 363.3 419.3 L 354.9 418.5 L 346.6 417.4 L 338.4 415.9 L 330.2 414.1 L 322.2 412.0 L 314.2 409.6 L 306.3 406.9 L 298.6 403.8 L 291.0 400.5 L 283.5 396.9 L 276.2 393.0 L 269.1 388.8 L 262.2 384.4 L 255.5 379.7 L 248.9 374.8 L 242.6 369.6 L 236.6 364.2 L 230.7 358.6 L 225.1 352.7 L 219.8 346.7 L 214.7 340.5 L 209.9 334.2 L 205.3 327.6 L 201.1 321.0 L 197.1 314.2 L 193.4 307.3 L 190.0 300.2 L 186.9 293.1 L 184.0 285.9 L 181.5 278.7 L 179.3 271.4 L 177.4 264.1 L 175.8 256.7 L 174.5 249.3 L 173.5 242.0 L 172.7 234.6 L 172.3 227.3 L 172.2 220.0 L 172.3 212.8 L 172.7 205.6 L 173.4 198.5 L 174.4 191.5 L 175.6 184.7 L 177.1 177.9 L 178.8 171.2 L 180.8 164.7 L 183.0 158.3 L 185.5 152.1 L 188.1 146.1 L 191.0 140.2 L 194.0 134.5 L 197.2 128.9 L 200.7 123.6 L 204.2 118.5 L 208.0 113.5 L 211.9 108.8 L 215.9 104.3 L 220.0 100.0 L 224.2 95.9 L 228.6 92.1 L 233.0 88.4 L 237.5 85.0 L 242.1 81.8 L 246.7 78.9 L 251.3 76.2 L 256.0 73.7 L 260.7 71.4 L 265.5 69.3 L 270.2 67.5 L 274.9 65.8 L 279.5 64.4 L 284.2 63.2 L 288.7 62.2 L 293.3 61.4 L 297.8 60.8 L 302.2 60.3 L 306.5 60.1 L 310.7 60.0 L 314.9 60.1 L 318.9 60.3 L 322.8 60.7 L 326.6 61.2 L 330.3 61.9 L 333.9 62.7 L 337.4 63.6 L 340.7 64.6 L 343.8 65.7 L 346.9 66.9 L 349.8 68.1 L 352.5 69.5 L 355.1 70.8 L 357.6 72.3 L 359.9 73.8 L 362.0 75.3 L 364.1 76.8 L 365.9 78.4 L 367.7 79.9 L 369.3 81.4 L 370.7 83.0 L 372.1 84.5 L 373.3 85.9 L 374.4 87.4 L 375.3 88.7 L 376.2 90.1 L 376.9 91.3 L 377.6 92.6 L 378.1 93.7 L 378.6 94.7 L 379.0 95.7 L 379.3 96.6 L 379.5 97.4 L 379.7 98.1 L 379.8 98.6 L 379.9 99.1 L 380.0 99.5 L 380.0 99.8 L 380.0 99.9 L 380.0 100.0 L 380.0 99.9 L 380.0 99.8 L 380.0 99.5 L 380.1 99.1 L 380.2 98.6 L 380.3 98.1 L 380.5 97.4 L 380.7 96.6 L 381.0 95.7 L 381.4 94.7 L 381.9 93.7 L 382.4 92.6 L 383.1 91.3 L 383.8 90.1 L 384.7 88.7 L 385.6 87.4 L 386.7 85.9 L 387.9 84.5 L 389.3 83.0 L 390.7 81.4 L 392.3 79.9 L 394.1 78.4 L 395.9 76.8 L 398.0 75.3 L 400.1 73.8 L 402.4 72.3 L 404.9 70.8 L 407.5 69.5 L 410.2 68.1 L 413.1 66.9 L 416.2 65.7 L 419.3 64.6 L 422.6 63.6 L 426.1 62.7 L 429.7 61.9 L 433.4 61.2 L 437.2 60.7 L 441.1 60.3 L 445.1 60.1 L 449.3 60.0 L 453.5 60.1 L 457.8 60.3 L 462.2 60.8 L 466.7 61.4 L 471.3 62.2 L 475.8 63.2 L 480.5 64.4 L 485.1 65.8 L 489.8 67.5 L 494.5 69.3 L 499.3 71.4 L 504.0 73.7 L 508.7 76.2 L 513.3 78.9 L 517.9 81.8 L 522.5 85.0 L 527.0 88.4 L 531.4 92.1 L 535.8 95.9 L 540.0 100.0 L 544.1 104.3 L 548.1 108.8 L 552.0 113.5 L 555.8 118.5 L 559.3 123.6 L 562.8 128.9 L 566.0 134.5 L 569.0 140.2 L 571.9 146.1 L 574.5 152.1 L 577.0 158.3 L 579.2 164.7 L 581.2 171.2 L 582.9 177.9 L 584.4 184.7 L 585.6 191.5 L 586.6 198.5 L 587.3 205.6 L 587.7 212.8 L 587.8 220.0 L 587.7 227.3 L 587.3 234.6 L 586.5 242.0 L 585.5 249.3 L 584.2 256.7 L 582.6 264.1 L 580.7 271.4 L 578.5 278.7 L 576.0 285.9 L 573.1 293.1 L 570.0 300.2 L 566.6 307.3 L 562.9 314.2 L 558.9 321.0 L 554.7 327.6 L 550.1 334.2 L 545.3 340.5 L 540.2 346.7 L 534.9 352.7 L 529.3 358.6 L 523.4 364.2 L 517.4 369.6 L 511.1 374.8 L 504.5 379.7 L 497.8 384.4 L 490.9 388.8 L 483.8 393.0 L 476.5 396.9 L 469.0 400.5 L 461.4 403.8 L 453.7 406.9 L 445.8 409.6 L 437.8 412.0 L 429.8 414.1 L 421.6 415.9 L 413.4 417.4 L 405.1 418.5 L 396.7 419.3 L 388.4 419.8 L 380.0 420.0 Z" fill="none" stroke="#60a5fa" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Portion d'étude t in [0; pi] en bleu soutenu -->
+    <path d="M 380.0 100.0 L 380.0 99.9 L 380.0 99.8 L 380.0 99.5 L 380.1 99.1 L 380.2 98.6 L 380.3 98.1 L 380.5 97.4 L 380.7 96.6 L 381.0 95.7 L 381.4 94.7 L 381.9 93.7 L 382.4 92.6 L 383.1 91.3 L 383.8 90.1 L 384.7 88.7 L 385.6 87.4 L 386.7 85.9 L 387.9 84.5 L 389.3 83.0 L 390.7 81.4 L 392.3 79.9 L 394.1 78.4 L 395.9 76.8 L 398.0 75.3 L 400.1 73.8 L 402.4 72.3 L 404.9 70.8 L 407.5 69.5 L 410.2 68.1 L 413.1 66.9 L 416.2 65.7 L 419.3 64.6 L 422.6 63.6 L 426.1 62.7 L 429.7 61.9 L 433.4 61.2 L 437.2 60.7 L 441.1 60.3 L 445.1 60.1 L 449.3 60.0 L 453.5 60.1 L 457.8 60.3 L 462.2 60.8 L 466.7 61.4 L 471.3 62.2 L 475.8 63.2 L 480.5 64.4 L 485.1 65.8 L 489.8 67.5 L 494.5 69.3 L 499.3 71.4 L 504.0 73.7 L 508.7 76.2 L 513.3 78.9 L 517.9 81.8 L 522.5 85.0 L 527.0 88.4 L 531.4 92.1 L 535.8 95.9 L 540.0 100.0 L 544.1 104.3 L 548.1 108.8 L 552.0 113.5 L 555.8 118.5 L 559.3 123.6 L 562.8 128.9 L 566.0 134.5 L 569.0 140.2 L 571.9 146.1 L 574.5 152.1 L 577.0 158.3 L 579.2 164.7 L 581.2 171.2 L 582.9 177.9 L 584.4 184.7 L 585.6 191.5 L 586.6 198.5 L 587.3 205.6 L 587.7 212.8 L 587.8 220.0 L 587.7 227.3 L 587.3 234.6 L 586.5 242.0 L 585.5 249.3 L 584.2 256.7 L 582.6 264.1 L 580.7 271.4 L 578.5 278.7 L 576.0 285.9 L 573.1 293.1 L 570.0 300.2 L 566.6 307.3 L 562.9 314.2 L 558.9 321.0 L 554.7 327.6 L 550.1 334.2 L 545.3 340.5 L 540.2 346.7 L 534.9 352.7 L 529.3 358.6 L 523.4 364.2 L 517.4 369.6 L 511.1 374.8 L 504.5 379.7 L 497.8 384.4 L 490.9 388.8 L 483.8 393.0 L 476.5 396.9 L 469.0 400.5 L 461.4 403.8 L 453.7 406.9 L 445.8 409.6 L 437.8 412.0 L 429.8 414.1 L 421.6 415.9 L 413.4 417.4 L 405.1 418.5 L 396.7 419.3 L 388.4 419.8 L 380.0 420.0" fill="none" stroke="#2563eb" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Points remarquables -->
+    <!-- Cusp en t = 0 : M(0; 1) -->
+    <circle cx="380.0" cy="100.0" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <text x="392.0" y="96.0" fill="#b91c1c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">M(0) (0; 1) [Rebroussement]</text>
+
+    <!-- M(pi/3) -->
+    <circle cx="449.3" cy="60.0" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <text x="449.3" y="50.0" text-anchor="middle" fill="#b91c1c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">M(π/3) (√3/2 ; 1,5)</text>
+
+    <!-- M(2pi/3) -->
+    <circle cx="587.8" cy="220.0" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <text x="595.8" y="224.0" fill="#b91c1c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">M(2π/3) (3√3/2 ; −0,5)</text>
+
+    <!-- M(pi) -->
+    <circle cx="380.0" cy="420.0" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <text x="392.0" y="424.0" fill="#b91c1c" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="700">M(π) (0; −3)</text>
+
+    <!-- Légende -->
+    <g transform="translate(48, 48)">
+      <rect x="0" y="0" width="230" height="96" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.05))"/>
+      <line x1="12" y1="20" x2="36" y2="20" stroke="#2563eb" stroke-width="3.2"/>
+      <text x="44" y="24" fill="#1f2937" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="700">Portion t ∈ [0 ; π]</text>
+      
+      <line x1="12" y1="42" x2="36" y2="42" stroke="#60a5fa" stroke-width="2.2"/>
+      <text x="44" y="46" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="600">Courbe entière (symétrie Oy)</text>
+      
+      <line x1="12" y1="64" x2="36" y2="64" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="3 3"/>
+      <text x="44" y="68" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="600">Tangentes horizontales & vert.</text>
+
+      <circle cx="24" cy="84" r="4" fill="#ef4444"/>
+      <text x="44" y="88" fill="#374151" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="11.5" font-weight="600">Points remarquables</text>
+    </g>
+  </svg>
+</div>`
+    },
+    {
+      label: 'Problème — Fonction f sur ]-1;+∞[ (12 pts)',
+      problem: `<p>On considère la fonction f définie sur \\(]-1;+\\infty[\\) par :</p>
+<p>\\[f(x) = \\begin{cases} -x + 2\\ln(1+x) & \\text{si } x \\in ]-1;0[ \\\\ x - 1 + e^{-x} & \\text{si } x \\in [0;+\\infty[ \\end{cases}\\]</p>
+<p>de courbe représentative (C) dans un repère orthonormal \\((O;\\vec{i};\\vec{j})\\) d'unité graphique 2 cm.</p>
+<p><strong>Partie A</strong></p>
+<p><strong>1) a)</strong> Étudier la continuité de f en 0.</p>
+<p><strong>b)</strong> Étudier la dérivabilité de f en 0. Interpréter graphiquement le résultat.</p>
+<p><strong>2) a)</strong> Calculer \\(\\displaystyle\\lim_{x \\to -1^+} f(x)\\) et interpréter graphiquement le résultat.</p>
+<p><strong>b)</strong> Calculer \\(\\displaystyle\\lim_{x \\to +\\infty} f(x)\\).</p>
+<p><strong>c)</strong> Montrer que la droite \\((\\Delta)\\) d'équation \\(y = x-1\\) est une asymptote oblique à (C) au voisinage de \\(+\\infty\\).</p>
+<p><strong>3) a)</strong> Déterminer le sens de variation de f sur \\(]-1;0[\\) puis sur \\([0;+\\infty[\\) et dresser le tableau de variation de f.</p>
+<p><strong>b)</strong> Tracer la courbe (C) et ses asymptotes.</p>
+<p><strong>4)</strong> Soit h la restriction de f à l'intervalle \\(]-1;0[\\).</p>
+<p><strong>a)</strong> Montrer que h admet une bijection réciproque \\(h^{-1}\\) dont on précisera l'ensemble de définition.</p>
+<p><strong>b)</strong> Construire en pointillés la courbe \\((\\Gamma)\\) de \\(h^{-1}\\) dans le même repère que (C). Justifier la construction.</p>
+<p><strong>Partie B</strong></p>
+<p><strong>1)</strong> On considère un réel \\(\\alpha\\) supérieur à 1. Soit \\(A(\\alpha)\\) l'aire de la partie du plan délimitée par les droites d'équations \\(x=1\\) ; \\(x=\\alpha\\) ; \\(y=x-1\\) et la courbe (C).</p>
+<p><strong>a)</strong> Calculer en cm² l'aire \\(A(\\alpha)\\) en fonction de \\(\\alpha\\).</p>
+<p><strong>b)</strong> Calculer \\(\\displaystyle\\lim_{\\alpha \\to +\\infty} A(\\alpha)\\).</p>
+<p><strong>2)</strong> On considère \\(\\Sigma\\), la portion du plan comprise entre les droites \\(x=0\\) ; \\(x=1\\) ; l'axe des abscisses et la courbe (C). On note V le volume engendré par la rotation complète de \\(\\Sigma\\) autour de l'axe des abscisses.</p>
+<p><strong>a)</strong> Calculer en intégrant par parties \\(I = \\displaystyle\\int_0^1 (x-1)e^{-x}\\,dx\\).</p>
+<p><strong>b)</strong> Calculer le volume V en cm³. <em>On donne : \\(e \\approx 2{,}7\\).</em></p>`,
+            rappel: `<div class="rappel">
+  <span class="label">Rappels de cours — Fonctions définies par morceaux, bijection réciproque &amp; volumes de révolution</span>
+  <ul>
+    <li><strong>Continuité et dérivabilité en 0 :</strong> Vérifiez $\\lim_{x\\to 0^-} f(x) = \\lim_{x\\to 0^+} f(x) = f(0)$. Calculez les taux d'accroissement à gauche et à droite pour déterminer les demi-tangentes.</li>
+    <li><strong>Bijection réciproque $h^{-1}$ :</strong> Si $h$ est la restriction continue et strictement croissante de $f$ sur $]-1;0[$, elle est bijective de $]-1;0[$ sur $]-\\infty;0[$. La courbe $(\\Gamma)$ de $h^{-1}$ est le symétrique de $(C)$ par rapport à la première bissectrice $(y=x)$.</li>
+    <li><strong>Volume de révolution autour de $(Ox)$ :</strong> Le volume engendré par la rotation d'une courbe $y=f(x)$ sur $[a;b]$ autour de l'axe $(Ox)$ est donné par $V = \\pi \\int_a^b [f(x)]^2\\,dx \\times U_V$, où $U_V = \\|\\vec{i}\\|^3$ en cm³.</li>
+  </ul>
+</div>`,
+      correction: `<h4> Proposition de Corrigé</h4>
+
+<p><strong>Partie A</strong></p>
+
+<p><strong>1a) Continuité en 0</strong></p>
+<p>\\(\\lim_{x\\to0^-}f(x) = \\lim_{x\\to0^-}(-x+2\\ln(1+x)) = 0 + 2\\ln 1 = 0\\)</p>
+<p>\\(f(0) = 0 - 1 + e^0 = 0\\)</p>
+<p>\\(\\lim_{x\\to0^-}f(x) = f(0) = 0\\) → f est <strong>continue en 0</strong>.</p>
+
+<p><strong>1b) Dérivabilité en 0</strong></p>
+<p>À gauche : \\(\\lim_{x\\to0^-}\\dfrac{f(x)-f(0)}{x-0} = \\lim_{x\\to0^-}\\dfrac{-x+2\\ln(1+x)}{x}\\)</p>
+<p>\\(= \\lim_{x\\to0^-}\\left(-1 + 2\\dfrac{\\ln(1+x)}{x}\\right) = -1 + 2 \\times 1 = 1\\)</p>
+<p>(car \\(\\displaystyle\\lim_{x\\to0}\\dfrac{\\ln(1+x)}{x} = 1\\))</p>
+<p>À droite : \\(\\lim_{x\\to0^+}\\dfrac{f(x)-f(0)}{x} = \\lim_{x\\to0^+}\\dfrac{x-1+e^{-x}}{x}\\)</p>
+<p>\\(= \\lim_{x\\to0^+}\\left(1 - \\dfrac{1}{x} + \\dfrac{e^{-x}}{x}\\right)\\). Comme \\(\\dfrac{e^{-x}-1}{x} \\to -1\\) :</p>
+<p>\\(= 1 + \\lim_{x\\to0^+}\\dfrac{e^{-x}-1}{x} = 1 + (-1) = 0\\)</p>
+<p>Les limites à gauche (1) et à droite (0) sont <strong>différentes</strong> → f n'est <strong>pas dérivable en 0</strong>.</p>
+<p>Interprétation : (C) admet un <strong>point anguleux</strong> en (0;0) avec demi-tangente de pente 1 à gauche et demi-tangente horizontale (pente 0) à droite.</p>
+
+<p><strong>2a) Limite en \\(-1^+\\)</strong></p>
+<p>\\(\\lim_{x\\to-1^+}f(x) = \\lim_{x\\to-1^+}(-x+2\\ln(1+x)) = 1 + 2\\ln(0^+) = 1 - \\infty = -\\infty\\)</p>
+<p>La droite \\(x = -1\\) est <strong>asymptote verticale</strong> à (C).</p>
+
+<p><strong>2b) Limite en \\(+\\infty\\)</strong></p>
+<p>\\(\\lim_{x\\to+\\infty}f(x) = \\lim_{x\\to+\\infty}(x-1+e^{-x}) = +\\infty\\) (car \\(e^{-x}\\to0\\)).</p>
+
+<p><strong>2c) Asymptote oblique</strong></p>
+<p>\\(f(x) - (x-1) = e^{-x} \\to 0\\) quand \\(x\\to+\\infty\\).</p>
+<p>La droite \\((\\Delta): y=x-1\\) est <strong>asymptote oblique</strong> à (C) en \\(+\\infty\\). De plus \\(e^{-x} > 0\\) donc (C) est <strong>au-dessus</strong> de \\((\\Delta)\\) sur \\([0;+\\infty[\\).</p>
+
+<p><strong>3a) Variations de f</strong></p>
+<p><em>Sur \\(]-1;0[\\) :</em> \\(f'(x) = -1 + \\dfrac{2}{1+x} = \\dfrac{1-x}{1+x}\\). Sur \\(]-1;0[\\), \\(1-x > 0\\) et \\(1+x > 0\\) donc \\(f'(x) > 0\\) → f <strong>croissante</strong>.</p>
+<p><em>Sur \\([0;+\\infty[\\) :</em> \\(f'(x) = 1 - e^{-x}\\). \\(f'(x) = 0 \\iff e^{-x} = 1 \\iff x = 0\\). Pour \\(x > 0\\) : \\(e^{-x} < 1\\) donc \\(f'(x) > 0\\) → f <strong>croissante</strong>.</p>
+
+
+<div class="diagram-wrap">
+  <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;">
+    <defs>
+      <marker id="arr-green-22-1-f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#1a7a5e"/>
+      </marker>
+      <linearGradient id="forbid-grad-22-1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fee2e2" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#fee2e2" stop-opacity="0.15"/>
+      </linearGradient>
+    </defs>
+    <rect x="1" y="1" width="758" height="258" rx="10" fill="#ffffff" stroke="#dde1ec" stroke-width="1.5"/>
+    <path d="M 1 10 C 1 5 5 1 10 1 L 95 1 L 95 259 L 10 259 C 5 259 1 250 Z" fill="#222d46"/>
+    <line x1="0" y1="50" x2="760" y2="50" stroke="#dde1ec" stroke-width="1.5"/>
+    <line x1="0" y1="100" x2="760" y2="100" stroke="#dde1ec" stroke-width="1.5"/>
+    <line x1="95" y1="0" x2="95" y2="260" stroke="#dde1ec" stroke-width="1.5"/>
+
+    <text x="47.5" y="26" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="'Nunito', sans-serif" font-size="16" font-weight="800" font-style="italic">x</text>
+    <text x="47.5" y="75" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="'Nunito', sans-serif" font-size="14" font-weight="800" font-style="italic">f '(x)</text>
+    <text x="47.5" y="165" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-family="'Nunito', sans-serif" font-size="16" font-weight="800" font-style="italic">f(x)</text>
+    <text x="47.5" y="188" text-anchor="middle" dominant-baseline="central" fill="rgba(255,255,255,0.65)" font-family="'Nunito', sans-serif" font-size="11" font-weight="700">Variations</text>
+
+    <!-- Ligne x : -1, 0, +inf -->
+    <text x="160" y="26" text-anchor="middle" dominant-baseline="central" fill="#b83232" font-family="'Nunito', sans-serif" font-size="16" font-weight="900">−1</text>
+    <text x="430" y="26" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="'Nunito', sans-serif" font-size="16" font-weight="900">0</text>
+    <text x="700" y="26" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="'Nunito', sans-serif" font-size="17" font-weight="800">+∞</text>
+
+    <!-- Double barre en -1 (asymptote verticale) -->
+    <rect x="153" y="50" width="14" height="209" fill="url(#forbid-grad-22-1)"/>
+    <line x1="157" y1="50" x2="157" y2="259" stroke="#b83232" stroke-width="2"/>
+    <line x1="163" y1="50" x2="163" y2="259" stroke="#b83232" stroke-width="2"/>
+
+    <!-- Double barre en x = 0 uniquement sur la ligne f' (non dérivable en 0) -->
+    <line x1="427" y1="50" x2="427" y2="100" stroke="#b83232" stroke-width="1.8"/>
+    <line x1="433" y1="50" x2="433" y2="100" stroke="#b83232" stroke-width="1.8"/>
+
+    <!-- Ligne f'(x) -->
+    <text x="295" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="'Nunito', sans-serif" font-size="22" font-weight="900">+</text>
+    <text x="565" y="75" text-anchor="middle" dominant-baseline="central" fill="#1a7a5e" font-family="'Nunito', sans-serif" font-size="22" font-weight="900">+</text>
+
+    <!-- Ligne f(x) -->
+    <!-- Limite en -1+ : -inf -->
+    <text x="195" y="235" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="'Nunito', sans-serif" font-size="15" font-weight="800">−∞</text>
+    
+    <!-- Montée vers f(0) = 0 -->
+    <line x1="215" y1="225" x2="400" y2="188" stroke="#1a7a5e" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="430" y="185" text-anchor="middle" dominant-baseline="central" fill="#222d46" font-family="'Nunito', sans-serif" font-size="16" font-weight="900">0</text>
+    
+    <!-- Montée de 0 vers +inf -->
+    <line x1="455" y1="182" x2="675" y2="135" stroke="#1a7a5e" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arr-green-22-1-f)"/>
+    <text x="700" y="125" text-anchor="middle" dominant-baseline="central" fill="#d4a017" font-family="'Nunito', sans-serif" font-size="15" font-weight="800">+∞</text>
   </svg>
 </div>
 
