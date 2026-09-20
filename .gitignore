@@ -1,0 +1,10 @@
+# Batch scripts
+*.bat
+push_to_github.bat
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temporary / logs
+*.log
